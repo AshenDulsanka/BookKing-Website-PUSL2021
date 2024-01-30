@@ -1,0 +1,135 @@
+-- Admin Table
+CREATE TABLE Admin (
+    AID INT PRIMARY KEY NOT NULL,
+    Username VARCHAR(255) NOT NULL,
+    Password VARCHAR(255) NOT NULL
+);
+
+-- User Table
+CREATE TABLE Users (
+    UID INT PRIMARY KEY NOT NULL,
+    email VARCHAR(500) NOT NULL,
+    password VARCHAR(500) NOT  NULL,
+    name VARCHAR(255) NOT NULL,
+    address VARCHAR(1000) NOT NULL,
+    phoneNumber VARCHAR(20) NOT NULL
+);
+
+-- ServiceProvider Table
+CREATE TABLE ServiceProvider (
+    SPID INT PRIMARY KEY NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    name VARCHAR(255) NOT NULL,
+    address VARCHAR(255) NOT NULL,
+    phoneNumber VARCHAR(20) NOT NULL,
+    category VARCHAR(255) NOT NULL
+);
+
+-- Booking Table
+CREATE TABLE Booking (
+    BID INT PRIMARY KEY NOT NULL,
+    UID INT NOT NULL,
+    SID INT NOT NULL,
+    amount DECIMAL(10, 2) NOT NULL,
+    dateTime DATETIME NOT NULL,
+    FOREIGN KEY (UID) REFERENCES Users(UID),
+    FOREIGN KEY (SID) REFERENCES Service(SID)
+);
+
+-- Service Table
+CREATE TABLE Service (
+    SID INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    SPID INT NOT NULL,
+    Name VARCHAR(255) NOT NULL,
+    Amount DECIMAL(10, 2) NOT NULL,
+    LongDescription VARCHAR(4000) NOT NULL,
+    ShortDescription VARCHAR(2000) NOT NULL,
+    Image VARCHAR(255) NOT NULL,
+    Image2 VARCHAR(255),
+    Image3 VARCHAR(255),
+    Image4 VARCHAR(255),
+    Image5 VARCHAR(255),
+    isAvailable BOOLEAN NOT NULL,
+    Location VARCHAR(1000) NOT NULL,
+    FOREIGN KEY (SPID) REFERENCES ServiceProvider(SPID)
+);
+
+-- Event Table
+CREATE TABLE Events (
+    EID INT PRIMARY KEY NOT NULL,
+    SID INT NOT NULL,
+    FOREIGN KEY (SID) REFERENCES Service(SID)
+);
+
+-- Venue Table
+CREATE TABLE Venue (
+    VID INT PRIMARY KEY NOT NULL,
+    SID INT NOT NULL,
+    FOREIGN KEY (SID) REFERENCES Service(SID)
+);
+
+-- Notification Table
+CREATE TABLE Notification (
+    NID INT PRIMARY KEY NOT NULL,
+    Content VARCHAR(1000) NOT NULL,
+    dateTime DATETIME NOT NULL
+);
+
+-- Hotel Table
+CREATE TABLE Hotel (
+    HID INT PRIMARY KEY NOT NULL,
+    SID INT NOT NULL,
+    FOREIGN KEY (SID) REFERENCES Service(SID)
+);
+
+-- Vehicle Table
+CREATE TABLE Vehicle (
+    VehID INT PRIMARY KEY NOT NULL,
+    SID INT NOT NULL,
+    FOREIGN KEY (SID) REFERENCES Service(SID)
+);
+
+-- Tour Table
+CREATE TABLE Tour (
+    TID INT PRIMARY KEY NOT NULL,
+    SID INT NOT NULL,
+    FOREIGN KEY (SID) REFERENCES Service(SID)
+);
+
+-- Feedback Table
+CREATE TABLE Feedback (
+    FID INT PRIMARY KEY NOT NULL,
+    UID INT NOT NULL,
+    text VARCHAR(5000) NOT NULL,
+    dateTime DATETIME NOT NULL,
+    FOREIGN KEY (UID) REFERENCES Users(UID)
+);
+
+-- Activity Table
+CREATE TABLE Activity (
+    AcID INT PRIMARY KEY NOT NULL,
+    SID INT NOT NULL,
+    FOREIGN KEY (SID) REFERENCES Service(SID)
+);
+
+-- Catering Table
+CREATE TABLE Catering (
+    CID INT PRIMARY KEY NOT NULL,
+    SID INT NOT NULL,
+    FOREIGN KEY (SID) REFERENCES Service(SID)
+);
+
+-- Entertainment Table
+CREATE TABLE Entertainment (
+    EnID INT PRIMARY KEY NOT NULL,
+    SID INT NOT NULL,
+    FOREIGN KEY (SID) REFERENCES Service(SID)
+);
+
+-- Freelancer Table
+CREATE TABLE Freelancer (
+    FrID INT PRIMARY KEY NOT NULL,
+    SID INT NOT NULL,
+    FOREIGN KEY (SID) REFERENCES Service(SID)
+);
