@@ -1,135 +1,101 @@
--- Admin Table
-CREATE TABLE Admin (
-    AID INT PRIMARY KEY NOT NULL,
-    Username VARCHAR(255) NOT NULL,
-    Password VARCHAR(255) NOT NULL
-);
+-- Create database if not exists
+CREATE DATABASE IF NOT EXISTS `bookking`;
+USE `bookking`;
 
--- User Table
-CREATE TABLE Users (
-    UID INT PRIMARY KEY NOT NULL,
-    email VARCHAR(500) NOT NULL,
-    password VARCHAR(500) NOT  NULL,
-    name VARCHAR(255) NOT NULL,
-    address VARCHAR(1000) NOT NULL,
-    phoneNumber VARCHAR(20) NOT NULL
-);
+-- Set SQL mode and transaction settings
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
 
--- ServiceProvider Table
-CREATE TABLE ServiceProvider (
-    SPID INT PRIMARY KEY NOT NULL,
-    email VARCHAR(255) NOT NULL,
-    password VARCHAR(255) NOT NULL,
-    name VARCHAR(255) NOT NULL,
-    address VARCHAR(255) NOT NULL,
-    phoneNumber VARCHAR(20) NOT NULL,
-    category VARCHAR(255) NOT NULL
-);
+-- Create table `admin`
+CREATE TABLE `admin` (
+  `AID` int(11) NOT NULL AUTO_INCREMENT,
+  `Username` varchar(255) NOT NULL,
+  `Password` varchar(255) NOT NULL,
+  PRIMARY KEY (`AID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- Booking Table
-CREATE TABLE Booking (
-    BID INT PRIMARY KEY NOT NULL,
-    UID INT NOT NULL,
-    SID INT NOT NULL,
-    amount DECIMAL(10, 2) NOT NULL,
-    dateTime DATETIME NOT NULL,
-    FOREIGN KEY (UID) REFERENCES Users(UID),
-    FOREIGN KEY (SID) REFERENCES Service(SID)
-);
+-- Insert data into `admin`
+INSERT INTO `admin` (`AID`, `Username`, `Password`) VALUES
+(1, 'adminbook1', 'bookinadm427'),
+(2, 'bokadm4527', 'admbok162d');
 
--- Service Table
-CREATE TABLE Service (
-    SID INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
-    SPID INT NOT NULL,
-    Name VARCHAR(255) NOT NULL,
-    Amount DECIMAL(10, 2) NOT NULL,
-    LongDescription VARCHAR(4000) NOT NULL,
-    ShortDescription VARCHAR(2000) NOT NULL,
-    Image VARCHAR(255) NOT NULL,
-    Image2 VARCHAR(255),
-    Image3 VARCHAR(255),
-    Image4 VARCHAR(255),
-    Image5 VARCHAR(255),
-    isAvailable BOOLEAN NOT NULL,
-    Location VARCHAR(1000) NOT NULL,
-    FOREIGN KEY (SPID) REFERENCES ServiceProvider(SPID)
-);
+-- Create table `booking`
+CREATE TABLE `booking` (
+  `BID` int(11) NOT NULL AUTO_INCREMENT,
+  `UID` int(11) NOT NULL,
+  `SID` int(11) NOT NULL,
+  `amount` decimal(10,2) NOT NULL,
+  `dateTime` datetime NOT NULL,
+  PRIMARY KEY (`BID`),
+  KEY `UID` (`UID`),
+  KEY `SID` (`SID`),
+  CONSTRAINT `booking_ibfk_1` FOREIGN KEY (`UID`) REFERENCES `users` (`UID`),
+  CONSTRAINT `booking_ibfk_2` FOREIGN KEY (`SID`) REFERENCES `service` (`SID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- Event Table
-CREATE TABLE Events (
-    EID INT PRIMARY KEY NOT NULL,
-    SID INT NOT NULL,
-    FOREIGN KEY (SID) REFERENCES Service(SID)
-);
+-- Create table `feedback`
+CREATE TABLE `feedback` (
+  `FID` int(11) NOT NULL AUTO_INCREMENT,
+  `UID` int(11) NOT NULL,
+  `text` varchar(5000) NOT NULL,
+  `dateTime` datetime NOT NULL,
+  PRIMARY KEY (`FID`),
+  KEY `UID` (`UID`),
+  CONSTRAINT `feedback_ibfk_1` FOREIGN KEY (`UID`) REFERENCES `users` (`UID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- Venue Table
-CREATE TABLE Venue (
-    VID INT PRIMARY KEY NOT NULL,
-    SID INT NOT NULL,
-    FOREIGN KEY (SID) REFERENCES Service(SID)
-);
+-- Create table `notification`
+CREATE TABLE `notification` (
+  `NID` int(11) NOT NULL AUTO_INCREMENT,
+  `Content` varchar(1000) NOT NULL,
+  `dateTime` datetime NOT NULL,
+  PRIMARY KEY (`NID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- Notification Table
-CREATE TABLE Notification (
-    NID INT PRIMARY KEY NOT NULL,
-    Content VARCHAR(1000) NOT NULL,
-    dateTime DATETIME NOT NULL
-);
+-- Create table `service`
+CREATE TABLE `service` (
+  `SID` int(11) NOT NULL AUTO_INCREMENT,
+  `SPID` int(11) NOT NULL,
+  `Name` varchar(255) NOT NULL,
+  `Amount` decimal(10,2) NOT NULL,
+  `LongDescription` varchar(4000) NOT NULL,
+  `ShortDescription` varchar(2000) NOT NULL,
+  `Image` varchar(255) NOT NULL,
+  `Image2` varchar(255) DEFAULT NULL,
+  `Image3` varchar(255) DEFAULT NULL,
+  `Image4` varchar(255) DEFAULT NULL,
+  `Image5` varchar(255) DEFAULT NULL,
+  `isAvailable` tinyint(1) NOT NULL,
+  `Location` varchar(1000) NOT NULL,
+  `category` varchar(500) DEFAULT NULL,
+  PRIMARY KEY (`SID`),
+  KEY `SPID` (`SPID`),
+  CONSTRAINT `service_ibfk_1` FOREIGN KEY (`SPID`) REFERENCES `serviceprovider` (`SPID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- Hotel Table
-CREATE TABLE Hotel (
-    HID INT PRIMARY KEY NOT NULL,
-    SID INT NOT NULL,
-    FOREIGN KEY (SID) REFERENCES Service(SID)
-);
+-- Create table `serviceprovider`
+CREATE TABLE `serviceprovider` (
+  `SPID` int(11) NOT NULL AUTO_INCREMENT,
+  `email` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `address` varchar(255) NOT NULL,
+  `phoneNumber` varchar(20) NOT NULL,
+  `category` varchar(255) NOT NULL,
+  PRIMARY KEY (`SPID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- Vehicle Table
-CREATE TABLE Vehicle (
-    VehID INT PRIMARY KEY NOT NULL,
-    SID INT NOT NULL,
-    FOREIGN KEY (SID) REFERENCES Service(SID)
-);
+-- Create table `users`
+CREATE TABLE `users` (
+  `UID` int(11) NOT NULL AUTO_INCREMENT,
+  `email` varchar(500) NOT NULL,
+  `password` varchar(500) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `address` varchar(1000) NOT NULL,
+  `phoneNumber` varchar(20) NOT NULL,
+  PRIMARY KEY (`UID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- Tour Table
-CREATE TABLE Tour (
-    TID INT PRIMARY KEY NOT NULL,
-    SID INT NOT NULL,
-    FOREIGN KEY (SID) REFERENCES Service(SID)
-);
-
--- Feedback Table
-CREATE TABLE Feedback (
-    FID INT PRIMARY KEY NOT NULL,
-    UID INT NOT NULL,
-    text VARCHAR(5000) NOT NULL,
-    dateTime DATETIME NOT NULL,
-    FOREIGN KEY (UID) REFERENCES Users(UID)
-);
-
--- Activity Table
-CREATE TABLE Activity (
-    AcID INT PRIMARY KEY NOT NULL,
-    SID INT NOT NULL,
-    FOREIGN KEY (SID) REFERENCES Service(SID)
-);
-
--- Catering Table
-CREATE TABLE Catering (
-    CID INT PRIMARY KEY NOT NULL,
-    SID INT NOT NULL,
-    FOREIGN KEY (SID) REFERENCES Service(SID)
-);
-
--- Entertainment Table
-CREATE TABLE Entertainment (
-    EnID INT PRIMARY KEY NOT NULL,
-    SID INT NOT NULL,
-    FOREIGN KEY (SID) REFERENCES Service(SID)
-);
-
--- Freelancer Table
-CREATE TABLE Freelancer (
-    FrID INT PRIMARY KEY NOT NULL,
-    SID INT NOT NULL,
-    FOREIGN KEY (SID) REFERENCES Service(SID)
-);
+-- Commit transaction and set character set settings
+COMMIT;
