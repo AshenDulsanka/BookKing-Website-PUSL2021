@@ -12,11 +12,16 @@ offering a user-friendly interface and robust backend infrastructure, this platf
 way consumers access and book services.
 
 <h2>Contributions</h2>
-<hr>
-<br>
-<h5>Ashen Dulsanka</h5>
+<h3>Ashen Dulsanka</h3>
 <ul style="list-style-type:disc">
   <li>Backend Development</li>
   <li>Diagrams</li>
   <li>SQL/Database</li>
+</ul>
+<h4>Socials</h4>
+<ul style="list-style-type:disc">
+  <li><a href="https://www.linkedin.com/in/ashen-abeysekara/">LinkedIn</a></li>
+  <li><a href="https://github.com/AshenDulsanka">GitHub</a></li>
+  <li><a href="https://www.instagram.com/ashennn.___/">Instagram</a></li>
+  <li><a href="https://www.facebook.com/ashen.abeysekera.9">Facebook</a></li>
 </ul>
