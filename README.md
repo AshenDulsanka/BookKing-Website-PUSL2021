@@ -16,6 +16,7 @@ way consumers access and book services.
 <ul style="list-style-type:disc">
   <li>Backend Development</li>
   <li>Diagrams</li>
+  <li>API Integration</li>
   <li>SQL/Database</li>
 </ul>
 <h5>Socials</h5>
@@ -24,4 +25,30 @@ way consumers access and book services.
   <li><a href="https://github.com/AshenDulsanka">GitHub</a></li>
   <li><a href="https://www.instagram.com/ashennn.___/">Instagram</a></li>
   <li><a href="https://www.facebook.com/ashen.abeysekera.9">Facebook</a></li>
+</ul>
+
+<h4>Nethindu Wijewardena</h4>
+<ul style="list-style-type:disc">
+  <li>Frontend Development</li>
+  <li>UI Design</li>
+</ul>
+<h5>Socials</h5>
+<ul style="list-style-type:disc">
+  <li><a href="https://www.linkedin.com/in/nethindu-wijewardena-ba3304241?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">LinkedIn</a></li>
+  <li><a href="https://github.com/Nethindu27">GitHub</a></li>
+  <li><a href="https://www.instagram.com/_n3th1ndu_w?igsh=NW0xOWk4cmJpZGNp">Instagram</a></li>
+  <li><a href="https://www.facebook.com/nethindu.wijewardena?mibextid=2JQ9oc">Facebook</a></li>
+</ul>
+
+<h4>Minindu Gunawardana</h4>
+<ul style="list-style-type:disc">
+  <li>Frontend Development</li>
+  <li>UI Design</li>
+</ul>
+<h5>Socials</h5>
+<ul style="list-style-type:disc">
+  <li><a href="https://www.linkedin.com/in/minindu-dewruwan-02786b225?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app">LinkedIn</a></li>
+  <li><a href="https://github.com/minimize404">GitHub</a></li>
+  <li><a href="https://www.instagram.com/mini.mize_?igsh=dDY2ODlzODR4dXVm&utm_source=qr">Instagram</a></li>
+  <li><a href="https://www.facebook.com/profile.php?id=100070597232382">Facebook</a></li>
 </ul>
