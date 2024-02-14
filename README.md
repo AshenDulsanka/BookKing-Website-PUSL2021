@@ -27,6 +27,8 @@ way consumers access and book services.
   <li><a href="https://www.facebook.com/ashen.abeysekera.9">Facebook</a></li>
 </ul>
 
+<hr>
+
 <h4>Nethindu Wijewardena</h4>
 <ul style="list-style-type:disc">
   <li>Frontend Development</li>
@@ -39,6 +41,8 @@ way consumers access and book services.
   <li><a href="https://www.instagram.com/_n3th1ndu_w?igsh=NW0xOWk4cmJpZGNp">Instagram</a></li>
   <li><a href="https://www.facebook.com/nethindu.wijewardena?mibextid=2JQ9oc">Facebook</a></li>
 </ul>
+
+<hr>
 
 <h4>Minindu Gunawardana</h4>
 <ul style="list-style-type:disc">
