@@ -23,6 +23,7 @@ way consumers access and book services.
 <ul style="list-style-type:disc">
   <li><a href="https://www.linkedin.com/in/ashen-abeysekara/">LinkedIn</a></li>
   <li><a href="https://github.com/AshenDulsanka">GitHub</a></li>
+  <li><a href="https://discordapp.com/users/391966470852050949">Discord</a></li>
   <li><a href="https://www.instagram.com/ashennn.___/">Instagram</a></li>
   <li><a href="https://www.facebook.com/ashen.abeysekera.9">Facebook</a></li>
 </ul>
@@ -55,4 +56,49 @@ way consumers access and book services.
   <li><a href="https://github.com/minimize404">GitHub</a></li>
   <li><a href="https://www.instagram.com/mini.mize_?igsh=dDY2ODlzODR4dXVm&utm_source=qr">Instagram</a></li>
   <li><a href="https://www.facebook.com/profile.php?id=100070597232382">Facebook</a></li>
+</ul>
+
+<hr>
+
+<h4>Rumeth Randisa</h4>
+<ul style="list-style-type:disc">
+  <li>Frontend Development</li>
+  <li>UI Design</li>
+</ul>
+<h5>Socials</h5>
+<ul style="list-style-type:disc">
+  <li><a href="https://www.linkedin.com/in/rumeth-randisa-a1274b254?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app">LinkedIn</a></li>
+  <li><a href="https://github.com/rumethrandisa">GitHub</a></li>
+  <li><a href="https://www.instagram.com/_randisa_x?igsh=cDYxc2o3Z2lqcm00&utm_source=qr">Instagram</a></li>
+  <li><a href="https://www.facebook.com/rumeth.randisa?mibextid=dGKdO6">Facebook</a></li>
+</ul>
+
+<hr>
+
+<h4>Lakindu Bandara</h4>
+<ul style="list-style-type:disc">
+  <li>Frontend Development</li>
+</ul>
+<h5>Socials</h5>
+<ul style="list-style-type:disc">
+  <li><a href="https://github.com/lakindu-Hesara">GitHub</a></li>
+  <li><a href="https://www.facebook.com/profile.php?id=100077669991645&mibextid=AEUHqQ">Facebook</a></li>
+  <li><a href="https://www.instagram.com/itsme_lakindu?igsh=NzA1azRjMjJ3bTg1&utm_source=qr">Instagram</a></li>
+  <li><a href="https://t.snapchat.com/CziXnHuN">Snapchat</a></li>
+  <li><a href="https://www.tiktok.com/@lakindu____?_t=8jsDD9b5ldS&_r=1">TikTok</a></li>
+</ul>
+
+<hr>
+
+<h4>Rasith Senanayake</h4>
+<ul style="list-style-type:disc">
+  <li>Frontend Development</li>
+  <li>UI Design</li>
+</ul>
+<h5>Socials</h5>
+<ul style="list-style-type:disc">
+  <li><a href="https://www.linkedin.com/in/rasith-senanayake?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app">LinkedIn</a></li>
+  <li><a href="https://github.com/rasithsenanayake">GitHub</a></li>
+  <li><a href="https://www.facebook.com/rasiya.lk?mibextid=LQQJ4d">Facebook</a></li>
+  <li><a href="http://discordapp.com/users/skippiiii">Discord</a></li>
 </ul>
