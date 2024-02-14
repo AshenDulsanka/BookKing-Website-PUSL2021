@@ -17,6 +17,7 @@ way consumers access and book services.
   <li>Backend Development</li>
   <li>Diagrams</li>
   <li>API Integration</li>
+  <li>Authentication</li>
   <li>SQL/Database</li>
 </ul>
 <h5>Socials</h5>
