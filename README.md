@@ -1,4 +1,3 @@
-![image](https://github.com/AshenDulsanka/BookKing-Website-PUSL2021/assets/104350487/2c5cb18a-f11a-4f52-8f87-e4aada600c00)# BookKing-Website PUSL2021
 This is the project we are creating for our second-year computing group project module.
 
 Online booking platforms have become increasingly popular in recent years, as consumers seek the 
