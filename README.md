@@ -1,4 +1,4 @@
-# BookKing-Website PUSL2021
+![image](https://github.com/AshenDulsanka/BookKing-Website-PUSL2021/assets/104350487/2c5cb18a-f11a-4f52-8f87-e4aada600c00)# BookKing-Website PUSL2021
 This is the project we are creating for our second-year computing group project module.
 
 Online booking platforms have become increasingly popular in recent years, as consumers seek the 
@@ -19,6 +19,7 @@ way consumers access and book services.
   <li>API Integration</li>
   <li>Authentication</li>
   <li>SQL/Database</li>
+  <li>Interim 1 Report: Functional Specification and Technical Specification</li>
 </ul>
 <h5>Socials</h5>
 <ul style="list-style-type:disc">
@@ -35,6 +36,7 @@ way consumers access and book services.
 <ul style="list-style-type:disc">
   <li>Frontend Development</li>
   <li>UI Design</li>
+  <li>Interim 1 Report: Introduction and User Requirement</li>
 </ul>
 <h5>Socials</h5>
 <ul style="list-style-type:disc">
@@ -50,6 +52,7 @@ way consumers access and book services.
 <ul style="list-style-type:disc">
   <li>Frontend Development</li>
   <li>UI Design</li>
+  <li>Interim 1 Report: Work Breakdown Project Timeline</li>
 </ul>
 <h5>Socials</h5>
 <ul style="list-style-type:disc">
@@ -65,6 +68,7 @@ way consumers access and book services.
 <ul style="list-style-type:disc">
   <li>Frontend Development</li>
   <li>UI Design</li>
+  <li>Interim 1 Report: Conclusion</li>
 </ul>
 <h5>Socials</h5>
 <ul style="list-style-type:disc">
@@ -95,6 +99,7 @@ way consumers access and book services.
 <ul style="list-style-type:disc">
   <li>Frontend Development</li>
   <li>UI Design</li>
+  <li>Interim 1 Report: Background and Current Status</li>
 </ul>
 <h5>Socials</h5>
 <ul style="list-style-type:disc">
