@@ -1,12 +1,21 @@
 {
   "name": "backend",
   "version": "1.0.0",
-  "description": "",
+  "description": "backend json ",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "author": "ashen",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AshenDulsanka/BookKing-Website-PUSL2021.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AshenDulsanka/BookKing-Website-PUSL2021/issues"
+  },
+  "homepage": "https://github.com/AshenDulsanka/BookKing-Website-PUSL2021#readme",
+  "type": "module"
 }
