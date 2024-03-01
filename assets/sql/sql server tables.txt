@@ -1,0 +1,95 @@
+-- Create database if not exists
+IF NOT EXISTS (SELECT * FROM sys.databases WHERE name = N'BookKing')
+CREATE DATABASE BookKing;
+GO
+
+USE BookKing;
+GO
+
+-- Create table `admin`
+CREATE TABLE admin (
+  AID INT IDENTITY(1, 1) PRIMARY KEY,
+  Username VARCHAR(255) NOT NULL,
+  Password VARCHAR(255) NOT NULL
+);
+GO
+
+-- Insert data into `admin`
+INSERT INTO admin (Username, Password) VALUES
+('adminbook1', 'bookinadm427'),
+('bokadm4527', 'admbok162d');
+GO
+
+-- Create table `notification`
+CREATE TABLE notification (
+  NID INT IDENTITY(1, 1) PRIMARY KEY,
+  Content VARCHAR(1000) NOT NULL,
+  dateTime DATETIME NOT NULL
+);
+GO
+
+-- Create table `serviceprovider`
+CREATE TABLE serviceprovider (
+  SPID INT IDENTITY(1, 1) PRIMARY KEY,
+  email VARCHAR(255) NOT NULL,
+  [password] VARCHAR(255) NOT NULL,
+  [name] VARCHAR(255) NOT NULL,
+  address VARCHAR(255) NOT NULL,
+  phoneNumber VARCHAR(20) NOT NULL,
+  serviceDesc VARCHAR(500) NOT NULL,
+  category VARCHAR(255) NOT NULL
+);
+GO
+
+-- Create table `service`
+CREATE TABLE service (
+  SID INT IDENTITY(1, 1) PRIMARY KEY,
+  SPID INT NOT NULL,
+  Name VARCHAR(255) NOT NULL,
+  Amount DECIMAL(10,2) NOT NULL,
+  LongDescription VARCHAR(4000) NOT NULL,
+  ShortDescription VARCHAR(2000) NOT NULL,
+  Image VARCHAR(255) NOT NULL,
+  Image2 VARCHAR(255) NULL,
+  Image3 VARCHAR(255) NULL,
+  Image4 VARCHAR(255) NULL,
+  Image5 VARCHAR(255) NULL,
+  isAvailable TINYINT NOT NULL,
+  Location VARCHAR(1000) NOT NULL,
+  category VARCHAR(500) NULL,
+  FOREIGN KEY (SPID) REFERENCES serviceprovider (SPID)
+);
+GO
+
+-- Create table `users`
+CREATE TABLE users (
+  UID INT IDENTITY(1, 1) PRIMARY KEY,
+  email VARCHAR(500) NOT NULL,
+  [password] VARCHAR(500) NOT NULL,
+  [name] VARCHAR(255) NOT NULL,
+  address VARCHAR(1000) NOT NULL,
+  phoneNumber VARCHAR(20) NOT NULL
+);
+GO
+
+-- Create table `booking`
+CREATE TABLE booking (
+  BID INT IDENTITY(1, 1) PRIMARY KEY,
+  UID INT NOT NULL,
+  SID INT NOT NULL,
+  amount DECIMAL(10,2) NOT NULL,
+  dateTime DATETIME NOT NULL,
+  FOREIGN KEY (UID) REFERENCES users (UID),
+  FOREIGN KEY (SID) REFERENCES service (SID)
+);
+GO
+
+-- Create table `feedback`
+CREATE TABLE feedback (
+  FID INT IDENTITY(1, 1) PRIMARY KEY,
+  UID INT NOT NULL,
+  text VARCHAR(5000) NOT NULL,
+  dateTime DATETIME NOT NULL,
+  FOREIGN KEY (UID) REFERENCES users (UID)
+);
+GO
