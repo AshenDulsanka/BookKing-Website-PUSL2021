@@ -1,6 +1,6 @@
 # frontend
 
-> A Vue.js project
+> none
 
 ## Build Setup
 
