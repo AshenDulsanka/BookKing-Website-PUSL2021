@@ -3,22 +3,11 @@
     <newheader />
     <br>
     
-   
+    
     <section class="header-frame-wrapper">
       <div class="header-frame">
+        
         <EmailRectangle />
-        <div class="password-input-frame">
-       
-          <div class="login-image">
-            <img class="loginimg-icon" loading="lazy" alt="" src="../signup.png"/>
-            <div class="already-have-account-message">
-              <a href="#">You don't have an account?</a>
-            </div>
-            <div class="already-have-account-message">
-              <a href="#">Service Provider Login</a>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
     
@@ -26,7 +15,14 @@
     <br>
     <br>
     <br>
-    
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
     <newfooter />
     
   </div>
@@ -36,6 +32,7 @@
   
   import EmailRectangle from "../components/EmailRectangle.vue"; 
   import newfooter from "@/components/newfooter.vue";
+  
   import newheader from "@/components/newheader.vue";
   
 
@@ -52,12 +49,12 @@
   
   .loginimg-icon {
     align-self: stretch;
-    height: 250px;
+    height: 205px;
     position: relative;
     max-width: 100%;
     overflow: hidden;
     flex-shrink: 0;
-    margin-top: 120px;
+    margin-top: -100px;
   }
   .you-dont-have {
     margin: 0;
