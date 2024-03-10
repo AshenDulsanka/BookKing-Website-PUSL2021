@@ -22,12 +22,9 @@
     </div>
     <a href="#">
         <button class="ok">
-            <div class="ok">OK</div>
+            <div class="ok">Register</div>
         </button>
     </a>
-    <div class="forgot-password-link">
-      <a href="#">Forgot Password</a>
-    </div>
   </div>
 </template>
 <script>

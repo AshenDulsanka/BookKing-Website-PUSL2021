@@ -12,10 +12,10 @@
           <div class="login-image">
             <img class="loginimg-icon" loading="lazy" alt="" src="../signup.png"/>
             <div class="already-have-account-message">
-              <a href="#">You don't have an account?</a>
+              <a href="#">Already have an account?</a>
             </div>
             <div class="already-have-account-message">
-              <a href="#">Service Provider Login</a>
+              <a href="#">Are you a Service Provider?</a>
             </div>
           </div>
         </div>

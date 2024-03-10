@@ -26,7 +26,7 @@ const router = createRouter({
 
 router.beforeEach((toRoute, fromRoute, next) => {
   const documentTitle =
-    toRoute?.meta && toRoute?.meta?.title ? toRoute?.meta?.title : "Rasith";
+    toRoute?.meta && toRoute?.meta?.title ? toRoute?.meta?.title : "User Sign up";
   window.document.title = documentTitle;
   if (toRoute?.meta?.description) {
     addMetaTag(toRoute?.meta?.description);
