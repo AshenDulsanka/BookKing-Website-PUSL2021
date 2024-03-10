@@ -2,27 +2,20 @@
   <div class="service-provider-login1">
     <newheader />
     <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>    
+    
+   
     <section class="header-frame-wrapper">
       <div class="header-frame">
         <EmailRectangle />
         <div class="password-input-frame">
        
           <div class="login-image">
-            <img class="loginimg-icon" loading="lazy" alt="" src="../img.png"/>
+            <img class="loginimg-icon" loading="lazy" alt="" src="../signup.png"/>
             <div class="already-have-account-message">
-              <a href="#">You don't have an Service account?</a>
+              <a href="#">You don't have an account?</a>
             </div>
             <div class="already-have-account-message">
-              <a href="#">Already have an User account?</a>
+              <a href="#">Service Provider Login</a>
             </div>
           </div>
         </div>
@@ -40,15 +33,15 @@
 </template>
 <script>
   import { defineComponent } from "vue";
-
-  import EmailRectangle from "../components/EmailRectangle.vue";
-  import newheader from "@/components/newheader.vue";
+  
+  import EmailRectangle from "../components/EmailRectangle.vue"; 
   import newfooter from "@/components/newfooter.vue";
+  import newheader from "@/components/newheader.vue";
   
 
   export default defineComponent({
     name: "ServiceProviderLogin1",
-    components: { newheader , EmailRectangle,  newfooter, },
+    components: {newheader ,EmailRectangle,  newfooter, },
   });
 </script>
 <style scoped>
@@ -59,12 +52,12 @@
   
   .loginimg-icon {
     align-self: stretch;
-    height: 205px;
+    height: 250px;
     position: relative;
     max-width: 100%;
     overflow: hidden;
     flex-shrink: 0;
-    margin-top: -100px;
+    margin-top: 120px;
   }
   .you-dont-have {
     margin: 0;
