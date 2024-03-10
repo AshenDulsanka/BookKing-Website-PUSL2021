@@ -1,19 +1,21 @@
 <template>
   <div :class="$style.aboutUs">
-    <SubHeader />
+    <newheader />
     <main :class="$style.welcomeTextWrapper"><WelcomeText /></main>
-    <Footer3 />
+    <br>
+    <br>
+    <newfooter />
   </div>
 </template>
 <script>
   import { defineComponent } from "vue";
-  import SubHeader from "../components/SubHeader.vue";
+  import newheader from "@/components/newheader.vue";
   import WelcomeText from "../components/WelcomeText.vue";
-  import Footer3 from "../components/Footer3.vue";
+  import newfooter from "@/components/newfooter.vue";
 
   export default defineComponent({
     name: "AboutUs1",
-    components: { SubHeader, WelcomeText, Footer3 },
+    components: { newheader, WelcomeText, newfooter },
   });
 </script>
 <style module>

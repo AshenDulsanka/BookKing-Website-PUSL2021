@@ -1,6 +1,6 @@
 <template>
   <div :class="$style.reviews">
-    <NewHeader11 />
+    <newheader />
     <main :class="$style.reviewsInner">
       <section :class="$style.reviewsParent">
         <h1 :class="$style.reviews1">Reviews</h1>
@@ -8,18 +8,18 @@
       </section>
     </main>
     <div :class="$style.reviewsChild" />
-    <Footer41 />
+    <newfooter />
   </div>
 </template>
 <script>
   import { defineComponent } from "vue";
-  import NewHeader11 from "../components/NewHeader1.vue";
+  import newheader from "@/components/newheader.vue";
   import Frame1 from "../components/Frame1.vue";
-  import Footer41 from "../components/Footer4.vue";
+  import newfooter from "@/components/newfooter.vue";
 
   export default defineComponent({
     name: "Reviews",
-    components: { NewHeader11, Frame1, Footer41 },
+    components: { newheader, Frame1, newfooter },
   });
 </script>
 <style module>
