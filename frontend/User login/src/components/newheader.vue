@@ -1,18 +1,18 @@
 <template>
+    <title>USer Sign Up</title>
   <Header>
         <nav>
             <img src="../logo.png" alt="" class="img">
                 <div class="header">
                     <ul>
                     <li><a href="#">Home</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Review</a></li>
+                    <li><a href="#">Vehicles</a></li>  
+                    <li><a href="#">Hotels</a></li>                                          
+                    <li><a href="#">Tours</a></li>
+                    <li><a href="#">Reviews</a></li>
                     <li><a href="#">Contact us</a></li>
                     <li><a href="#">About us</a></li>
-                    <li><a href="#">Hotels</a></li>
-                    <li><a href="#">Vehicles</a></li>                        
-                    <li><a href="#">Events</a></li>
-                    <li><a href="#">Tours</a></li>
+                    
                     <li><a  class="login" href="#">Login</a></li>
                     </ul>
                 </div>
@@ -50,7 +50,7 @@
     background-color: #000000;
     padding: 20px;
     text-align: right;
-    position:fixed;
+    
     top:0px;
     bottom: 0;
     width: 100%;
