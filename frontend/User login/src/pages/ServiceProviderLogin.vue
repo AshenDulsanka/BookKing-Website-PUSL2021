@@ -1,7 +1,15 @@
 <template>
   <div class="service-provider-login1">
-    <Header1 />
-    <NewHeader />
+    <newheader />
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
     <section class="header-frame-wrapper">
       <div class="header-frame">
         <EmailRectangle />
@@ -10,7 +18,7 @@
           <div class="login-image">
             <img class="loginimg-icon" loading="lazy" alt="" src="../img.png"/>
             <div class="already-have-account-message">
-              <a href="#">You dont have an account?</a>
+              <a href="#">You don't have an account?</a>
             </div>
             <div class="already-have-account-message">
               <a href="#">Service Provider Login</a>
@@ -31,15 +39,16 @@
 </template>
 <script>
   import { defineComponent } from "vue";
-  import Header1 from "../components/Header.vue";
-  import EmailRectangle from "../components/EmailRectangle.vue";
- 
+  
+  import EmailRectangle from "../components/EmailRectangle.vue"; 
   import newfooter from "@/components/newfooter.vue";
+  
+  import newheader from "@/components/newheader.vue";
   
 
   export default defineComponent({
     name: "ServiceProviderLogin1",
-    components: { Header1, EmailRectangle,  newfooter, },
+    components: {newheader ,EmailRectangle,  newfooter, },
   });
 </script>
 <style scoped>
