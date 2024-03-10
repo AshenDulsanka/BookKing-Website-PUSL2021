@@ -12,7 +12,7 @@
           />
           <div :class="$style.welcomeToYourContainer">
             <p :class="$style.welcomeToYour">
-              Welcome to [Your Booking Website], where we redefine the way you
+              Welcome to BookKing, where we redefine the way you
               experience travel. Established with a commitment to elevate your
               journey, we take pride in being your go-to platform for
               discovering and booking accommodations that align with your unique
@@ -45,7 +45,7 @@
                   commitment to providing you with the best possible stay.
                 </p>
                 <p :class="$style.atYourBooking">
-                  At [Your Booking Website], we understand that every journey is
+                  At BookKing, we understand that every journey is
                   a unique story waiting to unfold. Our dedication to customer
                   satisfaction extends beyond the booking process, as we
                   continuously strive to enhance your overall travel experience.
@@ -63,7 +63,7 @@
             </div>
             <div :class="$style.embarkOnAJourneyOfDiscoveWrapper">
               <div :class="$style.embarkOnA">
-                Embark on a journey of discovery with [Your Booking Website],
+                Embark on a journey of discovery with BookKing,
                 and let us be your trusted companion in crafting remarkable
                 travel experiences. Your adventure begins here, as we invite you
                 to explore, dream, and book with confidence. Thank you for
