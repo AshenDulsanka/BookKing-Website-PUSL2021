@@ -1,11 +1,7 @@
 <template>
   <div class="service-provider-login1">
     <newheader />
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+
     <br>
     <br>
     <br>
@@ -14,7 +10,7 @@
       <div class="header-frame">
         <EmailRectangle />
         <div class="password-input-frame">
-       
+
           <div class="login-image">
             <img class="loginimg-icon" loading="lazy" alt="" src="../img.png"/>
             <div class="already-have-account-message">
@@ -27,36 +23,28 @@
         </div>
       </div>
     </section>
-    
-    <br>
-    <br>
-    <br>
-    <br>
-    
     <newfooter />
-    
   </div>
 </template>
-<script>
-  import { defineComponent } from "vue";
-  
-  import EmailRectangle from "../components/EmailRectangle.vue"; 
-  import newfooter from "@/components/newfooter.vue";
-  
-  import newheader from "@/components/newheader.vue";
-  
 
-  export default defineComponent({
-    name: "ServiceProviderLogin1",
-    components: {newheader ,EmailRectangle,  newfooter, },
-  });
+<script>
+import { defineComponent } from 'vue'
+
+import EmailRectangle from '../components/EmailRectangle.vue'
+import newfooter from '@/components/newfooter.vue'
+import newheader from '@/components/newheader.vue'
+
+export default defineComponent({
+  name: 'userLogin',
+  components: {newheader, EmailRectangle, newfooter}
+})
 </script>
 <style scoped>
   a{
     text-decoration: underline;
     color: black;
   }
-  
+
   .loginimg-icon {
     align-self: stretch;
     height: 205px;
@@ -101,7 +89,7 @@
     flex-direction: row;
     align-items: flex-start;
     justify-content: flex-start;
-    padding: 0px 44px;
+    padding: 0px 100px;
     box-sizing: border-box;
     max-width: 100%;
   }
@@ -160,9 +148,9 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    padding: 0px 0px 229.5px;
+    padding: 0px 0px 250.5px;
     box-sizing: border-box;
-    gap: 104.5px 0px;
+    gap: 141.5px 0px;
     letter-spacing: normal;
   }
 

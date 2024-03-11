@@ -26,13 +26,15 @@
     </div>
   </header>
 </template>
-<script>
-  import { defineComponent } from "vue";
 
-  export default defineComponent({
-    name: "Header1",
-  });
+<script>
+import { defineComponent } from 'vue'
+
+export default defineComponent({
+  name: 'Header1'
+})
 </script>
+
 <style scoped>
   a{
     text-decoration: none;
