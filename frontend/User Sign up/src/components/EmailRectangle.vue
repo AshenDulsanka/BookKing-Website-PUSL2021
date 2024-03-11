@@ -14,7 +14,7 @@
         <input class="frame-item" type="text" />
         <div class="email1">Password Confirm</div>
         <input class="frame-item" type="text" />
-        <div class="email1">Phone Numebr</div>
+        <div class="email1">Phone Number</div>
         <input class="frame-item" type="text" />
         <div class="email1">Address</div>
         <input class="frame-item" type="text" />
@@ -22,20 +22,17 @@
     </div>
     <a href="#">
         <button class="ok">
-            <div class="ok">OK</div>
+            <div class="ok">Register</div>
         </button>
     </a>
-    <div class="forgot-password-link">
-      <a href="#">Forgot Password</a>
-    </div>
   </div>
 </template>
 <script>
-  import { defineComponent } from "vue";
+import { defineComponent } from 'vue'
 
-  export default defineComponent({
-    name: "EmailRectangle",
-  });
+export default defineComponent({
+  name: 'EmailRectangle'
+})
 </script>
 <style scoped>
   .ok{
@@ -117,7 +114,7 @@
     box-sizing: border-box;
     max-width: 100%;
   }
- 
+
   .frame-item {
     border: none;
     outline: none;
@@ -150,7 +147,7 @@
     text-decoration: none;
     color: rgb(99, 1, 1);
     position: relative;
-    
+
   }
   .forgot-password-link {
     text-decoration: none;
