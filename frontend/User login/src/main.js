@@ -2,20 +2,14 @@ import { createApp } from "vue";
 import { createRouter, createWebHistory } from "vue-router";
 import App from "./App.vue";
 
-import ServiceProviderLogin from "./pages/ServiceProviderLogin.vue";
-import ServiceProviderLogin1 from "./pages/ServiceProviderLogin.vue";
+import userLogin from "./pages/userLogin.vue";
 import "./global.css";
 
 const routes = [
   {
     path: "/",
-    name: "ServiceProviderLogin",
-    component: ServiceProviderLogin,
-  },
-  {
-    path: "/service-provider-login",
-    name: "ServiceProviderLogin1",
-    component: ServiceProviderLogin1,
+    name: "userLogin",
+    component: userLogin,
   },
 ];
 
