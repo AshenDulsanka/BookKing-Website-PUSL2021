@@ -15,16 +15,17 @@ import TheWelcome from '../components/TheWelcome.vue'
           </div>
         </header>
         <div class="cars">
-          <img class="img" alt="Rectangle"
-            src="https://cdn.animaapp.com/projects/65d23269fb82e0b1687904f9/releases/65d233c5449bbb741dc6aecb/img/rectangle-10.png" />
-          <img class="rectangle-5" alt="Rectangle"
-            src="https://cdn.animaapp.com/projects/65d23269fb82e0b1687904f9/releases/65d233c5449bbb741dc6aecb/img/rectangle-6.png" />
-          <img class="rectangle-6" alt="Rectangle"
-            src="https://cdn.animaapp.com/projects/65d23269fb82e0b1687904f9/releases/65d233c5449bbb741dc6aecb/img/rectangle-7.png" />
-          <img class="rectangle-7" alt="Rectangle"
-            src="https://cdn.animaapp.com/projects/65d23269fb82e0b1687904f9/releases/65d233c5449bbb741dc6aecb/img/rectangle-8.png" />
-          <img class="rectangle-8" alt="Rectangle"
-            src="https://cdn.animaapp.com/projects/65d23269fb82e0b1687904f9/releases/65d233c5449bbb741dc6aecb/img/rectangle-9.png" />
+          <!--Here I have added a tags to the imgs, enter page locations to the href accordingly-->
+          <a href="#"><img class="img" alt="Rectangle"
+            src="https://cdn.animaapp.com/projects/65d23269fb82e0b1687904f9/releases/65d233c5449bbb741dc6aecb/img/rectangle-10.png" /></a>
+          <a href="#"><img class="rectangle-5" alt="Rectangle"
+            src="https://cdn.animaapp.com/projects/65d23269fb82e0b1687904f9/releases/65d233c5449bbb741dc6aecb/img/rectangle-6.png" /></a>
+          <a href="#"><img class="rectangle-6" alt="Rectangle"
+            src="https://cdn.animaapp.com/projects/65d23269fb82e0b1687904f9/releases/65d233c5449bbb741dc6aecb/img/rectangle-7.png" /></a>
+          <a href="#"><img class="rectangle-7" alt="Rectangle"
+            src="https://cdn.animaapp.com/projects/65d23269fb82e0b1687904f9/releases/65d233c5449bbb741dc6aecb/img/rectangle-8.png" /></a>
+          <a href="#"><img class="rectangle-8" alt="Rectangle"
+            src="https://cdn.animaapp.com/projects/65d23269fb82e0b1687904f9/releases/65d233c5449bbb741dc6aecb/img/rectangle-9.png" /></a>
           <div class="text-wrapper-9">Car</div>
           <div class="text-wrapper-10">Mini Car</div>
           <div class="text-wrapper-11">Van</div>
@@ -38,13 +39,14 @@ import TheWelcome from '../components/TheWelcome.vue'
         </div>
       </div>
       <div class="tour">
-        <img class="rectangle-9" alt="Rectangle"
-          src="https://cdn.animaapp.com/projects/65d23269fb82e0b1687904f9/releases/65d233c5449bbb741dc6aecb/img/rectangle-11.png" />
+        <!--Here I have added a tags to the imgs, enter page locations to the href accordingly-->
+        <a href="#"><img class="rectangle-9" alt="Rectangle"
+          src="https://cdn.animaapp.com/projects/65d23269fb82e0b1687904f9/releases/65d233c5449bbb741dc6aecb/img/rectangle-11.png" /></a>
         <div class="text-wrapper-19">Tours</div>
-        <img class="rectangle-10" alt="Rectangle"
-          src="https://cdn.animaapp.com/projects/65d23269fb82e0b1687904f9/releases/65d233c5449bbb741dc6aecb/img/rectangle-12.png" />
-        <img class="rectangle-11" alt="Rectangle"
-          src="https://cdn.animaapp.com/projects/65d23269fb82e0b1687904f9/releases/65d233c5449bbb741dc6aecb/img/rectangle-13.png" />
+        <a href="#"><img class="rectangle-10" alt="Rectangle"
+          src="https://cdn.animaapp.com/projects/65d23269fb82e0b1687904f9/releases/65d233c5449bbb741dc6aecb/img/rectangle-12.png" /></a>
+          <a href="#"><img class="rectangle-11" alt="Rectangle"
+          src="https://cdn.animaapp.com/projects/65d23269fb82e0b1687904f9/releases/65d233c5449bbb741dc6aecb/img/rectangle-13.png" /></a>
         <div class="text-wrapper-20">Historical Tour</div>
         <div class="text-wrapper-21">Tea Country tour</div>
         <div class="text-wrapper-22">Sigiriya tour</div>
@@ -62,12 +64,14 @@ import TheWelcome from '../components/TheWelcome.vue'
         </p>
       </div>
       <div class="reviews">
+        <!--Here I have added a tags to the imgs, enter page locations to the href accordingly-->
         <div class="overlap-2">
           <p class="text-wrapper-24">
             &#34;Absolutely loved my stay! The accommodation was clean, comfortable, and the staff went above and
             beyond to make my experience unforgettable. Will definitely book again.&#34;
           </p>
-          <div class="overlap-group-2" />
+          <a href="#"><img class="ellipse review-img" 
+            src="../assets/stickman.jpg" /></a>
         </div>
         <div class="rectangle-12" />
         <div class="overlap-3">
@@ -75,49 +79,50 @@ import TheWelcome from '../components/TheWelcome.vue'
             &#34;Great value for money! The room was cozy, and the location was convenient. The booking platform made
             everything easy. A delightful experience overall, and I&#39;ll be back for sure.&#34;
           </p>
-          <img class="ellipse review-img" alt="Ellipse"
-            src="../assets/images/ellipse_2.png" />
+          <a href="#"><img class="ellipse review-img" 
+            src="../assets/stickman.jpg" /></a>
         </div>
         <div class="overlap-4">
           <p class="great-value-for">
             &#34;Great value for money! The room was cozy, and the location was convenient. The booking platform made
             everything easy. A delightful experience overall, and I&#39;ll be back for sure.&#34;
           </p>
-          <img class="ellipse-2 review-img" alt="Ellipse"
-          src="../assets/images/ellipse_2.png" />
+          <a href="#"><img class="ellipse-2 review-img"
+          src="../assets/stickman.jpg" /></a>
         </div>
         <div class="overlap-5">
           <div class="ellipse-3" />
           <div class="ellipse-4" />
         </div>
-        <img class="ellipse-5 review-img" alt="Ellipse"
-         src="../assets/images/ellipse_2.png" />
+        <a href="#"><img class="ellipse-5 review-img"
+        src="../assets/stickman.jpg" /></a>
         <div class="overlap-6">
           <p class="text-wrapper-24">
             &#34;Picturesque location! The booking process was seamless, and the property exceeded expectations. From
             the amenities to the service, everything was top-notch. Highly recommend this gem.&#34;
           </p>
           <div class="overlap-group-2">
-            <img class="ellipse-6 review-img" alt="Ellipse"
-              src="../assets/images/ellipse_2.png" />
+            <a href="#"><img class="ellipse-6 review-img"
+            src="../assets/stickman.jpg" /></a>
           </div>
         </div>
       </div>
       <div class="hotels">
+        <!--Here I have added a tags to the imgs, enter page locations to the href accordingly-->
         <div class="overlap-7">
           <div class="rectangle-13" />
-          <img class="rectangle-14" alt="Rectangle"
-            src="https://cdn.animaapp.com/projects/65d23269fb82e0b1687904f9/releases/65d233c5449bbb741dc6aecb/img/rectangle-24.png" />
-          <img class="rectangle-15" alt="Rectangle"
-            src="https://cdn.animaapp.com/projects/65d23269fb82e0b1687904f9/releases/65d233c5449bbb741dc6aecb/img/rectangle-25.png" />
-          <img class="rectangle-16" alt="Rectangle"
-            src="https://cdn.animaapp.com/projects/65d23269fb82e0b1687904f9/releases/65d233c5449bbb741dc6aecb/img/rectangle-26.png" />
-          <img class="rectangle-17" alt="Rectangle"
-            src="https://cdn.animaapp.com/projects/65d23269fb82e0b1687904f9/releases/65d233c5449bbb741dc6aecb/img/rectangle-27.png" />
-          <img class="rectangle-18" alt="Rectangle"
-            src="https://cdn.animaapp.com/projects/65d23269fb82e0b1687904f9/releases/65d233c5449bbb741dc6aecb/img/rectangle-28.png" />
-          <img class="rectangle-19" alt="Rectangle"
-            src="https://cdn.animaapp.com/projects/65d23269fb82e0b1687904f9/releases/65d233c5449bbb741dc6aecb/img/rectangle-29.png" />
+          <a href="#"><img class="rectangle-14" alt="Rectangle"
+            src="https://cdn.animaapp.com/projects/65d23269fb82e0b1687904f9/releases/65d233c5449bbb741dc6aecb/img/rectangle-24.png" /></a>
+            <a href="#"><img class="rectangle-15" alt="Rectangle"
+            src="https://cdn.animaapp.com/projects/65d23269fb82e0b1687904f9/releases/65d233c5449bbb741dc6aecb/img/rectangle-25.png" /></a>
+            <a href="#"><img class="rectangle-16" alt="Rectangle"
+            src="https://cdn.animaapp.com/projects/65d23269fb82e0b1687904f9/releases/65d233c5449bbb741dc6aecb/img/rectangle-26.png" /></a>
+            <a href="#"><img class="rectangle-17" alt="Rectangle"
+            src="https://cdn.animaapp.com/projects/65d23269fb82e0b1687904f9/releases/65d233c5449bbb741dc6aecb/img/rectangle-27.png" /></a>
+            <a href="#"><img class="rectangle-18" alt="Rectangle"
+            src="https://cdn.animaapp.com/projects/65d23269fb82e0b1687904f9/releases/65d233c5449bbb741dc6aecb/img/rectangle-28.png" /></a>
+            <a href="#"><img class="rectangle-19" alt="Rectangle"
+            src="https://cdn.animaapp.com/projects/65d23269fb82e0b1687904f9/releases/65d233c5449bbb741dc6aecb/img/rectangle-29.png" /></a>
           <div class="text-wrapper-25">Hotel 1</div>
           <div class="text-wrapper-26">Hotel 2</div>
           <div class="text-wrapper-27">Hotel 3</div>
@@ -140,9 +145,13 @@ import TheWelcome from '../components/TheWelcome.vue'
             your travel dreams into reality, providing you with memorable moments and unparalleled hospitality.
             Discover, book, and embark on your next journey with BookKing. Your adventure begins here.
           </p>
-          <img class="BOOK-king-removebg-2" alt="Book king removebg"
-            src="https://cdn.animaapp.com/projects/65d23269fb82e0b1687904f9/releases/65d233c5449bbb741dc6aecb/img/book-king-removebg-preview-2.png" />
-          <div class="text-wrapper-33">Read More</div>
+          <!--put the home page location to this href-->
+          <a href="#"><img class="BOOK-king-removebg-2" alt="Book king removebg"
+            src="https://cdn.animaapp.com/projects/65d23269fb82e0b1687904f9/releases/65d233c5449bbb741dc6aecb/img/book-king-removebg-preview-2.png" /></a>
+            <!--when clicked redirects to the home page-->
+
+            <!--put the about us page location to this href-->
+          <div class="text-wrapper-33"><a href="#" style="color: white; text-decoration: none;">Read More</a></div>
         </div>
       </div>
     </div>
@@ -151,6 +160,9 @@ import TheWelcome from '../components/TheWelcome.vue'
 
 
 <style scoped>
+
+
+
 .index {
   background-color: #ffffff;
   display: flex;
@@ -161,7 +173,7 @@ import TheWelcome from '../components/TheWelcome.vue'
 }
 
 .index .div {
-  background-color: #ffffff;
+  background-color: #fbfdd5;
   height: 4148px;
   overflow: hidden;
   position: relative;
@@ -215,7 +227,7 @@ import TheWelcome from '../components/TheWelcome.vue'
   left: 1445px;
   position: absolute;
   top: 60px;
-  width: 65px;
+  width: 100%;
 }
 
 .index .text-wrapper {
@@ -228,7 +240,7 @@ import TheWelcome from '../components/TheWelcome.vue'
   line-height: normal;
   position: absolute;
   top: 70px;
-  width: 37px;
+  width: 100%;
 }
 
 .index .text-wrapper-2 {
@@ -241,7 +253,7 @@ import TheWelcome from '../components/TheWelcome.vue'
   line-height: normal;
   position: absolute;
   top: 71px;
-  width: 54px;
+  width: 100%;
 }
 
 .index .text-wrapper-3 {
@@ -267,7 +279,7 @@ import TheWelcome from '../components/TheWelcome.vue'
   line-height: normal;
   position: absolute;
   top: 70px;
-  width: 67px;
+  width: 100%;
 }
 
 .index .text-wrapper-5 {
@@ -280,7 +292,7 @@ import TheWelcome from '../components/TheWelcome.vue'
   line-height: normal;
   position: absolute;
   top: 71px;
-  width: 55px;
+  width: 100%;
 }
 
 .index .rectangle-4 {
@@ -290,7 +302,7 @@ import TheWelcome from '../components/TheWelcome.vue'
   left: 1833px;
   position: absolute;
   top: 65px;
-  width: 65px;
+  width: 100%;
 }
 
 .index .text-wrapper-6 {
@@ -303,7 +315,7 @@ import TheWelcome from '../components/TheWelcome.vue'
   line-height: normal;
   position: absolute;
   top: 71px;
-  width: 33px;
+  width: 100%;
 }
 
 .index .BOOK-king-removebg {
@@ -725,6 +737,7 @@ import TheWelcome from '../components/TheWelcome.vue'
   position: absolute;
   top: 20px;
   width: 120px;
+  border-radius: 500px;
 }
 
 .index .overlap-4 {
@@ -756,8 +769,9 @@ import TheWelcome from '../components/TheWelcome.vue'
   left: 34px;
   object-fit: cover;
   position: absolute;
-  top: 33px;
+  top: 20px;
   width: 120px;
+  border-radius: 500px;
 }
 
 .index .overlap-5 {
@@ -776,16 +790,17 @@ import TheWelcome from '../components/TheWelcome.vue'
   position: absolute;
   top: 0;
   width: 120px;
+  border-radius: 500px;
 }
 
 .index .ellipse-4 {
   background-color: #e12929;
-  border-radius: 60px;
   height: 120px;
   left: 8px;
   position: absolute;
   top: 0;
   width: 120px;
+  border-radius: 500px;
 }
 
 .index .ellipse-5 {
@@ -795,6 +810,7 @@ import TheWelcome from '../components/TheWelcome.vue'
   position: absolute;
   top: 5182px;
   width: 120px;
+  border-radius: 500px;
 }
 
 .index .overlap-6 {
@@ -815,6 +831,7 @@ import TheWelcome from '../components/TheWelcome.vue'
   position: absolute;
   top: 0;
   width: 120px;
+  border-radius: 500px;
 }
 
 .index .hotels {
@@ -822,7 +839,7 @@ import TheWelcome from '../components/TheWelcome.vue'
   left: -115px;
   position: absolute;
   top: 2480px;
-  width: 2148px;
+  width: 100%;
 }
 
 .index .overlap-7 {
@@ -842,7 +859,7 @@ import TheWelcome from '../components/TheWelcome.vue'
   left: 0;
   position: absolute;
   top: 81px;
-  width: 2134px;
+  width: 7680px;
 }
 
 .index .rectangle-14 {
@@ -985,10 +1002,11 @@ import TheWelcome from '../components/TheWelcome.vue'
 
 .index .about-us {
   height: 900px;
-  left: 0;
   position: absolute;
   top: 3392px;
   width: 100%;
+  
+  
 }
 
 .index .overlap-8 {
@@ -1009,10 +1027,11 @@ import TheWelcome from '../components/TheWelcome.vue'
 .index .rectangle-21 {
   background-color: #000000;
   height: 601px;
-  left: 12px;
+  left: 0.2%;
   position: absolute;
   top: 139px;
-  width: 1894px;
+  width: 7680px;
+  
 }
 
 .index .text-wrapper-32 {
@@ -1026,12 +1045,12 @@ import TheWelcome from '../components/TheWelcome.vue'
   position: absolute;
   text-align: right;
   top: 248px;
-  width: 762px;
+  width: 50%;
 }
 
 .index .BOOK-king-removebg-2 {
   height: 908px;
-  left: 800px;
+  left: 50%;
   object-fit: cover;
   position: absolute;
   top: 0;
@@ -1039,7 +1058,7 @@ import TheWelcome from '../components/TheWelcome.vue'
 }
 
 .index .text-wrapper-33 {
-  color: #000000;
+  color: #ffffff;
   font-family: "Poppins", Helvetica;
   font-size: 20px;
   font-weight: 500;
@@ -1047,7 +1066,6 @@ import TheWelcome from '../components/TheWelcome.vue'
   letter-spacing: 1.8px;
   line-height: normal;
   position: absolute;
-  text-decoration: underline;
   top: 663px;
 }
 
