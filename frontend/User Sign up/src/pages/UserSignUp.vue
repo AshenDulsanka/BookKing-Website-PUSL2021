@@ -2,57 +2,56 @@
   <div class="service-provider-login1">
     <newheader />
     <br>
-    
-   
+
     <section class="header-frame-wrapper">
       <div class="header-frame">
         <EmailRectangle />
         <div class="password-input-frame">
-       
+
           <div class="login-image">
             <img class="loginimg-icon" loading="lazy" alt="" src="../signup.png"/>
             <div class="already-have-account-message">
-              <a href="#">You don't have an account?</a>
+              <a href="#">Already have an account?</a>
             </div>
             <div class="already-have-account-message">
-              <a href="#">Service Provider Login</a>
+              <a href="#">Are you a Service Provider?</a>
             </div>
           </div>
         </div>
       </div>
     </section>
-    
+
     <br>
     <br>
     <br>
     <br>
-    
+
     <newfooter />
-    
+
   </div>
 </template>
 <script>
-  import { defineComponent } from "vue";
-  
-  import EmailRectangle from "../components/EmailRectangle.vue"; 
-  import newfooter from "@/components/newfooter.vue";
-  import newheader from "@/components/newheader.vue";
-  
+import { defineComponent } from 'vue'
 
-  export default defineComponent({
-    name: "ServiceProviderLogin1",
-    components: {newheader ,EmailRectangle,  newfooter, },
-  });
+import EmailRectangle from '../components/EmailRectangle.vue'
+import newfooter from '@/components/newfooter.vue'
+import newheader from '@/components/newheader.vue'
+
+export default defineComponent({
+  name: 'UserSignUp',
+  components: {newheader, EmailRectangle, newfooter}
+})
 </script>
 <style scoped>
   a{
     text-decoration: underline;
     color: black;
   }
-  
+
   .loginimg-icon {
     align-self: stretch;
     height: 250px;
+    width: 350px;
     position: relative;
     max-width: 100%;
     overflow: hidden;
@@ -94,7 +93,7 @@
     flex-direction: row;
     align-items: flex-start;
     justify-content: flex-start;
-    padding: 0px 44px;
+    padding: 0px 84px;
     box-sizing: border-box;
     max-width: 100%;
   }
