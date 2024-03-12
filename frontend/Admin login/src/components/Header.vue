@@ -17,17 +17,17 @@
 
 <script>
 export default {
-  data() {
+  data () {
     return {
       username: '',
       password: ''
     }
   },
   methods: {
-    handleSubmit() {
+    handleSubmit () {
       // In a real app, you'd send an authentication request to your backend
-      console.log('Username:', this.username);
-      console.log('Password:', this.password); 
+      console.log('Username:', this.username)
+      console.log('Password:', this.password)
     }
   }
 }

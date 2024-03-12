@@ -1,5 +1,5 @@
 <template>
-    <title>USer Sign Up</title>
+  <title>Service Provider Login</title>
   <Header>
         <nav>
             <img src="../logo.png" alt="" class="img">
@@ -18,7 +18,6 @@
                 </div>
         </nav>
   </Header>
-
 </template>
 
 <style scoped>
@@ -31,30 +30,29 @@
         object-fit: cover;
         margin-top:-35px;
     }
-    
+
     a:hover {
         background-color: yellow;
         color: black;
         font-weight: bold;
-        
     }
     .login{
         color: yellow;
-        font-weight: bolder;      
-    }    
+        font-weight: bolder;
+    }
     .login:hover{
         background-color:yellow;
-        color: black        ;
+        color: black;
     }
     Header {
     background-color: #000000;
     padding: 20px;
     text-align: right;
-    
+
     top:0px;
     bottom: 0;
     width: 100%;
-    height: 50px;    
+    height: 50px;
     }
 
     Header nav ul {
@@ -69,7 +67,6 @@
     display: inline-block;
     margin-right: 15px;
     font-weight: bold
-    
     }
 
     Header nav a {
@@ -79,12 +76,11 @@
     font-style:normal;
     color:white;
     text-decoration: none;
-    display: block; 
-    padding: 15px 20px; 
-    text-decoration: none; 
+    display: block;
+    padding: 15px 20px;
+    text-decoration: none;
     font-size: 14px;
     font-weight: 600;
     }
-    
-    
+
 </style>
