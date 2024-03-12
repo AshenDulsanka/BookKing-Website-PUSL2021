@@ -8,7 +8,7 @@
     <br>
     <section class="header-frame-wrapper">
       <div class="header-frame">
-        <EmailRectangle />
+        <userLoginContent />
         <div class="password-input-frame">
 
           <div class="login-image">
@@ -30,13 +30,13 @@
 <script>
 import { defineComponent } from 'vue'
 
-import EmailRectangle from '../components/EmailRectangle.vue'
+import userLoginContent from '../components/userLoginContent.vue'
 import newfooter from '@/components/newfooter.vue'
 import newheader from '@/components/newheader.vue'
 
 export default defineComponent({
   name: 'userLogin',
-  components: {newheader, EmailRectangle, newfooter}
+  components: {newheader, userLoginContent, newfooter}
 })
 </script>
 <style scoped>
