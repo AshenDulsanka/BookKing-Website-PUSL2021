@@ -4,13 +4,41 @@
     <main :class="$style.reviewsInner">
       <section :class="$style.reviewsParent">
         <h1 :class="$style.reviews1">Reviews</h1>
-        <reviewsFrame /><reviewsFrame /><reviewsFrame /><reviewsFrame /><reviewsFrame /><reviewsFrame /><reviewsFrame />
+        <reviewsFrame 
+          reviewText="Great value for money, the room was clean and the staff were very helpful. The location was great, close to the beach and the main road. Would definitely stay again."
+          image="../../src/User.png"
+        />
+        <reviewsFrame 
+          reviewText="Great value for money, the room was clean and the staff were very helpful. The location was great, close to the beach and the main road. Would definitely stay again."
+          image="../../src/User.png"
+        />
+        <reviewsFrame 
+          reviewText="Great value for money, the room was clean and the staff were very helpful. The location was great, close to the beach and the main road. Would definitely stay again."
+          image="../../src/User.png"
+        />
+        <reviewsFrame 
+          reviewText="Great value for money, the room was clean and the staff were very helpful. The location was great, close to the beach and the main road. Would definitely stay again."
+          image="../../src/User.png"
+        />
+        <reviewsFrame 
+          reviewText="Great value for money, the room was clean and the staff were very helpful. The location was great, close to the beach and the main road. Would definitely stay again."
+          image="../../src/User.png"
+        />
+        <reviewsFrame 
+          reviewText="Great value for money, the room was clean and the staff were very helpful. The location was great, close to the beach and the main road. Would definitely stay again."
+          image="../../src/User.png"
+        />
+        <reviewsFrame 
+          reviewText="Great value for money, the room was clean and the staff were very helpful. The location was great, close to the beach and the main road. Would definitely stay again."
+          image="../../src/User.png"
+        />
       </section>
     </main>
     <div :class="$style.reviewsChild" />
     <newfooter />
   </div>
 </template>
+
 <script>
   import { defineComponent } from "vue";
   import newheader from "@/components/newheader.vue";
@@ -22,6 +50,7 @@
     components: { newheader, reviewsFrame, newfooter },
   });
 </script>
+
 <style module>
   .reviews1 {
     margin: 0;
@@ -50,12 +79,12 @@
     font-family: var(--font-tajawal);
   }
   .reviewsInner {
-    width: 1778px;
+    width: 1740px;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     justify-content: flex-start;
-    padding: 0px 0px 361px var(--padding-xl);
+    padding: 0px 0px 290px var(--padding-xl);
     box-sizing: border-box;
     max-width: 100%;
     flex-shrink: 0;
@@ -78,7 +107,7 @@
     flex-direction: column;
     align-items: flex-end;
     justify-content: flex-start;
-    gap: 175px 0px;
+    gap: 80px 0px;
     letter-spacing: normal;
   }
 

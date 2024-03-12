@@ -11,50 +11,48 @@
         </div>
         
         <!-- new hotel frame starts here -->
-        <frame
-          imgSrc="../../ritz.png"
-          hotelName="Cinnoman Grand"
+        <serviceFrame
+          hotelName="Kingsbury"
           price="LKR 20,000"
           propPadding="0px 0px 0px var(--padding-5xs)"
           propPadding1="var(--padding-35xl) 0px 0px"
           propGap="8px 0px"
           belowIsAn="The Kingsbury Hotel is a luxurious 5-star haven in the heart of Colombo, Sri Lanka.  Its prime oceanfront location provides breathtaking views of the Colombo Harbor and Galle Face Green. The hotel offers beautifully designed rooms with modern amenities, a selection of award-winning restaurants serving diverse cuisines, and outstanding facilities. These include a delightful pool, a rejuvenating spa, and a well-equipped fitness center. Whether for business or leisure, the Kingsbury Hotel blends modern luxury with traditional Sri Lankan hospitality, making it an ideal choice for a memorable stay in  Colombo."
-        />
+          image="../../src/Kingsbury.png"
+          />
         <div :class="$style.lineWrapper1">
           <div :class="$style.frameChild1" />
         </div>
         <!-- new hotel frame ends here -->
         
-        <frame
-          rectangle72="/rectangle-72-4@2x.png"
-          hotelName="Kingsbury"
+        <serviceFrame
+          hotelName="Shangrila"
           propPadding="0px 0px 0px var(--padding-5xs)"
           propPadding1="var(--padding-35xl) 0px 0px"
           propGap="8px 0px"
+          image="../../src/Shangrila.png"
         />
         <div :class="$style.lineWrapper2">
           <div :class="$style.frameChild2" />
         </div>
         
-        <frame
-          rectangle72="/rectangle-72-5@2x.png"
+        <serviceFrame
           hotelName="The Ritz"
-          imgSrc="../ritz.png"
           propPadding="0px 0px 0px var(--padding-5xs)"
           propPadding1="var(--padding-35xl) 0px 0px"
           propGap="8px 0px"
+          image="../../src/Ritz.png"
         />
         <div :class="$style.lineWrapper3">
           <div :class="$style.frameChild3" />
         </div>
 
-        <frame
-          rectangle72="/rectangle-72-4@2x.png"
-          hotelName="Kingsbury"
-          imgSrc="../kingsbury.png"
+        <serviceFrame
+          hotelName="Cinnamon Grand"
           propPadding="0px 0px 0px var(--padding-5xs)"
           propPadding1="var(--padding-35xl) 0px 0px"
           propGap="8px 0px"
+          image="../../src/Cinnamon.png"
         />
         <div :class="$style.lineWrapper2">
           <div :class="$style.frameChild2" />

@@ -2,33 +2,19 @@
   <div :class="$style.frameParent">
     <div :class="$style.rectangleParent">
       <div :class="$style.frameChild" />
-      <img
-        :class="$style.starRatingGroup"
-        loading="lazy"
-        alt=""
-        src="../User.png"
-      />
+      <img :class="$style.starRatingGroup" alt="" :src="image"/>
       <div :class="$style.greatValueForMoneyTheRooWrapper">
         <div :class="$style.greatValueFor">
-          "Great value for money! The room was cozy, and the location was
-          convenient. The booking platform made everything easy. A delightful
-          experience overall, and I'll be back for sure."
+          {{reviewText}}
         </div>
       </div>
     </div>
     <div :class="$style.rectangleGroup">
       <div :class="$style.frameItem" />
-      <img
-        :class="$style.reviewSectionIcon"
-        loading="lazy"
-        alt=""
-        src="../User.png"
-      />
+      <img :class="$style.reviewSectionIcon"alt="" :src="image"/>
       <div :class="$style.greatValueForMoneyTheRooContainer">
         <div :class="$style.greatValueFor1">
-          "Great value for money! The room was cozy, and the location was
-          convenient. The booking platform made everything easy. A delightful
-          experience overall, and I'll be back for sure."
+          {{reviewText}}
         </div>
       </div>
     </div>
@@ -40,6 +26,10 @@
 
   export default defineComponent({
     name: "reviewsFrame",
+    props: {
+      reviewText: { type: String },
+      image: { type: String },
+    },
   });
 </script>
 

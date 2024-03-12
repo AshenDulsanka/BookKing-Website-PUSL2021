@@ -4,10 +4,7 @@
       <div :class="$style.frameChild" />
       <div :class="$style.rectangleWrapper">
         <img 
-          :class="$style.frameItem" 
-          loading="eager"
-          alt="" 
-          src={{imgSrc}} />
+          :class="$style.frameItem" alt="" :src="image" />
       </div>
       <div :class="$style.frameInner" />
       <div :class="$style.frameContainer" :style="frameDiv1Style">
@@ -33,13 +30,13 @@
   export default defineComponent({
     name: "serviceFrame",
     props: {
-      imgSrc: { type: String },
       hotelName: { type: String },
       price: { type: String },
       propPadding: { type: [Object, Array, String, Number, Boolean] },
       propPadding1: { type: [Object, Array, String, Number, Boolean] },
       propGap: { type: String },
       belowIsAn: { type: String },
+      image: { type: String },
     },
     computed: {
       frameDivStyle() {
