@@ -1,21 +1,16 @@
 <template>
   <div class="service-provider-login1">
     <Header1 />
-    
-  
- 
   </div>
 </template>
 <script>
-  import { defineComponent } from "vue";
-  import Header1 from "../components/Header.vue";
- 
-  
+import { defineComponent } from 'vue'
+import Header1 from '../components/Header.vue'
 
-  export default defineComponent({
-    name: "ServiceProviderLogin1",
-    components: { Header1 },
-  });
+export default defineComponent({
+  name: 'adminLogin',
+  components: { Header1 }
+})
 </script>
 <style scoped>
   @media screen and (max-width: 1350px) {
