@@ -1,8 +1,11 @@
 <template>
 <title>User Sign Up</title>
   <Header>
+                <a href="facebook.com">
+                    <img src="../logo.png" alt="" class="img">
+                </a>
         <nav>
-            <img src="../logo.png" alt="" class="img">
+                
                 <div class="header">
                     <ul>
                     <li><a href="#">Home</a></li>
