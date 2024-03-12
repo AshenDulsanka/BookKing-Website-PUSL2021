@@ -34,13 +34,15 @@
     </div>
   </div>
 </template>
+
 <script>
   import { defineComponent } from "vue";
 
   export default defineComponent({
-    name: "Frame1",
+    name: "reviewsFrame",
   });
 </script>
+
 <style module>
   .frameChild {
     height: 257px;

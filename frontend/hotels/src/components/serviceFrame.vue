@@ -3,7 +3,11 @@
     <div :class="$style.rectangleParent">
       <div :class="$style.frameChild" />
       <div :class="$style.rectangleWrapper">
-        <img :class="$style.frameItem" alt="" :src="imgSrc" />
+        <img 
+          :class="$style.frameItem" 
+          loading="eager"
+          alt="" 
+          src={{imgSrc}} />
       </div>
       <div :class="$style.frameInner" />
       <div :class="$style.frameContainer" :style="frameDiv1Style">

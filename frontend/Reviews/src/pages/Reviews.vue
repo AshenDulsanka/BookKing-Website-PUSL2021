@@ -4,7 +4,7 @@
     <main :class="$style.reviewsInner">
       <section :class="$style.reviewsParent">
         <h1 :class="$style.reviews1">Reviews</h1>
-        <Frame1 /><Frame1 /><Frame1 /><Frame1 /><Frame1 /><Frame1 /><Frame1 />
+        <reviewsFrame /><reviewsFrame /><reviewsFrame /><reviewsFrame /><reviewsFrame /><reviewsFrame /><reviewsFrame />
       </section>
     </main>
     <div :class="$style.reviewsChild" />
@@ -14,12 +14,12 @@
 <script>
   import { defineComponent } from "vue";
   import newheader from "@/components/newheader.vue";
-  import Frame1 from "../components/Frame1.vue";
+  import reviewsFrame from "../components/reviewsFrame.vue";
   import newfooter from "@/components/newfooter.vue";
 
   export default defineComponent({
     name: "Reviews",
-    components: { newheader, Frame1, newfooter },
+    components: { newheader, reviewsFrame, newfooter },
   });
 </script>
 <style module>
@@ -119,4 +119,4 @@
       gap: 18px 0px;
     }
   }
-</style>
+</style>../components/reviewsFrame.vue
