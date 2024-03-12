@@ -1,21 +1,22 @@
 <template>
   <div :class="$style.singleProductPage">
     <main :class="$style.headerFrame">
-      <newheader/><SigiriatourFrame /><newfooter />
+      <newheader/>
+      <singleProductFrame />
+      <newfooter />
     </main>
-    <b :class="$style.bookNow">Book NOW</b><newfooter />
   </div>
 </template>
 <script>
   import { defineComponent } from "vue";
   import newheader from "@/components/newheader.vue";
-  import SigiriatourFrame from "../components/SigiriatourFrame.vue";
+  import singleProductFrame from "../components/singleProductFrame.vue";
   import newfooter from "@/components/newfooter.vue";
 
 
   export default defineComponent({
-    name: "SingleProductPage2",
-    components: { newheader, SigiriatourFrame, newfooter },
+    name: "SingleProductPage",
+    components: { newheader, singleProductFrame, newfooter },
   });
 </script>
 <style module>
@@ -75,4 +76,4 @@
       gap: 352px 0px;
     }
   }
-</style>
+</style>../components/singleProductFrame.vue

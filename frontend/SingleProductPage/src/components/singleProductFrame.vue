@@ -33,7 +33,7 @@
         </div>
         <div :class="$style.embarkOnJourneyFrame">
           <div :class="$style.embarkOnAContainer">
-            <p :class="$style.embarkOnA">
+            <p :class="$style.embarkOnA1">
               "Embark on a captivating journey to Sigiriya, a UNESCO World
               Heritage site in Sri Lanka. Discover the ancient rock fortress
               rising majestically above lush landscapes, adorned with intricate
@@ -121,7 +121,7 @@
   import { defineComponent } from "vue";
 
   export default defineComponent({
-    name: "SigiriatourFrame",
+    name: "singleProductFrame",
   });
 </script>
 <style module>
