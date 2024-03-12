@@ -27,7 +27,7 @@
   import { defineComponent } from "vue";
 
   export default defineComponent({
-    name: "Frame",
+    name: "serviceFrame",
     props: {
       imgSrc: { type: String },
       hotelName: { type: String },

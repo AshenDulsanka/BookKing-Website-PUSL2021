@@ -73,12 +73,12 @@
   import { defineComponent } from "vue";
 
   import newHeader from "@/components/newheader.vue";
-  import Frame from "../components/Frame.vue";
+  import serviceFrame from "../components/serviceFrame.vue";
   import newfooter from "../components/newfooter.vue";
 
   export default defineComponent({
     name: "Hotels",
-    components: { newHeader, Frame, newfooter },
+    components: { newHeader, serviceFrame, newfooter },
   });
 </script>
 
@@ -692,4 +692,4 @@
       box-sizing: border-box;
     }
   }
-</style>@/components/NewHeader.vue
+</style>@/components/NewHeader.vue../components/serviceFrame.vue
