@@ -8,55 +8,48 @@
     <br>
     <br>
     <br>
-    <br>
-    <br>
-    <br>    
     <section class="header-frame-wrapper">
       <div class="header-frame">
-        <EmailRectangle />
+        <ServiceProviderLoginContent />
         <div class="password-input-frame">
-       
+
           <div class="login-image">
             <img class="loginimg-icon" loading="lazy" alt="" src="../img.png"/>
             <div class="already-have-account-message">
-              <a href="#">You don't have an Service account?</a>
+              <a href="#">You don't have a Service account?</a>
             </div>
             <div class="already-have-account-message">
-              <a href="#">Already have an User account?</a>
+              <a href="#">Already have an user account?</a>
             </div>
           </div>
         </div>
       </div>
     </section>
-    
+
     <br>
-    <br>
-    <br>
-    <br>
-    
     <newfooter />
-    
   </div>
 </template>
+
 <script>
-  import { defineComponent } from "vue";
+import { defineComponent } from 'vue'
 
-  import EmailRectangle from "../components/EmailRectangle.vue";
-  import newheader from "@/components/newheader.vue";
-  import newfooter from "@/components/newfooter.vue";
-  
+import ServiceProviderLoginContent from '../components/ServiceProviderLoginContent.vue'
+import newheader from '@/components/newheader.vue'
+import newfooter from '@/components/newfooter.vue'
 
-  export default defineComponent({
-    name: "ServiceProviderLogin1",
-    components: { newheader , EmailRectangle,  newfooter, },
-  });
+export default defineComponent({
+  name: 'ServiceProviderLogin',
+  components: { newheader, ServiceProviderLoginContent, newfooter }
+})
 </script>
+
 <style scoped>
   a{
     text-decoration: underline;
     color: black;
   }
-  
+
   .loginimg-icon {
     align-self: stretch;
     height: 205px;

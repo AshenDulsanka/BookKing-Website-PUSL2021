@@ -3,19 +3,18 @@
         <nav>
             <ul>
             <li><a href="#">Home</a></li>
-            <li><a href="#">Vehicles</a></li> 
-            <li><a href="#">Hotels</a></li>                      
+            <li><a href="#">Vehicles</a></li>
+            <li><a href="#">Hotels</a></li>
             <li><a href="#">Tours</a></li>
             <li><a href="#">Reviews</a></li>
             <li><a href="#">Contact us</a></li>
-            <li><a href="#">About us</a></li>        
+            <li><a href="#">About us</a></li>
             <li><a  class="login" href="#">Login</a></li>
             </ul>
         </nav>
     </footer>
 
 </template>
-
 
 <style scoped>
     a:hover {
@@ -38,7 +37,7 @@
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 2.5rem;    
+    height: 2.5rem;
     }
 
     footer nav ul {
@@ -59,11 +58,9 @@
     font-style: normal;
     color: rgb(255, 255, 255);
     text-decoration: none;
-    display: block; 
-    padding: 10px 20px; 
-    text-decoration: none; 
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
     font-size: 14px;
     }
-    
-    
 </style>
