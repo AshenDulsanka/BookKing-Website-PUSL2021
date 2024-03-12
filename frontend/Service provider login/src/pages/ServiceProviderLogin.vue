@@ -10,16 +10,16 @@
     <br>
     <section class="header-frame-wrapper">
       <div class="header-frame">
-        <EmailRectangle />
+        <ServiceProviderLoginContent />
         <div class="password-input-frame">
 
           <div class="login-image">
             <img class="loginimg-icon" loading="lazy" alt="" src="../img.png"/>
             <div class="already-have-account-message">
-              <a href="#">You don't have an Service account?</a>
+              <a href="#">You don't have a Service account?</a>
             </div>
             <div class="already-have-account-message">
-              <a href="#">Already have an User account?</a>
+              <a href="#">Already have an user account?</a>
             </div>
           </div>
         </div>
@@ -34,13 +34,13 @@
 <script>
 import { defineComponent } from 'vue'
 
-import EmailRectangle from '../components/EmailRectangle.vue'
+import ServiceProviderLoginContent from '../components/ServiceProviderLoginContent.vue'
 import newheader from '@/components/newheader.vue'
 import newfooter from '@/components/newfooter.vue'
 
 export default defineComponent({
   name: 'ServiceProviderLogin',
-  components: { newheader, EmailRectangle, newfooter }
+  components: { newheader, ServiceProviderLoginContent, newfooter }
 })
 </script>
 
