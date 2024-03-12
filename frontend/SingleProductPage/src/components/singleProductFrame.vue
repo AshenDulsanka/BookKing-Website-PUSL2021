@@ -10,27 +10,24 @@
         <div :class="$style.locationFrame">
           <div :class="$style.pricePerPersonFrame">
             <b :class="$style.location">Location</b>
-            <b :class="$style.location1">Location</b>
+            
           </div>
           <div :class="$style.seegiriyaLocation">
             <div :class="$style.seegiriyaSrilanka">Seegiriya SriLanka</div>
-            <div :class="$style.seegiriyaSrilanka1">Seegiriya SriLanka</div>
+            
           </div>
         </div>
         <div :class="$style.locationFrame1">
           <div :class="$style.pricePerPersonParent">
             <b :class="$style.pricePerPerson">Price per person</b>
-            <b :class="$style.pricePerPerson1">Price per person</b>
+            
           </div>
           <div :class="$style.rs150000Parent">
             <div :class="$style.rs150000">Rs.150 000</div>
-            <div :class="$style.rs1500001">Rs.150 000</div>
+            
           </div>
         </div>
-        <div :class="$style.sigiriyaTour">
-          <h1 :class="$style.sigiriyaTour1">Sigiriya tour</h1>
-          <h1 :class="$style.sigiriyaTour2">Sigiriya tour</h1>
-        </div>
+       
         <div :class="$style.embarkOnJourneyFrame">
           <div :class="$style.embarkOnAContainer">
             <p :class="$style.embarkOnA1">
@@ -45,19 +42,7 @@
               enthusiasts and nature lovers alike."
             </p>
           </div>
-          <div :class="$style.embarkOnAContainer1">
-            <p :class="$style.embarkOnA1">
-              "Embark on a captivating journey to Sigiriya, a UNESCO World
-              Heritage site in Sri Lanka. Discover the ancient rock fortress
-              rising majestically above lush landscapes, adorned with intricate
-              frescoes and the iconic Lion's Paw entrance. Immerse yourself in
-              the rich history as you explore the archaeological wonders, from
-              the royal gardens to the summit with breathtaking panoramic views.
-              A Sigiriya tour promises a blend of cultural marvels and natural
-              beauty, offering an unforgettable experience for history
-              enthusiasts and nature lovers alike."
-            </p>
-          </div>
+          
         </div>
         <div :class="$style.singleProductPage">
           <div :class="$style.vipAccessToContainer">
@@ -80,32 +65,12 @@
               <li>Luxury Accommodation Packages</li>
             </ul>
           </div>
-          <div :class="$style.vipAccessToContainer1">
-            <ul :class="$style.vipAccessToSigiriyaFortres1">
-              <li :class="$style.vipAccessTo1">
-                VIP Access to Sigiriya Fortress
-              </li>
-              <li :class="$style.scenicHelicopterRide1">
-                Scenic Helicopter Ride Upgrade
-              </li>
-              <li :class="$style.culturalInsightsWith1">
-                Cultural Insights with Knowledgeable Guides
-              </li>
-              <li :class="$style.gourmetPicnicAt1">
-                Gourmet Picnic at Royal Gardens
-              </li>
-              <li :class="$style.exclusiveSunsetTours1">
-                Exclusive Sunset Tours
-              </li>
-              <li>Luxury Accommodation Packages</li>
-            </ul>
-          </div>
+          
         </div>
       </div>
       <div :class="$style.singleProductPageFrame">
         <div :class="$style.productPageFrame">
           <h1 :class="$style.singleProductPage1">Single product Page</h1>
-          <h1 :class="$style.singleProductPage2">Single product Page</h1>
         </div>
         <img
           :class="$style.contactFooterIcon"

@@ -19,7 +19,13 @@
         <div class="email1">Address</div>
         <input class="frame-item" type="text" />
         <div class="email1">What we do</div>
+<<<<<<< HEAD:frontend/Service provide sign up/src/components/EmailRectangle.vue
+        <textarea class="frame-item1" name="wat we do" rows="4" cols="50">
+          
+        </textarea>
+=======
         <textarea class="frame-item1" name="wat we do" rows="4" cols="50"></textarea>
+>>>>>>> e9307ee92bd427e172d596c0632075877beb6569:frontend/Service provider sign up/src/components/serviceProviderSignUpContent.vue
       </div>
     </div>
     <a href="#">
