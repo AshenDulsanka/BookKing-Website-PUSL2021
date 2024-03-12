@@ -27,10 +27,7 @@
             
           </div>
         </div>
-        <div :class="$style.sigiriyaTour">
-          <h1 :class="$style.sigiriyaTour1">Sigiriya tour</h1>
-          
-        </div>
+       
         <div :class="$style.embarkOnJourneyFrame">
           <div :class="$style.embarkOnAContainer">
             <p :class="$style.embarkOnA1">
