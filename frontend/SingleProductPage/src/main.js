@@ -2,14 +2,14 @@ import { createApp } from "vue";
 import { createRouter, createWebHistory } from "vue-router";
 import App from "./App.vue";
 
-import SingleProductPage2 from "./pages/SingleProductPage2.vue";
+import SingleProductPage from "./pages/SingleProductPage.vue";
 import "./global.css";
 
 const routes = [
   {
     path: "/",
     name: "SingleProductPage2",
-    component: SingleProductPage2,
+    component: SingleProductPage,
   },
 ];
 
@@ -20,7 +20,7 @@ const router = createRouter({
 
 router.beforeEach((toRoute, fromRoute, next) => {
   const documentTitle =
-    toRoute?.meta && toRoute?.meta?.title ? toRoute?.meta?.title : "BookKing";
+    toRoute?.meta && toRoute?.meta?.title ? toRoute?.meta?.title : "BookKing Product Page";
   window.document.title = documentTitle;
   if (toRoute?.meta?.description) {
     addMetaTag(toRoute?.meta?.description);

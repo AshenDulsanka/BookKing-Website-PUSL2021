@@ -1,132 +1,63 @@
 <template>
   <div :class="$style.hotels">
     <div :class="$style.hotelsChild" />
-    <NewHeader />
+    <newHeader />
     <main :class="$style.hotelsInner">
       <section :class="$style.frameParent">
         <div :class="$style.frameWrapper">
           <div :class="$style.frameGroup">
-            <div :class="$style.hotelsWrapper">
-              <b :class="$style.hotels1">Hotels</b>
-            </div>
             <h1 :class="$style.hotels2">Hotels</h1>
           </div>
         </div>
-        <MainContent />
-        <div :class="$style.lineWrapper">
-          <div :class="$style.frameChild" />
-        </div>
-        <EventsFrame />
-        <div :class="$style.lineContainer">
-          <div :class="$style.frameItem" />
-        </div>
-        <div :class="$style.palaceHotelWrapper">
-          <div :class="$style.palaceHotel">
-            <div :class="$style.palaceHotelChild" />
-            <div :class="$style.palaceHotelInner">
-              <img
-                :class="$style.frameInner"
-                alt=""
-                src="../Raffles.png"
-              />
-            </div>
-            <div :class="$style.majesticHotel" />
-            <div :class="$style.frameDiv">
-              <div :class="$style.budgetHostelsParent">
-                <div :class="$style.budgetHostels">
-                  <b :class="$style.r">shangri-la</b>
-                  <div :class="$style.belowIsAnExampleOfAGoodWrapper">
-                    <div :class="$style.belowIsAn">
-                      Below is an example of a good car description for a
-                      higher-mileage car that isn't in perfect condition but is
-                      in excellent mechanical shape: Selling to get a family car
-                      — just had first child. 33 MPG and runs great. All
-                      scheduled maintenance, including regular oil changes.Below
-                      is an example of a good car description for a
-                      higher-mileage car that isn't in perfect condition but is
-                      in excellent mechanical shape: Selling to get a family car
-                      — just had first child. 33 MPG and runs great. All
-                      scheduled maintenance, including regular oil changes.
-                    </div>
-                  </div>
-                </div>
-                <div :class="$style.groupFrame">
-                  <button :class="$style.rectangleParent">
-                    <div :class="$style.rectangleDiv" />
-                    <b :class="$style.bookNow">Book NOW</b>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div :class="$style.lineFrame">
-          <div :class="$style.lineDiv" />
-        </div>
-        <frame
-          rectangle72="/rectangle-72-3@2x.png"
-          cinnomanGrand="Cinnoman Grand"
-        />
-        <div :class="$style.lineWrapper1">
-          <div :class="$style.frameChild1" />
-        </div>
-        <frame
-          rectangle72="/rectangle-72-4@2x.png"
-          cinnomanGrand="Kingsbury"
+        
+        <!-- new hotel frame starts here -->
+        <serviceFrame
+          hotelName="Kingsbury"
+          price="LKR 20,000"
           propPadding="0px 0px 0px var(--padding-5xs)"
           propPadding1="var(--padding-35xl) 0px 0px"
           propGap="8px 0px"
+          belowIsAn="The Kingsbury Hotel is a luxurious 5-star haven in the heart of Colombo, Sri Lanka.  Its prime oceanfront location provides breathtaking views of the Colombo Harbor and Galle Face Green. The hotel offers beautifully designed rooms with modern amenities, a selection of award-winning restaurants serving diverse cuisines, and outstanding facilities. These include a delightful pool, a rejuvenating spa, and a well-equipped fitness center. Whether for business or leisure, the Kingsbury Hotel blends modern luxury with traditional Sri Lankan hospitality, making it an ideal choice for a memorable stay in  Colombo."
+          image="../../src/Kingsbury.png"
+          />
+        <div :class="$style.lineWrapper1">
+          <div :class="$style.frameChild1" />
+        </div>
+        <!-- new hotel frame ends here -->
+        
+        <serviceFrame
+          hotelName="Shangrila"
+          propPadding="0px 0px 0px var(--padding-5xs)"
+          propPadding1="var(--padding-35xl) 0px 0px"
+          propGap="8px 0px"
+          image="../../src/Shangrila.png"
         />
         <div :class="$style.lineWrapper2">
           <div :class="$style.frameChild2" />
         </div>
-        <frame
-          rectangle72="/rectangle-72-5@2x.png"
-          cinnomanGrand="The Ritz"
+        
+        <serviceFrame
+          hotelName="The Ritz"
           propPadding="0px 0px 0px var(--padding-5xs)"
-          propPadding1="var(--padding-43xl) 0px 0px"
-          propGap="unset"
+          propPadding1="var(--padding-35xl) 0px 0px"
+          propGap="8px 0px"
+          image="../../src/Ritz.png"
         />
         <div :class="$style.lineWrapper3">
           <div :class="$style.frameChild3" />
         </div>
-        <div :class="$style.footerCTA">
-          <div :class="$style.footerLine">
-            <div :class="$style.logoContainer">
-              <div :class="$style.socialMediaIcons">
-                <img
-                  :class="$style.footerLinksIcon"
-                  alt=""
-                  src="../LaMamounia.png"
-                />
-              </div>
-              <div :class="$style.logoContainerChild" />
-            </div>
-            <div :class="$style.hotelDescriptionWrapper">
-              <div :class="$style.hotelDescription">
-                <div :class="$style.ritzFrame">
-                  <b :class="$style.laMamounia">La Mamounia</b>
-                  <div :class="$style.belowIsAn1">
-                    Below is an example of a good car description for a
-                    higher-mileage car that isn't in perfect condition but is in
-                    excellent mechanical shape: Selling to get a family car —
-                    just had first child. 33 MPG and runs great. All scheduled
-                    maintenance, including regular oil changes.Below is an
-                    example of a good car description for a higher-mileage car
-                    that isn't in perfect condition but is in excellent
-                    mechanical shape: Selling to get a family car — just had
-                    first child. 33 MPG and runs great. All scheduled
-                    maintenance, including regular oil changes.
-                  </div>
-                </div>
-                <button :class="$style.rectangleGroup">
-                  <div :class="$style.frameChild4" />
-                  <b :class="$style.iWantThis">Book NOW</b>
-                </button>
-              </div>
-            </div>
-          </div>
+
+        <serviceFrame
+          hotelName="Cinnamon Grand"
+          propPadding="0px 0px 0px var(--padding-5xs)"
+          propPadding1="var(--padding-35xl) 0px 0px"
+          propGap="8px 0px"
+          image="../../src/Cinnamon.png"
+        />
+        <div :class="$style.lineWrapper2">
+          <div :class="$style.frameChild2" />
         </div>
+
         <div :class="$style.lineWrapper4">
           <div :class="$style.frameChild5" />
         </div>
@@ -138,17 +69,17 @@
 </template>
 <script>
   import { defineComponent } from "vue";
-  import NewHeader from "@/components/newheader.vue";
-  import MainContent from "../components/MainContent.vue";
-  import EventsFrame from "../components/EventsFrame.vue";
-  import Frame from "../components/Frame.vue";
+
+  import newHeader from "@/components/newheader.vue";
+  import serviceFrame from "../components/serviceFrame.vue";
   import newfooter from "../components/newfooter.vue";
 
   export default defineComponent({
     name: "Hotels",
-    components: { NewHeader, MainContent, EventsFrame, Frame, newfooter },
+    components: { newHeader, serviceFrame, newfooter },
   });
 </script>
+
 <style module>
   .hotelsChild {
     width: 1736px;
@@ -558,7 +489,6 @@
     padding: var(--padding-3xs) var(--padding-181xl) var(--padding-4xs)
       var(--padding-156xl);
     background-color: var(--color-yellow-100);
-    width: 449px;
     border-radius: var(--br-sm);
     display: flex;
     flex-direction: row;
@@ -760,4 +690,4 @@
       box-sizing: border-box;
     }
   }
-</style>@/components/NewHeader.vue
+</style>@/components/NewHeader.vue../components/serviceFrame.vue

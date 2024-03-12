@@ -2,14 +2,14 @@ import { createApp } from "vue";
 import { createRouter, createWebHistory } from "vue-router";
 import App from "./App.vue";
 
-import AboutUs1 from "./pages/AboutUs1.vue";
+import AboutUs from "./pages/AboutUs.vue";
 import "./global.css";
 
 const routes = [
   {
     path: "/",
-    name: "AboutUs1",
-    component: AboutUs1,
+    name: "AboutUs",
+    component: AboutUs,
   },
 ];
 
@@ -20,7 +20,7 @@ const router = createRouter({
 
 router.beforeEach((toRoute, fromRoute, next) => {
   const documentTitle =
-    toRoute?.meta && toRoute?.meta?.title ? toRoute?.meta?.title : "BookKing";
+    toRoute?.meta && toRoute?.meta?.title ? toRoute?.meta?.title : "About Us";
   window.document.title = documentTitle;
   if (toRoute?.meta?.description) {
     addMetaTag(toRoute?.meta?.description);
