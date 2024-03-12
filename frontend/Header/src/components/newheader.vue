@@ -10,7 +10,7 @@
                     <li><a href="#">Contact us</a></li>
                     <li><a href="#">About us</a></li>
                     <li><a href="#">Hotels</a></li>
-                    <li><a href="#">Vehicles</a></li>                        
+                    <li><a href="#">Vehicles</a></li>
                     <li><a href="#">Events</a></li>
                     <li><a href="#">Tours</a></li>
                     <li><a  class="login" href="#">Login</a></li>
@@ -31,17 +31,17 @@
         object-fit: cover;
         margin-top:-35px;
     }
-    
+
     a:hover {
         background-color: yellow;
         color: black;
         font-weight: bold;
-        
+
     }
     .login{
         color: yellow;
-        font-weight: bolder;      
-    }    
+        font-weight: bolder;
+    }
     .login:hover{
         background-color:yellow;
         color: black        ;
@@ -54,7 +54,7 @@
     top:0px;
     bottom: 0;
     width: 100%;
-    height: 50px;    
+    height: 50px;
     }
 
     Header nav ul {
@@ -69,7 +69,7 @@
     display: inline-block;
     margin-right: 15px;
     font-weight: bold
-    
+
     }
 
     Header nav a {
@@ -79,12 +79,11 @@
     font-style:normal;
     color:white;
     text-decoration: none;
-    display: block; 
-    padding: 15px 20px; 
-    text-decoration: none; 
+    display: block;
+    padding: 15px 20px;
+    text-decoration: none;
     font-size: 14px;
     font-weight: 600;
     }
-    
-    
+
 </style>
