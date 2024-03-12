@@ -8,19 +8,9 @@
       <div :class="$style.frameInner" />
       <div :class="$style.frameContainer" :style="frameDiv1Style">
         <div :class="$style.frameParent">
-          <div :class="$style.cinnomanGrandParent" :style="frameDiv2Style">
-            <b :class="$style.cinnomanGrand">{{cinnomanGrand}}</b>
-            <div :class="$style.belowIsAn">
-              Below is an example of a good car description for a higher-mileage
-              car that isn't in perfect condition but is in excellent mechanical
-              shape: Selling to get a family car — just had first child. 33 MPG
-              and runs great. All scheduled maintenance, including regular oil
-              changes.Below is an example of a good car description for a
-              higher-mileage car that isn't in perfect condition but is in
-              excellent mechanical shape: Selling to get a family car — just had
-              first child. 33 MPG and runs great. All scheduled maintenance,
-              including regular oil changes.
-            </div>
+          <div :class="$style.hotelNameParent" :style="frameDiv2Style">
+            <b :class="$style.hotelName">{{hotelName}}</b>
+            <div :class="$style.belowIsAn">{{belowIsAn}}</div> 
           </div>
           <button :class="$style.rectangleGroup">
             <div :class="$style.rectangleDiv" />
@@ -38,10 +28,11 @@
     name: "Frame",
     props: {
       rectangle72: { type: String },
-      cinnomanGrand: { type: String },
+      hotelName: { type: String },
       propPadding: { type: [Object, Array, String, Number, Boolean] },
       propPadding1: { type: [Object, Array, String, Number, Boolean] },
       propGap: { type: String },
+      belowIsAn: { type: String },
     },
     computed: {
       frameDivStyle() {
@@ -95,7 +86,7 @@
     box-sizing: border-box;
     z-index: 1;
   }
-  .cinnomanGrand {
+  .hotelName {
     position: relative;
     line-height: 120.31%;
     z-index: 1;
@@ -107,7 +98,7 @@
     font-weight: 300;
     z-index: 1;
   }
-  .cinnomanGrandParent {
+  .hotelNameParent {
     align-self: stretch;
     display: flex;
     flex-direction: column;
