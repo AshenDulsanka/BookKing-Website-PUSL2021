@@ -1,5 +1,5 @@
 <template>
-    <title>USer Sign Up</title>
+    <title>About Us</title>
   <Header>
         <nav>
             <img src="../logo.png" alt="" class="img">
