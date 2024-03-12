@@ -2,20 +2,14 @@
   <div class="service-provider-login1">
     <newheader />
     <br>
-    
-    
+
     <section class="header-frame-wrapper">
       <div class="header-frame">
-        
-        <EmailRectangle />
+
+        <adminDashboardContent />
       </div>
     </section>
-    
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+
     <br>
     <br>
     <br>
@@ -24,29 +18,28 @@
     <br>
     <br>
     <newfooter />
-    
+
   </div>
 </template>
 <script>
-  import { defineComponent } from "vue";
-  
-  import EmailRectangle from "../components/EmailRectangle.vue"; 
-  import newfooter from "@/components/newfooter.vue";
-  
-  import newheader from "@/components/newheader.vue";
-  
+import { defineComponent } from 'vue'
 
-  export default defineComponent({
-    name: "ServiceProviderLogin1",
-    components: {newheader ,EmailRectangle,  newfooter, },
-  });
+import adminDashboardContent from '@/components/adminDashboardContent.vue'
+import newfooter from '@/components/newfooter.vue'
+
+import newheader from '@/components/newheader.vue'
+
+export default defineComponent({
+  name: 'adminDashboard',
+  components: {newheader, adminDashboardContent, newfooter}
+})
 </script>
 <style scoped>
   a{
     text-decoration: underline;
     color: black;
   }
-  
+
   .loginimg-icon {
     align-self: stretch;
     height: 205px;

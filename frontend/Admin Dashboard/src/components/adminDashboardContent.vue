@@ -13,32 +13,32 @@
       <a href="#">
         <img src="../logout.png" alt="Image description" class="img">
       </a>
-      
+
     </div>
-    
+
   </div>
 </template>
 <script>
-  import { defineComponent } from "vue";
+import { defineComponent } from 'vue'
 
-  export default defineComponent({
-    name: "EmailRectangle",
-  });
+export default defineComponent({
+  name: 'adminDashboardContent'
+})
 </script>
 <style scoped>
 
   .dashboardicons{
     margin-top: 100px;
   }
- 
-  .img{    
+
+  .img{
     display:inline;
     list-style: none;
     margin: 0;
     margin-right: 150px;
-    
+
   }
- 
+
   .service-provider-login3 {
     margin: 0;
     height: 15px;
