@@ -16,22 +16,23 @@
         <input class="frame-item" type="text" />
       </div>
     </div>
-    <a href="#">
-        <button class="ok">
-            <div class="ok">OK</div>
-        </button>
-    </a>
     <div class="forgot-password-link">
       <a href="#">Forgot Password</a>
     </div>
+    <a href="#">
+      <button class="ok">
+        <div class="ok">Login</div>
+      </button>
+    </a>
   </div>
 </template>
-<script>
-  import { defineComponent } from "vue";
 
-  export default defineComponent({
-    name: "EmailRectangle",
-  });
+<script>
+import { defineComponent } from 'vue'
+
+export default defineComponent({
+  name: 'EmailRectangle'
+})
 </script>
 <style scoped>
   .ok{
@@ -163,7 +164,7 @@
     text-decoration: none;
     color: rgb(99, 1, 1);
     position: relative;
-    
+
   }
   .forgot-password-link {
     text-decoration: none;
