@@ -3,7 +3,7 @@
     <div :class="$style.rectangleParent">
       <div :class="$style.frameChild" />
       <div :class="$style.rectangleWrapper">
-        <img :class="$style.frameItem" alt="" :src="rectangle72" />
+        <img :class="$style.frameItem" alt="" :src="imgSrc" />
       </div>
       <div :class="$style.frameInner" />
       <div :class="$style.frameContainer" :style="frameDiv1Style">
@@ -11,6 +11,8 @@
           <div :class="$style.hotelNameParent" :style="frameDiv2Style">
             <b :class="$style.hotelName">{{hotelName}}</b>
             <div :class="$style.belowIsAn">{{belowIsAn}}</div> 
+            <br>
+            <b :class="$style.hotelName">{{price}}</b>
           </div>
           <button :class="$style.rectangleGroup">
             <div :class="$style.rectangleDiv" />
@@ -27,8 +29,9 @@
   export default defineComponent({
     name: "Frame",
     props: {
-      rectangle72: { type: String },
+      imgSrc: { type: String },
       hotelName: { type: String },
+      price: { type: String },
       propPadding: { type: [Object, Array, String, Number, Boolean] },
       propPadding1: { type: [Object, Array, String, Number, Boolean] },
       propGap: { type: String },

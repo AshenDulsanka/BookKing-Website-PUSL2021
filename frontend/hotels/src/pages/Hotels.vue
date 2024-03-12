@@ -6,17 +6,15 @@
       <section :class="$style.frameParent">
         <div :class="$style.frameWrapper">
           <div :class="$style.frameGroup">
-            <!-- <div :class="$style.hotelsWrapper">
-              <b :class="$style.hotels1">Hotels</b>
-            </div> -->
             <h1 :class="$style.hotels2">Hotels</h1>
           </div>
         </div>
         
         <!-- new hotel frame starts here -->
         <frame
-          rectangle72="../ritz.png"
+          imgSrc="../../ritz.png"
           hotelName="Cinnoman Grand"
+          price="LKR 20,000"
           propPadding="0px 0px 0px var(--padding-5xs)"
           propPadding1="var(--padding-35xl) 0px 0px"
           propGap="8px 0px"
