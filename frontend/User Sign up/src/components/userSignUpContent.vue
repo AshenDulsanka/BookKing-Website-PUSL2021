@@ -31,7 +31,7 @@
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-  name: 'EmailRectangle'
+  name: 'userSignUpContent'
 })
 </script>
 <style scoped>
