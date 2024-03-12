@@ -5,7 +5,7 @@
 
     <section class="header-frame-wrapper">
       <div class="header-frame">
-        <EmailRectangle />
+        <serviceProviderSignUpContent />
         <div class="password-input-frame">
           <div class="login-image">
             <img class="loginimg-icon" loading="lazy" alt="" src="../signup.png"/>
@@ -26,13 +26,13 @@
 <script>
 import { defineComponent } from 'vue'
 
-import EmailRectangle from '../components/EmailRectangle.vue'
+import serviceProviderSignUpContent from '../components/serviceProviderSignUpContent.vue'
 import newfooter from '@/components/newfooter.vue'
 import newheader from '@/components/newheader.vue'
 
 export default defineComponent({
   name: 'ServiceProviderSignUp',
-  components: {newheader, EmailRectangle, newfooter}
+  components: {newheader, serviceProviderSignUpContent, newfooter}
 })
 </script>
 <style scoped>
