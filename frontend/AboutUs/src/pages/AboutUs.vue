@@ -7,6 +7,7 @@
     <newfooter />
   </div>
 </template>
+
 <script>
   import { defineComponent } from "vue";
   import newheader from "@/components/newheader.vue";
@@ -14,10 +15,11 @@
   import newfooter from "@/components/newfooter.vue";
 
   export default defineComponent({
-    name: "AboutUs1",
+    name: "AboutUs",
     components: { newheader, WelcomeText, newfooter },
   });
 </script>
+
 <style module>
   .welcomeTextWrapper {
     align-self: stretch;
