@@ -18,7 +18,7 @@
         <input class="frame-item" type="text" />
         <div class="email1">Address</div>
         <input class="frame-item" type="text" />
-        <div class="email1">Wat we do</div>
+        <div class="email1">What we do</div>
         <textarea class="frame-item1" name="wat we do" rows="4" cols="50">
           
         </textarea>
