@@ -6,6 +6,7 @@ import App from './App.vue'
 import UserSignUp from './pages/auth/UserSignUp.vue'
 import userLogin from './pages/auth/userLogin.vue'
 import ServiceProviderSignUp from './pages/auth/ServiceProviderSignUp.vue'
+import ServiceProviderLogin from './pages/auth/ServiceProviderLogin.vue'
 
 //dashboard
 import UserDashboard from './pages/dashboard/UserDashboard.vue'
@@ -30,6 +31,10 @@ const routes = [
   {
     path: '/spsignup',
     component: ServiceProviderSignUp
+  },
+  {
+    path: '/splogin',
+    component: ServiceProviderLogin
   },
 
   //dashboard
