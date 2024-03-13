@@ -18,6 +18,7 @@ import Hotels from './pages/public/Hotels.vue'
 
 //admin
 import adminLogin from './pages/admin/adminLogin.vue'
+import adminDashboard from './pages/admin/adminDashboard.vue'
 
 //css
 import './global.css'
@@ -52,6 +53,10 @@ const routes = [
   {
     path: '/adminlogin',
     component: adminLogin
+  },
+  {
+    path: '/adminDashboard',
+    component: adminDashboard
   },
 
   //public
