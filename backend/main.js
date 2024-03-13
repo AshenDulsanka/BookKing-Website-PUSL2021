@@ -8,9 +8,9 @@ server.use(morgan('combined'))
 server.use(bodyParser.json())
 server.use(cors())
 
-server.get('/status', (req, res) => {
+server.post('/userSignUp', (req, res) => {
   res.send({
-    message: 'hello world'
+    message: `Hello ${req.body.email}! Your user was registered! Have fun!`
   })
 })
 
