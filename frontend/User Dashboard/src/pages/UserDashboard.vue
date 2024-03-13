@@ -14,14 +14,13 @@
 <script>
   import { defineComponent } from "vue";
   
-  import EmailTextInput from "../components/EmailTextInput.vue";
-  
-  import newfooter from "@/components/newfooter.vue";
+  import EmailTextInput from "../components/EmailTextInput.vue";  
+  import newfooter from "@/components/newfooter.vue"; 
   import newheader from "@/components/newheader.vue";
 
   export default defineComponent({
     name: "UserDashboard",
-    components: { newheader ,EmailTextInput,  newfooter },
+    components: { newheader ,EmailTextInput,newfooter   },
   });
 </script>
 <style module>

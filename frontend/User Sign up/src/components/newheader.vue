@@ -4,8 +4,7 @@
                 <a href="facebook.com">
                     <img src="../logo.png" alt="" class="img">
                 </a>
-        <nav>
-                
+            <nav>                
                 <div class="header">
                     <ul>
                     <li><a href="#">Home</a></li>
@@ -19,7 +18,7 @@
                     <li><a  class="login" href="#">Login</a></li>
                     </ul>
                 </div>
-        </nav>
+            </nav>
   </Header>
 
 </template>
