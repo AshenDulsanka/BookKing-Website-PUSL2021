@@ -2,7 +2,7 @@
 <title>User Sign Up</title>
   <Header>
                 <a href="facebook.com">
-                    <img src="../logo.png" alt="" class="img">
+                    <img src="../../../public/assets/logo.png" alt="" class="img">
                 </a>
         <nav>
                 

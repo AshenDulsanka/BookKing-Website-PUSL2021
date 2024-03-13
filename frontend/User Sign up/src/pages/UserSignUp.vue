@@ -9,7 +9,7 @@
         <div class="password-input-frame">
 
           <div class="login-image">
-            <img class="loginimg-icon" loading="lazy" alt="" src="../signup.png"/>
+            <img class="loginimg-icon" loading="lazy" alt="" src="../../public/assets/images/signup.png"/>
             <div class="already-have-account-message">
               <a href="#">Already have an account?</a>
             </div>
@@ -34,8 +34,8 @@
 import { defineComponent } from 'vue'
 
 import userSignUpContent from '../components/userSignUpContent.vue'
-import newfooter from '@/components/newfooter.vue'
-import newheader from '@/components/newheader.vue'
+import newfooter from '@/components/public/newfooter.vue'
+import newheader from '@/components/public/newheader.vue'
 
 export default defineComponent({
   name: 'UserSignUp',

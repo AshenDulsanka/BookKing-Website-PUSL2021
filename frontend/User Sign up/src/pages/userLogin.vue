@@ -1,7 +1,6 @@
 <template>
   <div class="service-provider-login1">
     <newheader />
-
     <br>
     <br>
     <br>
@@ -12,9 +11,9 @@
         <div class="password-input-frame">
 
           <div class="login-image">
-            <img class="loginimg-icon" loading="lazy" alt="" src="../img.png"/>
+            <img class="loginimg-icon" loading="lazy" alt="" src="../../public/assets/images/login.png"/>
             <div class="already-have-account-message">
-              <a href="#">You don't have an account?</a>
+              <a href="/signup">You don't have an account?</a>
             </div>
             <div class="already-have-account-message">
               <a href="#">Service Provider Login</a>
@@ -31,8 +30,8 @@
 import { defineComponent } from 'vue'
 
 import userLoginContent from '../components/userLoginContent.vue'
-import newfooter from '@/components/newfooter.vue'
-import newheader from '@/components/newheader.vue'
+import newfooter from '../components/public/newfooter.vue'
+import newheader from '../components/public/newheader.vue'
 
 export default defineComponent({
   name: 'userLogin',
