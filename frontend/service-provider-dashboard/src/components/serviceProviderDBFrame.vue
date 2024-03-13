@@ -137,7 +137,7 @@
 import { defineComponent, ref } from "vue";
 
 export default defineComponent({
-  name: "RumethMansara",
+  name: "serviceProviderDBFrame",
   setup() {
     // basic services fetch function
     // userServices = fetch('api/[userid]/services/')
@@ -193,8 +193,9 @@ export default defineComponent({
 </script>
 <style scoped>
 
+/* 
 .image-3-icon{
-}
+} */
 
 .image-4-icon{
   width: 250px;

@@ -12,7 +12,7 @@
           </div>
         </div>
       </section>
-      <RumethMansara />
+      <serviceProviderDBFrame />
     </main>
     <NewFooter />
   </div>
@@ -21,11 +21,11 @@
   import { defineComponent } from "vue";
   import NewHeader from "../components/NewHeader.vue";
   import NewFooter from "../components/newfooter.vue";
-  import RumethMansara from "../components/RumethMansara.vue";
+  import serviceProviderDBFrame from "../components/serviceProviderDBFrame.vue";
 
   export default defineComponent({
     name: "ServiceProviderDashboard",
-    components: { NewHeader, RumethMansara, NewFooter },
+    components: { NewHeader, serviceProviderDBFrame, NewFooter },
   });
 </script>
 <style scoped>
@@ -163,3 +163,4 @@
     }
   }
 </style>
+../components/serviceProviderDBFrame.vue
