@@ -9,6 +9,9 @@ import userLogin from './pages/auth/userLogin.vue'
 //dashboard
 import UserDashboard from './pages/dashboard/UserDashboard.vue'
 
+//public
+import SingleProductPage from './pages/public/SingleProductPage.vue'
+
 //css
 import './global.css'
 
@@ -28,6 +31,12 @@ const routes = [
   {
     path: '/userdashboard',
     component: UserDashboard
+  },
+
+  //public
+  {
+    path: '/productPage',
+    component: SingleProductPage
   }
 ]
 
