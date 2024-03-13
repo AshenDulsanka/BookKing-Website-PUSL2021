@@ -1,7 +1,7 @@
 <template>
 <title>User Sign Up</title>
   <Header>
-                <a href="facebook.com">
+                <a href="/">
                     <img src="../../../public/assets/logo.png" alt="" class="img">
                 </a>
         <nav>
