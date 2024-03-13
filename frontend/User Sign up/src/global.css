@@ -15,6 +15,15 @@ body {
   --font-size-21xl: 40px;
   --font-size-13xl: 32px;
   --font-size-5xl: 24px;
+    --font-size-7xl: 26px;
+  --font-size-lgi: 19px;
+  --font-size-17xl: 36px;
+  --font-size-10xl: 29px;
+  --font-size-3xl: 22px;
+  --font-size-45xl: 64px;
+  --font-size-32xl: 51px;
+  --font-size-19xl: 38px;
+  --font-size-base: 16px;
 
   /* Colors */
   --color-white: #fff;
@@ -30,6 +39,7 @@ body {
   --gap-5xs: 8px;
   --gap-3xs: 10px;
   --gap-0: 0px;
+  
 
   /* Paddings */
   --padding-29xl: 48px;
@@ -55,6 +65,7 @@ body {
   --padding-2xl: 21px;
   --padding-6xs-1: 6.1px;
   --padding-mini: 15px;
+  
 
   /* Border radiuses */
   --br-9xs: 4px;

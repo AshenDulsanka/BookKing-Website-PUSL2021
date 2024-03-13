@@ -11,7 +11,7 @@
         <div class="password-input-frame">
 
           <div class="login-image">
-            <img class="loginimg-icon" loading="lazy" alt="" src="../../public/assets/images/login.png"/>
+            <img class="loginimg-icon" loading="lazy" alt="" src="../../../public/assets/images/login.png"/>
             <div class="already-have-account-message">
               <a href="/signup">You don't have an account?</a>
             </div>
@@ -29,9 +29,9 @@
 <script>
 import { defineComponent } from 'vue'
 
-import userLoginContent from '../components/userLoginContent.vue'
-import newfooter from '../components/public/newfooter.vue'
-import newheader from '../components/public/newheader.vue'
+import userLoginContent from '../../components/auth/userLoginContent.vue'
+import newfooter from '../../components/public/newfooter.vue'
+import newheader from '../../components/public/newheader.vue'
 
 export default defineComponent({
   name: 'userLogin',
@@ -183,4 +183,4 @@ export default defineComponent({
       box-sizing: border-box;
     }
   }
-</style>
+</style>../../components/auth/userLoginContent.vue../../components/auth/userLoginContent.vue../../components/auth/userLoginContent.vue
