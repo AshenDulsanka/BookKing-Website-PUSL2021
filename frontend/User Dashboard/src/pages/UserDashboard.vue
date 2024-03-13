@@ -2,7 +2,12 @@
   <div :class="$style.userDashboard">
     <newheader />
       <main :class="$style.rumethMansaraPiliyandalaRd">
-      <EmailTextInput />
+      <userDashboardContent 
+        name="Rumeth Mansara"
+        address="Piliyandala Rd"
+        phoneNo="071 123 4567"
+        email="rumeth@gmail.com"
+      />
       
     </main>
     
@@ -14,14 +19,13 @@
 <script>
   import { defineComponent } from "vue";
   
-  import EmailTextInput from "../components/EmailTextInput.vue";
-  
+  import userDashboardContent from "../components/userDashboardContent.vue";
   import newfooter from "@/components/newfooter.vue";
   import newheader from "@/components/newheader.vue";
 
   export default defineComponent({
     name: "UserDashboard",
-    components: { newheader ,EmailTextInput,  newfooter },
+    components: { newheader, userDashboardContent, newfooter },
   });
 </script>
 <style module>
@@ -79,3 +83,4 @@
     }
   }
 </style>
+../components/userDashboardContent.vue

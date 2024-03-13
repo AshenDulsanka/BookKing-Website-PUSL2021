@@ -16,21 +16,21 @@
                 <b :class="$style.rumethMansara">
                   <span>
                     <ul :class="$style.rumethMansara1">
-                      <li>Rumeth Randisa</li>
+                      <li>{{name}}</li>
                     </ul>
                   </span>
                 </b>
                 <b :class="$style.piliyandalaRdKottawaContainer">
                   <span>
                     <ul :class="$style.piliyandalaRdKottawa">
-                      <li>100/02, Piliyandala Rd, Kottawa</li>
+                      <li>{{address}}</li>
                     </ul>
                   </span>
                 </b>
                 <b :class="$style.loginTextLabelContainer">
                   <span :class="$style.loginTextLabelContainer1">
                     <ul :class="$style.ul">
-                      <li>071-1234567</li>
+                      <li>{{phoneNo}}</li>
                     </ul>
                   </span>
                 </b>
@@ -38,7 +38,7 @@
                   <b :class="$style.rumethgayoragmailcom">
                     <span :class="$style.rumethgayoragmailcomTxt">
                       <ul :class="$style.rumethgayoragmailcom1">
-                        <li>rumethgayora@gmail.com</li>
+                        <li>{{email}}</li>
                       </ul>
                     </span>
                   </b>
@@ -80,7 +80,13 @@
   import { defineComponent } from "vue";
 
   export default defineComponent({
-    name: "EmailTextInput",
+    name: "userDashboardContent",
+    props: {
+      name: { type: String },
+      address: { type: String },
+      phoneNo: { type: String },
+      email: { type: String },
+    },
   });
 </script>
 <style module>
