@@ -14,6 +14,10 @@ import UserDashboard from './pages/dashboard/UserDashboard.vue'
 //public
 import SingleProductPage from './pages/public/SingleProductPage.vue'
 import Reviews from './pages/public/Reviews.vue'
+import Hotels from './pages/public/Hotels.vue'
+
+//admin
+import adminLogin from './pages/admin/adminLogin.vue'
 
 //css
 import './global.css'
@@ -44,6 +48,12 @@ const routes = [
     component: UserDashboard
   },
 
+  //admin
+  {
+    path: '/adminlogin',
+    component: adminLogin
+  },
+
   //public
   {
     path: '/productPage',
@@ -53,6 +63,10 @@ const routes = [
     path: '/reviews',
     component: Reviews
   
+  },
+  {
+    path: '/hotels',
+    component: Hotels
   }
 ]
 
