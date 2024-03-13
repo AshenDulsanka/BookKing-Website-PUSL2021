@@ -10,6 +10,7 @@ import ServiceProviderLogin from './pages/auth/ServiceProviderLogin.vue'
 
 //dashboard
 import UserDashboard from './pages/dashboard/UserDashboard.vue'
+import ServiceProviderDashboard from './pages/dashboard/ServiceProviderDashboard.vue'
 
 //public
 import SingleProductPage from './pages/public/SingleProductPage.vue'
@@ -48,6 +49,10 @@ const routes = [
   {
     path: '/userdashboard',
     component: UserDashboard
+  },
+  {
+    path: '/spdashboard',
+    component: ServiceProviderDashboard
   },
 
   //admin
