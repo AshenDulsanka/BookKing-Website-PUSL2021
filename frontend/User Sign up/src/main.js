@@ -15,6 +15,7 @@ import UserDashboard from './pages/dashboard/UserDashboard.vue'
 import SingleProductPage from './pages/public/SingleProductPage.vue'
 import Reviews from './pages/public/Reviews.vue'
 import Hotels from './pages/public/Hotels.vue'
+import AboutUs from './pages/public/AboutUs.vue'
 
 //admin
 import adminLogin from './pages/admin/adminLogin.vue'
@@ -72,7 +73,11 @@ const routes = [
   {
     path: '/hotels',
     component: Hotels
-  }
+  },
+  {
+    path: '/aboutus',
+    component: AboutUs
+  },
 ]
 
 const router = createRouter({
