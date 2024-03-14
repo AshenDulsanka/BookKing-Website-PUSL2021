@@ -1,4 +1,5 @@
 <template>
+  <newheader />
   <div class="index">
     <div class="div">
       <div class="overlap">
@@ -67,7 +68,7 @@
             beyond to make my experience unforgettable. Will definitely book again.&#34;
           </p>
           <a href="#"><img class="ellipse review-img" 
-            src="../assets/stickman.jpg" /></a>
+            src="../../../public/assets/images/stickman.jpg" /></a>
         </div>
         <div class="rectangle-12" />
         <div class="overlap-3">
@@ -76,7 +77,7 @@
             everything easy. A delightful experience overall, and I&#39;ll be back for sure.&#34;
           </p>
           <a href="#"><img class="ellipse review-img" 
-            src="../assets/stickman.jpg" /></a>
+            src="../../../public/assets/images/stickman.jpg" /></a>
         </div>
         <div class="overlap-4">
           <p class="great-value-for">
@@ -84,14 +85,14 @@
             everything easy. A delightful experience overall, and I&#39;ll be back for sure.&#34;
           </p>
           <a href="#"><img class="ellipse-2 review-img"
-          src="../assets/stickman.jpg" /></a>
+          src="../../../public/assets/images/stickman.jpg" /></a>
         </div>
         <div class="overlap-5">
           <div class="ellipse-3" />
           <div class="ellipse-4" />
         </div>
         <a href="#"><img class="ellipse-5 review-img"
-        src="../assets/stickman.jpg" /></a>
+        src="../../../public/assets/images/stickman.jpg" /></a>
         <div class="overlap-6">
           <p class="text-wrapper-24">
             &#34;Picturesque location! The booking process was seamless, and the property exceeded expectations. From
@@ -99,7 +100,7 @@
           </p>
           <div class="overlap-group-2">
             <a href="#"><img class="ellipse-6 review-img"
-            src="../assets/stickman.jpg" /></a>
+            src="../../../public/assets/images/stickman.jpg" /></a>
           </div>
         </div>
       </div>
@@ -152,8 +153,19 @@
       </div>
     </div>
   </div>
+  <newfooter />
 </template>
 
+<script>
+  import { defineComponent } from "vue";
+  import newheader from "../../components/public/newheader.vue";
+  import newfooter from "../../components/public/newfooter.vue";
+
+  export default defineComponent({
+    name: "Home",
+    components: { newheader, newfooter },
+  });
+</script>
 
 <style scoped>
 
