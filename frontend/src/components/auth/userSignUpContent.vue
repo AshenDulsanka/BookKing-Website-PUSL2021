@@ -7,33 +7,59 @@
       <div class="email-parent">
         <br>
         <div class="email1">Name</div>
-        <input class="rectangle-rectangle" type="text" />
+        <input class="rectangle-rectangle" type="text" name="name" v-model="name" />
         <div class="email1">Email</div>
-        <input class="frame-item" type="text" />
+        <input class="frame-item" type="email" name="email" v-model="email" />
         <div class="email1">Password</div>
-        <input class="frame-item" type="text" />
+        <input class="frame-item" type="password" name="password" v-model="password" />
         <div class="email1">Password Confirm</div>
-        <input class="frame-item" type="text" />
+        <input class="frame-item" type="password" name="passwordc" v-model="passwordc" />
         <div class="email1">Phone Number</div>
-        <input class="frame-item" type="text" />
+        <input class="frame-item" type="text" name="phoneno" v-model="phoneno" />
         <div class="email1">Address</div>
-        <input class="frame-item" type="text" />
+        <input class="frame-item" type="text" name="address" v-model="address" />
       </div>
     </div>
     <a href="#">
-        <button class="ok">
+        <button class="ok" @click="register">
             <div class="ok">Register</div>
         </button>
     </a>
   </div>
 </template>
+
 <script>
+import authenticationServices from '@/services/authenticationServices';
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-  name: 'userSignUpContent'
+  name: 'userSignUpContent',
+  data() {
+    return {
+      name: '',
+      email: '',
+      password: '',
+      passwordc: '',
+      phoneno: '',
+      address: ''
+    }
+  },
+  methods: {
+    async register(){
+      const response = await authenticationServices.userSignUp({
+        name: this.name,
+        email: this.email,
+        password: this.password,
+        passwordc: this.passwordc,
+        phoneno: this.phoneno,
+        address: this.address
+      });
+      console.log(response.data)
+    }
+  }
 })
 </script>
+
 <style scoped>
   .ok{
     font-family: "poppins", sans-serif;
