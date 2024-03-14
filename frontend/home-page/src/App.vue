@@ -1,6 +1,4 @@
 <script setup>
-import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
 import NewHeader from './components/newheader.vue'
 import NewFooter from './components/newfooter.vue'
 </script>
