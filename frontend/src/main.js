@@ -10,12 +10,15 @@ import ServiceProviderLogin from './pages/auth/ServiceProviderLogin.vue'
 
 //dashboard
 import UserDashboard from './pages/dashboard/UserDashboard.vue'
+import ServiceProviderDashboard from './pages/dashboard/ServiceProviderDashboard.vue'
+import addPage from './pages/dashboard/AddPage.vue'
 
 //public
 import SingleProductPage from './pages/public/SingleProductPage.vue'
 import Reviews from './pages/public/Reviews.vue'
 import Hotels from './pages/public/Hotels.vue'
 import AboutUs from './pages/public/AboutUs.vue'
+import HomeView from './pages/public/HomeView.vue'
 
 //admin
 import adminLogin from './pages/admin/adminLogin.vue'
@@ -23,16 +26,17 @@ import adminDashboard from './pages/admin/adminDashboard.vue'
 
 //css
 import './global.css'
+import './pages/assets/main.css'
 
 const routes = [
 
   //auth
   {
-    path: '/',
+    path: '/login',
     component: userLogin
   },
   {
-    path: '/usersignup',
+    path: '/signup',
     component: UserSignUp
   },
   {
@@ -49,10 +53,18 @@ const routes = [
     path: '/userdashboard',
     component: UserDashboard
   },
+  {
+    path: '/spdashboard',
+    component: ServiceProviderDashboard
+  },
+  {
+    path: '/addpage',
+    component: addPage
+  },
 
   //admin
   {
-    path: '/adminlogin',
+    path: '/secret',
     component: adminLogin
   },
   {
@@ -61,6 +73,10 @@ const routes = [
   },
 
   //public
+  {
+    path: '/',
+    component: HomeView
+  },
   {
     path: '/productPage',
     component: SingleProductPage
