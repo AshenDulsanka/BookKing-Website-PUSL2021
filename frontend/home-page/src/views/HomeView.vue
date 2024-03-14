@@ -1,5 +1,6 @@
 <template>
   <div class="index">
+    <NewHeader />
     <div class="div">
       <div class="overlap">
         <header class="header">
@@ -151,8 +152,20 @@
         </div>
       </div>
     </div>
+    <NewFooter />
   </div>
 </template>
+
+<script>
+  import { defineComponent } from "vue";
+  import NewHeader from "../components/newheader.vue";
+  import NewFooter from "../components/newfooter.vue";
+
+  export default defineComponent({
+    name: "HomePage",
+    components: { NewHeader, NewFooter },
+  });
+</script>
 
 
 <style scoped>
