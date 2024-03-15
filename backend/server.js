@@ -6,8 +6,11 @@ import dotenv from 'dotenv'
 import { conn } from './config/dbCon.js'
 
 const server = express()
+
+server.use(express.json())
 server.use(morgan('combined'))
 server.use(bodyParser.json())
+server.use(bodyParser.urlencoded({ extended: true }))
 server.use(cors())
 dotenv.config()
 
