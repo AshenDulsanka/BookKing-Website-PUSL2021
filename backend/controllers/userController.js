@@ -1,10 +1,10 @@
-import validationResult from 'express-validator'
+import { validationResult } from 'express-validator'
 
 const register = (req, res) => {
   const errors = validationResult(req)
 
   if (!errors.isEmpty()) {
-    return res.status(400).json({ errros: errors.array() })
+    return res.status(422).json({ errors: errors.array() })
   }
 }
 

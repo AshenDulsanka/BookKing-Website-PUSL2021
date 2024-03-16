@@ -35,4 +35,7 @@ server.use((err, req, res, next) => {
   })
 })
 
-server.listen(process.env.PORT || 8081)
+const PORT = process.env.PORT || 8081
+server.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`)
+})
