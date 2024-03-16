@@ -1,5 +1,4 @@
 <template>
-  <newheader />
   <div class="index">
     <div class="div">
       <div class="overlap">
@@ -153,7 +152,6 @@
       </div>
     </div>
   </div>
-  <newfooter />
 </template>
 
 <script>
