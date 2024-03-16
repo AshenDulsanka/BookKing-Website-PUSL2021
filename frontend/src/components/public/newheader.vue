@@ -8,15 +8,15 @@
                 
                 <div class="header">
                     <ul>
-                    <li><a href="#">Home</a></li>
+                    <li><a href="/">Home</a></li>
                     <li><a href="#">Vehicles</a></li>  
-                    <li><a href="#">Hotels</a></li>                                          
+                    <li><a href="/hotels">Hotels</a></li>                                          
                     <li><a href="#">Tours</a></li>
-                    <li><a href="#">Reviews</a></li>
+                    <li><a href="/reviews">Reviews</a></li>
                     <li><a href="#">Contact us</a></li>
-                    <li><a href="#">About us</a></li>
+                    <li><a href="/aboutus">About us</a></li>
                     
-                    <li><a  class="login" href="#">Login</a></li>
+                    <li><a  class="login" href="/login">Login</a></li>
                     </ul>
                 </div>
         </nav>
