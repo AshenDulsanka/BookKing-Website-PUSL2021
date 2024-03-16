@@ -5,6 +5,8 @@ import morgan from 'morgan'
 import dotenv from 'dotenv'
 import { conn } from './config/dbCon.js'
 
+import { userRouter } from './routes/userRoute.js'
+
 const server = express()
 
 server.use(express.json())
@@ -21,6 +23,8 @@ server.post('/userSignUp', (req, res) => {
 })
 
 console.log(conn.connect)
+
+server.use('/api', userRouter)
 
 // error handling
 server.use((err, req, res, next) => {
