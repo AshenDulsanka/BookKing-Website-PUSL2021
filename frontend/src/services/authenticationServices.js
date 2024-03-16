@@ -6,7 +6,7 @@ export default {
   }
 }
 
-// authenticationServices.register({
+// authenticationServices.userSignUp({
 //     email: 'ashendul@gmail.com',
 //     passwpord: '123456'
 // })

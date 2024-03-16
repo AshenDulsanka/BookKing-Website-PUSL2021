@@ -7,19 +7,19 @@
       <div class="email-parent">
         <br>
         <div class="email1">Name</div>
-        <input class="rectangle-rectangle" type="text" />
+        <input class="rectangle-rectangle" type="text" name="name" required/>
         <div class="email1">Email</div>
-        <input class="frame-item" type="text" />
+        <input class="frame-item" type="email" name="email" required/>
         <div class="email1">Password</div>
-        <input class="frame-item" type="text" />
+        <input class="frame-item" type="password" name="password" required/>
         <div class="email1">Password Confirm</div>
-        <input class="frame-item" type="text" />
+        <input class="frame-item" type="password" name="passwordc" required/>
         <div class="email1">Phone Number</div>
-        <input class="frame-item" type="text" />
+        <input class="frame-item" type="text" name="phoneno" required/>
         <div class="email1">Address</div>
-        <input class="frame-item" type="text" />
+        <input class="frame-item" type="text" name="address" required/>
         <div class="email1">What we do</div>
-        <textarea class="frame-item1" name="wat we do" rows="4" cols="50"></textarea>
+        <textarea class="frame-item1" name="whatwedo" rows="4" cols="50" required></textarea>
       </div>
     </div>
     <a href="#">
