@@ -43,10 +43,57 @@ const register = (req, res) => {
                     msg: err
                   })
                 }
-                const mailSubject = 'Mail verification'
+                const mailSubject = 'BookKing Account Verification'
                 // eslint-disable-next-line no-multi-str
-                const content = '<p>Hi ' + req.body.name + ', \
-                Please verify your email by clicking on the <a href="http://localhost:8081/mailVerification?token=' + randomToken + '">link.</a>'
+                const content = `
+  <html>
+    <head>
+      <style>
+        body {
+          font-family: Arial, sans-serif;
+          background-color: #f4f4f4;
+          color: #333;
+        }
+        .container {
+          max-width: 600px;
+          margin: 0 auto;
+          padding: 20px;
+          background-color: #fff;
+          border-radius: 10px;
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+          color: #333;
+          text-align: center;
+        }
+        p {
+          margin-bottom: 20px;
+        }
+        a {
+          color: white;
+          text-decoration: none;
+        }
+        .button {
+          display: inline-block;
+          background-color: grey;
+          color: #fff;
+          padding: 10px 20px;
+          border-radius: 5px;
+          text-decoration: none;
+        }
+      </style>
+    </head>
+    <body>
+      <div class="container">
+        <h1>Hi ${req.body.name},</h1>
+        <p>Thank you for registering with our service! To complete your registration and access all features, please verify your email address by clicking on the button.</p>
+        <p><a class="button" href="http://localhost:8081/mailVerification?token=${randomToken}">Verify Email</a></p>
+        <p>If you did not register for this account, please ignore this email.</p>
+        <p>Thank you,<br>BookKing</p>
+      </div>
+    </body>
+  </html>
+`
                 sendMail(req.body.email, mailSubject, content)
                 return res.status(200).send({
                   msg: 'The user has been registered successfully!'
