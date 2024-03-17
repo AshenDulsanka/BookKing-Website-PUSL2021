@@ -34,10 +34,9 @@
     background-color: #000000;
     padding: 20px;
     text-align: center;
-    position: absolute;
     bottom: 0;
     width: 100%;
-    height: 2.5rem;
+    height: 5.5rem;
     }
 
     footer nav ul {
