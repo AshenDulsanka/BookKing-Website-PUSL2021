@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Verification</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            text-align: center;
+            padding: 50px;
+        }
+
+        h1 {
+            font-size: 36px;
+            color: #007bff;
+            /* Primary Blue */
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        .message {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Email Verification</h1>
+    <% if (message) { %>
+        <div class="message">
+            <p>
+                <%= message %>
+            </p>
+        </div>
+        <% } else { %>
+            <div class="message">
+                <p>No message to display.</p>
+            </div>
+            <% } %>
+</body>
+
+</html>

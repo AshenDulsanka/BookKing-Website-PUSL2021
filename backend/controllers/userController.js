@@ -107,4 +107,23 @@ const register = (req, res) => {
   )
 }
 
-export { register }
+const verifyMail = (req, res) => {
+  const token = req.query.token
+
+  db.query('SELECT * FROM users WHERE token=? limit 1', token, function (error, result, fields) {
+    if (error) {
+      console.log(error.message)
+    }
+
+    if (result.length > 0) {
+      db.query(`
+        UPDATE users SET token = null, isVerified = 1 WHERE UID = '${result[0].UID}'
+      `)
+      return res.render('mailVerification', { message: 'Mail Verified Successfully! You can now login!' })
+    } else {
+      return res.render('404')
+    }
+  })
+}
+
+export { register, verifyMail }
