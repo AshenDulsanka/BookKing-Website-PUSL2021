@@ -6,6 +6,7 @@ import dotenv from 'dotenv'
 import { conn } from './config/dbCon.js'
 
 import { userRouter } from './routes/userRoute.js'
+import { userRoute } from './routes/webRoute.js'
 
 const server = express()
 
@@ -16,15 +17,10 @@ server.use(bodyParser.urlencoded({ extended: true }))
 server.use(cors())
 dotenv.config()
 
-server.post('/userSignUp', (req, res) => {
-  res.send({
-    message: `Hello ${req.body.email}! Your user was registered! Have fun!`
-  })
-})
-
 console.log(conn.connect)
 
 server.use('/api', userRouter)
+server.use('/', userRoute)
 
 // error handling
 server.use((err, req, res, next) => {
