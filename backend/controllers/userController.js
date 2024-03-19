@@ -1,7 +1,7 @@
 import { validationResult } from 'express-validator'
 import bcrypt from 'bcryptjs'
 import random from 'randomstring'
-import jwt from 'jsonwebtoken'
+// import jwt from 'jsonwebtoken'
 import { sendMail } from '../helpers/sendMail.js'
 import { conn } from '../config/dbCon.js'
 
@@ -135,6 +135,48 @@ const login = (req, res) => {
   if (!errors.isEmpty()) {
     return res.status(400).json({ errors: errors.array() })
   }
+
+  db.query(
+    `
+      SELECT * FROM users WHERE email = ${db.escape(req.body.email)};
+    `,
+    (err, result) => {
+      if (err) {
+        return res.status(400).send({
+          msg: err
+        })
+      }
+
+      if (!result.length) {
+        return res.status(401).send({
+          msg: 'Email or password is incorrect!'
+        })
+      }
+
+      // debugging to see if the password is being retrieved from the database
+      // console.log('Password from Database:', result[0].password)
+
+      bcrypt.compare(
+        req.body.password,
+        result[0].password,
+        (bErr, bResult) => {
+          if (bErr) {
+            return res.status(400).send({
+              msg: bErr
+            })
+          }
+
+          if (bResult) {
+            console.log('JWT Key is, ' + JWTSECRET)
+          }
+
+          return res.status(401).send({
+            msg: 'Email or password is incorrect!'
+          })
+        }
+      )
+    }
+  )
 }
 
 export { register, verifyMail, login }
