@@ -1,8 +1,11 @@
 import { validationResult } from 'express-validator'
 import bcrypt from 'bcryptjs'
 import random from 'randomstring'
+import jwt from 'jsonwebtoken'
 import { sendMail } from '../helpers/sendMail.js'
 import { conn } from '../config/dbCon.js'
+
+const { JWTSECRET } = process.env
 
 const db = conn
 const randomToken = random.generate()
@@ -126,4 +129,12 @@ const verifyMail = (req, res) => {
   })
 }
 
-export { register, verifyMail }
+const login = (req, res) => {
+  const errors = validationResult(req)
+
+  if (!errors.isEmpty()) {
+    return res.status(400).json({ errors: errors.array() })
+  }
+}
+
+export { register, verifyMail, login }

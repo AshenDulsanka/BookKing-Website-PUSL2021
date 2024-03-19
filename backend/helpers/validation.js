@@ -28,3 +28,8 @@ export const spSignUpValidation = [
   body('address', 'Address is required').not().isEmpty(),
   body('whatwedo', 'Description is required').not().isEmpty()
 ]
+
+export const logInValidation = [
+  body('email', 'Please enter a valid email').isEmail().normalizeEmail({ gmail_remove_dots: true }),
+  body('password', 'Password is required').isLength({ min: 6 })
+]
