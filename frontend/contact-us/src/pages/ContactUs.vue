@@ -2,11 +2,11 @@
     <div class="contact-us">
       <div class="div-2">
         <div class="text-wrapper-30">Customer Service - Contact</div>
-        <img class="rectangle" alt="Rectangle" src="rectangle-36.svg" />
-        <img class="rectangle-2" alt="Rectangle" src="rectangle-37.svg" />
-        <img class="rectangle-3" alt="Rectangle" src="rectangle-38.svg" />
-        <img class="rectangle-4" alt="Rectangle" src="rectangle-39.svg" />
-        <img class="rectangle-5" alt="Rectangle" src="rectangle-40.svg" />
+        <img class="rectangle" alt="Rectangle" src="" />
+        <img class="rectangle-2" alt="Rectangle" src="" />
+        <img class="rectangle-3" alt="Rectangle" src="" />
+        <img class="rectangle-4" alt="Rectangle" src="" />
+        <img class="rectangle-5" alt="Rectangle" src="" />
         <div class="text-wrapper-31">Name</div>
         <div class="text-wrapper-32">Email Address</div>
         <div class="phone-number">Phone&nbsp;&nbsp;Number</div>
@@ -14,8 +14,8 @@
         <div class="text-wrapper-34">message</div>
         <div class="text-wrapper-35">FAQ’s</div>
         
-        <img class="line-2" alt="Line" src="line-4.svg" />
-        <img class="BOOK-king" alt="Book king" src="BOOK-king-1.png" />
+        <img class="line-2" alt="Line" src="" />
+        <img class="BOOK-king" alt="Book king" src="../BOOK king 1.png" />
         <p class="p">
           Connect with Us: Your Direct Line to Exceptional Service – Reach Out, Share Your Thoughts, and Let Us Assist
           You!
@@ -25,7 +25,8 @@
   </template>
   
   <script>
-  
+import newfooter from '../../components/public/newfooter.vue'
+import newheader from '../../components/public/newheader.vue'
   
   
   export default {
