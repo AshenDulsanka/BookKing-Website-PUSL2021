@@ -1,8 +1,11 @@
 import { validationResult } from 'express-validator'
 import bcrypt from 'bcryptjs'
 import random from 'randomstring'
+import jwt from 'jsonwebtoken'
 import { sendMail } from '../helpers/sendMail.js'
 import { conn } from '../config/dbCon.js'
+
+const { JWTSECRET } = process.env
 
 const db = conn
 const randomToken = random.generate()
@@ -107,4 +110,82 @@ const register = (req, res) => {
   )
 }
 
-export { register }
+const verifyMail = (req, res) => {
+  const token = req.query.token
+
+  db.query('SELECT * FROM users WHERE token=? limit 1', token, function (error, result, fields) {
+    if (error) {
+      console.log(error.message)
+    }
+
+    if (result.length > 0) {
+      db.query(`
+        UPDATE users SET token = null, isVerified = 1 WHERE UID = '${result[0].UID}'
+      `)
+      return res.render('mailVerification', { message: 'Mail Verified Successfully! You can now login!' })
+    } else {
+      return res.render('404')
+    }
+  })
+}
+
+const login = (req, res) => {
+  const errors = validationResult(req)
+
+  if (!errors.isEmpty()) {
+    return res.status(400).json({ errors: errors.array() })
+  }
+
+  db.query(
+    `
+      SELECT * FROM users WHERE email = ${db.escape(req.body.email)};
+    `,
+    (err, result) => {
+      if (err) {
+        return res.status(400).send({
+          msg: err
+        })
+      }
+
+      if (!result.length) {
+        return res.status(401).send({
+          msg: 'Email or password is incorrect!'
+        })
+      }
+
+      // debugging to see if the password is being retrieved from the database
+      // console.log('Password from Database:', result[0].password)
+
+      bcrypt.compare(
+        req.body.password,
+        result[0].password,
+        (bErr, bResult) => {
+          if (bErr) {
+            return res.status(400).send({
+              msg: bErr
+            })
+          }
+
+          if (bResult) {
+            // console.log('JWT Key is, ' + JWTSECRET)
+            const token = jwt.sign({ UID: result[0].UID }, JWTSECRET, { expiresIn: '1h' })
+            db.query(
+              `UPDATE users SET lastLogin = now() WHERE UID = '${result[0].UID}'`
+            )
+            return res.status(200).send({
+              msg: 'Logged in!',
+              token,
+              user: result[0]
+            })
+          }
+
+          return res.status(401).send({
+            msg: 'Email or password is incorrect!'
+          })
+        }
+      )
+    }
+  )
+}
+
+export { register, verifyMail, login }

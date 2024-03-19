@@ -55,7 +55,7 @@
     top:0px;
     bottom: 0;
     width: 100%;
-    height: 50px;
+    height: 100px;
     }
 
     Header nav ul {
