@@ -1,6 +1,7 @@
 <template>
   <section :class="$style.welcomeText">
     <h1 :class="$style.aboutUs">About us</h1>
+    <br>
     <div :class="$style.collaborationImage">
       <div :class="$style.journeyText">
         <div :class="$style.image1Parent">
@@ -84,6 +85,11 @@
   });
 </script>
 <style module>
+  p{
+    font-size: 16px;
+    font-weight: 500;
+    text-align: justify;
+  }
   .aboutUs {
     margin: 0;
     width: 412px;
@@ -130,9 +136,11 @@
   }
   .collaboratingWithA {
     margin: 0;
+    text-align: right;
   }
   .atYourBooking {
     margin: 0;
+    font-size: 16px;
   }
   .collaboratingWithAContainer {
     height: 368px;
@@ -172,6 +180,8 @@
     display: inline-block;
     flex-shrink: 0;
     max-width: 100%;
+    font-size: 16px;
+    font-weight: 500;
   }
   .embarkOnAJourneyOfDiscoveWrapper {
     width: 1242px;
