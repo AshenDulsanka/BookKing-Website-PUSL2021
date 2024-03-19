@@ -1,7 +1,7 @@
 import { validationResult } from 'express-validator'
 import bcrypt from 'bcryptjs'
 import random from 'randomstring'
-// import jwt from 'jsonwebtoken'
+import jwt from 'jsonwebtoken'
 import { sendMail } from '../helpers/sendMail.js'
 import { conn } from '../config/dbCon.js'
 
@@ -167,7 +167,16 @@ const login = (req, res) => {
           }
 
           if (bResult) {
-            console.log('JWT Key is, ' + JWTSECRET)
+            // console.log('JWT Key is, ' + JWTSECRET)
+            const token = jwt.sign({ UID: result[0].UID }, JWTSECRET, { expiresIn: '1h' })
+            db.query(
+              `UPDATE users SET lastLogin = now() WHERE UID = '${result[0].UID}'`
+            )
+            return res.status(200).send({
+              msg: 'Logged in!',
+              token,
+              user: result[0]
+            })
           }
 
           return res.status(401).send({
