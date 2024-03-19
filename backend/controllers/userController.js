@@ -188,4 +188,17 @@ const login = (req, res) => {
   )
 }
 
-export { register, verifyMail, login }
+const getUser = (req, res) => {
+  const authToken = req.headers.authorization.split(' ')[1]
+  const decode = jwt.verify(authToken, JWTSECRET)
+
+  db.query('SELECT * FROM users WHERE UID = ?', decode.UID, function (error, result, fields) {
+    if (error) {
+      throw error
+    }
+
+    return res.status(200).send({ success: true, data: result[0], message: 'Fetch Successfully' })
+  })
+}
+
+export { register, verifyMail, login, getUser }
