@@ -22,8 +22,9 @@
         </div>
       </div>
     </section>
-    <newfooter />
+    
   </div>
+  <newfooter />
 </template>
 
 <script>
