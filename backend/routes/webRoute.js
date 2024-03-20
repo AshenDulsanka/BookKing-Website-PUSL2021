@@ -1,5 +1,5 @@
 import express from 'express'
-import { verifyMail, resetPassword } from '../controllers/userController.js'
+import { verifyMail, resetPasswordLoad, resetPassword } from '../controllers/userController.js'
 const userRoute = express()
 
 userRoute.set('view engine', 'ejs')
@@ -7,6 +7,7 @@ userRoute.set('views', './views')
 userRoute.use(express.static('public'))
 
 userRoute.get('/mailVerification', verifyMail)
-userRoute.get('/resetPassword', resetPassword)
+userRoute.get('/resetPassword', resetPasswordLoad)
+userRoute.post('/resetPassword', resetPassword)
 
 export { userRoute }

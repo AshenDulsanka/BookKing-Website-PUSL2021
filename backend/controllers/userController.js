@@ -256,7 +256,7 @@ const forgetPassword = (req, res) => {
   })
 }
 
-const resetPassword = (req, res) => {
+const resetPasswordLoad = (req, res) => {
   try {
     const token = req.query.token
     // eslint-disable-next-line eqeqeq
@@ -286,4 +286,4 @@ const resetPassword = (req, res) => {
   }
 }
 
-export { register, verifyMail, login, getUser, forgetPassword, resetPassword }
+export { register, verifyMail, login, getUser, forgetPassword, resetPasswordLoad }
