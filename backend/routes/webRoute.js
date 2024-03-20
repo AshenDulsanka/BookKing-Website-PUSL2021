@@ -3,7 +3,7 @@ import { verifyMail, resetPasswordLoad, resetPassword } from '../controllers/use
 const userRoute = express()
 
 userRoute.set('view engine', 'ejs')
-userRoute.set('views', './views')
+userRoute.set('views', '../frontend/src/views')
 userRoute.use(express.static('public'))
 
 userRoute.get('/mailVerification', verifyMail)
