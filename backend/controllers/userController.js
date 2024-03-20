@@ -256,4 +256,34 @@ const forgetPassword = (req, res) => {
   })
 }
 
-export { register, verifyMail, login, getUser, forgetPassword }
+const resetPassword = (req, res) => {
+  try {
+    const token = req.query.token
+    // eslint-disable-next-line eqeqeq
+    if (token == undefined) {
+      res.render('404')
+    }
+
+    db.query('SELECT * FROM passwordresets WHERE token = ? limit 1', token, function (error, result, fields) {
+      if (error) {
+        console.log(error.message)
+      }
+
+      if (result.length > 0) {
+        db.query('SELECT * FROM users WHERE email = ? limit 1', result[0].email, function (error, result, fields) {
+          if (error) {
+            console.log(error.message)
+          }
+
+          res.render('resetPassword', { user: result[0] })
+        })
+      } else {
+        res.render('404')
+      }
+    })
+  } catch (error) {
+    console.log(error.message)
+  }
+}
+
+export { register, verifyMail, login, getUser, forgetPassword, resetPassword }
