@@ -7,10 +7,12 @@ const sendMail = async (email, mailSubject, content) => {
       host: 'smtp.gmail.com',
       port: 587,
       secure: false,
-      requireTLS: true,
       auth: {
         user: SMTPMAIL,
         pass: SMTPPASS
+      },
+      tls: {
+        rejectUnauthorized: false
       }
     })
 
