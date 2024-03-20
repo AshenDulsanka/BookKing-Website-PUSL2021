@@ -269,7 +269,7 @@ const resetPassword = (req, res) => {
         console.log(error.message)
       }
 
-      if (result.length > 0) {
+      if (result !== undefined && result.length > 0) {
         db.query('SELECT * FROM users WHERE email = ? limit 1', result[0].email, function (error, result, fields) {
           if (error) {
             console.log(error.message)
