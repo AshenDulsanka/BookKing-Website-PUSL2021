@@ -296,6 +296,10 @@ const resetPassword = (req, res) => {
     if (err) {
       console.log(err)
     }
+
+    db.query(
+      `DELETE FROM passwordresets WHERE email = '${req.body.email}'`
+    )
   })
 }
 
