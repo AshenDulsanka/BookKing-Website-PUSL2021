@@ -16,7 +16,7 @@
               <a href="/signup">You don't have an account?</a>
             </div>
             <div class="already-have-account-message">
-              <a href="#">Service Provider Login</a>
+              <a href="/splogin">Service Provider Login</a>
             </div>
           </div>
         </div>
