@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 20, 2024 at 05:26 AM
--- Server version: 10.4.27-MariaDB
--- PHP Version: 8.0.25
+-- Generation Time: Mar 20, 2024 at 11:20 AM
+-- Server version: 10.4.28-MariaDB
+-- PHP Version: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -167,7 +167,7 @@ INSERT INTO `users` (`UID`, `email`, `password`, `name`, `address`, `phoneNumber
 (2, 'test@gmail.com', '$2a$10$VSlzmC7GD65neGrbmbZM0OXvfewjjBG6TrowoIres/v.yPEFvALFq', 'test', 'Pannipitiya', '0111234567', 0, NULL, '2024-03-16 13:42:32', '2024-03-16 13:42:32', '12ouKAQ2VSNYEZHSPDKeqpLs5sMWOtIJ'),
 (3, 'uptimelk@gmail.com', '$2a$10$0SE0m.gpxgNmxckgS5TgIOuIKi7QiYORpNVkQvqj8CbvdOfMUl2ie', 'test', 'Pannipitiya', '0111234567', 0, NULL, '2024-03-16 13:44:21', '2024-03-16 13:44:21', '12ouKAQ2VSNYEZHSPDKeqpLs5sMWOtIJ'),
 (8, 'greenmartlankan@gmail.com', '$2a$10$DnG.qVk/ur0GcBPxIP./r.e9pS2BpPP7.IccY3YRlC4cYBALuUhOu', 'test', 'Pannipitiya', '0111234567', 1, NULL, '2024-03-17 08:31:34', '2024-03-17 08:31:34', NULL),
-(11, 'ashendul@gmail.com', '$2a$10$AYczV7JBM6NUnY7Yy9N7q.zaXvCPjGcVLy907B7gcI5QQuo5Z/wZa', 'test', 'Pannipitiya', '0111234567', 1, NULL, '2024-03-19 01:12:23', '2024-03-19 01:12:23', NULL),
+(11, 'ashendul@gmail.com', '$2a$10$ad8F8qinR54YbU.xTDwFHeJaKD.ej01n1Az1Rj4/.za0taKVAyFxS', 'Ashen Abeysekara', '', '', 1, '2024-03-20 10:00:42', '2024-03-19 01:12:23', '2024-03-19 01:12:23', NULL),
 (12, 'dulabeyse@gmail.com', '$2a$10$yeS/Pb8GvUEi.3is.2Rhpux7hAEYIqhJCawgyz8hcXHEJliPli3HK', 'test', 'Pannipitiya', '0111234567', 1, '2024-03-19 17:04:50', '2024-03-19 01:17:15', '2024-03-19 01:17:15', NULL),
 (13, 'test1@gmail.com', '$2a$10$XZOhAlSdfqVEhPyGhEUAeOOtGXCyK3zG2dAtsf1kPHwO3EKB867g.', 'test', 'Pannipitiya', '0111234567', 0, NULL, '2024-03-20 02:11:05', '2024-03-20 02:11:05', 'eteVGeuRV9buKt2Jf6roNGEt8y50NQDA');
 
