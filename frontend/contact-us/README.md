@@ -1,35 +1,8 @@
-# contact-us
-
-This template should help get you started developing with Vue 3 in Vite.
-
-## Recommended IDE Setup
-
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
+# ContactUs
+  
+Note: Please ensure you have installed <code><a href="https://nodejs.org/en/download/">nodejs</a></code>
+  
+To preview and run the project on your device:
+1) Open project folder in <a href="https://code.visualstudio.com/download">Visual Studio Code</a>
+2) In the terminal, run `npm install`
+3) Run `npm run start` to view project in browser
