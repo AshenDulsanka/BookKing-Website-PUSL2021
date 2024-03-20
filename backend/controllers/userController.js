@@ -256,4 +256,91 @@ const forgetPassword = (req, res) => {
   })
 }
 
-export { register, verifyMail, login, getUser, forgetPassword }
+const resetPasswordLoad = (req, res) => {
+  try {
+    const token = req.query.token
+    // eslint-disable-next-line eqeqeq
+    if (token == undefined) {
+      res.render('404')
+    }
+
+    db.query('SELECT * FROM passwordresets WHERE token = ? limit 1', token, function (error, result, fields) {
+      if (error) {
+        console.log(error.message)
+      }
+
+      if (result !== undefined && result.length > 0) {
+        db.query('SELECT * FROM users WHERE email = ? limit 1', result[0].email, function (error, result, fields) {
+          if (error) {
+            console.log(error.message)
+          }
+
+          res.render('resetPassword', { user: result[0] })
+        })
+      } else {
+        res.render('404')
+      }
+    })
+  } catch (error) {
+    console.log(error.message)
+  }
+}
+
+const resetPassword = (req, res) => {
+  // eslint-disable-next-line eqeqeq
+  if (req.body.password != req.body.confirmPassword) {
+    res.render('resetPassword', { errorMessage: 'Password do not match', user: { UID: req.body.userID, emaill: req.body.email } })
+  }
+
+  bcrypt.hash(req.body.confirmPassword, 10, (err, hash) => {
+    if (err) {
+      console.log(err)
+    }
+
+    db.query(
+      `DELETE FROM passwordresets WHERE email = '${req.body.email}'`
+    )
+
+    db.query(
+      `UPDATE users SET password = '${hash}' WHERE UID = '${req.body.userID}'`
+    )
+
+    res.render('resetSuccess')
+  })
+}
+
+const updateProfile = (req, res) => {
+  try {
+    const errors = validationResult(req)
+
+    if (!errors.isEmpty()) {
+      return res.status(400).json({ errors: errors.array() })
+    }
+
+    const token = req.headers.authorization.split(' ')[1]
+    const decode = jwt.verify(token, JWTSECRET)
+
+    let sql = '' // Declare the sql variable using let
+    let data // Declare the data variable using let
+
+    sql = 'UPDATE users SET name = ?, email = ?, phoneNumber = ?, address = ? WHERE UID = ?'
+    // eslint-disable-next-line prefer-const
+    data = [req.body.name, req.body.email, req.body.phoneNo, req.body.address, decode.UID]
+
+    db.query(sql, data, function (error, result, fields) {
+      if (error) {
+        res.status(400).send({
+          msg: error
+        })
+      }
+
+      res.status(200).send({
+        msg: 'Profile updated successfully'
+      })
+    })
+  } catch (error) {
+    return res.status(400).json({ msg: error.message })
+  }
+}
+
+export { register, verifyMail, login, getUser, forgetPassword, resetPasswordLoad, resetPassword, updateProfile }
