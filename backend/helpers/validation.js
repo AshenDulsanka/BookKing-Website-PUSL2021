@@ -33,3 +33,7 @@ export const logInValidation = [
   body('email', 'Please enter a valid email').isEmail().normalizeEmail({ gmail_remove_dots: true }),
   body('password', 'Password minimum length is 6 characters').isLength({ min: 6 })
 ]
+
+export const forgetValidation = [
+  body('email', 'Please enter a valid email').isEmail().normalizeEmail({ gmail_remove_dots: true })
+]
