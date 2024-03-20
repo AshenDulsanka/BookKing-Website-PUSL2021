@@ -77,29 +77,22 @@
       </ul>
     </div>
     <div class="contact-us-child" />
-    <img class="book-king-1" alt="" src="/book-king-1@2x.png" />
+    <img class="book-king-1" alt="" src="../../../public/assets/book-king-1@2x.png" />
     <section class="connect-with-us">
       Connect with Us: Your Direct Line to Exceptional Service – Reach Out,
       Share Your Thoughts, and Let Us Assist You!
     </section>
     <h1 class="contact-us1">Contact Us</h1>
     <button class="button"><b>Submit</b></button>
-    <NewFooter />
+    
   </div>
+  <NewFooter />
 </template>
-
-<!--<script>
-  import { defineComponent } from "vue";
-
-  export default defineComponent({
-    name: "ContactUs",
-  });
-</script>-->
 
 <script>
   import { defineComponent } from "vue";
-  import NewHeader from "/src/components/newheader.vue";
-  import NewFooter from "/src/components/newfooter.vue";
+  import NewHeader from "../../components/public/newheader.vue";
+  import NewFooter from "../../components/public/newfooter.vue";
 
   export default defineComponent({
     name: "ContactUs",
