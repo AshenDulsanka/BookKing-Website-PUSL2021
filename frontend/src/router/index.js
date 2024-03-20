@@ -15,6 +15,7 @@ import AboutUs from '../pages/public/AboutUs.vue';
 import HomeView from '../pages/public/HomeView.vue';
 import AdminLogin from '../pages/admin/adminLogin.vue';
 import AdminDashboard from '../pages/admin/adminDashboard.vue';
+import ContactUs from '../pages/public/ContactUs.vue';
 
 const routes = [
   // Auth
@@ -38,6 +39,7 @@ const routes = [
   { path: '/reviews', component: Reviews },
   { path: '/hotels', component: Hotels },
   { path: '/aboutus', component: AboutUs },
+  { path: '/contactus', component: ContactUs }
 ];
 
 const router = createRouter({
