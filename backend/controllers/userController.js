@@ -286,4 +286,17 @@ const resetPasswordLoad = (req, res) => {
   }
 }
 
-export { register, verifyMail, login, getUser, forgetPassword, resetPasswordLoad }
+const resetPassword = (req, res) => {
+  // eslint-disable-next-line eqeqeq
+  if (req.body.password != req.body.confirmPassword) {
+    res.render('resetPassword', { errorMessage: 'Password do not match', user: { UID: req.body.userID, emaill: req.body.email } })
+  }
+
+  bcrypt.hash(req.body.confirmPassword, 10, (err, hash) => {
+    if (err) {
+      console.log(err)
+    }
+  })
+}
+
+export { register, verifyMail, login, getUser, forgetPassword, resetPasswordLoad, resetPassword }
