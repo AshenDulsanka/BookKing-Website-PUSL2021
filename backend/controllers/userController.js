@@ -300,6 +300,10 @@ const resetPassword = (req, res) => {
     db.query(
       `DELETE FROM passwordresets WHERE email = '${req.body.email}'`
     )
+
+    db.query(
+      `UPDATE users SET password = '${hash}' WHERE UID = '${req.body.userID}'`
+    )
   })
 }
 
