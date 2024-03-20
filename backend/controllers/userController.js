@@ -304,6 +304,8 @@ const resetPassword = (req, res) => {
     db.query(
       `UPDATE users SET password = '${hash}' WHERE UID = '${req.body.userID}'`
     )
+
+    res.render('resetSuccess', { message: 'Password Reset Succesfully' })
   })
 }
 
