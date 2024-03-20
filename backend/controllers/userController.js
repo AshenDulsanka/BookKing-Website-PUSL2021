@@ -188,4 +188,72 @@ const login = (req, res) => {
   )
 }
 
-export { register, verifyMail, login }
+const getUser = (req, res) => {
+  const authToken = req.headers.authorization.split(' ')[1]
+  const decode = jwt.verify(authToken, JWTSECRET)
+
+  db.query('SELECT * FROM users WHERE UID = ?', decode.UID, function (error, result, fields) {
+    if (error) {
+      throw error
+    }
+
+    return res.status(200).send({ success: true, data: result[0], message: 'Fetch Successfully' })
+  })
+}
+
+const forgetPassword = (req, res) => {
+  const errors = validationResult(req)
+
+  if (!errors.isEmpty()) {
+    return res.status(400).json({ errors: errors.array() })
+  }
+
+  const email = req.body.email
+
+  db.query('SELECT * FROM users WHERE email = ? limit 1', email, function (error, result, fields) {
+    if (error) {
+      return res.status(400).json({ message: error })
+    }
+
+    if (result.length > 0) {
+      const mailSubject = 'Forget Password'
+      const randomstring = random.generate()
+      const content = `
+      <div style="font-family: Arial, sans-serif; color: #333; background-color: #f5f5f5; padding: 20px;">
+        <h2 style="color: #007bff; text-align: center;">Forgot Your Password?</h2>
+        <p>Hi ${result[0].name},</p>
+        <p>We received a request to reset the password associated with your account.</p>
+        <p style="margin-bottom: 20px;">If you didn't make this request, you can safely ignore this email.</p>
+        <div style="text-align: center;">
+          <a href="http://localhost:8081/resetPassword?token=${randomstring}" style="display: inline-block; background-color: #007bff; color: #fff; text-decoration: none; padding: 10px 20px; border-radius: 5px;">Reset Password</a>
+        </div>
+        <p style="margin-top: 20px;">Alternatively, you can copy and paste the following link into your browser:</p>
+        <p style="text-align: center; margin-bottom: 20px;"><a href="http://localhost:8081/resetPassword?token=${randomstring}" style="color: #007bff; text-decoration: none;">http://localhost:8081/resetPassword?token=${randomstring}</a></p>
+        <p>If you did request a password reset, click the button above to reset your password. This link will expire in 24 hours.</p>
+        <p>If you encounter any issues, please don't hesitate to contact us at bookkinglk@gmail.com.</p>
+        <p>Best Regards,<br/>Team BookKing</p>
+      </div>
+    `
+
+      sendMail(email, mailSubject, content)
+
+      db.query(
+        `DELETE FROM passwordresets WHERE email = ${db.escape(result[0].email)}`
+      )
+
+      db.query(
+        `INSERT INTO passwordresets (email, token) VALUES (${db.escape(result[0].email)}, '${randomstring}')`
+      )
+
+      return res.status(200).send({
+        message: 'Reset link has been sent to your email!'
+      })
+    }
+
+    return res.status(401).send({
+      message: "Email doesn't exists"
+    })
+  })
+}
+
+export { register, verifyMail, login, getUser, forgetPassword }
