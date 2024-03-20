@@ -3,8 +3,8 @@
     <div :class="$style.rectangleParent">
       <div :class="$style.frameChild" />
       <div :class="$style.rectangleWrapper">
-        <img 
-          :class="$style.frameItem" alt="" :src="image" />
+        <a href="/productPage"><img 
+          :class="$style.frameItem" alt="" :src="image" /></a>
       </div>
       <div :class="$style.frameInner" />
       <div :class="$style.frameContainer" :style="frameDiv1Style">
@@ -17,7 +17,7 @@
           </div>
           <button :class="$style.rectangleGroup">
             <div :class="$style.rectangleDiv" />
-            <b :class="$style.bookNow">Book NOW</b>
+            <a href="/productPage"><b :class="$style.bookNow">Book Now</b></a>
           </button>
         </div>
       </div>
