@@ -226,7 +226,7 @@ const forgetPassword = (req, res) => {
           <a href="http://localhost:8081/SPresetPassword?token=${randomstring}" style="display: inline-block; background-color: #007bff; color: #fff; text-decoration: none; padding: 10px 20px; border-radius: 5px;">Reset Password</a>
         </div>
         <p style="margin-top: 20px;">Alternatively, you can copy and paste the following link into your browser:</p>
-        <p style="text-align: center; margin-bottom: 20px;"><a href="http://localhost:8081/SPresetPassword?token=${randomstring}" style="color: #007bff; text-decoration: none;">http://localhost:8081/resetPassword?token=${randomstring}</a></p>
+        <p style="text-align: center; margin-bottom: 20px;"><a href="http://localhost:8081/SPresetPassword?token=${randomstring}" style="color: #007bff; text-decoration: none;">http://localhost:8081/SPresetPassword?token=${randomstring}</a></p>
         <p>If you did request a password reset, click the button above to reset your password. This link will expire in 24 hours.</p>
         <p>If you encounter any issues, please don't hesitate to contact us at bookkinglk@gmail.com.</p>
         <p>Best Regards,<br/>Team BookKing</p>
@@ -273,7 +273,7 @@ const SPresetPasswordLoad = (req, res) => {
             console.log(error.message)
           }
 
-          res.render('resetPassword', { user: result[0] })
+          res.render('SPresetPassword', { user: result[0] })
         })
       } else {
         res.render('404')
@@ -287,7 +287,7 @@ const SPresetPasswordLoad = (req, res) => {
 const SPresetPassword = (req, res) => {
   // eslint-disable-next-line eqeqeq
   if (req.body.password != req.body.confirmPassword) {
-    res.render('resetPassword', { errorMessage: 'Password do not match', user: { SPID: req.body.userID, emaill: req.body.email } })
+    res.render('SPresetPassword', { errorMessage: 'Password do not match', user: { SPID: req.body.spID, emaill: req.body.email } })
   }
 
   bcrypt.hash(req.body.confirmPassword, 10, (err, hash) => {
@@ -300,7 +300,11 @@ const SPresetPassword = (req, res) => {
     )
 
     db.query(
-      `UPDATE serviceprovider SET password = '${hash}' WHERE SPID = '${req.body.userID}'`
+      `UPDATE serviceprovider SET password = '${hash}' WHERE SPID = '${req.body.spID}'`
+    )
+
+    db.query(
+      `UPDATE serviceprovider SET updatedAt = now() WHERE SPID = '${req.body.spID}}'`
     )
 
     res.render('resetSuccess')

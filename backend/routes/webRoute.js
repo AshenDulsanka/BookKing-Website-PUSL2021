@@ -10,7 +10,8 @@ webRoute.use(express.static('public'))
 webRoute.get('/mailVerification', verifyMail)
 webRoute.get('/SPmailverification', SPverifyMail)
 webRoute.get('/resetPassword', resetPasswordLoad)
-webRoute.get('/SPresetPasswordLoad', SPresetPasswordLoad)
-webRoute.post('/resetPassword', resetPassword, SPresetPassword)
+webRoute.get('/SPresetPassword', SPresetPasswordLoad)
+webRoute.post('/resetPassword', resetPassword)
+webRoute.post('/SPresetPassword', SPresetPassword)
 
 export { webRoute }
