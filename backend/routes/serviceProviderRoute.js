@@ -12,6 +12,6 @@ serviceProviderRouter.get('/getServiceProvider', isAuthorized, getServiceProvide
 
 serviceProviderRouter.post('/spforgetPassword', forgetValidation, forgetPassword)
 
-serviceProviderRouter.post('/updateProfile', updateProfileValidation, isAuthorized, updateProfile)
+serviceProviderRouter.post('/spupdateProfile', updateProfileValidation, isAuthorized, updateProfile)
 
 export { serviceProviderRouter }

@@ -325,12 +325,12 @@ const updateProfile = (req, res) => {
     let sql = '' // Declare the sql variable using let
     let data // Declare the data variable using let
 
-    sql = 'UPDATE users SET name = ?, email = ?, phoneNumber = ?, address = ? WHERE UID = ?'
+    sql = 'UPDATE serviceprovider SET name = ?, email = ?, phoneNumber = ?, address = ?, serviceDesc = ? WHERE SPID = ?'
     // eslint-disable-next-line prefer-const
-    data = [req.body.name, req.body.email, req.body.phoneNo, req.body.address, decode.UID]
+    data = [req.body.name, req.body.email, req.body.phoneNo, req.body.address, req.body.serviceDesc, decode.SPID]
 
     db.query(
-      `UPDATE users SET updatedAt = now() WHERE UID = '${decode.UID}}'`
+      `UPDATE serviceprovider SET updatedAt = now() WHERE SPID = '${decode.SPID}}'`
     )
 
     db.query(sql, data, function (error, result, fields) {
