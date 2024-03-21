@@ -143,12 +143,12 @@
             Discover, book, and embark on your next journey with BookKing. Your adventure begins here.
           </p>
           <!--put the home page location to this href-->
-          <a href="#"><img class="BOOK-king-removebg-2" alt="Book king removebg"
+          <a href="/aboutus"><img class="BOOK-king-removebg-2" alt="Book king removebg"
             src="https://cdn.animaapp.com/projects/65d23269fb82e0b1687904f9/releases/65d233c5449bbb741dc6aecb/img/book-king-removebg-preview-2.png" /></a>
             <!--when clicked redirects to the home page-->
 
             <!--put the about us page location to this href-->
-          <div class="text-wrapper-33"><a href="#" style="color: white; text-decoration: none;">Read More</a></div>
+          <div class="text-wrapper-33"><a href="/aboutus" style="color: white; text-decoration: none;">Read More</a></div>
         </div>
       </div>
     </div>

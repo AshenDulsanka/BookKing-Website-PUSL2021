@@ -16,10 +16,10 @@
           <div class="login-image">
             <img class="loginimg-icon" loading="lazy" alt="" src="../../../public/assets/images/login.png"/>
             <div class="already-have-account-message">
-              <a href="#">You don't have a Service account?</a>
+              <a href="/spsignup">You don't have a Service account?</a>
             </div>
             <div class="already-have-account-message">
-              <a href="#">Already have an user account?</a>
+              <a href="/login">Already have an user account?</a>
             </div>
           </div>
         </div>

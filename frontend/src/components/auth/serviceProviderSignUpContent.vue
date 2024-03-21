@@ -13,7 +13,7 @@
         <div class="email1">Password</div>
         <input class="frame-item" type="password" name="password" required/>
         <div class="email1">Password Confirm</div>
-        <input class="frame-item" type="password" name="passwordc" required/>
+        <input class="frame-item" type="password" name="confirmPassword" required/>
         <div class="email1">Phone Number</div>
         <input class="frame-item" type="text" name="phoneno" required/>
         <div class="email1">Address</div>
