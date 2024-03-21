@@ -26,7 +26,7 @@ export const serviceProviderSignUpValidation = [
   }),
   body('phoneNo', 'Phone number is required').not().isEmpty(),
   body('address', 'Address is required').not().isEmpty(),
-  body('whatwedo', 'Description is required').not().isEmpty()
+  body('serviceDesc', 'Description is required').not().isEmpty()
 ]
 
 export const logInValidation = [

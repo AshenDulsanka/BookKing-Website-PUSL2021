@@ -27,7 +27,7 @@ const register = (req, res) => {
       }
       if (result && result.length) {
         return res.status(409).send({
-          msg: 'This user is already in use!'
+          msg: 'This service provider is already in use!'
         })
       } else {
         bcrypt.hash(req.body.password, 10, (err, hash) => {
@@ -37,9 +37,9 @@ const register = (req, res) => {
             })
           } else {
             db.query(
-              `INSERT INTO serviceprovider (name, email, password, phoneNumber, address, token) VALUES ('${req.body.name}', ${db.escape(
+              `INSERT INTO serviceprovider (name, email, password, phoneNumber, address, serviceDesc, token) VALUES ('${req.body.name}', ${db.escape(
                 req.body.email
-              )}, ${db.escape(hash)}, '${req.body.phoneNo}', '${req.body.address}', '${randomToken}');`,
+              )}, ${db.escape(hash)}, '${req.body.phoneNo}', '${req.body.address}', '${req.body.serviceDesc}','${randomToken}');`,
               (err, result) => {
                 if (err) {
                   return res.status(400).send({
@@ -72,17 +72,15 @@ const register = (req, res) => {
         p {
           margin-bottom: 20px;
         }
-        a {
-          color: white;
-          text-decoration: none;
-        }
-        .button {
+        a.button {
           display: inline-block;
+          margin: 0 auto; 
           background-color: grey;
-          color: #fff;
+          color: white; 
           padding: 10px 20px;
           border-radius: 5px;
           text-decoration: none;
+          text-align: center; 
         }
       </style>
     </head>
@@ -99,7 +97,7 @@ const register = (req, res) => {
 `
                 sendMail(req.body.email, mailSubject, content)
                 return res.status(200).send({
-                  msg: 'The user has been registered successfully!'
+                  msg: 'The service provider has been registered successfully!'
                 })
               }
             )
