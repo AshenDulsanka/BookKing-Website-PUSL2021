@@ -72,17 +72,15 @@ const register = (req, res) => {
         p {
           margin-bottom: 20px;
         }
-        a {
-          color: white;
-          text-decoration: none;
-        }
-        .button {
+        a.button {
           display: inline-block;
+          margin: 0 auto; 
           background-color: grey;
-          color: #fff;
+          color: white; 
           padding: 10px 20px;
           border-radius: 5px;
           text-decoration: none;
+          text-align: center; 
         }
       </style>
     </head>
