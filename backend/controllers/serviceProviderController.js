@@ -88,7 +88,7 @@ const register = (req, res) => {
       <div class="container">
         <h1>Hi ${req.body.name},</h1>
         <p>Thank you for registering with our service! To complete your registration and access all features, please verify your email address by clicking on the button.</p>
-        <p><a class="button" href="http://localhost:8081/mailVerification?token=${randomToken}">Verify Email</a></p>
+        <p><a class="button" href="http://localhost:8081/SPmailVerification?token=${randomToken}">Verify Email</a></p>
         <p>If you did not register for this account, please ignore this email.</p>
         <p>Thank you,<br>BookKing</p>
       </div>
@@ -108,17 +108,17 @@ const register = (req, res) => {
   )
 }
 
-const verifyMail = (req, res) => {
+const SPverifyMail = (req, res) => {
   const token = req.query.token
 
-  db.query('SELECT * FROM users WHERE token=? limit 1', token, function (error, result, fields) {
+  db.query('SELECT * FROM serviceprovider WHERE token=? limit 1', token, function (error, result, fields) {
     if (error) {
       console.log(error.message)
     }
 
     if (result.length > 0) {
       db.query(`
-        UPDATE users SET token = null, isVerified = 1 WHERE UID = '${result[0].UID}'
+        UPDATE serviceprovider SET token = null, isVerified = 1 WHERE SPID = '${result[0].SPID}'
       `)
       return res.render('mailVerification', { message: 'Mail Verified Successfully! You can now login!' })
     } else {
@@ -254,7 +254,7 @@ const forgetPassword = (req, res) => {
   })
 }
 
-const resetPasswordLoad = (req, res) => {
+const SPresetPasswordLoad = (req, res) => {
   try {
     const token = req.query.token
     // eslint-disable-next-line eqeqeq
@@ -284,7 +284,7 @@ const resetPasswordLoad = (req, res) => {
   }
 }
 
-const resetPassword = (req, res) => {
+const SPresetPassword = (req, res) => {
   // eslint-disable-next-line eqeqeq
   if (req.body.password != req.body.confirmPassword) {
     res.render('resetPassword', { errorMessage: 'Password do not match', user: { UID: req.body.userID, emaill: req.body.email } })
@@ -345,4 +345,4 @@ const updateProfile = (req, res) => {
   }
 }
 
-export { register, verifyMail, login, getUser, forgetPassword, resetPasswordLoad, resetPassword, updateProfile }
+export { register, SPverifyMail, login, getUser, forgetPassword, SPresetPasswordLoad, SPresetPassword, updateProfile }
