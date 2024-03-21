@@ -177,6 +177,7 @@
   flex-direction: column;
   justify-content: center;
   width: 100%;
+  position: relative;
 
 }
 
@@ -378,6 +379,11 @@
   position: absolute;
   top: 0;
   width: 253px;
+  transition: box-shadow 0.3s;
+}
+
+.index .img:hover {
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.3); /* Adding box shadow on hover */
 }
 
 .index .rectangle-5 {
@@ -387,6 +393,11 @@
   position: absolute;
   top: 0;
   width: 253px;
+  transition: box-shadow 0.3s;
+}
+
+.index .rectangle-5:hover {
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.3); /* Adding box shadow on hover */
 }
 
 .index .rectangle-6 {
@@ -396,6 +407,11 @@
   position: absolute;
   top: 0;
   width: 253px;
+  transition: box-shadow 0.3s;
+}
+
+.index .rectangle-6:hover {
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.3); /* Adding box shadow on hover */
 }
 
 .index .rectangle-7 {
@@ -405,6 +421,11 @@
   position: absolute;
   top: 0;
   width: 253px;
+  transition: box-shadow 0.3s;
+}
+
+.index .rectangle-7:hover {
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.3); /* Adding box shadow on hover */
 }
 
 .index .rectangle-8 {
@@ -414,6 +435,11 @@
   position: absolute;
   top: 0;
   width: 253px;
+  transition: box-shadow 0.3s;
+}
+
+.index .rectangle-8:hover {
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.3); /* Adding box shadow on hover */
 }
 
 .index .text-wrapper-9 {
