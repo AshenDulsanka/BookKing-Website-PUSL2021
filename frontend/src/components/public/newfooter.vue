@@ -34,7 +34,6 @@
     background-color: #000000;
     padding: 20px;
     text-align: center;
-    bottom: 0;
     width: 100%;
     height: 5.5rem;
     }
