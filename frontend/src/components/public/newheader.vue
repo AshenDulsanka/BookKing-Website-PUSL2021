@@ -1,6 +1,5 @@
 <template>
-<title>User Sign Up</title>
-  <Header>
+  <header>
                 <a href="/">
                     <img src="../../../public/assets/logo.png" alt="" class="img">
                 </a>
@@ -20,7 +19,7 @@
                     </ul>
                 </div>
         </nav>
-  </Header>
+  </header>
 
 </template>
 
@@ -48,17 +47,16 @@
         background-color:yellow;
         color: black        ;
     }
-    Header {
+    header {
     background-color: #000000;
     padding: 20px;
     text-align: right;
-    top:0px;
-    bottom: 0;
     width: 100%;
     height: 100px;
+    
     }
 
-    Header nav ul {
+    header nav ul {
     display: inline-block;
     list-style: none;
     margin: 0;
@@ -66,13 +64,13 @@
 
     }
 
-    Header nav li {
+    header nav li {
     display: inline-block;
     margin-right: 15px;
     font-weight: bold
     }
 
-    Header nav a {
+    header nav a {
     align-self: stretch;
     font-family: "Poppins", sans-serif;
     font-weight: 400;
