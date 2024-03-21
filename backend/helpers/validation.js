@@ -37,3 +37,8 @@ export const logInValidation = [
 export const forgetValidation = [
   body('email', 'Please enter a valid email').isEmail().normalizeEmail({ gmail_remove_dots: true })
 ]
+
+export const updateProfileValidation = [
+  body('name', 'Name is required').not().isEmpty(),
+  body('email', 'Please enter a valid email').isEmail().normalizeEmail({ gmail_remove_dots: true })
+]

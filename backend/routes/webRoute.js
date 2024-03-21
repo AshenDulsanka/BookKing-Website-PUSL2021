@@ -1,11 +1,13 @@
 import express from 'express'
-import { verifyMail } from '../controllers/userController.js'
-const userRoute = express()
+import { verifyMail, resetPasswordLoad, resetPassword } from '../controllers/userController.js'
+const wenRoute = express()
 
-userRoute.set('view engine', 'ejs')
-userRoute.set('views', './views')
-userRoute.use(express.static('public'))
+wenRoute.set('view engine', 'ejs')
+wenRoute.set('views', '../frontend/src/views')
+wenRoute.use(express.static('public'))
 
-userRoute.get('/mailVerification', verifyMail)
+wenRoute.get('/mailVerification', verifyMail)
+wenRoute.get('/resetPassword', resetPasswordLoad)
+wenRoute.post('/resetPassword', resetPassword)
 
-export { userRoute }
+export { wenRoute }

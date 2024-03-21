@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 27, 2024 at 07:14 AM
+-- Generation Time: Mar 20, 2024 at 12:00 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `bookking`
+-- Database: `bookkingdb`
 --
 
 -- --------------------------------------------------------
@@ -83,6 +83,26 @@ CREATE TABLE `notification` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `passwordresets`
+--
+
+CREATE TABLE `passwordresets` (
+  `email` varchar(255) NOT NULL,
+  `token` varchar(255) NOT NULL,
+  `createdAt` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `passwordresets`
+--
+
+INSERT INTO `passwordresets` (`email`, `token`, `createdAt`) VALUES
+('dulabeyse@gmail.com', 'zenzYPmdf5XmFnlfY64z3U6WECNvu80D', '2024-03-20 02:25:12'),
+('ashendul@gmail.com', 'O2wjwQUSBfihdQ028GvocUgiNfWriRRB', '2024-03-20 10:46:35');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `service`
 --
 
@@ -116,8 +136,8 @@ CREATE TABLE `serviceprovider` (
   `name` varchar(255) NOT NULL,
   `address` varchar(255) NOT NULL,
   `phoneNumber` varchar(20) NOT NULL,
-  `category` varchar(255) NOT NULL,
-  `serviceDesc` varchar(500) NOT NULL
+  `serviceDesc` varchar(500) NOT NULL,
+  `category` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -132,8 +152,25 @@ CREATE TABLE `users` (
   `password` varchar(500) NOT NULL,
   `name` varchar(255) NOT NULL,
   `address` varchar(1000) NOT NULL,
-  `phoneNumber` varchar(20) NOT NULL
+  `phoneNumber` varchar(20) NOT NULL,
+  `isVerified` int(11) NOT NULL DEFAULT 0,
+  `lastLogin` timestamp NULL DEFAULT NULL,
+  `createdAt` timestamp NOT NULL DEFAULT current_timestamp(),
+  `updateddAt` timestamp NOT NULL DEFAULT current_timestamp(),
+  `token` text DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`UID`, `email`, `password`, `name`, `address`, `phoneNumber`, `isVerified`, `lastLogin`, `createdAt`, `updateddAt`, `token`) VALUES
+(2, 'test@gmail.com', '$2a$10$VSlzmC7GD65neGrbmbZM0OXvfewjjBG6TrowoIres/v.yPEFvALFq', 'test', 'Pannipitiya', '0111234567', 0, NULL, '2024-03-16 13:42:32', '2024-03-16 13:42:32', '12ouKAQ2VSNYEZHSPDKeqpLs5sMWOtIJ'),
+(3, 'uptimelk@gmail.com', '$2a$10$0SE0m.gpxgNmxckgS5TgIOuIKi7QiYORpNVkQvqj8CbvdOfMUl2ie', 'test', 'Pannipitiya', '0111234567', 0, NULL, '2024-03-16 13:44:21', '2024-03-16 13:44:21', '12ouKAQ2VSNYEZHSPDKeqpLs5sMWOtIJ'),
+(8, 'greenmartlankan@gmail.com', '$2a$10$DnG.qVk/ur0GcBPxIP./r.e9pS2BpPP7.IccY3YRlC4cYBALuUhOu', 'test', 'Pannipitiya', '0111234567', 1, NULL, '2024-03-17 08:31:34', '2024-03-17 08:31:34', NULL),
+(11, 'ashendul@gmail.com', '$2a$10$ad8F8qinR54YbU.xTDwFHeJaKD.ej01n1Az1Rj4/.za0taKVAyFxS', 'Ashen Abeysekara', '', '', 1, '2024-03-20 10:46:30', '2024-03-19 01:12:23', '2024-03-19 01:12:23', NULL),
+(12, 'dulabeyse@gmail.com', '$2a$10$yeS/Pb8GvUEi.3is.2Rhpux7hAEYIqhJCawgyz8hcXHEJliPli3HK', 'test', 'Pannipitiya', '0111234567', 1, '2024-03-19 17:04:50', '2024-03-19 01:17:15', '2024-03-19 01:17:15', NULL),
+(13, 'test1@gmail.com', '$2a$10$XZOhAlSdfqVEhPyGhEUAeOOtGXCyK3zG2dAtsf1kPHwO3EKB867g.', 'test', 'Pannipitiya', '0111234567', 0, NULL, '2024-03-20 02:11:05', '2024-03-20 02:11:05', 'eteVGeuRV9buKt2Jf6roNGEt8y50NQDA');
 
 --
 -- Indexes for dumped tables
@@ -229,7 +266,7 @@ ALTER TABLE `serviceprovider`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `UID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `UID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- Constraints for dumped tables
