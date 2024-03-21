@@ -6,7 +6,7 @@ import dotenv from 'dotenv'
 import { conn } from './config/dbCon.js'
 
 import { userRouter } from './routes/userRoute.js'
-import { userRoute } from './routes/webRoute.js'
+import { webRoute } from './routes/webRoute.js'
 
 const server = express()
 
@@ -20,7 +20,7 @@ dotenv.config()
 console.log(conn.connect)
 
 server.use('/api', userRouter)
-server.use('/', userRoute)
+server.use('/', webRoute)
 
 // error handling
 server.use((err, req, res, next) => {
