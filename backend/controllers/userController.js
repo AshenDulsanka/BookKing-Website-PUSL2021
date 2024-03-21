@@ -303,6 +303,10 @@ const resetPassword = (req, res) => {
       `UPDATE users SET password = '${hash}' WHERE UID = '${req.body.userID}'`
     )
 
+    db.query(
+      `UPDATE users SET updatedAt = now() WHERE UID = '${req.body.userID}}'`
+    )
+
     res.render('resetSuccess')
   })
 }
