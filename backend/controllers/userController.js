@@ -327,6 +327,10 @@ const updateProfile = (req, res) => {
     // eslint-disable-next-line prefer-const
     data = [req.body.name, req.body.email, req.body.phoneNo, req.body.address, decode.UID]
 
+    db.query(
+      `UPDATE users SET updatedAt = now() WHERE UID = '${decode.UID}}'`
+    )
+
     db.query(sql, data, function (error, result, fields) {
       if (error) {
         res.status(400).send({

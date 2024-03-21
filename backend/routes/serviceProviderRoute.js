@@ -5,10 +5,10 @@ import { isAuthorized } from '../middleware/auth.js'
 
 const serviceProviderRouter = express.Router()
 
-serviceProviderRouter.post('/register', serviceProviderSignUpValidation, register)
-serviceProviderRouter.post('/login', logInValidation, login)
+serviceProviderRouter.post('/spregister', serviceProviderSignUpValidation, register)
+serviceProviderRouter.post('/splogin', logInValidation, login)
 
-serviceProviderRouter.get('/getUser', isAuthorized, getUser)
+serviceProviderRouter.get('/getServiceProvider', isAuthorized, getUser)
 
 serviceProviderRouter.post('/forgetPassword', forgetValidation, forgetPassword)
 

@@ -18,7 +18,7 @@ const register = (req, res) => {
   }
 
   db.query(
-    `SELECT * FROM users WHERE LOWER(email) = LOWER(${db.escape(req.body.email)})`,
+    `SELECT * FROM serviceprovider WHERE LOWER(email) = LOWER(${db.escape(req.body.email)})`,
     (err, result) => {
       if (err) {
         return res.status(500).send({
@@ -37,7 +37,7 @@ const register = (req, res) => {
             })
           } else {
             db.query(
-              `INSERT INTO users (name, email, password, phoneNumber, address, token) VALUES ('${req.body.name}', ${db.escape(
+              `INSERT INTO serviceprovider (name, email, password, phoneNumber, address, token) VALUES ('${req.body.name}', ${db.escape(
                 req.body.email
               )}, ${db.escape(hash)}, '${req.body.phoneNo}', '${req.body.address}', '${randomToken}');`,
               (err, result) => {
@@ -326,6 +326,10 @@ const updateProfile = (req, res) => {
     sql = 'UPDATE users SET name = ?, email = ?, phoneNumber = ?, address = ? WHERE UID = ?'
     // eslint-disable-next-line prefer-const
     data = [req.body.name, req.body.email, req.body.phoneNo, req.body.address, decode.UID]
+
+    db.query(
+      `UPDATE users SET updatedAt = now() WHERE UID = '${decode.UID}}'`
+    )
 
     db.query(sql, data, function (error, result, fields) {
       if (error) {
