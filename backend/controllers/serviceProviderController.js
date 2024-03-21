@@ -136,7 +136,7 @@ const login = (req, res) => {
 
   db.query(
     `
-      SELECT * FROM users WHERE email = ${db.escape(req.body.email)};
+      SELECT * FROM serviceprovider WHERE email = ${db.escape(req.body.email)};
     `,
     (err, result) => {
       if (err) {
@@ -166,9 +166,9 @@ const login = (req, res) => {
 
           if (bResult) {
             // console.log('JWT Key is, ' + JWTSECRET)
-            const token = jwt.sign({ UID: result[0].UID }, JWTSECRET, { expiresIn: '1h' })
+            const token = jwt.sign({ SPID: result[0].SPID }, JWTSECRET, { expiresIn: '1h' })
             db.query(
-              `UPDATE users SET lastLogin = now() WHERE UID = '${result[0].UID}'`
+              `UPDATE serviceprovider SET lastLogin = now() WHERE SPID = '${result[0].SPID}'`
             )
             return res.status(200).send({
               msg: 'Logged in!',
