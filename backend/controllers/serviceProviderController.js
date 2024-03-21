@@ -208,7 +208,7 @@ const forgetPassword = (req, res) => {
 
   const email = req.body.email
 
-  db.query('SELECT * FROM users WHERE email = ? limit 1', email, function (error, result, fields) {
+  db.query('SELECT * FROM serviceprovider WHERE email = ? limit 1', email, function (error, result, fields) {
     if (error) {
       return res.status(400).json({ message: error })
     }
@@ -223,10 +223,10 @@ const forgetPassword = (req, res) => {
         <p>We received a request to reset the password associated with your account.</p>
         <p style="margin-bottom: 20px;">If you didn't make this request, you can safely ignore this email.</p>
         <div style="text-align: center;">
-          <a href="http://localhost:8081/resetPassword?token=${randomstring}" style="display: inline-block; background-color: #007bff; color: #fff; text-decoration: none; padding: 10px 20px; border-radius: 5px;">Reset Password</a>
+          <a href="http://localhost:8081/SPresetPassword?token=${randomstring}" style="display: inline-block; background-color: #007bff; color: #fff; text-decoration: none; padding: 10px 20px; border-radius: 5px;">Reset Password</a>
         </div>
         <p style="margin-top: 20px;">Alternatively, you can copy and paste the following link into your browser:</p>
-        <p style="text-align: center; margin-bottom: 20px;"><a href="http://localhost:8081/resetPassword?token=${randomstring}" style="color: #007bff; text-decoration: none;">http://localhost:8081/resetPassword?token=${randomstring}</a></p>
+        <p style="text-align: center; margin-bottom: 20px;"><a href="http://localhost:8081/SPresetPassword?token=${randomstring}" style="color: #007bff; text-decoration: none;">http://localhost:8081/resetPassword?token=${randomstring}</a></p>
         <p>If you did request a password reset, click the button above to reset your password. This link will expire in 24 hours.</p>
         <p>If you encounter any issues, please don't hesitate to contact us at bookkinglk@gmail.com.</p>
         <p>Best Regards,<br/>Team BookKing</p>
@@ -268,7 +268,7 @@ const SPresetPasswordLoad = (req, res) => {
       }
 
       if (result !== undefined && result.length > 0) {
-        db.query('SELECT * FROM users WHERE email = ? limit 1', result[0].email, function (error, result, fields) {
+        db.query('SELECT * FROM serviceprovider WHERE email = ? limit 1', result[0].email, function (error, result, fields) {
           if (error) {
             console.log(error.message)
           }
@@ -287,7 +287,7 @@ const SPresetPasswordLoad = (req, res) => {
 const SPresetPassword = (req, res) => {
   // eslint-disable-next-line eqeqeq
   if (req.body.password != req.body.confirmPassword) {
-    res.render('resetPassword', { errorMessage: 'Password do not match', user: { UID: req.body.userID, emaill: req.body.email } })
+    res.render('resetPassword', { errorMessage: 'Password do not match', user: { SPID: req.body.userID, emaill: req.body.email } })
   }
 
   bcrypt.hash(req.body.confirmPassword, 10, (err, hash) => {
@@ -300,7 +300,7 @@ const SPresetPassword = (req, res) => {
     )
 
     db.query(
-      `UPDATE users SET password = '${hash}' WHERE UID = '${req.body.userID}'`
+      `UPDATE serviceprovider SET password = '${hash}' WHERE SPID = '${req.body.userID}'`
     )
 
     res.render('resetSuccess')

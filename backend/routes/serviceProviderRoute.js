@@ -10,7 +10,7 @@ serviceProviderRouter.post('/splogin', logInValidation, login)
 
 serviceProviderRouter.get('/getServiceProvider', isAuthorized, getServiceProvider)
 
-serviceProviderRouter.post('/forgetPassword', forgetValidation, forgetPassword)
+serviceProviderRouter.post('/spforgetPassword', forgetValidation, forgetPassword)
 
 serviceProviderRouter.post('/updateProfile', updateProfileValidation, isAuthorized, updateProfile)
 
