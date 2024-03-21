@@ -14,7 +14,7 @@ export const userSignUpValidation = [
   body('address', 'Address is required').not().isEmpty()
 ]
 
-export const spSignUpValidation = [
+export const serviceProviderSignUpValidation = [
   body('name', 'Name is required').not().isEmpty(),
   body('email', 'Please enter a valid email').isEmail().normalizeEmail({ gmail_remove_dots: true }),
   body('password', 'Password is required and it should be at least 6 characters, symbols or numbers').isLength({ min: 6 }),

@@ -1,17 +1,17 @@
 import express from 'express'
-import { userSignUpValidation, logInValidation, forgetValidation, updateProfileValidation } from '../helpers/validation.js'
-import { register, login, getUser, forgetPassword, updateProfile } from '../controllers/userController.js'
+import { serviceProviderSignUpValidation, logInValidation, forgetValidation, updateProfileValidation } from '../helpers/validation.js'
+import { register, login, getUser, forgetPassword, updateProfile } from '../controllers/serviceProviderController.js'
 import { isAuthorized } from '../middleware/auth.js'
 
-const userRouter = express.Router()
+const serviceProviderRouter = express.Router()
 
-userRouter.post('/register', userSignUpValidation, register)
-userRouter.post('/login', logInValidation, login)
+serviceProviderRouter.post('/register', serviceProviderSignUpValidation, register)
+serviceProviderRouter.post('/login', logInValidation, login)
 
-userRouter.get('/getUser', isAuthorized, getUser)
+serviceProviderRouter.get('/getUser', isAuthorized, getUser)
 
-userRouter.post('/forgetPassword', forgetValidation, forgetPassword)
+serviceProviderRouter.post('/forgetPassword', forgetValidation, forgetPassword)
 
-userRouter.post('/updateProfile', updateProfileValidation, isAuthorized, updateProfile)
+serviceProviderRouter.post('/updateProfile', updateProfileValidation, isAuthorized, updateProfile)
 
-export { userRouter }
+export { serviceProviderRouter }
