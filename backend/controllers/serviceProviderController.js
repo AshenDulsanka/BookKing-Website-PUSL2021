@@ -186,11 +186,11 @@ const login = (req, res) => {
   )
 }
 
-const getUser = (req, res) => {
+const getServiceProvider = (req, res) => {
   const authToken = req.headers.authorization.split(' ')[1]
   const decode = jwt.verify(authToken, JWTSECRET)
 
-  db.query('SELECT * FROM users WHERE UID = ?', decode.UID, function (error, result, fields) {
+  db.query('SELECT * FROM serviceprovider WHERE SPID = ?', decode.SPID, function (error, result, fields) {
     if (error) {
       throw error
     }
@@ -345,4 +345,4 @@ const updateProfile = (req, res) => {
   }
 }
 
-export { register, SPverifyMail, login, getUser, forgetPassword, SPresetPasswordLoad, SPresetPassword, updateProfile }
+export { register, SPverifyMail, login, getServiceProvider, forgetPassword, SPresetPasswordLoad, SPresetPassword, updateProfile }
