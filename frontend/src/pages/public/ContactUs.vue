@@ -2,11 +2,11 @@
   <div class="contact-us">
     <NewHeader />
     <h1 class="customer-service-">Customer Service - Contact</h1>
-    <input class="input" type="text" />
-    <input class="input1" type="text" />
-    <input class="input2" type="text" />
-    <input class="input3" type="text" />
-    <input class="input4" type="text" />
+    <input class="input" type="text" placeholder="Enter your name here"/>
+    <input class="input1" type="text" placeholder="Enter your email address here"/>
+    <input class="input2" type="text" placeholder="Enter your phone number here"/>
+    <input class="input3" type="text" placeholder="Enter your city here"/>
+    <input class="input4" type="text" placeholder="Enter your message here"/>
     <div class="name">Name</div>
     <div class="email-address">Email Address</div>
     <div class="phone-number">Phone Number</div>
@@ -83,10 +83,10 @@
       Share Your Thoughts, and Let Us Assist You!
     </section>
     <h1 class="contact-us1">Contact Us</h1>
-    <button class="button"><b>Submit</b></button>
+    <button class="submitBtn">Submit<svg fill="white" viewBox="0 0 448 512" height="1em" class="arrow"><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"></path></svg></button>
     
   </div>
-  <NewFooter />
+  
 </template>
 
 <script>
@@ -112,55 +112,156 @@
     font-family: inherit;
   }
   .input {
-    border: none;
-    outline: none;
-    background-color: var(--color-khaki);
+    border: 1ex solid none;
+    border-top-width: 1.7em;
+    margin: 0;
+    padding: 0;
+    color: black;
+    word-wrap: break-word;
+    outline: 5px solid #F0E68C;
+    height: 30px;
+    font-size: 17px;
+    text-align: center;
+    transition: all 1s;
+    width: 807px;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
     position: absolute;
     top: 610px;
     left: 162px;
-    width: 807px;
-    height: 48px;
   }
+
+  .input:hover {
+ border-top-width: 0.2em;
+ background-color: #F0E68C;
+  }
+
+  .input:focus {
+ border-top-width: 0.2em;
+ background-color: #e9e6c3;
+  }
+
   .input1 {
-    border: none;
-    outline: none;
-    background-color: var(--color-khaki);
+    border: 1ex solid none;
+    border-top-width: 1.7em;
+    margin: 0;
+    padding: 0;
+    color: black;
+    word-wrap: break-word;
+    outline: 5px solid #F0E68C;
+    height: 30px;
+    font-size: 17px;
+    text-align: center;
+    transition: all 1s;
+    width: 807px;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
     position: absolute;
     top: 725px;
     left: 162px;
-    width: 807px;
-    height: 48px;
   }
+
+  .input1:hover {
+ border-top-width: 0.2em;
+ background-color: #F0E68C;
+  }
+
+  .input1:focus {
+ border-top-width: 0.2em;
+ background-color: #e9e6c3;
+  }
+
   .input2 {
-    border: none;
-    outline: none;
-    background-color: var(--color-khaki);
+    border: 1ex solid none;
+    border-top-width: 1.7em;
+    margin: 0;
+    padding: 0;
+    color: black;
+    word-wrap: break-word;
+    outline: 5px solid #F0E68C;
+    height: 30px;
+    font-size: 17px;
+    text-align: center;
+    transition: all 1s;
+    width: 807px;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
     position: absolute;
     top: 840px;
     left: 162px;
-    width: 807px;
-    height: 48px;
   }
+
+  .input2:hover {
+ border-top-width: 0.2em;
+ background-color: #F0E68C;
+  }
+
+  .input2:focus {
+ border-top-width: 0.2em;
+ background-color: #e9e6c3;
+  }
+
   .input3 {
-    border: none;
-    outline: none;
-    background-color: var(--color-khaki);
+    border: 1ex solid none;
+    border-top-width: 1.7em;
+    margin: 0;
+    padding: 0;
+    color: black;
+    word-wrap: break-word;
+    outline: 5px solid #F0E68C;
+    height: 30px;
+    font-size: 17px;
+    text-align: center;
+    transition: all 1s;
+    width: 807px;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
     position: absolute;
     top: 955px;
     left: 162px;
-    width: 807px;
-    height: 48px;
   }
+
+  .input3:hover {
+ border-top-width: 0.2em;
+ background-color: #F0E68C;
+  }
+
+  .input3:focus {
+ border-top-width: 0.2em;
+ background-color: #e9e6c3;
+  }
+
   .input4 {
-    border: none;
-    outline: none;
-    background-color: var(--color-khaki);
+    border: 1ex solid none;
+    border-top-width: 250px;
+    margin: 0;
+    padding: 0;
+    color: black;
+    word-wrap: break-word;
+    outline: 5px solid #F0E68C;
+    height: 250px;
+    font-size: 17px;
+    text-align: left;
+    transition: all 1s;
+    width: 807px;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
     position: absolute;
     top: 1070px;
     left: 162px;
-    width: 807px;
-    height: 256px;
+    
   }
+
+  .input4:hover {
+ border-top-width: 0.2em;
+ background-color: #F0E68C;
+  }
+
+  .input4:focus {
+ border-top-width: 0.2em;
+ background-color: #e9e6c3;
+  }
+
   .name {
     position: absolute;
     top: 580px;
@@ -295,19 +396,47 @@
     height: 39px;
   }
 
-  .button {
+  .submitBtn {
     cursor: pointer;
     border: none;
+    border-radius: 30px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.13);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-weight: 900;
+    color: rgb(255, 255, 255);
+    letter-spacing: 0.7px;
     padding: 0;
-    background-color: transparent;
+    background: linear-gradient(to left,rgb(0, 0, 0),rgb(255, 174, 0));
     position: absolute;
     top: 1363px;
     left: 171px;
-    width: 99px;
-    height: 36px;
-    border-radius: 4px;
-    background-color: #faff00;
+    width: 120px;
+    height: 40px;
+    
   }
+
+  .submitBtn:hover .arrow {
+  animation: slide-in-left 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@keyframes slide-in-left {
+  0% {
+    transform: translateX(-10px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+.submitBtn:active {
+  transform: scale(0.97);
+}
   .contact-us {
     width: 100%;
     height: 2281px;
