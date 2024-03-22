@@ -370,4 +370,31 @@ const deleteServiceProvider = (req, res) => {
   }
 }
 
-export { register, SPverifyMail, login, getServiceProvider, forgetPassword, SPresetPasswordLoad, SPresetPassword, updateProfile, deleteServiceProvider }
+const addService = (req, res) => {
+  try {
+    const errors = validationResult(req)
+
+    if (!errors.isEmpty()) {
+      return res.status(400).json({ errors: errors.array() })
+    }
+
+    const token = req.headers.authorization.split(' ')[1]
+    const decode = jwt.verify(token, JWTSECRET)
+
+    const sql = 'INSERT INTO service (Name, LongDescription, ShortDescription, Price, Location, category, Image, SPID) VALUES (?, ?, ?, ?, ?, ?, ?, ?)'
+    const data = [req.body.name, req.body.longDescription, req.body.shortDescription, req.body.price, req.body.location, req.body.category, req.file.filename, decode.SPID]
+
+    db.query(sql, data, (error, result) => {
+      if (error) {
+        return res.status(400).json({ msg: error.message })
+      }
+
+      const SID = result.SID
+      return res.status(200).json({ msg: 'Service added successfully', SID })
+    })
+  } catch (error) {
+    return res.status(400).json({ msg: error.message })
+  }
+}
+
+export { register, SPverifyMail, login, getServiceProvider, forgetPassword, SPresetPasswordLoad, SPresetPassword, updateProfile, deleteServiceProvider, addService }

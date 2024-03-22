@@ -29,6 +29,22 @@ export const serviceProviderSignUpValidation = [
   body('serviceDesc', 'Description is required').not().isEmpty()
 ]
 
+export const addServiceValidation = [
+  body('name', 'Service name is required').not().isEmpty(),
+  body('longDescription', 'Long description is required').not().isEmpty(),
+  body('shortDescription', 'Short description is required').not().isEmpty(),
+  body('price', 'Price is required').not().isEmpty().isNumeric(),
+  body('location', 'Location is required').not().isEmpty(),
+  body('category', 'Category is required').not().isEmpty(),
+  body('image').custom((value, { req }) => {
+    if (req.file.mimetype === 'image/jpeg' || req.file.mimetype === 'image/png') {
+      return true
+    } else {
+      return false
+    }
+  }).withMessage('Please upload an image with PNG or JPEG format')
+]
+
 export const logInValidation = [
   body('email', 'Please enter a valid email').isEmail().normalizeEmail({ gmail_remove_dots: true }),
   body('password', 'Password minimum length is 6 characters').isLength({ min: 6 })
