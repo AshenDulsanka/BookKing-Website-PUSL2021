@@ -72,17 +72,15 @@ const register = (req, res) => {
         p {
           margin-bottom: 20px;
         }
-        a {
-          color: white;
-          text-decoration: none;
-        }
-        .button {
+        a.button {
           display: inline-block;
+          margin: 0 auto; 
           background-color: grey;
-          color: #fff;
+          color: white; 
           padding: 10px 20px;
           border-radius: 5px;
           text-decoration: none;
+          text-align: center; 
         }
       </style>
     </head>
@@ -305,6 +303,10 @@ const resetPassword = (req, res) => {
       `UPDATE users SET password = '${hash}' WHERE UID = '${req.body.userID}'`
     )
 
+    db.query(
+      `UPDATE users SET updatedAt = now() WHERE UID = '${req.body.userID}}'`
+    )
+
     res.render('resetSuccess')
   })
 }
@@ -327,6 +329,10 @@ const updateProfile = (req, res) => {
     // eslint-disable-next-line prefer-const
     data = [req.body.name, req.body.email, req.body.phoneNo, req.body.address, decode.UID]
 
+    db.query(
+      `UPDATE users SET updatedAt = now() WHERE UID = '${decode.UID}}'`
+    )
+
     db.query(sql, data, function (error, result, fields) {
       if (error) {
         res.status(400).send({
@@ -343,4 +349,25 @@ const updateProfile = (req, res) => {
   }
 }
 
-export { register, verifyMail, login, getUser, forgetPassword, resetPasswordLoad, resetPassword, updateProfile }
+const deleteUser = (req, res) => {
+  try {
+    const token = req.headers.authorization.split(' ')[1]
+    const decode = jwt.verify(token, JWTSECRET)
+
+    db.query('DELETE FROM users WHERE UID = ?', decode.UID, (error, result) => {
+      if (error) {
+        return res.status(400).json({ msg: error.message })
+      }
+
+      if (result.affectedRows > 0) {
+        return res.status(200).json({ msg: 'User profile deleted successfully' })
+      } else {
+        return res.status(404).json({ msg: 'User not found' })
+      }
+    })
+  } catch (error) {
+    return res.status(400).json({ msg: error.message })
+  }
+}
+
+export { register, verifyMail, login, getUser, forgetPassword, resetPasswordLoad, resetPassword, updateProfile, deleteUser }
