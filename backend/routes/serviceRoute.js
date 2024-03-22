@@ -4,7 +4,7 @@ import multer from 'multer'
 import { fileURLToPath } from 'url'
 import { isAuthorized } from '../middleware/auth.js'
 import { addServiceValidation } from '../helpers/validation.js'
-import { addService, updateService, deleteService } from '../controllers/serviceController.js'
+import { addService, updateService, deleteService, getHotels } from '../controllers/serviceController.js'
 
 const serviceRouter = express.Router()
 
@@ -35,5 +35,6 @@ const upload = multer({
 serviceRouter.post('/addService', upload.single('image'), addServiceValidation, isAuthorized, addService)
 serviceRouter.post('/updateService', isAuthorized, updateService)
 serviceRouter.delete('/deleteService', isAuthorized, deleteService)
+serviceRouter.get('/Hotels', getHotels)
 
 export { serviceRouter }
