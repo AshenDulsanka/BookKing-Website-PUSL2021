@@ -1,155 +1,174 @@
 <template>
   <div class="index">
     <NewHeader />
-    <div class="div">
+    <div class="home-body">
       <div class="overlap">
         <header class="header">
-          <div class="overlap-group">
-            <div class="rectangle" />
-            <div class="rectangle-2" />
-            <div class="text-wrapper-7">BookKing</div>
-            <div class="text-wrapper-8">Your traveling partner...</div>
+          <div class="bg-container1">
+            <div class="intro">
+              <div class="intro-text-box">
+                <h1 class="intro-text1">BookKing</h1>
+                <h5 class="intro-text2">
+                  <span class="intro-text2-effect">Your traveling partner...</span>
+                </h5>
+              </div>
+            </div>
+            <div class="cars">
+              <!--Here I have added a tags to the imgs, enter page locations to the href accordingly-->
+              <div class="vehicle-list">
+                  <a href="#" class="vehicle-item">
+                    <img class="cars-img" alt="hotel-image" src="https://cdn.animaapp.com/projects/65d23269fb82e0b1687904f9/releases/65d233c5449bbb741dc6aecb/img/rectangle-10.png" />
+                    <h3 class="text-wrapper-9">Car</h3>
+                  </a>
+                  
+                <a href="#" class="vehicle-item">
+                  <img class="cars-img" alt="hotel-image" src="https://cdn.animaapp.com/projects/65d23269fb82e0b1687904f9/releases/65d233c5449bbb741dc6aecb/img/rectangle-6.png" />
+                  <h3 class="text-wrapper-9">Mini Car</h3>
+                </a>
+                  
+                <a href="#" class="vehicle-item">
+                  <img class="cars-img" alt="hotel-image" src="https://cdn.animaapp.com/projects/65d23269fb82e0b1687904f9/releases/65d233c5449bbb741dc6aecb/img/rectangle-7.png" />
+                  <h3 class="text-wrapper-9">Van</h3>
+                </a>
+                 
+                <a href="#" class="vehicle-item">
+                  <img class="cars-img" alt="hotel-image" src="https://cdn.animaapp.com/projects/65d23269fb82e0b1687904f9/releases/65d233c5449bbb741dc6aecb/img/rectangle-8.png" />
+                  <h3 class="text-wrapper-9">Bus</h3>
+                </a>
+                 
+                <a href="#" class="vehicle-item">
+                  <img class="cars-img" alt="hotel-image" src="https://cdn.animaapp.com/projects/65d23269fb82e0b1687904f9/releases/65d233c5449bbb741dc6aecb/img/rectangle-9.png" />
+                  <h3 class="text-wrapper-9">Bike</h3>
+                </a>
+              </div>
+            </div>
           </div>
         </header>
-        <div class="cars">
-          <!--Here I have added a tags to the imgs, enter page locations to the href accordingly-->
-          <a href="#"><img class="img" alt="Rectangle"
-            src="https://cdn.animaapp.com/projects/65d23269fb82e0b1687904f9/releases/65d233c5449bbb741dc6aecb/img/rectangle-10.png" /></a>
-          <a href="#"><img class="rectangle-5" alt="Rectangle"
-            src="https://cdn.animaapp.com/projects/65d23269fb82e0b1687904f9/releases/65d233c5449bbb741dc6aecb/img/rectangle-6.png" /></a>
-          <a href="#"><img class="rectangle-6" alt="Rectangle"
-            src="https://cdn.animaapp.com/projects/65d23269fb82e0b1687904f9/releases/65d233c5449bbb741dc6aecb/img/rectangle-7.png" /></a>
-          <a href="#"><img class="rectangle-7" alt="Rectangle"
-            src="https://cdn.animaapp.com/projects/65d23269fb82e0b1687904f9/releases/65d233c5449bbb741dc6aecb/img/rectangle-8.png" /></a>
-          <a href="#"><img class="rectangle-8" alt="Rectangle"
-            src="https://cdn.animaapp.com/projects/65d23269fb82e0b1687904f9/releases/65d233c5449bbb741dc6aecb/img/rectangle-9.png" /></a>
-          <div class="text-wrapper-9">Car</div>
-          <div class="text-wrapper-10">Mini Car</div>
-          <div class="text-wrapper-11">Van</div>
-          <div class="text-wrapper-12">Bus</div>
-          <div class="text-wrapper-13">Bike</div>
-          <div class="text-wrapper-14">1km = Rs.350</div>
-          <div class="text-wrapper-15">1km = Rs.150</div>
-          <div class="text-wrapper-16">1km = Rs.750</div>
-          <div class="text-wrapper-17">1km = Rs.550</div>
-          <div class="text-wrapper-18">1km = Rs.80</div>
-        </div>
-      </div>
-      <div class="tour">
-        <!--Here I have added a tags to the imgs, enter page locations to the href accordingly-->
-        <a href="#"><img class="rectangle-9" alt="Rectangle"
-          src="https://cdn.animaapp.com/projects/65d23269fb82e0b1687904f9/releases/65d233c5449bbb741dc6aecb/img/rectangle-11.png" /></a>
-        <div class="text-wrapper-19">Tours</div>
-        <a href="#"><img class="rectangle-10" alt="Rectangle"
-          src="https://cdn.animaapp.com/projects/65d23269fb82e0b1687904f9/releases/65d233c5449bbb741dc6aecb/img/rectangle-12.png" /></a>
-          <a href="#"><img class="rectangle-11" alt="Rectangle"
-          src="https://cdn.animaapp.com/projects/65d23269fb82e0b1687904f9/releases/65d233c5449bbb741dc6aecb/img/rectangle-13.png" /></a>
-        <div class="text-wrapper-20">Historical Tour</div>
-        <div class="text-wrapper-21">Tea Country tour</div>
-        <div class="text-wrapper-22">Sigiriya tour</div>
-        <p class="p">
-          Embark on a captivating historical tour, delving into bygone eras, unraveling stories, and discovering the
-          cultural tapestry of civilizations.
-        </p>
-        <p class="text-wrapper-23">
-          Step into the enchanting world of tea on a scenic estate tour. Immerse yourself in lush plantations, witness
-          tea-making traditions, and savor aromatic blends amidst breathtaking landscapes and rich history.
-        </p>
-        <p class="embark-on-a">
-          Embark on a mesmerizing Sigiriya tour, exploring the ancient rock fortress, adorned with majestic frescoes
-          and surrounded by stunning landscapes, unraveling the mysteries of Sri Lanka&#39;s cultural heritage
-        </p>
-      </div>
-      <div class="reviews">
-        <!--Here I have added a tags to the imgs, enter page locations to the href accordingly-->
-        <div class="overlap-2">
-          <p class="text-wrapper-24">
-            &#34;Absolutely loved my stay! The accommodation was clean, comfortable, and the staff went above and
-            beyond to make my experience unforgettable. Will definitely book again.&#34;
-          </p>
-          <a href="#"><img class="ellipse review-img" 
-            src="../../../public/assets/images/stickman.jpg" /></a>
-        </div>
-        <div class="rectangle-12" />
-        <div class="overlap-3">
-          <p class="text-wrapper-24">
-            &#34;Great value for money! The room was cozy, and the location was convenient. The booking platform made
-            everything easy. A delightful experience overall, and I&#39;ll be back for sure.&#34;
-          </p>
-          <a href="#"><img class="ellipse review-img" 
-            src="../../../public/assets/images/stickman.jpg" /></a>
-        </div>
-        <div class="overlap-4">
-          <p class="great-value-for">
-            &#34;Great value for money! The room was cozy, and the location was convenient. The booking platform made
-            everything easy. A delightful experience overall, and I&#39;ll be back for sure.&#34;
-          </p>
-          <a href="#"><img class="ellipse-2 review-img"
-          src="../../../public/assets/images/stickman.jpg" /></a>
-        </div>
-        <div class="overlap-5">
-          <div class="ellipse-3" />
-          <div class="ellipse-4" />
-        </div>
-        <a href="#"><img class="ellipse-5 review-img"
-        src="../../../public/assets/images/stickman.jpg" /></a>
-        <div class="overlap-6">
-          <p class="text-wrapper-24">
-            &#34;Picturesque location! The booking process was seamless, and the property exceeded expectations. From
-            the amenities to the service, everything was top-notch. Highly recommend this gem.&#34;
-          </p>
-          <div class="overlap-group-2">
-            <a href="#"><img class="ellipse-6 review-img"
-            src="../../../public/assets/images/stickman.jpg" /></a>
+        <div class="bg-container2">
+          <div class="tour">
+            <h2 class="text-wrapper-19">Tours</h2>
+            <div class="tour-list">
+              <!--Here I have added a tags to the imgs, enter page locations to the href accordingly-->
+              <div class="tour-box">
+                <a href="#" class="tour-item">
+                  <img class="tour-img" alt="hotel-image" src="https://cdn.animaapp.com/projects/65d23269fb82e0b1687904f9/releases/65d233c5449bbb741dc6aecb/img/rectangle-11.png" />
+                  <h3 class="text-wrapper-20">Historical Tour</h3>
+                </a>
+                <p class="tour-text"> Embark on a captivating historical tour, delving into bygone eras, unraveling stories, and discovering the cultural tapestry of civilizations. </p>
+              </div>
+
+              <div class="tour-box">
+                <a href="#" class="tour-item">
+                <img class="tour-img" alt="hotel-image" src="https://cdn.animaapp.com/projects/65d23269fb82e0b1687904f9/releases/65d233c5449bbb741dc6aecb/img/rectangle-12.png" />
+                <h3 class="text-wrapper-20">Tea Country tour</h3>
+                </a>
+                <p class="tour-text"> Step into the enchanting world of tea on a scenic estate tour. Immerse yourself in lush plantations, witness tea-making traditions, and savor aromatic blends amidst breathtaking landscapes and rich history. </p>
+              </div>
+                
+              <div class="tour-box">
+                <a href="#" class="tour-item">
+                <img class="tour-img" alt="hotel-image" src="https://cdn.animaapp.com/projects/65d23269fb82e0b1687904f9/releases/65d233c5449bbb741dc6aecb/img/rectangle-13.png" />
+                <h3 class="text-wrapper-20">Sigiriya tour</h3>
+                </a>
+                <p class="tour-text"> Embark on a mesmerizing Sigiriya tour, exploring the ancient rock fortress, adorned with majestic frescoes and surrounded by stunning landscapes, unraveling the mysteries of Sri Lanka&#39;s cultural heritage </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      <div class="hotels">
-        <!--Here I have added a tags to the imgs, enter page locations to the href accordingly-->
-        <div class="overlap-7">
-          <div class="rectangle-13" />
-          <a href="#"><img class="rectangle-14" alt="Rectangle"
-            src="https://cdn.animaapp.com/projects/65d23269fb82e0b1687904f9/releases/65d233c5449bbb741dc6aecb/img/rectangle-24.png" /></a>
-            <a href="#"><img class="rectangle-15" alt="Rectangle"
-            src="https://cdn.animaapp.com/projects/65d23269fb82e0b1687904f9/releases/65d233c5449bbb741dc6aecb/img/rectangle-25.png" /></a>
-            <a href="#"><img class="rectangle-16" alt="Rectangle"
-            src="https://cdn.animaapp.com/projects/65d23269fb82e0b1687904f9/releases/65d233c5449bbb741dc6aecb/img/rectangle-26.png" /></a>
-            <a href="#"><img class="rectangle-17" alt="Rectangle"
-            src="https://cdn.animaapp.com/projects/65d23269fb82e0b1687904f9/releases/65d233c5449bbb741dc6aecb/img/rectangle-27.png" /></a>
-            <a href="#"><img class="rectangle-18" alt="Rectangle"
-            src="https://cdn.animaapp.com/projects/65d23269fb82e0b1687904f9/releases/65d233c5449bbb741dc6aecb/img/rectangle-28.png" /></a>
-            <a href="#"><img class="rectangle-19" alt="Rectangle"
-            src="https://cdn.animaapp.com/projects/65d23269fb82e0b1687904f9/releases/65d233c5449bbb741dc6aecb/img/rectangle-29.png" /></a>
-          <div class="text-wrapper-25">Hotel 1</div>
-          <div class="text-wrapper-26">Hotel 2</div>
-          <div class="text-wrapper-27">Hotel 3</div>
+      <div class="bg-container3">
+        <div class="reviews">
+          <!--Here I have added a tags to the imgs, enter page locations to the href accordingly--> 
+          <div class="review-unit">
+            <div class="review-box">
+              <a href="#" class="review-text">
+                <img class="ellipse" src="../../../public/assets/images/stickman.jpg" />
+                <p class="text-wrapper-24"> &#34;Absolutely loved my stay! The accommodation was clean, comfortable, and the staff went above and beyond to make my experience unforgettable. Will definitely book again.&#34; </p>
+              </a>
+            </div>
+            <div class="review-box">
+              <a href="#" class="review-text">
+                <img class="ellipse" src="../../../public/assets/images/stickman.jpg" />
+                <p class="text-wrapper-24"> &#34;Great value for money! The room aaaaaaaaaaaaaaaaaaa, and the location was convenient. The booking platform made everything easy. A delightful experience overall, and I&#39;ll be back for sure.&#34; </p>
+              </a>
+            </div>
+          </div>
+          <div class="review-unit">
+            <div class="review-box">
+              <a href="#" class="review-text">
+                <img class="ellipse" src="../../../public/assets/images/stickman.jpg" />
+                <p class="text-wrapper-24"> &#34;Great value for money! The room was cozy, and the location was convenient. The booking platform made everything easy. A delightful experience overall, and I&#39;ll be back for sure.&#34; </p>
+              </a>
+            </div>
+            <div class="review-box">
+              <a href="#" class="review-text">
+                <img class="ellipse" src="../../../public/assets/images/stickman.jpg" />
+                <p class="text-wrapper-24"> &#34;Picturesque location! The booking process was seamless, and the property exceeded expectations. From the amenities to the service, everything was top-notch. Highly recommend this gem.&#34; </p>
+              </a>
+            </div>
+          </div>
         </div>
-        <div class="text-wrapper-28">Hotel 5</div>
-        <div class="text-wrapper-29">Hotel 6</div>
-        <div class="text-wrapper-30">Hotel 7</div>
-        <div class="text-wrapper-31">Hotels</div>
+      </div>
+      <div class="bg-container4">
+        <div class="hotels">
+          <h2 class="text-wrapper-31">Hotels</h2>
+          <!--Here I have added a tags to the imgs, enter page locations to the href accordingly-->
+          <div class="hotel-list">
+            <a href="#" class="hotel-img">
+              <img class="rectangle-14" alt="hotel-image" src="https://cdn.animaapp.com/projects/65d23269fb82e0b1687904f9/releases/65d233c5449bbb741dc6aecb/img/rectangle-24.png" />
+              <div class="hotel-img-overlay">
+                <h3 class="text-wrapper-25">Hotel 1</h3>
+              </div>
+            </a>
+            <a href="#" class="hotel-img">
+              <img class="rectangle-14" alt="hotel-image" src="https://cdn.animaapp.com/projects/65d23269fb82e0b1687904f9/releases/65d233c5449bbb741dc6aecb/img/rectangle-25.png" />
+              <div class="hotel-img-overlay">
+                <h3 class="text-wrapper-25">Hotel 2</h3>
+              </div>
+            </a>
+            <a href="#" class="hotel-img">
+              <img class="rectangle-14" alt="hotel-image" src="https://cdn.animaapp.com/projects/65d23269fb82e0b1687904f9/releases/65d233c5449bbb741dc6aecb/img/rectangle-26.png" />
+              <div class="hotel-img-overlay">
+                <h3 class="text-wrapper-25">Hotel 3</h3>
+              </div>
+            </a>
+            <a href="#" class="hotel-img">
+              <img class="rectangle-14" alt="hotel-image" src="https://cdn.animaapp.com/projects/65d23269fb82e0b1687904f9/releases/65d233c5449bbb741dc6aecb/img/rectangle-27.png" />
+              <div class="hotel-img-overlay">
+                <h3 class="text-wrapper-25">Hotel 4</h3>
+              </div>
+            </a>
+            <a href="#" class="hotel-img">
+              <img class="rectangle-14" alt="hotel-image" src="https://cdn.animaapp.com/projects/65d23269fb82e0b1687904f9/releases/65d233c5449bbb741dc6aecb/img/rectangle-28.png" />
+              <div class="hotel-img-overlay">
+                <h3 class="text-wrapper-25">Hotel 5</h3>
+              </div>
+            </a>
+            <a href="#" class="hotel-img">
+              <img class="rectangle-14" alt="hotel-image" src="https://cdn.animaapp.com/projects/65d23269fb82e0b1687904f9/releases/65d233c5449bbb741dc6aecb/img/rectangle-29.png" />
+              <div class="hotel-img-overlay">
+                <h3 class="text-wrapper-25">Hotel 6</h3>
+              </div>
+            </a>
+          </div>
+        </div>
       </div>
       <div class="about-us">
-        <div class="overlap-8">
-          <div class="rectangle-20" />
-          <div class="rectangle-21" />
-          <p class="text-wrapper-32">
-            Welcome to BookKing, where seamless travel experiences come to life. We are passionate about
-            connecting you with exceptional accommodations and unique destinations. Our user-friendly platform ensures
-            effortless booking, putting your travel preferences first. Whether you seek a tranquil escape, a vibrant
-            city stay, or an adventure-filled getaway, we have a diverse range of options to cater to your every need.
-            Committed to excellence, we collaborate with trusted partners to guarantee quality stays. Trust us to turn
-            your travel dreams into reality, providing you with memorable moments and unparalleled hospitality.
-            Discover, book, and embark on your next journey with BookKing. Your adventure begins here.
-          </p>
-          <!--put the home page location to this href-->
-          <a href="/aboutus"><img class="BOOK-king-removebg-2" alt="Book king removebg"
-            src="https://cdn.animaapp.com/projects/65d23269fb82e0b1687904f9/releases/65d233c5449bbb741dc6aecb/img/book-king-removebg-preview-2.png" /></a>
-            <!--when clicked redirects to the home page-->
-
+          <div class="rectangle-21">
+            <div class="about-us-content">
+              <p class="about-us-text"> Welcome to BookKing, where seamless travel experiences come to life. We are passionate about connecting you with exceptional accommodations and unique destinations. Our user-friendly platform ensures effortless booking, putting your travel preferences first. Whether you seek a tranquil escape, a vibrant city stay, or an adventure-filled getaway, we have a diverse range of options to cater to your every need. Committed to excellence, we collaborate with trusted partners to guarantee quality stays. Trust us to turn your travel dreams into reality, providing you with memorable moments and unparalleled hospitality. Discover, book, and embark on your next journey with BookKing. Your adventure begins here. </p>
+              <!--put the home page location to this href-->
+              <a href="/aboutus" class="about-us-img">
+                  <img class="BOOKKING-bottom-logo" alt="Book king removebg" src="https://cdn.animaapp.com/projects/65d23269fb82e0b1687904f9/releases/65d233c5449bbb741dc6aecb/img/book-king-removebg-preview-2.png" />
+              </a>
+              <!--when clicked redirects to the home page-->
+            </div>
             <!--put the about us page location to this href-->
-          <div class="text-wrapper-33"><a href="/aboutus" style="color: white; text-decoration: none;">Read More</a></div>
-        </div>
+            <div class="read-more">
+              <a href="/aboutus">Read More</a>
+            </div>
+          </div>
+        
       </div>
     </div>
     <NewFooter />
@@ -169,7 +188,56 @@
 
 <style scoped>
 
+:root{
+  --root-gradient: linear-gradient(180deg, rgb(255, 237.79, 82.87) 68%, rgba(228.7, 213.65, 78.14, 0.03) 99%);
+}
 
+.index .review-unit{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  column-gap: 2%;
+  row-gap: 2rem;
+}
+
+.index .review-text{
+    text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: .25rem .5rem;
+  height: 100%;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+
+.index .reviews {
+  display: flex;
+  justify-content: space-around;
+  row-gap: 2rem;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+}
+
+.index .review-box {
+  background: linear-gradient(180deg, rgb(255, 237.79, 82.87) 0%, rgba(240.12, 240.12, 240.12, 0) 100%);
+  border-radius: 24px;
+  box-shadow: 0px 4px 4px #00000040;
+  height: 100%;
+  width: 45%;
+  max-height: 400px;
+  min-height: 200px;
+  max-width: 550px;
+  min-width: 500px;
+  padding: 2%;
+
+
+}
+
+.index .review-box:hover {
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.3); 
+}
 
 .index {
   background-color: #ffffff;
@@ -181,61 +249,100 @@
 
 }
 
-.index .div {
-  background-color: #fbfdd5;
-  height: 4148px;
+.index .home-body {
+  background-color: repeating-linear-gradient(60deg, transparent 30px, rgba(255, 0, 0, 0.2) 10px,rgba(255, 238, 0, 0.2) 90px),
+    repeating-linear-gradient(120deg, transparent 30px, rgba(255, 0, 0, 0.2) 10px,rgba(255, 238, 0, 0.2)90px),
+    repeating-linear-gradient(180deg, transparent 30px, rgba(255, 0, 0, 0.2) 10px, rgba(255, 238, 0, 0.2) 90px);
+  height: 100%;
   overflow: hidden;
-  position: relative;
+  position: relative; 
   width: 100%;
 }
 
 .index .overlap {
-  height: 1079px;
-  left: -14px;
-  position: absolute;
-  top: -16px;
+  height: 80%;
   width: 100%;
+  margin-bottom: 5%;
 }
 
 .index .header {
   background-color: transparent;
-  height: 1079px;
-  left: 0;
-  position: absolute;
-  top: 0;
+  height: 50%;
+  
   width: 100%;
 }
 
-.index .overlap-group {
-  height: 1079px;
- 
+
+
+.index .intro-text-box{
+  padding: 0 0 0 5%;
 }
 
-.index .rectangle {
+.index .bg-container1 {
   background: linear-gradient(180deg, rgb(255, 237.79, 82.87) 68%, rgba(228.7, 213.65, 78.14, 0.03) 99%);
-  height: 742px;
-  left: 14px;
-  position: absolute;
-  top: 337px;
+  height: 100%;
   width: 100%;
 }
 
-.index .rectangle-2 {
+.index .bg-container2 {
+  height: 100%;
+  width: 100%;
+}
+
+.index .tour-img {
+  border-radius: 9%;
+  height: 239px;
+  object-fit: cover;
+    
+  width: 80%;
+  transition: box-shadow 0.3s;
+}
+
+.index .tour-img:hover {
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.3); 
+}
+
+
+.index .tour-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding:0 4% 0;
+
+}
+
+.index  .tour-list > .tour-box{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  row-gap: 1rem;
+  width: 30%;
+  min-width: 390px;
+}
+
+.index .tour-list > .tour-box > .tour-item{
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    row-gap: 1rem;
+    text-decoration: none;
+}
+
+.index .intro {
   background-color: #000000;
   border-radius: 0px 0px 108px 108px;
-  height: 455px;
-  left: 14px;
-  position: absolute;
-  top: 12px;
+  height: 210px;
   width: 100%;
 }
 
 .index .rectangle-3 {
   background-color: #f9ff00;
   height: 40px;
-  left: 1445px;
-  position: absolute;
-  top: 60px;
+  
   width: 100%;
 }
 
@@ -244,202 +351,124 @@
   font-family: "Poppins", Helvetica;
   font-size: 12px;
   font-weight: 600;
-  left: 1459px;
+  
   letter-spacing: 0;
   line-height: normal;
-  position: absolute;
-  top: 70px;
+    
+  
   width: 100%;
 }
 
-.index .text-wrapper-2 {
-  color: #ffffff;
-  font-family: "Poppins", Helvetica;
-  font-size: 12px;
-  font-weight: 600;
-  left: 1519px;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  top: 71px;
+
+.index .intro-text1 {
+  font-size: 5em;
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.3);
+  background: #222 -webkit-gradient(
+      linear,
+      left top,
+      right top,
+      from(#222),
+      to(#222),
+      color-stop(0.5, #fff)
+    ) 0 0 no-repeat;
+  background-image: -webkit-linear-gradient(
+    -40deg,
+    transparent 0%,
+    transparent 40%,
+    #f9ff00 50%,
+    transparent 60%,
+    transparent 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-background-size: 280px;
+  -webkit-animation: zezzz;
+  -webkit-animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+}
+@-webkit-keyframes zezzz {
+  0%,
+  10% {
+    background-position: -200px;
+  }
+  20% {
+    background-position: top left;
+  }
+  100% {
+    background-position: 200px;
+  }
+}
+
+.index .intro-text2 {
+  
+  position: relative;
+  overflow: hidden;
+  border-right: 3px solid;
   width: 100%;
+  animation: typewriter 1s steps(10)  infinite alternate , blink 0.5s steps(10) infinite;
 }
 
-.index .text-wrapper-3 {
-  color: #ffffff;
-  font-family: "Poppins", Helvetica;
-  font-size: 12px;
-  font-weight: 600;
-  left: 1597px;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  top: 71px;
-  width: 47px;
-}
-
-.index .text-wrapper-4 {
-  color: #ffffff;
-  font-family: "Poppins", Helvetica;
-  font-size: 12px;
-  font-weight: 600;
-  left: 1669px;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  top: 70px;
-  width: 100%;
-}
-
-.index .text-wrapper-5 {
-  color: #ffffff;
-  font-family: "Poppins", Helvetica;
-  font-size: 12px;
-  font-weight: 600;
-  left: 1761px;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  top: 71px;
-  width: 100%;
-}
-
-.index .rectangle-4 {
-  background-color: #f9ff00;
-  border-radius: 4px;
-  height: 30px;
-  left: 1833px;
-  position: absolute;
-  top: 65px;
-  width: 100%;
-}
-
-.index .text-wrapper-6 {
-  color: #000000;
-  font-family: "Poppins", Helvetica;
-  font-size: 12px;
-  font-weight: 600;
-  left: 1849px;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  top: 71px;
-  width: 100%;
-}
-
-.index .BOOK-king-removebg {
-  height: 150px;
-  left: 0;
-  object-fit: cover;
-  position: absolute;
-  top: 0;
-  width: 176px;
-}
-
-.index .text-wrapper-7 {
-  color: #ffffff;
-  font-family: "Tajawal", Helvetica;
-  font-size: 64px;
+.index .intro-text2-effect{
+  font-size: 20px;
   font-weight: 700;
-  left: 113px;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  top: 219px;
-  white-space: nowrap;
-  width: 267px;
+  background: linear-gradient(to right,#ffffff, #f9ff00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.index .text-wrapper-8 {
-  color: #ffffff;
-  font-family: "Tajawal", Helvetica;
-  font-size: 16px;
-  font-weight: 700;
-  left: 115px;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  top: 289px;
-  white-space: nowrap;
-  width: 204px;
+@keyframes typewriter {
+  0% {
+    width: 226px;
+  }
+
+  100% {
+    width: 231px;
+  }
 }
 
-.index .cars {
-  height: 318px;
-  left: 190px;
-  position: absolute;
-  top: 623px;
-  width: 100%;
+@keyframes blink {
+  0% {
+    border-right-color: rgba(255,255,255,.75);
+    ;
+  }
+
+  100% {
+    border-right-color: transparent;
+  }
 }
 
-.index .img {
+.index .cars{
+  padding: 5%;
+  
+}
+
+.index .vehicle-list {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+
+}
+
+.index  .vehicle-list > .vehicle-item{
+  display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    align-items: center;
+    row-gap: 1rem;
+    text-decoration: none;
+}
+
+.index .cars-img {
+  border-radius: 25%;
   height: 239px;
-  left: 0;
   object-fit: cover;
-  position: absolute;
-  top: 0;
+    
   width: 253px;
   transition: box-shadow 0.3s;
 }
 
-.index .img:hover {
-  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.3); /* Adding box shadow on hover */
-}
-
-.index .rectangle-5 {
-  height: 239px;
-  left: 329px;
-  object-fit: cover;
-  position: absolute;
-  top: 0;
-  width: 253px;
-  transition: box-shadow 0.3s;
-}
-
-.index .rectangle-5:hover {
-  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.3); /* Adding box shadow on hover */
-}
-
-.index .rectangle-6 {
-  height: 239px;
-  left: 658px;
-  object-fit: cover;
-  position: absolute;
-  top: 0;
-  width: 253px;
-  transition: box-shadow 0.3s;
-}
-
-.index .rectangle-6:hover {
-  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.3); /* Adding box shadow on hover */
-}
-
-.index .rectangle-7 {
-  height: 239px;
-  left: 987px;
-  object-fit: cover;
-  position: absolute;
-  top: 0;
-  width: 253px;
-  transition: box-shadow 0.3s;
-}
-
-.index .rectangle-7:hover {
-  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.3); /* Adding box shadow on hover */
-}
-
-.index .rectangle-8 {
-  height: 239px;
-  left: 1316px;
-  object-fit: cover;
-  position: absolute;
-  top: 0;
-  width: 253px;
-  transition: box-shadow 0.3s;
-}
-
-.index .rectangle-8:hover {
-  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.3); /* Adding box shadow on hover */
+.index .cars-img:hover {
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.3); 
 }
 
 .index .text-wrapper-9 {
@@ -447,146 +476,13 @@
   font-family: "Poppins", Helvetica;
   font-size: 20px;
   font-weight: 700;
-  left: 0;
   letter-spacing: 0;
   line-height: normal;
-  position: absolute;
-  top: 249px;
-  width: 50px;
-}
-
-.index .text-wrapper-10 {
-  color: #000000;
-  font-family: "Poppins", Helvetica;
-  font-size: 20px;
-  font-weight: 700;
-  left: 329px;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  top: 257px;
-  width: 100px;
-}
-
-.index .text-wrapper-11 {
-  color: #000000;
-  font-family: "Poppins", Helvetica;
-  font-size: 20px;
-  font-weight: 700;
-  left: 658px;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  top: 257px;
-  width: 50px;
-}
-
-.index .text-wrapper-12 {
-  color: #000000;
-  font-family: "Poppins", Helvetica;
-  font-size: 20px;
-  font-weight: 700;
-  left: 987px;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  top: 257px;
-  width: 50px;
-}
-
-.index .text-wrapper-13 {
-  color: #000000;
-  font-family: "Poppins", Helvetica;
-  font-size: 20px;
-  font-weight: 700;
-  left: 1316px;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  top: 257px;
-  width: 50px;
-}
-
-.index .text-wrapper-14 {
-  color: #000000;
-  font-family: "Poppins", Helvetica;
-  font-size: 20px;
-  font-weight: 500;
-  left: 0;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  top: 286px;
-  width: 131px;
-}
-
-.index .text-wrapper-15 {
-  color: #000000;
-  font-family: "Poppins", Helvetica;
-  font-size: 20px;
-  font-weight: 500;
-  left: 329px;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  top: 287px;
-  width: 126px;
-}
-
-.index .text-wrapper-16 {
-  color: #000000;
-  font-family: "Poppins", Helvetica;
-  font-size: 20px;
-  font-weight: 500;
-  left: 658px;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  top: 287px;
-  width: 130px;
-}
-
-.index .text-wrapper-17 {
-  color: #000000;
-  font-family: "Poppins", Helvetica;
-  font-size: 20px;
-  font-weight: 500;
-  left: 987px;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  top: 288px;
-  width: 132px;
-}
-
-.index .text-wrapper-18 {
-  color: #000000;
-  font-family: "Poppins", Helvetica;
-  font-size: 20px;
-  font-weight: 500;
-  left: 1316px;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  top: 287px;
-  width: 119px;
+  
 }
 
 .index .tour {
-  height: 586px;
-  left: 31px;
-  position: absolute;
-  top: 1122px;
-  width: 1872px;
-}
-
-.index .rectangle-9 {
-  height: 377px;
-  left: 34px;
-  object-fit: cover;
-  position: absolute;
-  top: 96px;
-  width: 560px;
+  width: 100%;
 }
 
 .index .text-wrapper-19 {
@@ -594,30 +490,11 @@
   font-family: "Poppins", Helvetica;
   font-size: 32px;
   font-weight: 700;
-  left: 0;
   letter-spacing: 2.88px;
   line-height: normal;
-  position: absolute;
-  top: 0;
-  width: 153px;
-}
-
-.index .rectangle-10 {
-  height: 377px;
-  left: 666px;
-  object-fit: cover;
-  position: absolute;
-  top: 96px;
-  width: 561px;
-}
-
-.index .rectangle-11 {
-  height: 377px;
-  left: 1298px;
-  object-fit: cover;
-  position: absolute;
-  top: 96px;
-  width: 560px;
+  padding: 0 0 5% 5%;
+  width: 100%;
+  height: 95px;
 }
 
 .index .text-wrapper-20 {
@@ -625,96 +502,22 @@
   font-family: "Poppins", Helvetica;
   font-size: 24px;
   font-weight: 500;
-  left: 0;
   letter-spacing: 0;
   line-height: normal;
-  position: absolute;
-  top: 487px;
-  width: 285px;
+  display: flex;
+  justify-content: center;
+  width: 53%;
+  
 }
 
-.index .text-wrapper-21 {
-  color: #000000;
-  font-family: "Poppins", Helvetica;
-  font-size: 24px;
-  font-weight: 500;
-  left: 638px;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  top: 487px;
-  width: 490px;
-}
-
-.index .text-wrapper-22 {
-  color: #000000;
-  font-family: "Poppins", Helvetica;
-  font-size: 24px;
-  font-weight: 500;
-  left: 1276px;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  top: 487px;
-  width: 204px;
-}
-
-.index .p {
+.index .tour-text {
   color: #000000;
   font-family: "Poppins", Helvetica;
   font-size: 14px;
   font-weight: 300;
-  left: 0;
   letter-spacing: 0;
   line-height: normal;
-  position: absolute;
-  top: 523px;
-  width: 582px;
-}
-
-.index .text-wrapper-23 {
-  color: #000000;
-  font-family: "Poppins", Helvetica;
-  font-size: 14px;
-  font-weight: 300;
-  left: 638px;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  top: 523px;
-  width: 582px;
-}
-
-.index .embark-on-a {
-  color: #000000;
-  font-family: "Poppins", Helvetica;
-  font-size: 14px;
-  font-weight: 300;
-  left: 1276px;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  top: 523px;
-  width: 582px;
-}
-
-.index .reviews {
-  height: 367px;
-  left: -919px;
-  position: absolute;
-  top: 1917px;
-  width: 2816px;
-}
-
-.index .overlap-2 {
-  background: linear-gradient(180deg, rgb(255, 237.79, 82.87) 0%, rgba(240.12, 240.12, 240.12, 0) 100%);
-  border-radius: 24px;
-  box-shadow: 0px 4px 4px #00000040;
-  height: 160px;
-  left: 958px;
-  position: absolute;
-  top: 0;
-  width: 892px;
+  width: 60%;
 }
 
 .index .text-wrapper-24 {
@@ -722,304 +525,88 @@
   font-family: "Poppins", Helvetica;
   font-size: 14px;
   font-weight: 400;
-  left: 189px;
   letter-spacing: 1.26px;
   line-height: normal;
-  position: absolute;
-  top: 49px;
-  width: 642px;
-}
-
-.index .overlap-group-2 {
-  background-image: url('../assets/images/ellipse_2.png');
-  background-position: 50% 50%;
-  background-size: cover;
-  border-radius: 60px;
-  height: 120px;
-  left: 26px;
-  position: absolute;
-  top: 20px;
-  width: 120px;
-}
-
-.index .rectangle-12 {
-  background: linear-gradient(180deg, rgb(255, 237.79, 82.87) 0%, rgba(240.12, 240.12, 240.12, 0) 100%);
-  border-radius: 24px;
-  box-shadow: 0px 4px 4px #00000040;
-  height: 160px;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 892px;
-}
-
-.index .overlap-3 {
-  background: linear-gradient(180deg, rgb(255, 237.79, 82.87) 0%, rgba(240.12, 240.12, 240.12, 0) 100%);
-  border-radius: 24px;
-  box-shadow: 0px 4px 4px #00000040;
-  height: 160px;
-  left: 950px;
-  position: absolute;
-  top: 194px;
-  width: 892px;
+  line-break: loose;
+  
+  width: 80%;
 }
 
 .index .ellipse {
-  height: 120px;
-  left: 34px;
   object-fit: cover;
-  position: absolute;
-  top: 20px;
-  width: 120px;
+  width: 15%;
   border-radius: 500px;
 }
 
-.index .overlap-4 {
-  background: linear-gradient(180deg, rgb(255, 237.79, 82.87) 0%, rgba(240.12, 240.12, 240.12, 0) 100%);
-  border-radius: 24px;
-  box-shadow: 0px 4px 4px #00000040;
-  height: 160px;
-  left: 1916px;
-  position: absolute;
-  top: 207px;
-  width: 892px;
-}
+.index .bg-container4{
+  background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 0, 0.63) 50%, rgba(255, 255, 255, 1) 100%);
 
-.index .great-value-for {
-  color: #000000;
-  font-family: "Poppins", Helvetica;
-  font-size: 14px;
-  font-weight: 400;
-  left: 189px;
-  letter-spacing: 1.26px;
-  line-height: normal;
-  position: absolute;
-  top: 65px;
-  width: 642px;
-}
-
-.index .ellipse-2 {
-  height: 120px;
-  left: 34px;
-  object-fit: cover;
-  position: absolute;
-  top: 20px;
-  width: 120px;
-  border-radius: 500px;
-}
-
-.index .overlap-5 {
-  height: 120px;
-  left: 474px;
-  position: absolute;
-  top: 214px;
-  width: 128px;
-}
-
-.index .ellipse-3 {
-  background-color: #e12929;
-  border-radius: 60px;
-  height: 120px;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 120px;
-  border-radius: 500px;
-}
-
-.index .ellipse-4 {
-  background-color: #e12929;
-  height: 120px;
-  left: 8px;
-  position: absolute;
-  top: 0;
-  width: 120px;
-  border-radius: 500px;
-}
-
-.index .ellipse-5 {
-  height: 120px;
-  left: 8160px;
-  object-fit: cover;
-  position: absolute;
-  top: 5182px;
-  width: 120px;
-  border-radius: 500px;
-}
-
-.index .overlap-6 {
-  background: linear-gradient(180deg, rgb(255, 237.79, 82.87) 0%, rgba(240.12, 240.12, 240.12, 0) 100%);
-  border-radius: 24px;
-  box-shadow: 0px 4px 4px #00000040;
-  height: 160px;
-  left: 1916px;
-  position: absolute;
-  top: 0;
-  width: 892px;
-}
-
-.index .ellipse-6 {
-  height: 120px;
-  left: 0;
-  object-fit: cover;
-  position: absolute;
-  top: 0;
-  width: 120px;
-  border-radius: 500px;
 }
 
 .index .hotels {
-  height: 843px;
-  left: -115px;
-  position: absolute;
-  top: 2480px;
+  height: 100%;
   width: 100%;
 }
 
-.index .overlap-7 {
-  height: 697px;
-  left: 0;
-  position: absolute;
-  top: 90px;
-  width: 2134px;
+.index .hotel-list{
+  margin-top: 2%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  gap: 2rem;
 }
 
-.index .rectangle-13 {
-  background: linear-gradient(180deg,
-      rgba(255, 237.79, 82.87, 0) 0%,
-      rgb(249.9, 255, 0) 52.5%,
-      rgba(255, 237.79, 82.87, 0) 100%);
-  height: 535px;
-  left: 0;
+.index .hotel-img{
+  width: fit-content;
+  position: relative;
+  overflow: hidden;
+  border-radius:15% ;
+}
+
+.index .hotel-img-overlay{
   position: absolute;
-  top: 81px;
-  width: 7680px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 98%;
+  display: flex;
+  background-color:transparent ;
+  justify-content: center;
+  align-items:center;
+  transition: all 0.3s ease-out;
+}
+
+.index .hotel-img-overlay:hover{
+  background-color: rgba(0,0,0,0.7);
+  cursor: pointer;
+  & > h3 {
+    visibility: visible;
+  }
+}
+
+.index .bg-container3 {
+  height: 100%;
+  width: 100%;
+  padding: 2rem 0;
 }
 
 .index .rectangle-14 {
   height: 291px;
-  left: 244px;
   object-fit: cover;
-  position: absolute;
-  top: 0;
-  width: 427px;
-}
-
-.index .rectangle-15 {
-  height: 291px;
-  left: 244px;
-  object-fit: cover;
-  position: absolute;
-  top: 406px;
-  width: 427px;
-}
-
-.index .rectangle-16 {
-  height: 291px;
-  left: 839px;
-  object-fit: cover;
-  position: absolute;
-  top: 406px;
-  width: 427px;
-}
-
-.index .rectangle-17 {
-  height: 291px;
-  left: 839px;
-  object-fit: cover;
-  position: absolute;
-  top: 0;
-  width: 427px;
-}
-
-.index .rectangle-18 {
-  height: 291px;
-  left: 1433px;
-  object-fit: cover;
-  position: absolute;
-  top: 0;
-  width: 427px;
-}
-
-.index .rectangle-19 {
-  height: 291px;
-  left: 1433px;
-  object-fit: cover;
-  position: absolute;
-  top: 396px;
   width: 427px;
 }
 
 .index .text-wrapper-25 {
-  color: #000000;
+  color: #ffffff;
   font-family: "Poppins", Helvetica;
   font-size: 20px;
   font-weight: 700;
-  left: 244px;
   letter-spacing: 0;
   line-height: normal;
-  position: absolute;
-  top: 305px;
-}
-
-.index .text-wrapper-26 {
-  color: #000000;
-  font-family: "Poppins", Helvetica;
-  font-size: 20px;
-  font-weight: 700;
-  left: 839px;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  top: 317px;
-}
-
-.index .text-wrapper-27 {
-  color: #000000;
-  font-family: "Poppins", Helvetica;
-  font-size: 20px;
-  font-weight: 700;
-  left: 1438px;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  top: 305px;
-}
-
-.index .text-wrapper-28 {
-  color: #000000;
-  font-family: "Poppins", Helvetica;
-  font-size: 20px;
-  font-weight: 700;
-  left: 244px;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  top: 801px;
-}
-
-.index .text-wrapper-29 {
-  color: #000000;
-  font-family: "Poppins", Helvetica;
-  font-size: 20px;
-  font-weight: 700;
-  left: 839px;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  top: 813px;
-}
-
-.index .text-wrapper-30 {
-  color: #000000;
-  font-family: "Poppins", Helvetica;
-  font-size: 20px;
-  font-weight: 700;
-  left: 1433px;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  top: 791px;
+  visibility: hidden;
+    
 }
 
 .index .text-wrapper-31 {
@@ -1027,309 +614,98 @@
   font-family: "Poppins", Helvetica;
   font-size: 32px;
   font-weight: 700;
-  left: 244px;
   letter-spacing: 2.88px;
   line-height: normal;
-  position: absolute;
-  top: 0;
+  padding: 5% 0 0 5% ;
+  width: 100%;
 }
 
 .index .about-us {
-  height: 900px;
-  position: absolute;
-  top: 3392px;
-  width: 100%;
-  
-  
-}
-
-.index .overlap-8 {
-  height: 908px;
-  position: relative;
+  height: 100%;
   width: 100%;
 }
 
-.index .rectangle-20 {
-  background: linear-gradient(180deg, rgb(255, 237.79, 82.87) 99.99%, rgba(0, 0, 0, 0) 100%);
-  height: 630px;
-  left: 0;
-  position: absolute;
-  top: 126px;
-  width: 100%;
+.index .about-us-content{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 5% 5% 2% 5%;
 }
 
 .index .rectangle-21 {
+  margin-top: 5%;
   background-color: #000000;
-  height: 601px;
-  left: 0.2%;
-  position: absolute;
-  top: 139px;
-  width: 7680px;
+  border:1rem solid rgba(236, 233, 8, 2);
+  height: 100%;
+  width: 100%;
   
 }
 
-.index .text-wrapper-32 {
+.index .about-us-text {
+  display: flex;
   color: #ffffff;
   font-family: "Poppins", Helvetica;
   font-size: 20px;
   font-weight: 500;
-  left: 288px;
   letter-spacing: 1.8px;
   line-height: normal;
-  position: absolute;
   text-align: right;
-  top: 248px;
+  min-width: 400px;
   width: 50%;
 }
 
-.index .BOOK-king-removebg-2 {
-  height: 908px;
-  left: 50%;
-  object-fit: cover;
-  position: absolute;
-  top: 0;
-  width: 1120px;
+.about-us-img{
+  width: 50%;
+  height: auto
 }
 
-.index .text-wrapper-33 {
+.index .BOOKKING-bottom-logo {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+}
+
+.index .read-more {
   color: #ffffff;
   font-family: "Poppins", Helvetica;
   font-size: 20px;
   font-weight: 500;
-  left: 927px;
   letter-spacing: 1.8px;
   line-height: normal;
-  position: absolute;
-  top: 663px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5%;
+  transition: all .5s ease;
+  & > a{
+    color: white; 
+    text-decoration: none;   
+  }
 }
 
-.index .footer {
-  height: 577px;
-  left: 0;
-  position: absolute;
-  top: 4292px;
-  width: 100%;
+.index .read-more:hover a{
+  cursor: pointer;
+  color: #f9ff00;
 }
 
-.index .overlap-group-wrapper {
-  height: 577px;
-  width: 100%;
-}
+@media screen and (max-width:520px) {
+  .index .review-box {
+    min-width:250px;
+    width: 95% 
+  }
+  .index .about-us-text {
+  min-width: 260px;
+  }
 
-.index .overlap-group-3 {
-  background-color: #000000;
-  border-radius: 170px 170px 0px 0px;
-  height: 577px;
-  position: relative;
-  width: 100%;
+  .index .intro-text1 {
+  font-size: 4em;
+  }
+  
 }
-
-.index .text-wrapper-34 {
-  color: #ffffff;
-  font-family: "Poppins", Helvetica;
-  font-size: 12px;
-  font-weight: 600;
-  left: 1231px;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  top: 219px;
-  width: 37px;
-}
-
-.index .text-wrapper-35 {
-  color: #ffffff;
-  font-family: "Poppins", Helvetica;
-  font-size: 12px;
-  font-weight: 600;
-  left: 1305px;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  top: 196px;
-  width: 46px;
-}
-
-.index .text-wrapper-36 {
-  color: #ffffff;
-  font-family: "Poppins", Helvetica;
-  font-size: 12px;
-  font-weight: 600;
-  left: 1305px;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  top: 170px;
-  width: 39px;
-}
-
-.index .text-wrapper-37 {
-  color: #ffffff;
-  font-family: "Poppins", Helvetica;
-  font-size: 12px;
-  font-weight: 600;
-  left: 1222px;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  top: 252px;
-  width: 45px;
-}
-
-.index .text-wrapper-38 {
-  color: #ffffff;
-  font-family: "Poppins", Helvetica;
-  font-size: 12px;
-  font-weight: 600;
-  left: 1305px;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  top: 326px;
-  width: 41px;
-}
-
-.index .text-wrapper-39 {
-  color: #ffffff;
-  font-family: "Poppins", Helvetica;
-  font-size: 12px;
-  font-weight: 600;
-  left: 1305px;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  top: 300px;
-  width: 46px;
-}
-
-.index .text-wrapper-40 {
-  color: #ffffff;
-  font-family: "Poppins", Helvetica;
-  font-size: 12px;
-  font-weight: 600;
-  left: 1305px;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  top: 352px;
-  width: 61px;
-}
-
-.index .text-wrapper-41 {
-  color: #ffffff;
-  font-family: "Poppins", Helvetica;
-  font-size: 12px;
-  font-weight: 600;
-  left: 1305px;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  top: 378px;
-  width: 55px;
-}
-
-.index .text-wrapper-42 {
-  color: #ffffff;
-  font-family: "Poppins", Helvetica;
-  font-size: 12px;
-  font-weight: 600;
-  left: 1305px;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  top: 222px;
-  width: 94px;
-}
-
-.index .text-wrapper-43 {
-  color: #ffffff;
-  font-family: "Poppins", Helvetica;
-  font-size: 12px;
-  font-weight: 600;
-  left: 1305px;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  top: 248px;
-  width: 66px;
-}
-
-.index .text-wrapper-44 {
-  color: #ffffff;
-  font-family: "Poppins", Helvetica;
-  font-size: 12px;
-  font-weight: 600;
-  left: 1305px;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  top: 274px;
-  width: 34px;
-}
-
-.index .text-wrapper-45 {
-  color: #ffffff;
-  font-family: "Poppins", Helvetica;
-  font-size: 12px;
-  font-weight: 600;
-  left: 1198px;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  top: 324px;
-  width: 67px;
-}
-
-.index .text-wrapper-46 {
-  color: #ffffff;
-  font-family: "Poppins", Helvetica;
-  font-size: 12px;
-  font-weight: 600;
-  left: 1210px;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  top: 287px;
-  width: 55px;
-}
-
-.index .div-wrapper {
-  background-color: #f9ff00;
-  border-radius: 4px;
-  height: 92px;
-  left: 1537px;
-  position: absolute;
-  top: 234px;
-  width: 172px;
-}
-
-.index .text-wrapper-47 {
-  color: #000000;
-  font-family: "Poppins", Helvetica;
-  font-size: 32px;
-  font-weight: 600;
-  left: 42px;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  top: 19px;
-  width: 88px;
-}
-
-.index .BOOK-king-removebg-3 {
-  height: 385px;
-  left: 56px;
-  object-fit: cover;
-  position: absolute;
-  top: 100px;
-  width: 482px;
-}
-
-.index .line {
-  height: 257px;
-  left: 1282px;
-  position: absolute;
-  top: 152px;
-  width: 6px;
+@media screen and (max-width:1024px) {
+.index .about-us-text {
+    text-align: justify;
+  }
+  
 }
 </style>
