@@ -19,7 +19,7 @@
           <li><a class="login" href="/login">Login</a></li>
         </ul>
         <ul>
-          <li><a href="/"><img src="../logo.png" alt="Logo" /></a></li>
+          <li><a href="/"><img src="../../../public/assets/logo.png" alt="Logo" /></a></li>
           <li class="hideOnMobile"><a href="/">Home</a></li>
           <li class="hideOnMobile"><a href="#">Vehicles</a></li>
           <li class="hideOnMobile"><a href="/hotels">Hotels</a></li>

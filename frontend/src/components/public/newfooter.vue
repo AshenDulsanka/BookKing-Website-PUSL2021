@@ -1,25 +1,7 @@
 <template>
     <footer>
-      <nav>
-        <ul class="sidebar" :class="{ show: showSidebar }">
-          <li @click="toggleSidebar">
-            <a href="#">
-              <svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26">
-                <path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z" />
-              </svg>
-            </a>
-          </li>
-          <li><a href="/">Home</a></li>
-          <li><a href="#">Vehicles</a></li>
-          <li><a href="/hotels">Hotels</a></li>
-          <li><a href="#">Tours</a></li>
-          <li><a href="/reviews">Reviews</a></li>
-          <li><a href="/contactus">Contact us</a></li>
-          <li><a href="/aboutus">About us</a></li>
-          <li><a class="login" href="/login">Login</a></li>
-        </ul>
+      <nav>      
         <ul>
-          <li><a href="/"><img src="../logo.png" alt="Logo" /></a></li>
           <li class="hideOnMobile"><a href="/">Home</a></li>
           <li class="hideOnMobile"><a href="#">Vehicles</a></li>
           <li class="hideOnMobile"><a href="/hotels">Hotels</a></li>
@@ -28,33 +10,13 @@
           <li class="hideOnMobile"><a href="/contactus">Contact us</a></li>
           <li class="hideOnMobile"><a href="/aboutus">About us</a></li>
           <li class="hideOnMobile"><a class="login" href="/login">Login</a></li>
-          <li class="menu-button" @click="toggleSidebar">
-            <a href="#">
-              <svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26">
-                <path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z" />
-              </svg>
-            </a>
-          </li>
         </ul>
       </nav>
     </footer>
   </template>
   
-  <script>
-  export default {
-    name: 'ResponsiveNavbar',
-    data() {
-      return {
-        showSidebar: false,
-      };
-    },
-    methods: {
-      toggleSidebar() {
-        this.showSidebar = !this.showSidebar;
-      },
-    },
-  };
-  </script>
+
+  
   
   <style scoped>
   footer {
@@ -142,28 +104,5 @@
     display: none;
   }
   
-  @media (max-width: 1200px) {
-    .hideOnMobile {
-      display: none;
-    }
-    .menu-button {
-      display: block;
-    }
-    nav ul {
-      justify-content: space-between;
-      padding: 0 20px;
-    }
-    nav li:first-child {
-      margin-right: 0;
-    }
-    nav li:last-child {
-      margin-left: auto;
-    }
-  }
-  
-  @media (max-width: 400px) {
-    .sidebar {
-      width: 100%;
-    }
-  }
+ 
   </style>
