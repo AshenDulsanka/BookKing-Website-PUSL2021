@@ -3,7 +3,7 @@ import path from 'path'
 import multer from 'multer'
 import { fileURLToPath } from 'url'
 import { serviceProviderSignUpValidation, logInValidation, forgetValidation, updateProfileValidation, addServiceValidation } from '../helpers/validation.js'
-import { register, login, getServiceProvider, forgetPassword, updateProfile, deleteServiceProvider, addService } from '../controllers/serviceProviderController.js'
+import { register, login, getServiceProvider, forgetPassword, updateProfile, deleteServiceProvider, addService, updateService, deleteService } from '../controllers/serviceProviderController.js'
 import { isAuthorized } from '../middleware/auth.js'
 
 const serviceProviderRouter = express.Router()
@@ -35,8 +35,6 @@ const upload = multer({
 serviceProviderRouter.post('/spregister', serviceProviderSignUpValidation, register)
 serviceProviderRouter.post('/splogin', logInValidation, login)
 
-serviceProviderRouter.post('/addService', upload.single('image'), addServiceValidation, isAuthorized, addService)
-
 serviceProviderRouter.get('/getServiceProvider', isAuthorized, getServiceProvider)
 
 serviceProviderRouter.post('/spforgetPassword', forgetValidation, forgetPassword)
@@ -44,5 +42,9 @@ serviceProviderRouter.post('/spforgetPassword', forgetValidation, forgetPassword
 serviceProviderRouter.post('/spupdateProfile', updateProfileValidation, isAuthorized, updateProfile)
 
 serviceProviderRouter.delete('/deleteServiceProvider', isAuthorized, deleteServiceProvider)
+
+serviceProviderRouter.post('/addService', upload.single('image'), addServiceValidation, isAuthorized, addService)
+serviceProviderRouter.post('/updateService', isAuthorized, updateService)
+serviceProviderRouter.delete('/deleteService', isAuthorized, deleteService)
 
 export { serviceProviderRouter }

@@ -397,4 +397,12 @@ const addService = (req, res) => {
   }
 }
 
-export { register, SPverifyMail, login, getServiceProvider, forgetPassword, SPresetPasswordLoad, SPresetPassword, updateProfile, deleteServiceProvider, addService }
+const updateService = (req, res) => {
+
+}
+
+const deleteService = (req, res) => {
+
+}
+
+export { register, SPverifyMail, login, getServiceProvider, forgetPassword, SPresetPasswordLoad, SPresetPassword, updateProfile, deleteServiceProvider, addService, updateService, deleteService }
