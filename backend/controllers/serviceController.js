@@ -127,4 +127,22 @@ const getTours = (req, res) => {
   }
 }
 
+const getVehicles = (req, res) => {
+  try {
+    db.query('SELECT * FROM service WHERE category = "Vehicle"', (error, result) => {
+      if (error) {
+        return res.status(400).json({ msg: error.message })
+      }
+
+      if (result.length === 0) {
+        return res.status(404).json({ msg: 'No vehicles found' })
+      }
+
+      return res.status(200).json({ success: true, data: result, message: 'Vehicles fetched successfully' })
+    })
+  } catch (error) {
+    return res.status(400).json({ msg: error.message })
+  }
+}
+
 export { addService, updateService, deleteService, getHotels, getTours, getVehicles }
