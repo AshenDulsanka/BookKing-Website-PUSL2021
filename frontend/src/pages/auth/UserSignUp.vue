@@ -2,7 +2,6 @@
   <div class="service-provider-login1">
     <newheader />
     <br>
-
     <section class="header-frame-wrapper">
       <div class="header-frame">
         <userSignUpContent />
@@ -20,12 +19,8 @@
         </div>
       </div>
     </section>
-    
-
-    
-
+    <newfooter />
   </div>
-  <newfooter />
 </template>
 <script>
 import { defineComponent } from 'vue'
