@@ -37,12 +37,56 @@ export const addServiceValidation = [
   body('location', 'Location is required').not().isEmpty(),
   body('category', 'Category is required').not().isEmpty(),
   body('image').custom((value, { req }) => {
-    if (req.file.mimetype === 'image/jpeg' || req.file.mimetype === 'image/png') {
+    if (req.files?.image?.[0].mimetype === 'image/jpeg' || req.files?.image?.[0].mimetype === 'image/png') {
       return true
     } else {
       return false
     }
-  }).withMessage('Please upload an image with PNG or JPEG format')
+  }).withMessage('Please upload an image with PNG or JPEG format for the primary image'),
+  body('image2').optional().custom((value, { req }) => {
+    if (req.files?.image2?.[0]) {
+      if (req.files.image2[0].mimetype === 'image/jpeg' || req.files.image2[0].mimetype === 'image/png') {
+        return true
+      } else {
+        return false
+      }
+    } else {
+      return true
+    }
+  }).withMessage('Please upload an image with PNG or JPEG format for optional image 2'),
+  body('image3').optional().custom((value, { req }) => {
+    if (req.files?.image3?.[0]) {
+      if (req.files.image3[0].mimetype === 'image/jpeg' || req.files.image3[0].mimetype === 'image/png') {
+        return true
+      } else {
+        return false
+      }
+    } else {
+      return true
+    }
+  }).withMessage('Please upload an image with PNG or JPEG format for optional image 3'),
+  body('image4').optional().custom((value, { req }) => {
+    if (req.files?.image4?.[0]) {
+      if (req.files.image4[0].mimetype === 'image/jpeg' || req.files.image4[0].mimetype === 'image/png') {
+        return true
+      } else {
+        return false
+      }
+    } else {
+      return true
+    }
+  }).withMessage('Please upload an image with PNG or JPEG format for optional image 4'),
+  body('image5').optional().custom((value, { req }) => {
+    if (req.files?.image5?.[0]) {
+      if (req.files.image5[0].mimetype === 'image/jpeg' || req.files.image5[0].mimetype === 'image/png') {
+        return true
+      } else {
+        return false
+      }
+    } else {
+      return true
+    }
+  }).withMessage('Please upload an image with PNG or JPEG format for optional image 5')
 ]
 
 export const logInValidation = [

@@ -17,8 +17,21 @@ const addService = (req, res) => {
     const token = req.headers.authorization.split(' ')[1]
     const decode = jwt.verify(token, JWTSECRET)
 
-    const sql = 'INSERT INTO service (Name, LongDescription, ShortDescription, Price, Location, category, Image, SPID) VALUES (?, ?, ?, ?, ?, ?, ?, ?)'
-    const data = [req.body.name, req.body.longDescription, req.body.shortDescription, req.body.price, req.body.location, req.body.category, req.file.filename, decode.SPID]
+    const sql = 'INSERT INTO service (Name, LongDescription, ShortDescription, Price, Location, category, Image, Image2, Image3, Image4, Image5, SPID) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)'
+    const data = [
+      req.body.name,
+      req.body.longDescription,
+      req.body.shortDescription,
+      req.body.price,
+      req.body.location,
+      req.body.category,
+      req.files?.image?.[0].filename,
+      req.files?.image2?.[0].filename,
+      req.files?.image3?.[0].filename,
+      req.files?.image4?.[0].filename,
+      req.files?.image5?.[0].filename,
+      decode.SPID
+    ]
 
     db.query(sql, data, (error, result) => {
       if (error) {
