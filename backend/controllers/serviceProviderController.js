@@ -432,7 +432,27 @@ const updateService = (req, res) => {
 }
 
 const deleteService = (req, res) => {
+  try {
+    const token = req.headers.authorization.split(' ')[1]
+    const decode = jwt.verify(token, JWTSECRET)
 
+    const sql = 'DELETE FROM service WHERE SID = ? AND SPID = ?'
+    const data = [req.body.SID, decode.SPID]
+
+    db.query(sql, data, (error, result) => {
+      if (error) {
+        return res.status(400).json({ msg: error.message })
+      }
+
+      if (result.affectedRows === 0) {
+        return res.status(404).json({ msg: 'Service not found' })
+      }
+
+      return res.status(200).json({ msg: 'Service deleted successfully' })
+    })
+  } catch (error) {
+    return res.status(400).json({ msg: error.message })
+  }
 }
 
 export { register, SPverifyMail, login, getServiceProvider, forgetPassword, SPresetPasswordLoad, SPresetPassword, updateProfile, deleteServiceProvider, addService, updateService, deleteService }
