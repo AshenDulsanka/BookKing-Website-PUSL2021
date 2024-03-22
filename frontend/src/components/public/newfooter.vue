@@ -1,5 +1,5 @@
 <template>
-    <header>
+    <footer>
       <nav>
         <ul class="sidebar" :class="{ show: showSidebar }">
           <li @click="toggleSidebar">
@@ -19,6 +19,7 @@
           <li><a class="login" href="/login">Login</a></li>
         </ul>
         <ul>
+          <li><a href="/"><img src="../logo.png" alt="Logo" /></a></li>
           <li class="hideOnMobile"><a href="/">Home</a></li>
           <li class="hideOnMobile"><a href="#">Vehicles</a></li>
           <li class="hideOnMobile"><a href="/hotels">Hotels</a></li>
@@ -36,7 +37,7 @@
           </li>
         </ul>
       </nav>
-    </header>
+    </footer>
   </template>
   
   <script>
@@ -56,7 +57,7 @@
   </script>
   
   <style scoped>
-  header {
+  footer {
     width: 100%;
     height: 70px;
   }
@@ -118,6 +119,7 @@
     align-items: flex-start;
     justify-content: flex-start;
     z-index: 1;
+    bottom: 0;
   }
   .sidebar.show {
     display: flex;
