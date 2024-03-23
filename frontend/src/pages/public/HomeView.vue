@@ -153,23 +153,7 @@
           </div>
         </div>
       </div>
-      <div class="about-us">
-          <div class="rectangle-21">
-            <div class="about-us-content">
-              <p class="about-us-text"> Welcome to BookKing, where seamless travel experiences come to life. We are passionate about connecting you with exceptional accommodations and unique destinations. Our user-friendly platform ensures effortless booking, putting your travel preferences first. Whether you seek a tranquil escape, a vibrant city stay, or an adventure-filled getaway, we have a diverse range of options to cater to your every need. Committed to excellence, we collaborate with trusted partners to guarantee quality stays. Trust us to turn your travel dreams into reality, providing you with memorable moments and unparalleled hospitality. Discover, book, and embark on your next journey with BookKing. Your adventure begins here. </p>
-              <!--put the home page location to this href-->
-              <a href="/aboutus" class="about-us-img">
-                  <img class="BOOKKING-bottom-logo" alt="Book king removebg" src="https://cdn.animaapp.com/projects/65d23269fb82e0b1687904f9/releases/65d233c5449bbb741dc6aecb/img/book-king-removebg-preview-2.png" />
-              </a>
-              <!--when clicked redirects to the home page-->
-            </div>
-            <!--put the about us page location to this href-->
-            <div class="read-more">
-              <a href="/aboutus">Read More</a>
-            </div>
-          </div>
-        
-      </div>
+      
     </div>
     
   </div>
@@ -437,27 +421,6 @@
   -webkit-text-fill-color: transparent;
 }
 
-@keyframes typewriter {
-  0% {
-    width: 226px;
-  }
-
-  100% {
-    width: 231px;
-  }
-}
-
-@keyframes blink {
-  0% {
-    border-right-color: rgba(255,255,255,.75);
-    ;
-  }
-
-  100% {
-    border-right-color: transparent;
-  }
-}
-
 .index .cars{
   padding: 5%;
   
@@ -561,6 +524,7 @@
 
 .index .bg-container4{
   background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 0, 0.63) 50%, rgba(255, 255, 255, 1) 100%);
+  margin-bottom: 3rem;
 
 }
 

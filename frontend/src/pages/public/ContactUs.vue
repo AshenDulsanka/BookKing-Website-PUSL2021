@@ -10,20 +10,32 @@
       <div class="form-and-image">
         <div class="feedback-form">
           <h2 class="feedback"> Leave a FeedBack!!! </h2>
-          <h3 class="name">Name</h3>
-          <input class="input" type="text" placeholder="Enter your name here" />
-          <h3 class="email-address">Email Address</h3>
-          <input class="input1" type="text" placeholder="Enter your email address here" />
-          <h3 class="phone-number">Phone Number</h3>
-          <input class="input2" type="text" placeholder="Enter your phone number here" />
-          <h3 class="location">Location</h3>
-          <input class="input3" type="text" placeholder="Enter your city here" />
-          <h3 class="message">Message</h3>
-          <textarea class="input4 msg-box" placeholder="Enter your message here"></textarea>
+          <form action="#" method="post" class="feedback-content">
+            <div>
+              <label for="name" class="name">Name</label>
+              <input id="name" name="name" class="input" type="text" placeholder="Enter your name here" maxlength="30" required autofocus/>
+            </div>
+            <div>
+              <label for="email" class="email-address">Email Address</label>
+              <input id="email" name="email" class="input1" type="email" placeholder="Enter your email address here" maxlength="20"/>
+            </div>
+            <div>
+              <label for="phone" class="phone-number">Phone Number</label>
+              <input id="phone" name="phone" class="input2" type="tel" placeholder="Enter your phone number here" maxlength="10"/>
+            </div>
+            <div>
+              <label for="location" class="location">Location</label>
+              <input id="location" name="location" class="input3" type="text" placeholder="Enter your city here" />
+            </div>
+            <div>
+              <label for="message" class="message">Message</label>
+              <textarea id="message" name="message" class="input4 msg-box" placeholder="Enter your message here" minlength="10" maxlength="100"></textarea>
+            </div>
           <button class="submitBtn">Submit <svg fill="white" viewBox="0 0 448 512" height="1em" class="arrow">
               <path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"></path>
             </svg>
           </button>
+          </form>
         </div>
         <div class="logo-image">
           <img class="book-king-1" alt="" src="../../../public/assets/book-king-1@2x.png" />
@@ -102,51 +114,43 @@
   font-family: inherit;
 }
 
+.feedback-content{
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+
 .input,
 .input1,
 .input2,
 .input3,
 .input4 {
-  border: 1ex solid none;
-  border-top-width: 1.7em;
+  background-color: rgb(252, 252, 176);
+  border-radius: 7px;
   margin: 0;
-  padding: 0;
-  color: black;
+  padding: 1%;
+  color: #000;
   word-wrap: break-word;
-  outline: 5px solid #F0E68C;
   height: 30px;
   font-size: 17px;
-  text-align: center;
-  transition: all 1s;
   width: 100%;
   font-weight: bold;
-  font-family: 'Courier New', Courier, monospace;
+  font-family:Arial, Helvetica, sans-serif;
 }
 
-.input:hover,
-.input1:hover,
-.input2:hover,
-.input3:hover,
-.input4:hover {
-  border-top-width: 0.2em;
-  background-color: #F0E68C;
-}
 
-.input:focus,
-.input1:focus,
-.input2:focus,
-.input3:focus,
-.input4:focus {
-  border-top-width: 0.2em;
-  background-color: #e9e6c3;
+::placeholder {
+color: black;
+opacity: 0.5;
+font-weight: 500;
+text-align: left;
 }
 
 .msg-box{
+  padding:1%;
   margin-top: .15rem;
-  border-block-color: black;
-  color: black;
+  color: #000000;
   height: 100px;
-  border-top-width: 100px;
 }
 
 
@@ -364,5 +368,14 @@
 .contact-us-header{
   margin: 2rem 1.35rem
 }
+}
+
+@media screen and (max-width:500px) {
+  .content-wrapper{
+    margin: 0 0.5rem 4rem;
+  }
+  .form-and-image{
+    padding: 0;
+  }
 }
 </style>
