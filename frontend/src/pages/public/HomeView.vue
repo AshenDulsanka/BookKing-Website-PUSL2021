@@ -155,8 +155,9 @@
       </div>
       
     </div>
-    <NewFooter />
+    
   </div>
+  <NewFooter />
 </template>
 
 <script>
@@ -364,11 +365,17 @@
     transparent 60%,
     transparent 100%
   );
+  background-clip: text;
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-background-size: 280px;
+  background-size: 280px;
   -webkit-animation: zezzz;
+  animation: zezzz;
   -webkit-animation-duration: 5s;
+  animation-duration: 5s;
   -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
 }
 @-webkit-keyframes zezzz {
   0%,
@@ -381,6 +388,19 @@
   100% {
     background-position: 200px;
   }
+}
+
+@keyframes zezzz {
+   0%,
+   10% {
+     background-position: -200px;
+   }
+   20% {
+     background-position: top left;
+   }
+   100% {
+     background-position: 200px;
+   }
 }
 
 .index .intro-text2 {
@@ -396,6 +416,7 @@
   font-size: 20px;
   font-weight: 700;
   background: linear-gradient(to right,#ffffff, #f9ff00);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
