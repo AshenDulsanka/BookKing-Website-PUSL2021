@@ -2,12 +2,6 @@
   <div class="service-provider-login1">
     <newheader />
     <br>
-<<<<<<< HEAD
-    <br>
-    
-
-=======
->>>>>>> f0cc4001628c8dcd7707c59201f9235c8d86ddd4
     <section class="header-frame-wrapper">
       
       <div class="header-frame">

@@ -80,6 +80,7 @@
   }
   nav li {
     height: 50px;
+    align-content: center;
   }
   .menu-button {
     background-color: white;
