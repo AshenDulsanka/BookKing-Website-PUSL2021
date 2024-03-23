@@ -1,43 +1,47 @@
 <template>
-    <header>
-      <nav>
-        <ul class="sidebar" :class="{ show: showSidebar }">
-          <li @click="toggleSidebar">
-            <a href="#">
-              <svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26">
-                <path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z" />
-              </svg>
-            </a>
-          </li>
-          <li><a href="/">Home</a></li>
-          <li><a href="/vehicles">Vehicles</a></li>
-          <li><a href="/hotels">Hotels</a></li>
-          <li><a href="/tours">Tours</a></li>
-          <li><a href="/reviews">Reviews</a></li>
-          <li><a href="/contactus">Contact us</a></li>
-          <li><a href="/aboutus">About us</a></li>
-          <li><a class="login" href="/login">Login</a></li>
-        </ul>
-        <ul>
-          <li><a href="/"><img src="../../../public/assets/logo.png" alt="Logo" /></a></li>
-          <li class="hideOnMobile"><a href="/">Home</a></li>
-          <li class="hideOnMobile"><a href="/vehicles">Vehicles</a></li>
-          <li class="hideOnMobile"><a href="/hotels">Hotels</a></li>
-          <li class="hideOnMobile"><a href="/tours">Tours</a></li>
-          <li class="hideOnMobile"><a href="/contactus">Contact us</a></li>
-          <li class="hideOnMobile"><a href="/aboutus">About us</a></li>
-          <li class="hideOnMobile"><a class="login" href="/login">Login</a></li>
-          <li class="menu-button" @click="toggleSidebar">
-            <a href="#">
-              <svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26">
-                <path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z" />
-              </svg>
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </header>
-  </template>
+  <header>
+    <nav>
+      <ul class="sidebar" :class="{ show: showSidebar }">
+        <li @click="toggleSidebar">
+          <a href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26">
+              <path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z" />
+            </svg>
+          </a>
+        </li>
+        <li><a href="/">Home</a></li>
+        <li><a href="/vehicles">Vehicles</a></li>
+        <li><a href="/hotels">Hotels</a></li>
+        <li><a href="/tours">Tours</a></li>
+        <li><a href="/reviews">Reviews</a></li>
+        <li><a href="/contactus">Contact us</a></li>
+        <li><a href="/aboutus">About us</a></li>
+        <li v-if="!isLoggedIn"><a class="login" href="/login">Login</a></li>
+        <li v-else><a href="/profile">Profile</a></li>
+        <li v-if="isLoggedIn"><a href="#" @click="logout">Logout</a></li>
+      </ul>
+      <ul>
+        <li><a href="/"><img src="../../../public/assets/logo.png" alt="Logo" /></a></li>
+        <li class="hideOnMobile"><a href="/">Home</a></li>
+        <li class="hideOnMobile"><a href="/vehicles">Vehicles</a></li>
+        <li class="hideOnMobile"><a href="/hotels">Hotels</a></li>
+        <li class="hideOnMobile"><a href="/tours">Tours</a></li>
+        <li class="hideOnMobile"><a href="/contactus">Contact us</a></li>
+        <li class="hideOnMobile"><a href="/aboutus">About us</a></li>
+        <li v-if="!isLoggedIn" class="hideOnMobile"><a class="login" href="/login">Login</a></li>
+        <li v-else class="hideOnMobile"><a href="/profile">Profile</a></li>
+        <li v-if="isLoggedIn" class="hideOnMobile"><a href="#" @click="logout">Logout</a></li>
+        <li class="menu-button" @click="toggleSidebar">
+          <a href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26">
+              <path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z" />
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+</template>
   
   <script>
   export default {
