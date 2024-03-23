@@ -51,4 +51,58 @@ const login = (req, res) => {
   )
 }
 
-export { login }
+const getUsers = (req, res) => {
+  try {
+    db.query('SELECT * FROM users', (error, result) => {
+      if (error) {
+        return res.status(400).json({ msg: error.message })
+      }
+
+      if (result.length === 0) {
+        return res.status(404).json({ msg: 'No users found' })
+      }
+
+      return res.status(200).json({ success: true, data: result, message: 'Users fetched successfully' })
+    })
+  } catch (error) {
+    return res.status(400).json({ msg: error.message })
+  }
+}
+
+const getServiceProviders = (req, res) => {
+  try {
+    db.query('SELECT * FROM serviceprovider', (error, result) => {
+      if (error) {
+        return res.status(400).json({ msg: error.message })
+      }
+
+      if (result.length === 0) {
+        return res.status(404).json({ msg: 'No service providers found' })
+      }
+
+      return res.status(200).json({ success: true, data: result, message: 'Service providers fetched successfully' })
+    })
+  } catch (error) {
+    return res.status(400).json({ msg: error.message })
+  }
+}
+
+const getServices = (req, res) => {
+  try {
+    db.query('SELECT * FROM service', (error, result) => {
+      if (error) {
+        return res.status(400).json({ msg: error.message })
+      }
+
+      if (result.length === 0) {
+        return res.status(404).json({ msg: 'No services found' })
+      }
+
+      return res.status(200).json({ success: true, data: result, message: 'Services fetched successfully' })
+    })
+  } catch (error) {
+    return res.status(400).json({ msg: error.message })
+  }
+}
+
+export { login, getUsers, getServiceProviders, getServices }

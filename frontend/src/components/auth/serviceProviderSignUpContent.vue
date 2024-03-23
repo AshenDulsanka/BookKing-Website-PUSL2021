@@ -65,11 +65,10 @@ export default defineComponent({
         const responseData = await response.json();
         
         if (response.ok) {
-          this.$emit('login-success', true);
           alert('Registration successful, please verify your email.');
-          this.$router.push('/');
+          this.$router.push('/splogin');
         } else {
-          this.error = alert('Passwords do not match');
+          this.error = alert('An error occurred. Please try again later.');
         }
       } catch (error) {
         console.error('Error occurred:', error);
