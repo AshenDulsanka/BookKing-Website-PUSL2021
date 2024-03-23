@@ -69,63 +69,17 @@
                   <div :class="$style.reviewSummaryFrame">
                     <input :class="$style.contactUsFormFrame" type="radio" />
                     <div :class="$style.aboutUsHistoryFrame">
-                      <div :class="$style.freelancer">Freelancer</div>
+                      <div :class="$style.freelancer">Tours</div>
                     </div>
                   </div>
                 </div>
-                <div :class="$style.footerFrame">
-                  <div :class="$style.headerFrames">
-                    <div :class="$style.subHeaderFrames">
-                      <input :class="$style.servicesFrames" type="radio" />
-                      <div :class="$style.vehicleHotelsFrames">
-                        <div :class="$style.tours">Tours</div>
-                      </div>
-                    </div>
-                    <div :class="$style.footerFrames">
-                      <input
-                        :class="$style.homeReviewAboutUsFrames"
-                        type="radio"
-                      />
-                      <div :class="$style.contactUsFrame">
-                        <div :class="$style.entertainment">Entertainment</div>
-                      </div>
-                    </div>
-                  </div>
-                  <div :class="$style.headerFrames1">
-                    <div :class="$style.ellipseContainer">
-                      <input :class="$style.frameInner" type="radio" />
-                      <div :class="$style.venueWrapper">
-                        <div :class="$style.venue">Venue</div>
-                      </div>
-                    </div>
-                    <div :class="$style.frameDiv">
-                      <input :class="$style.ellipseInput" type="radio" />
-                      <div :class="$style.activitiesWrapper">
-                        <div :class="$style.activities">Activities</div>
-                      </div>
-                    </div>
-                  </div>
-                  <div :class="$style.headerFrames2">
-                    <div :class="$style.ellipseParent1">
-                      <input :class="$style.frameChild1" type="radio" />
-                      <div :class="$style.eventsWrapper">
-                        <div :class="$style.events">Events</div>
-                      </div>
-                    </div>
-                    <div :class="$style.ellipseParent2">
-                      <input :class="$style.frameChild2" type="radio" />
-                      <div :class="$style.cateringWrapper">
-                        <div :class="$style.catering">Catering</div>
-                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
+
   </section>
 </template>
 <script>
