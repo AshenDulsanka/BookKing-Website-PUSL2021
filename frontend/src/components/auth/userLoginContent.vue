@@ -5,7 +5,6 @@
     </div>
     <div class="password-rectangle1">
       <div class="email-parent">
-        <br>
         <div class="email1">Email</div>
         <input class="rectangle-rectangle" type="text" />
       </div>
@@ -55,8 +54,6 @@ export default defineComponent({
     color: black;
   }
   .service-provider-login3 {
-    margin: 0;
-    height: 15px;
     flex: 1;
     position: relative;
     font-size: inherit;
@@ -68,13 +65,9 @@ export default defineComponent({
   .service-provider-login-wrapper {
     align-self: stretch;
     display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: flex-start;
     padding: 0px 0px var(--padding-5xs);
     box-sizing: border-box;
     max-width: 100%;
-    margin-top: -140px;
   }
   .email1 {
     width: 40px;
@@ -104,17 +97,12 @@ export default defineComponent({
     flex: 1;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
     gap: 10px 0px;
     max-width: 100%;
   }
   .password-rectangle1 {
     width: 764px;
     display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: flex-start;
     padding: 0px var(--padding-10xs) var(--padding-xs);
     box-sizing: border-box;
     max-width: 100%;
@@ -147,17 +135,12 @@ export default defineComponent({
     flex: 1;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
     gap: 8px 0px;
     max-width: 100%;
   }
   .password-rectangle2 {
     width: 764px;
     display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: flex-start;
     padding: 0px var(--padding-10xs);
     box-sizing: border-box;
     max-width: 100%;
@@ -172,9 +155,6 @@ export default defineComponent({
     text-decoration: none;
     color: black;
     display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: flex-start;
     padding: 0px var(--padding-10xs);
     font-size: var(--font-size-sm);
     font-family: var(--font-poppins);
@@ -183,10 +163,9 @@ export default defineComponent({
     flex: 1;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
     gap: 21px 0px;
     max-width: 100%;
+    height: fit-content;
     flex-shrink: 0;
     text-align: left;
     font-size: var(--font-size-21xl);

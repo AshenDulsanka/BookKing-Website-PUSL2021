@@ -5,8 +5,3 @@ export default {
     return Api().post('userSignUp', userCredentials)
   }
 }
-
-// authenticationServices.userSignUp({
-//     email: 'ashendul@gmail.com',
-//     passwpord: '123456'
-// })
