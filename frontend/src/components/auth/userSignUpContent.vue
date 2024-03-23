@@ -13,7 +13,7 @@
         <div class="email1">Password</div>
         <input class="frame-item" type="password" name="password" v-model="password" required/>
         <div class="email1">Password Confirm</div>
-        <input class="frame-item" type="password" name="passwordc" v-model="passwordc" required/>
+        <input class="frame-item" type="password" name="confirmPassword" v-model="confirmPassword" required/>
         <div class="email1">Phone Number</div>
         <input class="frame-item" type="text" name="phoneno" v-model="phoneno" required/>
         <div class="email1">Address</div>
@@ -39,7 +39,7 @@ export default defineComponent({
       name: '',
       email: '',
       password: '',
-      passwordc: '',
+      confirmPassword: '',
       phoneno: '',
       address: ''
     }
