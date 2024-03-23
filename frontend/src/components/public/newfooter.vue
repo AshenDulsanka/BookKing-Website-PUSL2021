@@ -71,6 +71,9 @@ nav a:hover {
     text-align: center;
     
   }
+  .nav {
+  background-color:transparent;
+  }
 }
 
 @media (max-width: 480px) {

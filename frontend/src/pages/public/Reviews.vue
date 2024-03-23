@@ -35,8 +35,9 @@
       </section>
     </main>
     <div :class="$style.reviewsChild" />
-    <newfooter />
+    
   </div>
+  <newfooter />
 </template>
 
 <script>

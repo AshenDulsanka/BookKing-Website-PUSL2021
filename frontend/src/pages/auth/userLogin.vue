@@ -153,8 +153,8 @@ export default defineComponent({
     gap: 141.5px 0px;
     letter-spacing: normal;
   }
-
-  @media screen and (max-width: 1350px) {
+  
+  @media screen and (max-width: 1200px) {
     .password-input-frame {
       flex: 1;
       margin-left: 0;
@@ -166,6 +166,12 @@ export default defineComponent({
 
     .service-provider-login1 {
       gap: 52px 0px;
+    }
+   
+    .login-image{
+      display: flex;
+      align-self: auto;
+      margin-top: 50px;
     }
   }
   @media screen and (max-width: 925px) {

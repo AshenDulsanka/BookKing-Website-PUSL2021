@@ -152,8 +152,9 @@
         </div>
       </div>
     </div>
-    <NewFooter />
+    
   </div>
+  <NewFooter />
 </template>
 
 <script>
