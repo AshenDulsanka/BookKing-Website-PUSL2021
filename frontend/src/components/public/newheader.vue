@@ -67,20 +67,16 @@
   }
   nav {
     background-color: rgb(0, 0, 0);
-    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
     height: 70px;
     padding-top: 10px;
   }
   nav ul {
     width: 100%;
     list-style: none;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+    display: flex; 
     font-family: "Poppins", sans-serif;
     font-size: 14px;
     font-weight: 500;
-    align-items: center;
   }
   nav li {
     height: 50px;
