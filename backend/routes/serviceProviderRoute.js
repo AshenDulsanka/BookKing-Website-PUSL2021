@@ -1,17 +1,19 @@
 import express from 'express'
-import { userSignUpValidation, logInValidation, forgetValidation, updateProfileValidation } from '../helpers/validation.js'
-import { register, login, getUser, forgetPassword, updateProfile } from '../controllers/userController.js'
+import { serviceProviderSignUpValidation, logInValidation, forgetValidation, updateProfileValidation } from '../helpers/validation.js'
+import { register, login, getServiceProvider, forgetPassword, updateProfile, deleteServiceProvider } from '../controllers/serviceProviderController.js'
 import { isAuthorized } from '../middleware/auth.js'
 
-const userRouter = express.Router()
+const serviceProviderRouter = express.Router()
 
-userRouter.post('/register', userSignUpValidation, register)
-userRouter.post('/login', logInValidation, login)
+serviceProviderRouter.post('/spregister', serviceProviderSignUpValidation, register)
+serviceProviderRouter.post('/splogin', logInValidation, login)
 
-userRouter.get('/getUser', isAuthorized, getUser)
+serviceProviderRouter.get('/getServiceProvider', isAuthorized, getServiceProvider)
 
-userRouter.post('/forgetPassword', forgetValidation, forgetPassword)
+serviceProviderRouter.post('/spforgetPassword', forgetValidation, forgetPassword)
 
-userRouter.post('/updateProfile', updateProfileValidation, isAuthorized, updateProfile)
+serviceProviderRouter.post('/spupdateProfile', updateProfileValidation, isAuthorized, updateProfile)
 
-export { userRouter }
+serviceProviderRouter.delete('/deleteServiceProvider', isAuthorized, deleteServiceProvider)
+
+export { serviceProviderRouter }

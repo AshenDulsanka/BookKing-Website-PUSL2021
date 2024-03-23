@@ -18,7 +18,7 @@ const register = (req, res) => {
   }
 
   db.query(
-    `SELECT * FROM users WHERE LOWER(email) = LOWER(${db.escape(req.body.email)})`,
+    `SELECT * FROM serviceprovider WHERE LOWER(email) = LOWER(${db.escape(req.body.email)})`,
     (err, result) => {
       if (err) {
         return res.status(500).send({
@@ -27,7 +27,7 @@ const register = (req, res) => {
       }
       if (result && result.length) {
         return res.status(409).send({
-          msg: 'This user is already in use!'
+          msg: 'This service provider is already in use!'
         })
       } else {
         bcrypt.hash(req.body.password, 10, (err, hash) => {
@@ -37,9 +37,9 @@ const register = (req, res) => {
             })
           } else {
             db.query(
-              `INSERT INTO users (name, email, password, phoneNumber, address, token) VALUES ('${req.body.name}', ${db.escape(
+              `INSERT INTO serviceprovider (name, email, password, phoneNumber, address, serviceDesc, token) VALUES ('${req.body.name}', ${db.escape(
                 req.body.email
-              )}, ${db.escape(hash)}, '${req.body.phoneNo}', '${req.body.address}', '${randomToken}');`,
+              )}, ${db.escape(hash)}, '${req.body.phoneNo}', '${req.body.address}', '${req.body.serviceDesc}','${randomToken}');`,
               (err, result) => {
                 if (err) {
                   return res.status(400).send({
@@ -72,17 +72,15 @@ const register = (req, res) => {
         p {
           margin-bottom: 20px;
         }
-        a {
-          color: white;
-          text-decoration: none;
-        }
-        .button {
+        a.button {
           display: inline-block;
+          margin: 0 auto; 
           background-color: grey;
-          color: #fff;
+          color: white; 
           padding: 10px 20px;
           border-radius: 5px;
           text-decoration: none;
+          text-align: center; 
         }
       </style>
     </head>
@@ -90,7 +88,7 @@ const register = (req, res) => {
       <div class="container">
         <h1>Hi ${req.body.name},</h1>
         <p>Thank you for registering with our service! To complete your registration and access all features, please verify your email address by clicking on the button.</p>
-        <p><a class="button" href="http://localhost:8081/mailVerification?token=${randomToken}">Verify Email</a></p>
+        <p><a class="button" href="http://localhost:8081/SPmailVerification?token=${randomToken}">Verify Email</a></p>
         <p>If you did not register for this account, please ignore this email.</p>
         <p>Thank you,<br>BookKing</p>
       </div>
@@ -99,7 +97,7 @@ const register = (req, res) => {
 `
                 sendMail(req.body.email, mailSubject, content)
                 return res.status(200).send({
-                  msg: 'The user has been registered successfully!'
+                  msg: 'The service provider has been registered successfully!'
                 })
               }
             )
@@ -110,17 +108,17 @@ const register = (req, res) => {
   )
 }
 
-const verifyMail = (req, res) => {
+const SPverifyMail = (req, res) => {
   const token = req.query.token
 
-  db.query('SELECT * FROM users WHERE token=? limit 1', token, function (error, result, fields) {
+  db.query('SELECT * FROM serviceprovider WHERE token=? limit 1', token, function (error, result, fields) {
     if (error) {
       console.log(error.message)
     }
 
     if (result.length > 0) {
       db.query(`
-        UPDATE users SET token = null, isVerified = 1 WHERE UID = '${result[0].UID}'
+        UPDATE serviceprovider SET token = null, isVerified = 1 WHERE SPID = '${result[0].SPID}'
       `)
       return res.render('mailVerification', { message: 'Mail Verified Successfully! You can now login!' })
     } else {
@@ -138,7 +136,7 @@ const login = (req, res) => {
 
   db.query(
     `
-      SELECT * FROM users WHERE email = ${db.escape(req.body.email)};
+      SELECT * FROM serviceprovider WHERE email = ${db.escape(req.body.email)};
     `,
     (err, result) => {
       if (err) {
@@ -168,9 +166,9 @@ const login = (req, res) => {
 
           if (bResult) {
             // console.log('JWT Key is, ' + JWTSECRET)
-            const token = jwt.sign({ UID: result[0].UID }, JWTSECRET, { expiresIn: '1h' })
+            const token = jwt.sign({ SPID: result[0].SPID }, JWTSECRET, { expiresIn: '1h' })
             db.query(
-              `UPDATE users SET lastLogin = now() WHERE UID = '${result[0].UID}'`
+              `UPDATE serviceprovider SET lastLogin = now() WHERE SPID = '${result[0].SPID}'`
             )
             return res.status(200).send({
               msg: 'Logged in!',
@@ -188,11 +186,11 @@ const login = (req, res) => {
   )
 }
 
-const getUser = (req, res) => {
+const getServiceProvider = (req, res) => {
   const authToken = req.headers.authorization.split(' ')[1]
   const decode = jwt.verify(authToken, JWTSECRET)
 
-  db.query('SELECT * FROM users WHERE UID = ?', decode.UID, function (error, result, fields) {
+  db.query('SELECT * FROM serviceprovider WHERE SPID = ?', decode.SPID, function (error, result, fields) {
     if (error) {
       throw error
     }
@@ -210,7 +208,7 @@ const forgetPassword = (req, res) => {
 
   const email = req.body.email
 
-  db.query('SELECT * FROM users WHERE email = ? limit 1', email, function (error, result, fields) {
+  db.query('SELECT * FROM serviceprovider WHERE email = ? limit 1', email, function (error, result, fields) {
     if (error) {
       return res.status(400).json({ message: error })
     }
@@ -225,10 +223,10 @@ const forgetPassword = (req, res) => {
         <p>We received a request to reset the password associated with your account.</p>
         <p style="margin-bottom: 20px;">If you didn't make this request, you can safely ignore this email.</p>
         <div style="text-align: center;">
-          <a href="http://localhost:8081/resetPassword?token=${randomstring}" style="display: inline-block; background-color: #007bff; color: #fff; text-decoration: none; padding: 10px 20px; border-radius: 5px;">Reset Password</a>
+          <a href="http://localhost:8081/SPresetPassword?token=${randomstring}" style="display: inline-block; background-color: #007bff; color: #fff; text-decoration: none; padding: 10px 20px; border-radius: 5px;">Reset Password</a>
         </div>
         <p style="margin-top: 20px;">Alternatively, you can copy and paste the following link into your browser:</p>
-        <p style="text-align: center; margin-bottom: 20px;"><a href="http://localhost:8081/resetPassword?token=${randomstring}" style="color: #007bff; text-decoration: none;">http://localhost:8081/resetPassword?token=${randomstring}</a></p>
+        <p style="text-align: center; margin-bottom: 20px;"><a href="http://localhost:8081/SPresetPassword?token=${randomstring}" style="color: #007bff; text-decoration: none;">http://localhost:8081/SPresetPassword?token=${randomstring}</a></p>
         <p>If you did request a password reset, click the button above to reset your password. This link will expire in 24 hours.</p>
         <p>If you encounter any issues, please don't hesitate to contact us at bookkinglk@gmail.com.</p>
         <p>Best Regards,<br/>Team BookKing</p>
@@ -256,7 +254,7 @@ const forgetPassword = (req, res) => {
   })
 }
 
-const resetPasswordLoad = (req, res) => {
+const SPresetPasswordLoad = (req, res) => {
   try {
     const token = req.query.token
     // eslint-disable-next-line eqeqeq
@@ -270,12 +268,12 @@ const resetPasswordLoad = (req, res) => {
       }
 
       if (result !== undefined && result.length > 0) {
-        db.query('SELECT * FROM users WHERE email = ? limit 1', result[0].email, function (error, result, fields) {
+        db.query('SELECT * FROM serviceprovider WHERE email = ? limit 1', result[0].email, function (error, result, fields) {
           if (error) {
             console.log(error.message)
           }
 
-          res.render('resetPassword', { user: result[0] })
+          res.render('SPresetPassword', { user: result[0] })
         })
       } else {
         res.render('404')
@@ -286,10 +284,10 @@ const resetPasswordLoad = (req, res) => {
   }
 }
 
-const resetPassword = (req, res) => {
+const SPresetPassword = (req, res) => {
   // eslint-disable-next-line eqeqeq
   if (req.body.password != req.body.confirmPassword) {
-    res.render('resetPassword', { errorMessage: 'Password do not match', user: { UID: req.body.userID, emaill: req.body.email } })
+    res.render('SPresetPassword', { errorMessage: 'Password do not match', user: { SPID: req.body.spID, emaill: req.body.email } })
   }
 
   bcrypt.hash(req.body.confirmPassword, 10, (err, hash) => {
@@ -302,7 +300,11 @@ const resetPassword = (req, res) => {
     )
 
     db.query(
-      `UPDATE users SET password = '${hash}' WHERE UID = '${req.body.userID}'`
+      `UPDATE serviceprovider SET password = '${hash}' WHERE SPID = '${req.body.spID}'`
+    )
+
+    db.query(
+      `UPDATE serviceprovider SET updatedAt = now() WHERE SPID = '${req.body.spID}}'`
     )
 
     res.render('resetSuccess')
@@ -323,9 +325,13 @@ const updateProfile = (req, res) => {
     let sql = '' // Declare the sql variable using let
     let data // Declare the data variable using let
 
-    sql = 'UPDATE users SET name = ?, email = ?, phoneNumber = ?, address = ? WHERE UID = ?'
+    sql = 'UPDATE serviceprovider SET name = ?, email = ?, phoneNumber = ?, address = ?, serviceDesc = ? WHERE SPID = ?'
     // eslint-disable-next-line prefer-const
-    data = [req.body.name, req.body.email, req.body.phoneNo, req.body.address, decode.UID]
+    data = [req.body.name, req.body.email, req.body.phoneNo, req.body.address, req.body.serviceDesc, decode.SPID]
+
+    db.query(
+      `UPDATE serviceprovider SET updatedAt = now() WHERE SPID = '${decode.SPID}}'`
+    )
 
     db.query(sql, data, function (error, result, fields) {
       if (error) {
@@ -343,4 +349,25 @@ const updateProfile = (req, res) => {
   }
 }
 
-export { register, verifyMail, login, getUser, forgetPassword, resetPasswordLoad, resetPassword, updateProfile }
+const deleteServiceProvider = (req, res) => {
+  try {
+    const token = req.headers.authorization.split(' ')[1]
+    const decode = jwt.verify(token, JWTSECRET)
+
+    db.query('DELETE FROM serviceprovider WHERE SPID = ?', decode.SPID, (error, result) => {
+      if (error) {
+        return res.status(400).json({ msg: error.message })
+      }
+
+      if (result.affectedRows > 0) {
+        return res.status(200).json({ msg: 'Service Provider profile deleted successfully' })
+      } else {
+        return res.status(404).json({ msg: 'Service Provider not found' })
+      }
+    })
+  } catch (error) {
+    return res.status(400).json({ msg: error.message })
+  }
+}
+
+export { register, SPverifyMail, login, getServiceProvider, forgetPassword, SPresetPasswordLoad, SPresetPassword, updateProfile, deleteServiceProvider }

@@ -1,15 +1,9 @@
 <template>
   <div class="service-provider-login1">
     <newheader />
-    <br>
-    <br>
-    <br>
-    <br>
     <section class="header-frame-wrapper">
       <div class="header-frame">
         <userLoginContent />
-        <div class="password-input-frame">
-
           <div class="login-image">
             <img class="loginimg-icon" loading="lazy" alt="" src="../../../public/assets/images/login.png"/>
             <div class="already-have-account-message">
@@ -19,12 +13,10 @@
               <a href="/splogin">Service Provider Login</a>
             </div>
           </div>
-        </div>
       </div>
     </section>
-    
+    <newfooter />
   </div>
-  <newfooter />
 </template>
 
 <script>
@@ -40,118 +32,64 @@ export default defineComponent({
 })
 </script>
 <style scoped>
-  a{
+  a {
     text-decoration: underline;
     color: black;
   }
 
   .loginimg-icon {
-    align-self: stretch;
     height: 205px;
-    position: relative;
     max-width: 100%;
     overflow: hidden;
     flex-shrink: 0;
-    margin-top: -100px;
   }
-  .you-dont-have {
-    margin: 0;
-  }
-  .you-dont-have-container {
-    position: relative;
-    text-decoration: underline;
-  }
-  .password-rectangle {
-    flex: 1;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: flex-start;
-    padding: 0px 0px 0px 1px;
-  }
-  .already-have-an {
-    position: relative;
-    text-decoration: underline;
-  }
-  .email-rectangle {
-    align-self: stretch;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap: 11px 0px;
-  }
+
   .already-have-account-message {
     color: black;
     text-decoration: none;
-    height: 10px;
     display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: flex-start;
-    padding: 0px 100px;
-    box-sizing: border-box;
-    max-width: 100%;
+    justify-content: center; /* Centering links horizontally */
+    gap: 10px; /* Adjust gap between links */
   }
+
   .login-image {
-    align-self: stretch;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap: 27px 0px;
-    max-width: 100%;
+    align-items: center; /* Centering image and links */
+    gap: 27px; /* Adjust gap between elements */
   }
-  .password-input-frame {
-    height:16px;
-    width: 404px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    padding: 60px 0px 0px;
-    box-sizing: border-box;
-    min-width: 404px;
-    max-width: 100%;
-    z-index: 1;
-    margin-left: -75px;
-  }
-  .header-frame {
-    width: 1199px;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: flex-start;
-    max-width: 100%;
-    row-gap: 20px;
-  }
+
   .header-frame-wrapper {
-    align-self: stretch;
+    margin: auto;
     display: flex;
-    flex-direction: row;
-    align-items: flex-start;
     justify-content: center;
-    padding: 0px var(--padding-xl);
     box-sizing: border-box;
+    height: 100%;
     max-width: 100%;
-    text-align: left;
-    font-size: var(--font-size-sm);
-    color: var(--color-black);
-    font-family: var(--font-poppins);
   }
-  .service-provider-login1 {
+
+  .header-frame {
+    padding: 100px 30px;
+    margin: auto;
     width: 100%;
-    position: relative;
-    background-color: var(--color-white);
-    overflow: hidden;
+    height: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center content vertically */
+    flex-wrap: wrap; /* Allowing content to wrap */
+    gap: 30px; /* Adjust gap between elements */
+  }
+
+  .service-provider-login1 {
+    height: 100%;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    padding: 0px 0px 250.5px;
-    box-sizing: border-box;
-    gap: 141.5px 0px;
-    letter-spacing: normal;
+    position: relative;
+    align-items: center; /* Center content horizontally */
+    justify-content: center; /* Center content vertically */
+    background-color: var(--color-white);
   }
   
   @media screen and (max-width: 1200px) {
