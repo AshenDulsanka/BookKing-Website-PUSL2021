@@ -3,7 +3,7 @@
     <nav>
       <ul>
         <li class="hideOnMobile"><a href="/">Home</a></li>
-        <li class="hideOnMobile"><a href="#">Vehicles</a></li>
+        <li class="hideOnMobile"><a href="/vehicles">Vehicles</a></li>
         <li class="hideOnMobile"><a href="/hotels">Hotels</a></li>
         <li class="hideOnMobile"><a href="#">Tours</a></li>
         <li class="hideOnMobile"><a href="/reviews">Reviews</a></li>

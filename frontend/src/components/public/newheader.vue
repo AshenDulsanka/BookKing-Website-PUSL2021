@@ -10,7 +10,7 @@
             </a>
           </li>
           <li><a href="/">Home</a></li>
-          <li><a href="#">Vehicles</a></li>
+          <li><a href="/vehicles">Vehicles</a></li>
           <li><a href="/hotels">Hotels</a></li>
           <li><a href="#">Tours</a></li>
           <li><a href="/reviews">Reviews</a></li>
@@ -21,7 +21,7 @@
         <ul>
           <li><a href="/"><img src="../../../public/assets/logo.png" alt="Logo" /></a></li>
           <li class="hideOnMobile"><a href="/">Home</a></li>
-          <li class="hideOnMobile"><a href="#">Vehicles</a></li>
+          <li class="hideOnMobile"><a href="/vehicles">Vehicles</a></li>
           <li class="hideOnMobile"><a href="/hotels">Hotels</a></li>
           <li class="hideOnMobile"><a href="#">Tours</a></li>
           <li class="hideOnMobile"><a href="/contactus">Contact us</a></li>
