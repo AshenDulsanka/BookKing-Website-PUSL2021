@@ -1,6 +1,7 @@
 <template>
   <div :class="$style.addPage">
     <NewHeader /><AddPageButton /><PricingFrame />
+    <br><br><br><br><br><br><br><br>
     <newfooter />
   </div>
 </template>
