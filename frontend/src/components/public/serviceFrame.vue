@@ -11,9 +11,10 @@
         <div :class="$style.frameParent">
           <div :class="$style.hotelNameParent" :style="frameDiv2Style">
             <b :class="$style.hotelName">{{serviceName}}</b>
+            <br>
             <div :class="$style.belowIsAn">{{belowIsAn}}</div> 
             <br>
-            <b :class="$style.hotelName">{{price}}</b>
+            <b :class="$style.hotelName">Price: {{price}}</b>
           </div>
           <button :class="$style.rectangleGroup">
             <div :class="$style.rectangleDiv" />
