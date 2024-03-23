@@ -20,6 +20,7 @@
         <input class="frame-item" type="text" name="address" v-model="address" required/>
       </div>
     </div>
+    
     <a href="#">
         <button class="ok" @click="register">
             <div class="ok">Register</div>
