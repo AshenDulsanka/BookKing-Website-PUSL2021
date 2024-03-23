@@ -9,9 +9,7 @@
               <div class="intro-text-box">
                 <h1 class="intro-text1">BookKing</h1>
                 <h5 class="intro-text2">
-                  <span class="intro-text2-effect"
-                    >Your traveling partner...</span
-                  >
+                  <span class="intro-text2-effect">Your traveling partner...</span>
                 </h5>
               </div>
             </div>
@@ -19,47 +17,32 @@
               <!--Here I have added a tags to the imgs, enter page locations to the href accordingly-->
               <div class="vehicle-list">
                 <a href="#" class="vehicle-item">
-                  <img
-                    class="cars-img"
-                    alt="hotel-image"
-                    src="https://cdn.animaapp.com/projects/65d23269fb82e0b1687904f9/releases/65d233c5449bbb741dc6aecb/img/rectangle-10.png"
-                  />
+                  <img class="cars-img" alt="hotel-image"
+                    src="https://cdn.animaapp.com/projects/65d23269fb82e0b1687904f9/releases/65d233c5449bbb741dc6aecb/img/rectangle-10.png" />
                   <h3 class="text-wrapper-9">Car</h3>
                 </a>
 
                 <a href="#" class="vehicle-item">
-                  <img
-                    class="cars-img"
-                    alt="hotel-image"
-                    src="https://cdn.animaapp.com/projects/65d23269fb82e0b1687904f9/releases/65d233c5449bbb741dc6aecb/img/rectangle-6.png"
-                  />
+                  <img class="cars-img" alt="hotel-image"
+                    src="https://cdn.animaapp.com/projects/65d23269fb82e0b1687904f9/releases/65d233c5449bbb741dc6aecb/img/rectangle-6.png" />
                   <h3 class="text-wrapper-9">Mini Car</h3>
                 </a>
 
                 <a href="#" class="vehicle-item">
-                  <img
-                    class="cars-img"
-                    alt="hotel-image"
-                    src="https://cdn.animaapp.com/projects/65d23269fb82e0b1687904f9/releases/65d233c5449bbb741dc6aecb/img/rectangle-7.png"
-                  />
+                  <img class="cars-img" alt="hotel-image"
+                    src="https://cdn.animaapp.com/projects/65d23269fb82e0b1687904f9/releases/65d233c5449bbb741dc6aecb/img/rectangle-7.png" />
                   <h3 class="text-wrapper-9">Van</h3>
                 </a>
 
                 <a href="#" class="vehicle-item">
-                  <img
-                    class="cars-img"
-                    alt="hotel-image"
-                    src="https://cdn.animaapp.com/projects/65d23269fb82e0b1687904f9/releases/65d233c5449bbb741dc6aecb/img/rectangle-8.png"
-                  />
+                  <img class="cars-img" alt="hotel-image"
+                    src="https://cdn.animaapp.com/projects/65d23269fb82e0b1687904f9/releases/65d233c5449bbb741dc6aecb/img/rectangle-8.png" />
                   <h3 class="text-wrapper-9">Bus</h3>
                 </a>
 
                 <a href="#" class="vehicle-item">
-                  <img
-                    class="cars-img"
-                    alt="hotel-image"
-                    src="https://cdn.animaapp.com/projects/65d23269fb82e0b1687904f9/releases/65d233c5449bbb741dc6aecb/img/rectangle-9.png"
-                  />
+                  <img class="cars-img" alt="hotel-image"
+                    src="https://cdn.animaapp.com/projects/65d23269fb82e0b1687904f9/releases/65d233c5449bbb741dc6aecb/img/rectangle-9.png" />
                   <h3 class="text-wrapper-9">Bike</h3>
                 </a>
               </div>
@@ -73,11 +56,8 @@
               <!--Here I have added a tags to the imgs, enter page locations to the href accordingly-->
               <div class="tour-box">
                 <a href="#" class="tour-item">
-                  <img
-                    class="tour-img"
-                    alt="hotel-image"
-                    src="https://cdn.animaapp.com/projects/65d23269fb82e0b1687904f9/releases/65d233c5449bbb741dc6aecb/img/rectangle-11.png"
-                  />
+                  <img class="tour-img" alt="hotel-image"
+                    src="https://cdn.animaapp.com/projects/65d23269fb82e0b1687904f9/releases/65d233c5449bbb741dc6aecb/img/rectangle-11.png" />
                   <h3 class="text-wrapper-20">Historical Tour</h3>
                 </a>
                 <p class="tour-text">
@@ -89,11 +69,8 @@
 
               <div class="tour-box">
                 <a href="#" class="tour-item">
-                  <img
-                    class="tour-img"
-                    alt="hotel-image"
-                    src="https://cdn.animaapp.com/projects/65d23269fb82e0b1687904f9/releases/65d233c5449bbb741dc6aecb/img/rectangle-12.png"
-                  />
+                  <img class="tour-img" alt="hotel-image"
+                    src="https://cdn.animaapp.com/projects/65d23269fb82e0b1687904f9/releases/65d233c5449bbb741dc6aecb/img/rectangle-12.png" />
                   <h3 class="text-wrapper-20">Tea Country tour</h3>
                 </a>
                 <p class="tour-text">
@@ -106,11 +83,8 @@
 
               <div class="tour-box">
                 <a href="#" class="tour-item">
-                  <img
-                    class="tour-img"
-                    alt="hotel-image"
-                    src="https://cdn.animaapp.com/projects/65d23269fb82e0b1687904f9/releases/65d233c5449bbb741dc6aecb/img/rectangle-13.png"
-                  />
+                  <img class="tour-img" alt="hotel-image"
+                    src="https://cdn.animaapp.com/projects/65d23269fb82e0b1687904f9/releases/65d233c5449bbb741dc6aecb/img/rectangle-13.png" />
                   <h3 class="text-wrapper-20">Sigiriya tour</h3>
                 </a>
                 <p class="tour-text">
@@ -130,10 +104,7 @@
           <div class="review-unit">
             <div class="review-box">
               <a href="#" class="review-text">
-                <img
-                  class="ellipse"
-                  src="../../../public/assets/images/stickman.jpg"
-                />
+                <img class="ellipse" src="../../../public/assets/images/stickman.jpg" />
                 <p class="text-wrapper-24">
                   &#34;Absolutely loved my stay! The accommodation was clean,
                   comfortable, and the staff went above and beyond to make my
@@ -143,10 +114,7 @@
             </div>
             <div class="review-box">
               <a href="#" class="review-text">
-                <img
-                  class="ellipse"
-                  src="../../../public/assets/images/stickman.jpg"
-                />
+                <img class="ellipse" src="../../../public/assets/images/stickman.jpg" />
                 <p class="text-wrapper-24">
                   &#34;Great value for money! The room aaaaaaaaaaaaaaaaaaa, and
                   the location was convenient. The booking platform made
@@ -159,10 +127,7 @@
           <div class="review-unit">
             <div class="review-box">
               <a href="#" class="review-text">
-                <img
-                  class="ellipse"
-                  src="../../../public/assets/images/stickman.jpg"
-                />
+                <img class="ellipse" src="../../../public/assets/images/stickman.jpg" />
                 <p class="text-wrapper-24">
                   &#34;Great value for money! The room was cozy, and the
                   location was convenient. The booking platform made everything
@@ -173,10 +138,7 @@
             </div>
             <div class="review-box">
               <a href="#" class="review-text">
-                <img
-                  class="ellipse"
-                  src="../../../public/assets/images/stickman.jpg"
-                />
+                <img class="ellipse" src="../../../public/assets/images/stickman.jpg" />
                 <p class="text-wrapper-24">
                   &#34;Picturesque location! The booking process was seamless,
                   and the property exceeded expectations. From the amenities to
@@ -194,61 +156,43 @@
           <!--Here I have added a tags to the imgs, enter page locations to the href accordingly-->
           <div class="hotel-list">
             <a href="#" class="hotel-img">
-              <img
-                class="rectangle-14"
-                alt="hotel-image"
-                src="https://cdn.animaapp.com/projects/65d23269fb82e0b1687904f9/releases/65d233c5449bbb741dc6aecb/img/rectangle-24.png"
-              />
+              <img class="rectangle-14" alt="hotel-image"
+                src="https://cdn.animaapp.com/projects/65d23269fb82e0b1687904f9/releases/65d233c5449bbb741dc6aecb/img/rectangle-24.png" />
               <div class="hotel-img-overlay">
                 <h3 class="text-wrapper-25">Hotel 1</h3>
               </div>
             </a>
             <a href="#" class="hotel-img">
-              <img
-                class="rectangle-14"
-                alt="hotel-image"
-                src="https://cdn.animaapp.com/projects/65d23269fb82e0b1687904f9/releases/65d233c5449bbb741dc6aecb/img/rectangle-25.png"
-              />
+              <img class="rectangle-14" alt="hotel-image"
+                src="https://cdn.animaapp.com/projects/65d23269fb82e0b1687904f9/releases/65d233c5449bbb741dc6aecb/img/rectangle-25.png" />
               <div class="hotel-img-overlay">
                 <h3 class="text-wrapper-25">Hotel 2</h3>
               </div>
             </a>
             <a href="#" class="hotel-img">
-              <img
-                class="rectangle-14"
-                alt="hotel-image"
-                src="https://cdn.animaapp.com/projects/65d23269fb82e0b1687904f9/releases/65d233c5449bbb741dc6aecb/img/rectangle-26.png"
-              />
+              <img class="rectangle-14" alt="hotel-image"
+                src="https://cdn.animaapp.com/projects/65d23269fb82e0b1687904f9/releases/65d233c5449bbb741dc6aecb/img/rectangle-26.png" />
               <div class="hotel-img-overlay">
                 <h3 class="text-wrapper-25">Hotel 3</h3>
               </div>
             </a>
             <a href="#" class="hotel-img">
-              <img
-                class="rectangle-14"
-                alt="hotel-image"
-                src="https://cdn.animaapp.com/projects/65d23269fb82e0b1687904f9/releases/65d233c5449bbb741dc6aecb/img/rectangle-27.png"
-              />
+              <img class="rectangle-14" alt="hotel-image"
+                src="https://cdn.animaapp.com/projects/65d23269fb82e0b1687904f9/releases/65d233c5449bbb741dc6aecb/img/rectangle-27.png" />
               <div class="hotel-img-overlay">
                 <h3 class="text-wrapper-25">Hotel 4</h3>
               </div>
             </a>
             <a href="#" class="hotel-img">
-              <img
-                class="rectangle-14"
-                alt="hotel-image"
-                src="https://cdn.animaapp.com/projects/65d23269fb82e0b1687904f9/releases/65d233c5449bbb741dc6aecb/img/rectangle-28.png"
-              />
+              <img class="rectangle-14" alt="hotel-image"
+                src="https://cdn.animaapp.com/projects/65d23269fb82e0b1687904f9/releases/65d233c5449bbb741dc6aecb/img/rectangle-28.png" />
               <div class="hotel-img-overlay">
                 <h3 class="text-wrapper-25">Hotel 5</h3>
               </div>
             </a>
             <a href="#" class="hotel-img">
-              <img
-                class="rectangle-14"
-                alt="hotel-image"
-                src="https://cdn.animaapp.com/projects/65d23269fb82e0b1687904f9/releases/65d233c5449bbb741dc6aecb/img/rectangle-29.png"
-              />
+              <img class="rectangle-14" alt="hotel-image"
+                src="https://cdn.animaapp.com/projects/65d23269fb82e0b1687904f9/releases/65d233c5449bbb741dc6aecb/img/rectangle-29.png" />
               <div class="hotel-img-overlay">
                 <h3 class="text-wrapper-25">Hotel 6</h3>
               </div>
@@ -257,8 +201,8 @@
         </div>
       </div>
     </div>
+    <NewFooter />
   </div>
-  <NewFooter />
 </template>
 
 <script>
@@ -274,11 +218,9 @@ export default defineComponent({
 
 <style scoped>
 :root {
-  --root-gradient: linear-gradient(
-    180deg,
-    rgb(255, 237.79, 82.87) 68%,
-    rgba(228.7, 213.65, 78.14, 0.03) 99%
-  );
+  --root-gradient: linear-gradient(180deg,
+      rgb(255, 237.79, 82.87) 68%,
+      rgba(228.7, 213.65, 78.14, 0.03) 99%);
 }
 
 .index .review-unit {
@@ -310,11 +252,9 @@ export default defineComponent({
 }
 
 .index .review-box {
-  background: linear-gradient(
-    180deg,
-    rgb(255, 237.79, 82.87) 0%,
-    rgba(240.12, 240.12, 240.12, 0) 100%
-  );
+  background: linear-gradient(180deg,
+      rgb(255, 237.79, 82.87) 0%,
+      rgba(240.12, 240.12, 240.12, 0) 100%);
   border-radius: 24px;
   box-shadow: 0px 4px 4px #00000040;
   height: 100%;
@@ -340,24 +280,18 @@ export default defineComponent({
 }
 
 .index .home-body {
-  background-color: repeating-linear-gradient(
-      60deg,
+  background-color: repeating-linear-gradient(60deg,
       transparent 30px,
       rgba(255, 0, 0, 0.2) 10px,
-      rgba(255, 238, 0, 0.2) 90px
-    ),
-    repeating-linear-gradient(
-      120deg,
+      rgba(255, 238, 0, 0.2) 90px),
+    repeating-linear-gradient(120deg,
       transparent 30px,
       rgba(255, 0, 0, 0.2) 10px,
-      rgba(255, 238, 0, 0.2) 90px
-    ),
-    repeating-linear-gradient(
-      180deg,
+      rgba(255, 238, 0, 0.2) 90px),
+    repeating-linear-gradient(180deg,
       transparent 30px,
       rgba(255, 0, 0, 0.2) 10px,
-      rgba(255, 238, 0, 0.2) 90px
-    );
+      rgba(255, 238, 0, 0.2) 90px);
   height: 100%;
   overflow: hidden;
   position: relative;
@@ -382,11 +316,9 @@ export default defineComponent({
 }
 
 .index .bg-container1 {
-  background: linear-gradient(
-    180deg,
-    rgb(255, 237.79, 82.87) 68%,
-    rgba(228.7, 213.65, 78.14, 0.03) 99%
-  );
+  background: linear-gradient(180deg,
+      rgb(255, 237.79, 82.87) 68%,
+      rgba(228.7, 213.65, 78.14, 0.03) 99%);
   height: 100%;
   width: 100%;
 }
@@ -417,7 +349,7 @@ export default defineComponent({
   padding: 0 4% 0;
 }
 
-.index .tour-list > .tour-box {
+.index .tour-list>.tour-box {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -428,7 +360,7 @@ export default defineComponent({
   min-width: 390px;
 }
 
-.index .tour-list > .tour-box > .tour-item {
+.index .tour-list>.tour-box>.tour-item {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -467,22 +399,18 @@ export default defineComponent({
   font-size: 5em;
   font-weight: 900;
   color: rgba(255, 255, 255, 0.3);
-  background: #222 -webkit-gradient(
-      linear,
+  background: #222 -webkit-gradient(linear,
       left top,
       right top,
       from(#222),
       to(#222),
-      color-stop(0.5, #fff)
-    ) 0 0 no-repeat;
-  background-image: -webkit-linear-gradient(
-    -40deg,
-    transparent 0%,
-    transparent 40%,
-    #f9ff00 50%,
-    transparent 60%,
-    transparent 100%
-  );
+      color-stop(0.5, #fff)) 0 0 no-repeat;
+  background-image: -webkit-linear-gradient(-40deg,
+      transparent 0%,
+      transparent 40%,
+      #f9ff00 50%,
+      transparent 60%,
+      transparent 100%);
   background-clip: text;
   -webkit-background-clip: text;
   background-clip: text;
@@ -495,27 +423,34 @@ export default defineComponent({
   -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
 }
+
 @-webkit-keyframes zezzz {
+
   0%,
   10% {
     background-position: -200px;
   }
+
   20% {
     background-position: top left;
   }
+
   100% {
     background-position: 200px;
   }
 }
 
 @keyframes zezzz {
+
   0%,
   10% {
     background-position: -200px;
   }
+
   20% {
     background-position: top left;
   }
+
   100% {
     background-position: 200px;
   }
@@ -549,7 +484,7 @@ export default defineComponent({
   flex-wrap: wrap;
 }
 
-.index .vehicle-list > .vehicle-item {
+.index .vehicle-list>.vehicle-item {
   display: flex;
   flex-direction: column;
   align-content: space-between;
@@ -637,12 +572,10 @@ export default defineComponent({
 }
 
 .index .bg-container4 {
-  background: linear-gradient(
-    0deg,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(255, 255, 0, 0.63) 50%,
-    rgba(255, 255, 255, 1) 100%
-  );
+  background: linear-gradient(0deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(255, 255, 0, 0.63) 50%,
+      rgba(255, 255, 255, 1) 100%);
   margin-bottom: 3rem;
 }
 
@@ -684,9 +617,10 @@ export default defineComponent({
 .index .hotel-img-overlay:hover {
   background-color: rgba(0, 0, 0, 0.7);
   cursor: pointer;
-  & > h3 {
-    visibility: visible;
-  }
+}
+
+.index .hotel-img-overlay:hover>h3 {
+  visibility: visible;
 }
 
 .index .bg-container3 {
@@ -778,10 +712,11 @@ export default defineComponent({
   justify-content: center;
   margin-bottom: 5%;
   transition: all 0.5s ease;
-  & > a {
-    color: white;
-    text-decoration: none;
-  }
+}
+
+.index .read-more a {
+  color: white;
+  text-decoration: none;
 }
 
 .index .read-more:hover a {
@@ -794,6 +729,7 @@ export default defineComponent({
     min-width: 250px;
     width: 95%;
   }
+
   .index .about-us-text {
     min-width: 260px;
   }
@@ -802,6 +738,7 @@ export default defineComponent({
     font-size: 4em;
   }
 }
+
 @media screen and (max-width: 1024px) {
   .index .about-us-text {
     text-align: justify;
