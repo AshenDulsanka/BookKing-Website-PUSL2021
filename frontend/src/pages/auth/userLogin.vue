@@ -91,5 +91,41 @@ export default defineComponent({
     justify-content: center; /* Center content vertically */
     background-color: var(--color-white);
   }
+  
+  @media screen and (max-width: 1200px) {
+    .password-input-frame {
+      flex: 1;
+      margin-left: 0;
+    }
 
-</style>
+    .header-frame {
+      flex-wrap: wrap;
+    }
+
+    .service-provider-login1 {
+      gap: 52px 0px;
+    }
+   
+    .login-image{
+      display: flex;
+      align-self: auto;
+      margin-top: 50px;
+    }
+  }
+  @media screen and (max-width: 925px) {
+    .password-input-frame {
+      min-width: 100%;
+    }
+
+    .service-provider-login1 {
+      gap: 26px 0px;
+    }
+  }
+  @media screen and (max-width: 450px) {
+    .already-have-account-message {
+      padding-left: var(--padding-xl);
+      padding-right: var(--padding-xl);
+      box-sizing: border-box;
+    }
+  }
+</style>../../components/auth/userLoginContent.vue../../components/auth/userLoginContent.vue../../components/auth/userLoginContent.vue
