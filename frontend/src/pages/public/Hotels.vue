@@ -58,9 +58,9 @@
           <div :class="$style.frameChild2" />
         </div>
       </section>
-    </main>
-    <newfooter />
+    </main>    
   </div>
+  <newfooter />
 </template>
 <script>
   import { defineComponent } from "vue";
