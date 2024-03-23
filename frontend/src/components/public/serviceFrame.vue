@@ -10,7 +10,7 @@
       <div :class="$style.frameContainer" :style="frameDiv1Style">
         <div :class="$style.frameParent">
           <div :class="$style.hotelNameParent" :style="frameDiv2Style">
-            <b :class="$style.hotelName">{{hotelName}}</b>
+            <b :class="$style.hotelName">{{serviceName}}</b>
             <div :class="$style.belowIsAn">{{belowIsAn}}</div> 
             <br>
             <b :class="$style.hotelName">{{price}}</b>
@@ -24,13 +24,14 @@
     </div>
   </div>
 </template>
+
 <script>
   import { defineComponent } from "vue";
 
   export default defineComponent({
     name: "serviceFrame",
     props: {
-      hotelName: { type: String },
+      serviceName: { type: String },
       price: { type: String },
       propPadding: { type: [Object, Array, String, Number, Boolean] },
       propPadding1: { type: [Object, Array, String, Number, Boolean] },
@@ -57,6 +58,7 @@
     },
   });
 </script>
+
 <style module>
   .frameChild {
     height: 347px;
