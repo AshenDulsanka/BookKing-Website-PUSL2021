@@ -12,7 +12,7 @@
           <li><a href="/">Home</a></li>
           <li><a href="/vehicles">Vehicles</a></li>
           <li><a href="/hotels">Hotels</a></li>
-          <li><a href="#">Tours</a></li>
+          <li><a href="/tours">Tours</a></li>
           <li><a href="/reviews">Reviews</a></li>
           <li><a href="/contactus">Contact us</a></li>
           <li><a href="/aboutus">About us</a></li>
@@ -23,7 +23,7 @@
           <li class="hideOnMobile"><a href="/">Home</a></li>
           <li class="hideOnMobile"><a href="/vehicles">Vehicles</a></li>
           <li class="hideOnMobile"><a href="/hotels">Hotels</a></li>
-          <li class="hideOnMobile"><a href="#">Tours</a></li>
+          <li class="hideOnMobile"><a href="/tours">Tours</a></li>
           <li class="hideOnMobile"><a href="/contactus">Contact us</a></li>
           <li class="hideOnMobile"><a href="/aboutus">About us</a></li>
           <li class="hideOnMobile"><a class="login" href="/login">Login</a></li>
