@@ -94,14 +94,15 @@ export default defineComponent({
     font-family: "poppins", sans-serif;
     background-color: yellow;
     color: black;
-    padding: 6px 20px;
+    padding: 10px 20px;
     border: none;
-    border-radius: 2px;
+    border-radius: 10px;
     cursor: pointer;
     text-decoration: none;
     display: inline-block;
     font-size: 14px;
     font-weight: bold;
+    width: 15%;
   }
 
   a{
