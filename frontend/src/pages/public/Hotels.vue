@@ -57,15 +57,10 @@
         <div :class="$style.lineWrapper2">
           <div :class="$style.frameChild2" />
         </div>
-
-        <div :class="$style.lineWrapper4">
-          <div :class="$style.frameChild5" />
-        </div>
       </section>
-    </main>
-    <div :class="$style.hotelsItem" />
-    <newfooter />
+    </main>    
   </div>
+  <newfooter />
 </template>
 <script>
   import { defineComponent } from "vue";
