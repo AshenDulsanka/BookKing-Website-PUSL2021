@@ -3,6 +3,7 @@
     <newheader />
     <br>
     <section class="header-frame-wrapper">
+      
       <div class="header-frame">
         <userSignUpContent />
         <div class="password-input-frame">
@@ -134,6 +135,7 @@ export default defineComponent({
     font-size: var(--font-size-sm);
     color: var(--color-black);
     font-family: var(--font-poppins);
+    margin-top: 100px;
   }
   .service-provider-login1 {
     width: 100%;
@@ -163,7 +165,21 @@ export default defineComponent({
     .service-provider-login1 {
       gap: 52px 0px;
     }
+    .login-image{
+      display: flex;
+      align-self: auto;
+    }
+    .loginimg-icon {
+      display: none;
+    }
+    .already-have-account-message{
+      margin-left: 0% !important;
+    }
+    
+
+    
   }
+  
   @media screen and (max-width: 925px) {
     .password-input-frame {
       min-width: 100%;
