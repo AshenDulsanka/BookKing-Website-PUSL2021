@@ -3,6 +3,7 @@
     <newheader />
     <main>
       <h1 class="header-tag">Service provider dashboard</h1>
+      <hr class="line">
       <serviceProviderDBFrame />
     </main>
     <newfooter />
@@ -20,6 +21,30 @@ export default defineComponent({
 });
 </script>
 <style scoped>
+main{
+  height: 100%;
+  min-height: 100vh;
+}
+.service-provider-dashboard{
+ display: flex;
+ flex-direction: column;
+ width: 100%;
+ height: 100%;
+ min-height: 100vh;
+}
+.header-tag{
+  font-weight: 700;
+  text-transform: capitalize;
+  padding: 0 5%;
+  margin: 1% 0;
+}
+
+.line{
+  border-top: 3px solid black;
+  width: 99.5%;
+  margin: auto;
+
+}
 
 @media screen and (max-width: 1825px) {
  
