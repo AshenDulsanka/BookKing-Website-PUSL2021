@@ -24,7 +24,6 @@
           <li class="hideOnMobile"><a href="#">Vehicles</a></li>
           <li class="hideOnMobile"><a href="/hotels">Hotels</a></li>
           <li class="hideOnMobile"><a href="#">Tours</a></li>
-          <li class="hideOnMobile"><a href="/reviews">Reviews</a></li>
           <li class="hideOnMobile"><a href="/contactus">Contact us</a></li>
           <li class="hideOnMobile"><a href="/aboutus">About us</a></li>
           <li class="hideOnMobile"><a class="login" href="/login">Login</a></li>
@@ -60,6 +59,7 @@
   header {
     width: 100%;
     height: 70px;
+    
   }
   .img {
     height: auto;
@@ -109,13 +109,16 @@
   nav li:first-child:hover {
     background-color: black;
   }
+  nav li:last-child {
+    margin-left: auto;
+  }
   .sidebar {
     position: fixed;
     top: 0;
     right: 0;
     height: 100vh;
     width: 250px;
-    background-color: rgba(255, 255, 255, 0.15);
+    background-color: white;
     backdrop-filter: blur(12px);
     box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
     list-style: none;
