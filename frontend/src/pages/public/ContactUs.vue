@@ -189,7 +189,6 @@ export default defineComponent({
     async submit() {
       try {
         const token = localStorage.getItem('token');
-        console.log(token);
         if (!token) {
           alert('Please login to submit feedback');
           return;
