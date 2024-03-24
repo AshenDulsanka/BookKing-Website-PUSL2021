@@ -284,7 +284,7 @@ button:hover{
   text-decoration: none;
   display: inline-block;
   font-size: 14px;
-  font-weight: bold;
+  font-weight: normal;
 }
 
 .service-settings{
