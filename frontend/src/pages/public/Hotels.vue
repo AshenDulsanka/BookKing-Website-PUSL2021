@@ -21,6 +21,7 @@
           :propGap="'8px 0px'"
           :belowIsAn="hotel.ShortDescription"
           :image="`../../../public/uploads/${hotel.Image}`"
+          :serviceID="hotel.SID"
         />
         <div :class="$style.lineWrapper1">
           <div :class="$style.frameChild1" />

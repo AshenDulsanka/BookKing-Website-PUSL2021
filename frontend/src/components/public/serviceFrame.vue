@@ -3,8 +3,9 @@
     <div :class="$style.rectangleParent">
       <div :class="$style.frameChild" />
       <div :class="$style.rectangleWrapper">
-        <a href="/productPage"><img 
-          :class="$style.frameItem" alt="" :src="image" /></a>
+        <a :href="`/product/${serviceID}`">
+          <img :class="$style.frameItem" alt="" :src="image" />
+        </a>
       </div>
       <div :class="$style.frameInner" />
       <div :class="$style.frameContainer" :style="frameDiv1Style">
@@ -39,6 +40,7 @@
       propGap: { type: String },
       belowIsAn: { type: String },
       image: { type: String },
+      serviceID: { type: String },
     },
     computed: {
       frameDivStyle() {

@@ -43,7 +43,7 @@ const routes = [
 
   // Public
   { path: '/', component: HomeView },
-  { path: '/productPage', component: SingleProductPage },
+  { path: '/product/:id', component: SingleProductPage, props: true },
   { path: '/reviews', component: Reviews },
   { path: '/hotels', component: Hotels },
   { path: '/vehicles', component: Vehicles },

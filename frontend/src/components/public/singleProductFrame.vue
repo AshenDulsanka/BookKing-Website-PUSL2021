@@ -13,7 +13,7 @@
             
           </div>
           <div :class="$style.seegiriyaLocation">
-            <div :class="$style.seegiriyaSrilanka">Seegiriya SriLanka</div>
+            <div :class="$style.seegiriyaSrilanka">{{ Location }}</div>
             
           </div>
         </div>
@@ -23,7 +23,7 @@
             
           </div>
           <div :class="$style.rs150000Parent">
-            <div :class="$style.rs150000">Rs.150 000</div>
+            <div :class="$style.rs150000">{{ Price }}</div>
             
           </div>
         </div>
@@ -31,15 +31,7 @@
         <div :class="$style.embarkOnJourneyFrame">
           <div :class="$style.embarkOnAContainer">
             <p :class="$style.embarkOnA1">
-              "Embark on a captivating journey to Sigiriya, a UNESCO World
-              Heritage site in Sri Lanka. Discover the ancient rock fortress
-              rising majestically above lush landscapes, adorned with intricate
-              frescoes and the iconic Lion's Paw entrance. Immerse yourself in
-              the rich history as you explore the archaeological wonders, from
-              the royal gardens to the summit with breathtaking panoramic views.
-              A Sigiriya tour promises a blend of cultural marvels and natural
-              beauty, offering an unforgettable experience for history
-              enthusiasts and nature lovers alike."
+              {{ LongDescription}}
             </p>
           </div>
           
@@ -47,13 +39,13 @@
       </div>
       <div :class="$style.singleProductPageFrame">
         <div :class="$style.productPageFrame">
-          <h1 :class="$style.singleProductPage1">Single product Page</h1>
+          <h1 :class="$style.singleProductPage1">{{ Name }}</h1>
         </div>
         <img
           :class="$style.contactFooterIcon"
           loading="lazy"
           alt=""
-          src="../../../public/assets/images/Sigiriya.png"
+          :src="Image"
         />
       </div>
     </div>
@@ -65,6 +57,13 @@
 
   export default defineComponent({
     name: "singleProductFrame",
+    props: {
+      Name: { type: String },
+      LongDescription: { type: String },
+      Location: { type: String },
+      Price: { type: String },
+      Image: { type: String },
+    },
   });
 </script>
 

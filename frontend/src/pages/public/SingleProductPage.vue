@@ -2,24 +2,57 @@
   <div :class="$style.singleProductPage">
     <main :class="$style.headerFrame">
       <newheader/>
-      <singleProductFrame />
+      <singleProductFrame 
+        v-if="service"
+        :Name="service.Name"
+        :LongDescription="service.LongDescription"
+        :Location="service.Location"
+        :Price="service.Price"
+        :Image="`../../../public/uploads/${service.Image}`"
+      />
       
     </main>
   </div>
   <newfooter />
 </template>
+
 <script>
   import { defineComponent } from "vue";
   import newheader from "../../components/public/newheader.vue";
   import singleProductFrame from "../../components/public/singleProductFrame.vue";
   import newfooter from "../../components/public/newfooter.vue";
-
+  import axios from "axios";
 
   export default defineComponent({
     name: "SingleProductPage",
     components: { newheader, singleProductFrame, newfooter },
+    props: ["id"],
+    data() {
+      return {
+        service: null,
+      };
+    },
+    mounted() {
+      this.fetchService();
+    },
+    methods: {
+      async fetchService() {
+        try {
+          const response = await axios.post(
+            "http://localhost:8081/api/singleService",
+            {
+              SID: this.id,
+            }
+          );
+          this.service = response.data.data[0];
+        } catch (error) {
+          console.error(error);
+        }
+      },
+    },
   });
 </script>
+
 <style module>
   .headerFrame {
     align-self: stretch;
