@@ -81,6 +81,8 @@
           this.$router.push('/userdashboard');
         } else if (this.userRole === 'serviceProvider') {
           this.$router.push('/spdashboard');
+        } else if (this.userRole === 'admin') {
+          this.$router.push('/admindashboard');
         }
       },
     },
