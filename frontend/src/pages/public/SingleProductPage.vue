@@ -3,9 +3,10 @@
     <main :class="$style.headerFrame">
       <newheader/>
       <singleProductFrame />
-      <newfooter />
+      
     </main>
   </div>
+  <newfooter />
 </template>
 <script>
   import { defineComponent } from "vue";

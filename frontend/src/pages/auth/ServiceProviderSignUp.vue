@@ -10,10 +10,10 @@
           <div class="login-image">
             <img class="loginimg-icon" loading="lazy" alt="" src="../../../public/assets/images/signup.png"/>
             <div class="already-have-account-message">
-              <a href="#">Already have an account?</a>
+              <a href="/splogin">Already have an account?</a>
             </div>
             <div class="already-have-account-message">
-              <a href="#">Are you a customer?</a>
+              <a href="/signup">Are you a customer?</a>
             </div>
           </div>
         </div>

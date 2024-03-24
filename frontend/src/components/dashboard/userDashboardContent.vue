@@ -35,9 +35,9 @@
                   </span>
                 </b>
                 <div :class="$style.homeServicesReviewContactU">
-                  <b :class="$style.rumethgayoragmailcom">
-                    <span :class="$style.rumethgayoragmailcomTxt">
-                      <ul :class="$style.rumethgayoragmailcom1">
+                  <b :class="$style.emailparent">
+                    <span :class="$style.emailparentTxt">
+                      <ul :class="$style.Emailchild">
                         <li>{{email}}</li>
                       </ul>
                     </span>
@@ -156,16 +156,16 @@
     align-items: flex-end;
     flex-shrink: 0;
   }
-  .rumethgayoragmailcom1 {
+  .Emailchild {
     margin: 0;
     font-family: inherit;
     font-size: inherit;
     padding-left: var(--padding-2xl);
   }
-  .rumethgayoragmailcomTxt {
+  .emailparentTxt {
     line-break: anywhere;
   }
-  .rumethgayoragmailcom {
+  .emailparent {
     align-self: stretch;
     height: 26px;
     position: relative;

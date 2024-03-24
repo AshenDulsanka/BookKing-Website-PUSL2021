@@ -15,11 +15,12 @@
         <div class="email1">Password Confirm</div>
         <input class="frame-item" type="password" name="confirmPassword" v-model="confirmPassword" required/>
         <div class="email1">Phone Number</div>
-        <input class="frame-item" type="text" name="phoneno" v-model="phoneno" required/>
+        <input class="frame-item" type="text" name="phoneno" v-model="phoneNo" required/>
         <div class="email1">Address</div>
         <input class="frame-item" type="text" name="address" v-model="address" required/>
       </div>
     </div>
+    
     <a href="#">
         <button class="ok" @click="register">
             <div class="ok">Register</div>
@@ -29,7 +30,6 @@
 </template>
 
 <script>
-import authenticationServices from '@/services/authenticationServices';
 import { defineComponent } from 'vue'
 
 export default defineComponent({
@@ -40,21 +40,40 @@ export default defineComponent({
       email: '',
       password: '',
       confirmPassword: '',
-      phoneno: '',
+      phoneNo: '',
       address: ''
     }
   },
   methods: {
-    async register(){
-      const response = await authenticationServices.userSignUp({
-        name: this.name,
-        email: this.email,
-        password: this.password,
-        passwordc: this.passwordc,
-        phoneno: this.phoneno,
-        address: this.address
-      });
-      console.log(response.data)
+    async register() {
+      try {
+        const response = await fetch('http://localhost:8081/api/register', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            name: this.name,
+            email: this.email,
+            password: this.password,
+            confirmPassword: this.confirmPassword,
+            phoneNo: this.phoneNo,
+            address: this.address
+          }),
+        });
+
+        const responseData = await response.json();
+        
+        if (response.ok) {
+          alert('Registration successful, please verify your email.');
+          this.$router.push('/login');
+        } else {
+          this.error = alert('An error occurred. Please try again later.');
+        }
+      } catch (error) {
+        console.error('Error occurred:', error);
+        this.error = 'An error occurred. Please try again later.';
+      }
     }
   }
 })
@@ -105,7 +124,6 @@ export default defineComponent({
     font-family: var(--font-poppins);
     font-size: var(--font-size-sm);
     background-color: transparent;
-    height: 20px;
     position: relative;
     color: var(--color-black);
     text-align: left;

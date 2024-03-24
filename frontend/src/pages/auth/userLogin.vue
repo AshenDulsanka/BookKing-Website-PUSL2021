@@ -15,8 +15,9 @@
           </div>
       </div>
     </section>
-    <newfooter />
+    
   </div>
+  <newfooter />
 </template>
 
 <script>
@@ -111,6 +112,13 @@ export default defineComponent({
       align-self: auto;
       margin-top: 50px;
     }
+    .loginimg-icon{
+      display: none;
+    }
+    .already-have-account-message {
+    display: block;
+    float: left; /* Add this line to align the class to the left */
+  }
   }
   @media screen and (max-width: 925px) {
     .password-input-frame {
@@ -128,4 +136,4 @@ export default defineComponent({
       box-sizing: border-box;
     }
   }
-</style>../../components/auth/userLoginContent.vue../../components/auth/userLoginContent.vue../../components/auth/userLoginContent.vue
+</style>

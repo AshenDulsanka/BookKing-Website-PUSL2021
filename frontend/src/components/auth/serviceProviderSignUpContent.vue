@@ -7,35 +7,78 @@
       <div class="email-parent">
         <br>
         <div class="email1">Name</div>
-        <input class="rectangle-rectangle" type="text" name="name" required/>
+        <input class="rectangle-rectangle" type="text" name="name" required v-model="name"/>
         <div class="email1">Email</div>
-        <input class="frame-item" type="email" name="email" required/>
+        <input class="frame-item" type="email" name="email" required v-model="email"/>
         <div class="email1">Password</div>
-        <input class="frame-item" type="password" name="password" required/>
+        <input class="frame-item" type="password" name="password" required v-model="password"/>
         <div class="email1">Password Confirm</div>
-        <input class="frame-item" type="password" name="confirmPassword" required/>
+        <input class="frame-item" type="password" name="confirmPassword" required v-model="confirmPassword"/>
         <div class="email1">Phone Number</div>
-        <input class="frame-item" type="text" name="phoneno" required/>
+        <input class="frame-item" type="text" name="phoneno" required v-model="phoneNo"/>
         <div class="email1">Address</div>
-        <input class="frame-item" type="text" name="address" required/>
+        <input class="frame-item" type="text" name="address" required v-model="address"/>
         <div class="email1">What we do</div>
-        <textarea class="frame-item1" name="whatwedo" rows="4" cols="50" required></textarea>
+        <textarea class="frame-item1" name="whatwedo" rows="4" cols="50" required v-model="serviceDesc"></textarea>
       </div>
     </div>
-    <a href="#">
-        <button class="ok">
-            <div class="ok">Register</div>
-        </button>
-    </a>
+    <button class="ok" @click="submitForm">Register</button>
+    <div v-if="error" class="error-message">{{ error }}</div>
   </div>
 </template>
+
 <script>
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-  name: 'serviceProviderSignUpContent'
+  name: 'serviceProviderSignUpContent',
+  data() {
+    return {
+      name: '',
+      email: '',
+      password: '',
+      confirmPassword: '',
+      phoneNo: '',
+      address: '',
+      serviceDesc: ''
+    }
+  },
+  methods: {
+    async submitForm() {
+      try {
+        const response = await fetch('http://localhost:8081/api/spregister', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            name: this.name,
+            email: this.email,
+            password: this.password,
+            confirmPassword: this.confirmPassword,
+            phoneNo: this.phoneNo,
+            address: this.address,
+            serviceDesc: this.serviceDesc
+          }),
+        });
+
+        const responseData = await response.json();
+        
+        if (response.ok) {
+          alert('Registration successful, please verify your email.');
+          this.$router.push('/splogin');
+        } else {
+          this.error = alert('An error occurred. Please try again later.');
+        }
+      } catch (error) {
+        console.error('Error occurred:', error);
+        this.error = 'An error occurred. Please try again later.';
+      }
+    }
+  }
 })
 </script>
+
 <style scoped>
   .frame-item1{
     border: none;
@@ -50,14 +93,15 @@ export default defineComponent({
     font-family: "poppins", sans-serif;
     background-color: yellow;
     color: black;
-    padding: 6px 20px;
+    padding: 10px 20px;
     border: none;
-    border-radius: 2px;
+    border-radius: 10px;
     cursor: pointer;
     text-decoration: none;
     display: inline-block;
     font-size: 14px;
     font-weight: bold;
+    width: 15%;
   }
 
   a{

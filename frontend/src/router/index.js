@@ -16,6 +16,10 @@ import HomeView from '../pages/public/HomeView.vue';
 import AdminLogin from '../pages/admin/adminLogin.vue';
 import AdminDashboard from '../pages/admin/adminDashboard.vue';
 import ContactUs from '../pages/public/ContactUs.vue';
+import Vehicles from '../pages/public/Vehicles.vue';
+import Tours from '../pages/public/Tours.vue';
+import forgotPassword from '../pages/auth/forgotPassword.vue';
+import spforgetPassword from '../pages/auth/spForgotPassword.vue';
 
 const routes = [
   // Auth
@@ -23,6 +27,8 @@ const routes = [
   { path: '/signup', component: UserSignUp },
   { path: '/spsignup', component: ServiceProviderSignUp },
   { path: '/splogin', component: ServiceProviderLogin },
+  { path: '/forgotPassword', component: forgotPassword },
+  { path: '/spforgotPassword', component: spforgetPassword },
 
   // Dashboard
   { path: '/userdashboard', component: UserDashboard },
@@ -38,6 +44,8 @@ const routes = [
   { path: '/productPage', component: SingleProductPage },
   { path: '/reviews', component: Reviews },
   { path: '/hotels', component: Hotels },
+  { path: '/vehicles', component: Vehicles },
+  { path: '/tours', component: Tours },
   { path: '/aboutus', component: AboutUs },
   { path: '/contactus', component: ContactUs }
 ];

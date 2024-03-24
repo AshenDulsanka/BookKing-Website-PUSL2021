@@ -3,6 +3,7 @@
     <newheader />
     <br>
     <section class="header-frame-wrapper">
+      
       <div class="header-frame">
         <userSignUpContent />
         <div class="password-input-frame">
@@ -19,8 +20,10 @@
         </div>
       </div>
     </section>
-    <newfooter />
+    <br>
   </div>
+ 
+  <newfooter />
 </template>
 <script>
 import { defineComponent } from 'vue'
@@ -41,14 +44,11 @@ export default defineComponent({
   }
 
   .loginimg-icon {
-    align-self: stretch;
-    height: 250px;
-    width: 350px;
+    height: 100%;
+    width: 100%;
     position: relative;
     max-width: 100%;
-    overflow: hidden;
-    flex-shrink: 0;
-    margin-top: 120px;
+    padding-top: 15% ;
   }
   .you-dont-have {
     margin: 0;
@@ -99,18 +99,16 @@ export default defineComponent({
     max-width: 100%;
   }
   .password-input-frame {
-    height:16px;
-    width: 404px;
+    height:100%;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    padding: 60px 0px 0px;
-    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+    padding: 0 0 10% 5%;
     min-width: 404px;
     max-width: 100%;
     z-index: 1;
-    margin-left: -75px;
   }
   .header-frame {
     width: 1199px;
@@ -134,6 +132,7 @@ export default defineComponent({
     font-size: var(--font-size-sm);
     color: var(--color-black);
     font-family: var(--font-poppins);
+    margin-top: 100px;
   }
   .service-provider-login1 {
     width: 100%;
@@ -144,9 +143,8 @@ export default defineComponent({
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    padding: 0px 0px 229.5px;
     box-sizing: border-box;
-    gap: 104.5px 0px;
+    gap: 50px 0px;
     letter-spacing: normal;
   }
 
@@ -163,7 +161,21 @@ export default defineComponent({
     .service-provider-login1 {
       gap: 52px 0px;
     }
+    .login-image{
+      display: flex;
+      align-self: auto;
+    }
+    .loginimg-icon {
+      display: none;
+    }
+    .already-have-account-message{
+      margin-left: 0% !important;
+    }
+    
+
+    
   }
+  
   @media screen and (max-width: 925px) {
     .password-input-frame {
       min-width: 100%;
