@@ -18,6 +18,7 @@ import AdminDashboard from '../pages/admin/adminDashboard.vue';
 import ContactUs from '../pages/public/ContactUs.vue';
 import Vehicles from '../pages/public/Vehicles.vue';
 import Tours from '../pages/public/Tours.vue';
+import forgotPassword from '../pages/auth/forgotPassword.vue';
 
 const routes = [
   // Auth
@@ -25,6 +26,7 @@ const routes = [
   { path: '/signup', component: UserSignUp },
   { path: '/spsignup', component: ServiceProviderSignUp },
   { path: '/splogin', component: ServiceProviderLogin },
+  { path: '/forgotPassword', component: forgotPassword },
 
   // Dashboard
   { path: '/userdashboard', component: UserDashboard },
