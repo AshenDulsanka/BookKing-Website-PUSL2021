@@ -1,80 +1,169 @@
 <template>
   <div class="container">
-  <section :class="$style.addPageButton">
-    <div :class="$style.headerTextContainer">
-      <div :class="$style.searchSymbolFrame">
-        <h1 :class="$style.addPage">Add Page</h1>
-      </div>
-      <div :class="$style.priceFrame">
-        <div :class="$style.locationFrame">
-          <div :class="$style.vehiclesServicesFrame">
-            <div :class="$style.hotelsFrame">
-              <div :class="$style.hotelsFrameChild" />
-              <img
-                :class="$style.searchInterfaceSymbol2Icon"
-                loading="lazy"
-                alt=""
-                src="../../../public/assets/images/addpage.png"
-              />
+    <section :class="$style.addPageButton">
+      <div :class="$style.headerTextContainer">
+        <div :class="$style.searchSymbolFrame">
+          <h1 :class="$style.addPage">Add Page</h1>
+        </div>
+        <div :class="$style.priceFrame">
+          <div :class="$style.locationFrame">
+            <div :class="$style.vehiclesServicesFrame">
+              <div :class="$style.hotelsFrame">
+                <div :class="$style.hotelsFrameChild" />
+                <img
+                  :class="$style.searchInterfaceSymbol2Icon"
+                  loading="lazy"
+                  alt=""
+                  src="../../../public/assets/images/addpage.png"
+                />
+              </div>
             </div>
-          </div>
-          <div :class="$style.toursFrame">
-            <div :class="$style.entertainmentFrame">
-                  
-              <div :class="$style.price">Service name</div>
-              <input :class="$style.homeServicesFrame" type="text" />
-      
-              <div :class="$style.price">Long Description</div>
-              <input :class="$style.vehicleHotelsFrame" type="text" />
-
-              <div :class="$style.price">Short Description</div>
-              <input :class="$style.vehicleHotelsFrame" type="text" />
-
-              <div :class="$style.price">Price</div>
-              <input :class="$style.footerLinksFrame" type="text" />
-
-              <div :class="$style.price">location</div>
-              <input :class="$style.footerLinksFrame" type="text" />
-              <br>
-              <div :class="$style.cateringMenuFrame">
+            <div :class="$style.toursFrame">
+              <div :class="$style.entertainmentFrame">
+                <div :class="$style.price">Service name</div>
+                <input :class="$style.homeServicesFrame" type="text" v-model="service.Name" />
+                <div :class="$style.price">Long Description</div>
+                <input :class="$style.vehicleHotelsFrame" type="text" v-model="service.LongDescription" />
+                <div :class="$style.price">Short Description</div>
+                <input :class="$style.vehicleHotelsFrame" type="text" v-model="service.ShortDescription" />
+                <div :class="$style.price">Price</div>
+                <input :class="$style.footerLinksFrame" type="text" v-model="service.Price" />
+                <div :class="$style.price">Location</div>
+                <input :class="$style.footerLinksFrame" type="text" v-model="service.Location" />
+                <div :class="$style.price">Category</div>
+                <div :class="$style.cateringMenuFrame">
                   <div :class="$style.ellipseParent">
-                    <input :class="$style.frameChild" type="radio" v-model="selectedOption" value="vehicle"/>
+                    <input
+                      :class="$style.frameChild"
+                      type="radio"
+                      v-model="service.Category"
+                      value="Vehicle"
+                    />
                     <div :class="$style.vehicleWrapper">
                       <div :class="$style.vehicle">Vehicle</div>
                     </div>
                   </div>
                   <div :class="$style.ellipseGroup">
-                    <input :class="$style.frameItem" type="radio" v-model="selectedOption" value="Hotels" />
+                    <input
+                      :class="$style.frameItem"
+                      type="radio"
+                      v-model="service.Category"
+                      value="Hotel"
+                    />
                     <div :class="$style.hotelsWrapper">
                       <div :class="$style.hotels">Hotels</div>
                     </div>
                   </div>
                   <div :class="$style.reviewSummaryFrame">
-                    <input :class="$style.contactUsFormFrame" type="radio" v-model="selectedOption" value="Tours" />
-                    <div :class="$style.freelancer">Tours</div>   
+                    <input
+                      :class="$style.contactUsFormFrame"
+                      type="radio"
+                      v-model="service.Category"
+                      value="Tour"
+                    />
+                    <div :class="$style.freelancer">Tours</div>
                   </div>
                 </div>
+                <div :class="$style.price">Image</div>
+                <input
+                  type="file"
+                  accept="image/*"
+                  @change="handleFileUpload"
+                  :class="$style.fileInput"
+                />
+                <br>
+                <button @click="addService" :class="$style.addServiceButton">Add Service</button>
               </div>
-            </div>     
+            </div>
+          </div>
+        </div>
       </div>
-      </div>
-    </div>
-  </section>
+    </section>
+    
   </div>
 </template>
-<script>
-  import { defineComponent } from "vue";
 
-  export default defineComponent({
-    name: "AddPageButton",
-    data() {
-      return {
-        selectedOption: null 
-      };
-    }
-  });
+<script>
+import { defineComponent } from "vue";
+import axios from "axios";
+
+export default defineComponent({
+  name: "AddPageButton",
+  data() {
+    return {
+      service: {
+        Name: "",
+        LongDescription: "",
+        ShortDescription: "",
+        Price: "",
+        Location: "",
+        Category: "",
+        Image: null,
+      },
+      selectedFile: null,
+    };
+  },
+  methods: {
+    handleFileUpload(event) {
+      this.selectedFile = event.target.files[0];
+    },
+    async addService() {
+      try {
+        const token = localStorage.getItem("token");
+        const formData = new FormData();
+        formData.append("name", this.service.Name);
+        formData.append("longDescription", this.service.LongDescription);
+        formData.append("shortDescription", this.service.ShortDescription);
+        formData.append("price", this.service.Price);
+        formData.append("location", this.service.Location);
+        formData.append("category", this.service.Category);
+        if (this.selectedFile) {
+          formData.append("image", this.selectedFile);
+        }
+
+        const response = await axios.post("http://localhost:8081/api/addService", formData, {
+          headers: {
+            Authorization: `Bearer ${token}`,
+            "Content-Type": "multipart/form-data",
+          },
+        });
+
+        alert('Service added successfully!');
+        this.$router.push('/');
+
+        console.log("Service added successfully:", response.data.msg);
+        // Reset the form fields if needed
+        this.service = {
+          Name: "",
+          LongDescription: "",
+          ShortDescription: "",
+          Price: "",
+          Location: "",
+          Category: "",
+          Image: null,
+        };
+        this.selectedFile = null;
+      } catch (error) {
+        console.error("Error adding service:", error);
+      }
+    },
+  },
+});
 </script>
+
 <style module>
+  .addServiceButton {
+    font-family: "poppins", sans-serif;
+    background-color: yellow;
+    color: black;
+    padding: 6px 20px;
+    border-radius: 7px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: normal;
+  }
   .addPage {
     width: 293px;
     position: relative;
