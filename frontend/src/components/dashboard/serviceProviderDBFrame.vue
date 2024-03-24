@@ -1,6 +1,6 @@
 <template>
-  <section class="rumeth-mansara">
-    <div class="piliyandala-rd-kottawarumethga">
+  <section class="name1">
+    <div class="addresschildrumethga">
       <div class="text">
         <img
           class="image-icon"
@@ -12,10 +12,10 @@
       <div class="your-services">
         <div class="footer">
           <div class="service-provider-info">
-            <div class="rumeth-label">
-              <div class="rumeth-mansara1">
+            <div class="Name">
+              <div class="Namechild">
                 <span>
-                  <ul class="rumeth-mansara2">
+                  <ul class="name12">
                     <li>Rumeth Mansara</li>
                   </ul>
                 </span>
@@ -23,9 +23,9 @@
             </div>
             <div class="dashboard-sections">
               <div class="dashboard-sections1">
-                <div class="piliyandala-rd-kottawa-container">
+                <div class="address">
                   <span>
-                    <ul class="piliyandala-rd-kottawa">
+                    <ul class="addresschild">
                       <li>100/02, Piliyandala Rd, Kottawa</li>
                     </ul>
                   </span>
@@ -37,9 +37,9 @@
                     </ul>
                   </span>
                 </div>
-                <div class="rumethgayoragmailcom">
-                  <span class="rumethgayoragmailcom-txt">
-                    <ul class="rumethgayoragmailcom1">
+                <div class="emailparent">
+                  <span class="Email">
+                    <ul class="Emailchild">
                       <li>rumethgayora@gmail.com</li>
                     </ul>
                   </span>
@@ -47,9 +47,9 @@
               </div>
             </div>
             <div class="dashboard-sections2">
-              <div class="a-paragraph-is-container">
+              <div class="discrip">
                 <span>
-                  <ul class="a-paragraph-is-defined-as-a-g">
+                  <ul class="discrip-child">
                     <li>
                       A paragraph is defined as “a group of sentences or a
                       single sentence that forms a unit” (Lunsford and Connors
@@ -260,13 +260,13 @@ export default defineComponent({
     padding: var(--padding-60xl) 0px 0px;
     box-sizing: border-box;
   }
-  .rumeth-mansara2 {
+  .name12 {
     margin: 0;
     font-family: inherit;
     font-size: inherit;
     padding-left: var(--padding-2xl);
   }
-  .rumeth-mansara1 {
+  .Namechild {
     height: 26px;
     flex: 1;
     position: relative;
@@ -275,7 +275,7 @@ export default defineComponent({
     align-items: flex-end;
     max-width: 100%;
   }
-  .rumeth-label {
+  .Name {
     align-self: stretch;
     display: flex;
     flex-direction: row;
@@ -285,13 +285,13 @@ export default defineComponent({
     box-sizing: border-box;
     max-width: 100%;
   }
-  .piliyandala-rd-kottawa {
+  .addresschild {
     margin: 0;
     font-family: inherit;
     font-size: inherit;
     padding-left: var(--padding-2xl);
   }
-  .piliyandala-rd-kottawa-container {
+  .address {
     align-self: stretch;
     height: 26px;
     position: relative;
@@ -318,16 +318,16 @@ export default defineComponent({
     align-items: flex-end;
     flex-shrink: 0;
   }
-  .rumethgayoragmailcom1 {
+  .Emailchild {
     margin: 0;
     font-family: inherit;
     font-size: inherit;
     padding-left: var(--padding-2xl);
   }
-  .rumethgayoragmailcom-txt {
+  .Email {
     line-break: anywhere;
   }
-  .rumethgayoragmailcom {
+  .emailparent {
     align-self: stretch;
     height: 26px;
     position: relative;
@@ -356,13 +356,13 @@ export default defineComponent({
     box-sizing: border-box;
     max-width: 100%;
   }
-  .a-paragraph-is-defined-as-a-g {
+  .discrip-child {
     margin: 0;
     font-family: inherit;
     font-size: inherit;
     padding-left: var(--padding-2xl);
   }
-  .a-paragraph-is-container {
+  .discrip {
     align-self: stretch;
     height: 26px;
     position: relative;
@@ -589,7 +589,7 @@ export default defineComponent({
     min-width: 848px;
     max-width: 100%;
   }
-  .piliyandala-rd-kottawarumethga {
+  .addresschildrumethga {
     width: 1674px;
     display: flex;
     flex-direction: row;
@@ -599,7 +599,7 @@ export default defineComponent({
     gap: 0px 100px;
     max-width: 100%;
   }
-  .rumeth-mansara {
+  .name1 {
     width: 1846px;
     display: flex;
     flex-direction: row;
@@ -655,7 +655,7 @@ export default defineComponent({
       gap: 0px 19px;
     }
 
-    .piliyandala-rd-kottawarumethga {
+    .addresschildrumethga {
       gap: 0px 50px;
     }
   }
@@ -681,7 +681,7 @@ export default defineComponent({
       gap: 18px 0px;
     }
 
-    .piliyandala-rd-kottawarumethga {
+    .addresschildrumethga {
       gap: 0px 25px;
     }
   }
