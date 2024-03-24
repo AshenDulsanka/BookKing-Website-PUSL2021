@@ -52,7 +52,7 @@ export default defineComponent({
   }
 
   .loginimg-icon {
-    align-self: stretch;
+    align-self: auto;
     height: 205px;
     position: relative;
     max-width: 100%;
