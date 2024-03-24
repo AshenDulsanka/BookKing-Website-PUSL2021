@@ -107,3 +107,21 @@ export const updateServiceData = async (service) => {
     console.error("Error updating service:", error);
   }
 };
+
+export const deleteServiceData = async (serviceId) => {
+  try {
+    const token = localStorage.getItem('token');
+    const response = await axios.delete('http://localhost:8081/api/deleteService', {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+      data: {
+        SID: serviceId,
+      },
+    });
+    console.log('Service deleted successfully:', response.data.msg);
+    alert('Service deleted successfully');
+  } catch (error) {
+    console.error('Error deleting service:', error);
+  }
+};

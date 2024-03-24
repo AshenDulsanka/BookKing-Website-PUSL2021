@@ -35,6 +35,7 @@
                 <textarea id="profile" v-model="service.LongDescription" placeholder="#" maxlength="800" required ></textarea>
               </div>
               <button class="info-update-btn" title="Update Personal Info" type="submit">Update</button>
+              <button class="delete-btn-new" title="Delete Service" @click.prevent="deleteService">Delete</button>
             </form>
           </div>
         </div>
@@ -44,7 +45,7 @@
   
   <script>
   import { defineComponent, ref, reactive, onMounted } from "vue";
-  import { fetchService, updateServiceData } from "../../services/serviceProviderApi.js";
+  import { fetchService, updateServiceData, deleteServiceData } from "../../services/serviceProviderApi.js";
   import { useRoute } from "vue-router";
 
   
@@ -86,43 +87,21 @@
         }
       };
 
-      let sampleServices = ["car rental", "car wash", "detailing"];
-  
-      function deleteService() {
-        let options = "";
-        for (let i = 0; i < sampleServices.length; i++) {
-          options += `${i + 1}. ${sampleServices[i]}\n`;
+      const deleteService = async () => {
+        try {
+          const confirmed = window.confirm('Are you sure you want to delete this service?');
+          if (confirmed) {
+            await deleteServiceData(service.SID);
+          }
+        } catch (error) {
+          console.error('Error deleting service:', error);
         }
+      };
   
-        let person = prompt(`Choose What to Delete\n${options}`);
-  
-        if (person !== null && person >= 1 && person <= sampleServices.length) {
-          window.alert(`Hello ${sampleServices[person - 1]} was deleted!`);
-        }
-      }
-  
-      const formVisible = ref(false);
-  
-      function addService() {
-        formVisible.value = true;
-      }
-  
-      function cancelForm() {
-        formVisible.value = false;
-      }
-  
-      function submitForm() {
-        formVisible.value = false;
-      }
       return {
         service,
         updateService,
-        sampleServices,
         deleteService,
-        addService,
-        cancelForm,
-        submitForm,
-        formVisible,
       };
     },
   });
@@ -168,7 +147,20 @@
     align-items: center;
     row-gap: 1.5rem;  
   }
-  
+
+  .delete-btn-new {
+    font-family: "poppins", sans-serif;
+    background-color: rgb(255, 60, 0);
+    color: rgb(255, 255, 255);
+    padding: 6px 20px;
+    border-radius: 7px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: normal;
+  }
+      
   .profile-picture {
     border-radius: 10%;
     overflow: hidden;
