@@ -35,7 +35,8 @@ const login = (req, res) => {
       }
 
       // Password matches
-      const token = jwt.sign({ AID: result[0].AID }, JWTSECRET, { expiresIn: '1h' })
+      const userRole = result[0].role || 'admin'
+      const token = jwt.sign({ AID: result[0].AID, role: userRole }, JWTSECRET, { expiresIn: '1h' })
 
       // Update last login time
       db.query(
