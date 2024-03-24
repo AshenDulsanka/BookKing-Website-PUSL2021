@@ -158,6 +158,30 @@ const getVehicles = (req, res) => {
   }
 }
 
+const getServices = (req, res) => {
+  try {
+    const token = req.headers.authorization.split(' ')[1]
+    const decode = jwt.verify(token, JWTSECRET)
+
+    const sql = 'SELECT * FROM service WHERE SPID = ?'
+    const data = [decode.SPID]
+
+    db.query(sql, data, (error, result) => {
+      if (error) {
+        return res.status(400).json({ msg: error.message })
+      }
+
+      if (result.length === 0) {
+        return res.status(404).json({ msg: 'No services found' })
+      }
+
+      return res.status(200).json({ success: true, data: result, message: 'Services fetched successfully' })
+    })
+  } catch (error) {
+    return res.status(400).json({ msg: error.message })
+  }
+}
+
 const getSingleService = (req, res) => {
   try {
     db.query(`SELECT * FROM service WHERE SID = "${req.body.SID}"`, (error, result) => {
@@ -176,4 +200,4 @@ const getSingleService = (req, res) => {
   }
 }
 
-export { addService, updateService, deleteService, getHotels, getTours, getVehicles, getSingleService }
+export { addService, updateService, deleteService, getHotels, getTours, getVehicles, getServices, getSingleService }

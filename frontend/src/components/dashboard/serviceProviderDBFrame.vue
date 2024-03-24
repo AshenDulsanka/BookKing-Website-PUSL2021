@@ -38,12 +38,13 @@
                 <img loading="lazy" alt="profile picture" src="../../../public/assets/images/plus-sign.png" />
               </button>
             </a>
-            <div class="service">
-              <h3>Car Service</h3>
-              <button class="delete-btn" title="Remove This Service">
-                <img loading="lazy" alt="profile picture" src="../../../public/assets/images/close.png" />
-              </button>
-            </div>
+            <a href="#" @click.prevent="redirectToServiceDetails(service.SID)">
+              <div class="service" v-for="service in services" :key="service.SID">
+                  <h3>{{ service.Name }}</h3>
+                  <button class="delete-btn" title="Remove This Service">
+                  </button>
+              </div>
+            </a>
           </div>
         </div>
       </div>
@@ -53,11 +54,14 @@
 
 <script>
 import { defineComponent, ref, reactive, onMounted } from "vue";
-import { fetchServiceProvider, updateServiceProvider } from "../../services/serviceProviderApi.js";
+import { fetchServiceProvider, updateServiceProvider, fetchServices } from "../../services/serviceProviderApi.js";
+import { useRouter } from "vue-router";
 
 export default defineComponent({
   name: "serviceProviderDBFrame",
   setup() {
+    const router = useRouter();
+
     const serviceProvider = reactive({
       name: "",
       email: "",
@@ -65,9 +69,15 @@ export default defineComponent({
       address: "",
       serviceDesc: ""
     });
-    onMounted(() => {
+
+    const services = ref([]);
+
+    onMounted(async () => {
       fetchServiceProvider(serviceProvider);
+      const fetchedServices = await fetchServices(services.value);
+      console.log('Fetched services:', fetchedServices); 
     });
+
     const updateProfile = async (event) => {
       event.preventDefault();
       try {
@@ -75,10 +85,12 @@ export default defineComponent({
       } catch (error) {
         console.error("Error updating profile:", error);
       }
-      
     };
-    // basic services fetch function
-    // userServices = fetch('api/[userid]/services/')
+
+    const redirectToServiceDetails = (SID) => {
+      router.push(`/updateService`);
+    };
+
     let sampleServices = ["car rental", "car wash", "detailing"];
 
     function deleteService() {
@@ -105,17 +117,6 @@ export default defineComponent({
     }
 
     function submitForm() {
-      //post/api/[userid]/service/
-      //   let options = "";
-      //   for (let i = 0; i < sampleServices.length; i++) {
-      //     options += `${i + 1}. ${sampleServices[i]}\n`;
-      //   }
-
-      //   let person = prompt(`Choose What to Delete\n${options}`);
-
-      //   if (person !== null && person >= 1 && person <= sampleServices.length) {
-      //     window.alert(`Hello ${sampleServices[person - 1]} was deleted!`);
-      //   }
       formVisible.value = false;
     }
     return {
@@ -127,6 +128,8 @@ export default defineComponent({
       cancelForm,
       submitForm,
       formVisible,
+      services,
+      redirectToServiceDetails,
     };
   },
 });
@@ -148,6 +151,15 @@ button:hover{
   font-size: var(--font-size-base);
   color: var(--color-black);
   font-family: var(--font-tajawal);
+}
+
+.updateservice{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: black;
 }
 
 .wrapper {
