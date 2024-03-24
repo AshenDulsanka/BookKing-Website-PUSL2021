@@ -21,3 +21,27 @@ export const fetchServiceProvider = async (serviceProvider) => {
   }
 };
 
+export const updateServiceProvider = async (serviceProvider) => {
+    try {
+      const token = localStorage.getItem("token");
+      const response = await axios.post(
+        "http://localhost:8081/api/spupdateProfile",
+        {
+          name: serviceProvider.name,
+          email: serviceProvider.email,
+          phoneNo: serviceProvider.phoneNo,
+          address: serviceProvider.address,
+          serviceDesc: serviceProvider.serviceDesc,
+        },
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        }
+      );
+      console.log("Profile updated successfully:", response.data.msg);
+      alert("Profile updated successfully");
+    } catch (error) {
+      console.error("Error updating profile:", error);
+    }
+  };

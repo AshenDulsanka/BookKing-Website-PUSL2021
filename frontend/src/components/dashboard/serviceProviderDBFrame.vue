@@ -5,7 +5,7 @@
         <hr class="line">
         <div class="personal-settings">
           <h2>Personal Info</h2>
-          <form class="personal-info" action="#" method="post">
+          <form class="personal-info" @submit.prevent="updateProfile">
             <div class="input-box">
               <label for="name">Name</label>
               <input type="text" id="name" v-model="serviceProvider.name" placeholder="#" required />
@@ -26,7 +26,7 @@
               <label for="profile">Profile</label>
               <textarea id="profile" v-model="serviceProvider.serviceDesc" placeholder="#" maxlength="200" required></textarea>
             </div>
-            <button class="info-update-btn" title="Update Personal Info">Update</button>
+            <button class="info-update-btn" title="Update Personal Info" type="submit">Update</button>
           </form>
         </div>
         <hr class="line">
@@ -53,7 +53,7 @@
 
 <script>
 import { defineComponent, ref, reactive, onMounted } from "vue";
-import { fetchServiceProvider } from "../../services/serviceProviderApi.js";
+import { fetchServiceProvider, updateServiceProvider } from "../../services/serviceProviderApi.js";
 
 export default defineComponent({
   name: "serviceProviderDBFrame",
@@ -68,6 +68,15 @@ export default defineComponent({
     onMounted(() => {
       fetchServiceProvider(serviceProvider);
     });
+    const updateProfile = async (event) => {
+      event.preventDefault();
+      try {
+        await updateServiceProvider(serviceProvider);
+      } catch (error) {
+        console.error("Error updating profile:", error);
+      }
+      
+    };
     // basic services fetch function
     // userServices = fetch('api/[userid]/services/')
     let sampleServices = ["car rental", "car wash", "detailing"];
@@ -111,6 +120,7 @@ export default defineComponent({
     }
     return {
       serviceProvider,
+      updateProfile,
       sampleServices,
       deleteService,
       addService,
