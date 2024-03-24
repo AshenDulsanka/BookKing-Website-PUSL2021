@@ -6,8 +6,9 @@
       <hr class="line">
       <serviceProviderDBFrame />
     </main>
-    <newfooter />
+    
   </div>
+  <newfooter />
 </template>
 <script>
 import { defineComponent } from "vue";

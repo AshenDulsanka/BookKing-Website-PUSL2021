@@ -1,9 +1,11 @@
 <template>
+<NewHeader />
   <div :class="$style.addPage">
-    <NewHeader /><AddPageButton /><PricingFrame />
-    <br><br><br><br><br><br><br><br>
-    <newfooter />
+    <AddPageButton />
+    <PricingFrame />
+    
   </div>
+  <newfooter />
 </template>
 <script>
   import { defineComponent } from "vue";
