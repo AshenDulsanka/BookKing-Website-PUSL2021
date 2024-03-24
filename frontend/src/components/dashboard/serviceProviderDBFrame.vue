@@ -262,7 +262,7 @@ button:hover{
   height: 30px;
   font-size: 17px;
   width: 100%;
-  font-weight: bold;
+  font-weight: normal;
   font-family: Arial, Helvetica, sans-serif;
 }
 
