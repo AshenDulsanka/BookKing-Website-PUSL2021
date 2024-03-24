@@ -51,10 +51,20 @@
         showSidebar: false,
       };
     },
+    computed: {
+      isLoggedIn() {
+        const token = localStorage.getItem('token');
+        return !!token; 
+      },
+    },
     methods: {
       toggleSidebar() {
         this.showSidebar = !this.showSidebar;
       },
+      logout() {
+      localStorage.removeItem('token');
+      this.$router.push('/login');
+    },
     },
   };
   </script>
