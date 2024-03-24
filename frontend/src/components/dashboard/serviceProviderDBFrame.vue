@@ -38,11 +38,13 @@
                 <img loading="lazy" alt="profile picture" src="../../../public/assets/images/plus-sign.png" />
               </button>
             </a>
-            <div class="service" v-for="service in services" :key="service.SID">
-              <h3>{{ service.Name }}</h3>
-              <button class="delete-btn" title="Remove This Service">
-              </button>
-            </div>
+            <a href="#" @click.prevent="redirectToServiceDetails(SID)">
+              <div class="service" v-for="service in services" :key="service.SID">
+                  <h3>{{ service.Name }}</h3>
+                  <button class="delete-btn" title="Remove This Service">
+                  </button>
+              </div>
+            </a>
           </div>
         </div>
       </div>
@@ -85,10 +87,9 @@ export default defineComponent({
     };
 
     const redirectToServiceDetails = (SID) => {
-      router.push(`/service-details/${SID}`); // Replace '/service-details/:id' with your actual route
+      router.push(`/updateService`);
     };
-    // basic services fetch function
-    // userServices = fetch('api/[userid]/services/')
+
     let sampleServices = ["car rental", "car wash", "detailing"];
 
     function deleteService() {
@@ -115,17 +116,6 @@ export default defineComponent({
     }
 
     function submitForm() {
-      //post/api/[userid]/service/
-      //   let options = "";
-      //   for (let i = 0; i < sampleServices.length; i++) {
-      //     options += `${i + 1}. ${sampleServices[i]}\n`;
-      //   }
-
-      //   let person = prompt(`Choose What to Delete\n${options}`);
-
-      //   if (person !== null && person >= 1 && person <= sampleServices.length) {
-      //     window.alert(`Hello ${sampleServices[person - 1]} was deleted!`);
-      //   }
       formVisible.value = false;
     }
     return {
@@ -160,6 +150,15 @@ button:hover{
   font-size: var(--font-size-base);
   color: var(--color-black);
   font-family: var(--font-tajawal);
+}
+
+.updateservice{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: black;
 }
 
 .wrapper {

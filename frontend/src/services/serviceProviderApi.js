@@ -58,4 +58,50 @@ export const fetchServices = async (services) => {
     } catch (error) {
       console.error("Error fetching services:", error);
     }
-  };
+};
+
+export const fetchService = async (SID, service) => {
+    try {
+      const token = localStorage.getItem("token");
+      const response = await axios.get(`http://localhost:8081/api/services/${SID}`, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      });
+      const data = response.data.data;
+
+      service.SID = data.SID;
+      service.Category = data.Category;
+      service.Name = data.Name;
+      service.Location = data.Location;
+      service.price = data.price;
+      service.ShortDescription = data.ShortDescription;
+      service.LongDescription = data.LongDescription;
+    } catch (error) {
+      console.error("Error fetching service:", error);
+    }
+};
+
+export const updateServiceData = async (service) => {
+  try {
+    const token = localStorage.getItem("token");
+    const formData = new FormData();
+    formData.append("name", service.Name);
+    formData.append("longDescription", service.LongDescription);
+    formData.append("shortDescription", service.ShortDescription);
+    formData.append("price", service.price);
+    formData.append("location", service.Location);
+    formData.append("category", service.Category);
+    formData.append("SID", service.SID);
+
+    const response = await axios.put("http://localhost:8081/api/updateService", formData, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+        "Content-Type": "multipart/form-data",
+      },
+    });
+    console.log("Service updated successfully:", response.data.msg);
+  } catch (error) {
+    console.error("Error updating service:", error);
+  }
+};
