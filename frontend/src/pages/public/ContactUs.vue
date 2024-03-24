@@ -8,6 +8,9 @@
         <h2 class="connect-with-us">
           Connect with Us: Your Direct Line to Exceptional Service – Reach Out,
           Share Your Thoughts, and Let Us Assist You!
+          <br>
+          <a href="mailto:bookkinglk@gmail.com">Send us an email</a><br>
+          <a href="tel:076 702 4733">Call us: 07X XXX XXXX</a>
         </h2>
       </div>
       <div class="form-and-image">
