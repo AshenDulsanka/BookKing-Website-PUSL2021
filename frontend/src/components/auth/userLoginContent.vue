@@ -52,6 +52,7 @@ export default defineComponent({
         const responseData = await response.json();
         
         if (response.ok) {
+          localStorage.setItem('token', responseData.token);
           this.$emit('login-success', true);
           this.$router.push('/');
         } else {

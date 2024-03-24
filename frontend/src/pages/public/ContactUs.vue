@@ -68,9 +68,10 @@
                 placeholder="Enter your message here"
                 minlength="10"
                 maxlength="100"
+                v-model="text"
               ></textarea>
             </div>
-            <button class="submitBtn">
+            <button class="submitBtn" @click="submit">
               Submit
               <svg
                 fill="white"
@@ -176,6 +177,45 @@ import NewFooter from "../../components/public/newfooter.vue";
 export default defineComponent({
   name: "ContactUs",
   components: { NewHeader, NewFooter },
+  data() {
+    return {
+      text: "",
+    };
+  },
+  methods: {
+    async submit() {
+      try {
+        const token = localStorage.getItem('token');
+        console.log(token);
+        if (!token) {
+          alert('Please login to submit feedback');
+          return;
+        }
+
+        const response = await fetch('http://localhost:8081/api/sendFeedback', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${token}`,
+          },
+          body: JSON.stringify({
+            text: this.text,
+          }),
+        });
+
+        const responseData = await response.json();
+        
+        if (response.ok) {
+          alert("Feedback submitted successfully");
+        } else {
+          this.error = alert('Something went wrong. Please try again later');
+        }
+      } catch (error) {
+        console.error('Error occurred:', error);
+        this.error = 'An error occurred. Please try again later.';
+      }
+    },
+  },
 });
 </script>
 
