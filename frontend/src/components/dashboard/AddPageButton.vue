@@ -24,50 +24,47 @@
             <div :class="$style.entertainmentFrame">
               <div :class="$style.eventsFrame">
                 <div :class="$style.cateringFrame">
-                  <input
-                    :class="$style.serviceName"
-                    placeholder="Service Name"
-                    type="text"
-                  />
-                  <input :class="$style.homeServicesFrame" type="text" />
-                </div>
-                <div :class="$style.longDescription1">Long Description</div>
-                <input :class="$style.vehicleHotelsFrame" type="text" />
-              </div>
-              <div :class="$style.loginTextInput">
-                <div :class="$style.shortDescription1">Short Description</div>
-                <div :class="$style.reviewRating">
-                  <input :class="$style.contactFormFrame" type="text" />
+                  <div :class="$style.aboutUsInfoFrame">
+                    <div :class="$style.price">Service name</div>
+                    <input :class="$style.homeServicesFrame" type="text" />
+                    <br>
                 </div>
               </div>
+              <div :class="$style.longDescription1">Long Description</div>
+              <input :class="$style.vehicleHotelsFrame" type="text" />
+            </div>
+            <div :class="$style.loginTextInput">
+              <div :class="$style.shortDescription1">Short Description</div>
+              <div :class="$style.reviewRating">
+                <input :class="$style.contactFormFrame" type="text" />
+              </div>
+            </div>
               <div :class="$style.aboutUsInfoFrame">
                 <div :class="$style.price">Price</div>
                 <input :class="$style.footerLinksFrame" type="text" />
               </div>
             </div>
-            <div :class="$style.homeServicesFrame1">
-              <div :class="$style.subHeaderFrame">
-                <b :class="$style.location">Location</b>
-              </div>
-              <input :class="$style.freelancerDetailsFrame" type="text" />
-            </div>
+            <div :class="$style.aboutUsInfoFrame">
+                <div :class="$style.price">location</div>
+                <input :class="$style.footerLinksFrame" type="text" />
+              </div>             
             <div :class="$style.toursVenuesFrame">
               <div :class="$style.eventsActivitiesFrame">
                 <div :class="$style.cateringMenuFrame">
                   <div :class="$style.ellipseParent">
-                    <input :class="$style.frameChild" type="radio" />
+                    <input :class="$style.frameChild" type="checkbox" />
                     <div :class="$style.vehicleWrapper">
                       <div :class="$style.vehicle">Vehicle</div>
                     </div>
                   </div>
                   <div :class="$style.ellipseGroup">
-                    <input :class="$style.frameItem" type="radio" />
+                    <input :class="$style.frameItem" type="checkbox" />
                     <div :class="$style.hotelsWrapper">
                       <div :class="$style.hotels">Hotels</div>
                     </div>
                   </div>
                   <div :class="$style.reviewSummaryFrame">
-                    <input :class="$style.contactUsFormFrame" type="radio" />
+                    <input :class="$style.contactUsFormFrame" type="checkbox" />
                     <div :class="$style.aboutUsHistoryFrame">
                       <div :class="$style.freelancer">Tours</div>
                     </div>
