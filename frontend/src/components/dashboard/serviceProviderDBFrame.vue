@@ -38,7 +38,7 @@
                 <img loading="lazy" alt="profile picture" src="../../../public/assets/images/plus-sign.png" />
               </button>
             </a>
-            <a href="#" @click.prevent="redirectToServiceDetails(SID)">
+            <a href="#" @click.prevent="redirectToServiceDetails(service.SID)">
               <div class="service" v-for="service in services" :key="service.SID">
                   <h3>{{ service.Name }}</h3>
                   <button class="delete-btn" title="Remove This Service">
@@ -74,7 +74,8 @@ export default defineComponent({
 
     onMounted(async () => {
       fetchServiceProvider(serviceProvider);
-      await fetchServices(services.value); 
+      const fetchedServices = await fetchServices(services.value);
+      console.log('Fetched services:', fetchedServices); 
     });
 
     const updateProfile = async (event) => {
