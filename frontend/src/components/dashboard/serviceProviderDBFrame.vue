@@ -1,13 +1,6 @@
 <template>
   <section class="service-dashboard">
     <div class="wrapper">
-      <div class="profile-picture-setup">
-        <div class="profile-picture">
-          <img loading="lazy" alt="profile picture" src="../../../public/assets/images/user-sample.jpg" />
-        </div>
-        <button title="Add a New Picture">Change Picture</button>
-        <button title="Remove Your Picture">Remove Picture</button>
-      </div>
       <div class="settings">
         <hr class="line">
         <div class="personal-settings">
@@ -45,30 +38,6 @@
             </button>
             <div class="service">
               <h3>Car Service</h3>
-              <button class="delete-btn" title="Remove This Service">
-                <img loading="lazy" alt="profile picture" src="../../../public/assets/images/close.png" />
-              </button>
-            </div>
-            <div class="service">
-              <h3>Car Detailing</h3>
-              <button class="delete-btn" title="Remove This Service">
-                <img loading="lazy" alt="profile picture" src="../../../public/assets/images/close.png" />
-              </button>
-            </div>
-            <div class="service">
-              <h3>Body Tinkering</h3>
-              <button class="delete-btn" title="Remove This Service">
-                <img loading="lazy" alt="profile picture" src="../../../public/assets/images/close.png" />
-              </button>
-            </div>
-            <div class="service">
-              <h3>Car Body Wash</h3>
-              <button class="delete-btn" title="Remove This Service">
-                <img loading="lazy" alt="profile picture" src="../../../public/assets/images/close.png" />
-              </button>
-            </div>
-            <div class="service">
-              <h3>Car Parts Dealing</h3>
               <button class="delete-btn" title="Remove This Service">
                 <img loading="lazy" alt="profile picture" src="../../../public/assets/images/close.png" />
               </button>
