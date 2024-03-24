@@ -434,4 +434,17 @@ const makeBooking = (req, res) => {
   }
 }
 
-export { register, verifyMail, login, getUser, forgetPassword, resetPasswordLoad, resetPassword, updateProfile, deleteUser, sendFeedback, makeBooking }
+const getBookings = (req, res) => {
+  const authToken = req.headers.authorization.split(' ')[1]
+  const decode = jwt.verify(authToken, JWTSECRET)
+
+  db.query('SELECT * FROM booking WHERE UID = ?', decode.UID, function (error, result, fields) {
+    if (error) {
+      throw error
+    }
+
+    return res.status(200).send({ success: true, data: result, message: 'Fetch Successfully' })
+  })
+}
+
+export { register, verifyMail, login, getUser, forgetPassword, resetPasswordLoad, resetPassword, updateProfile, deleteUser, sendFeedback, makeBooking, getBookings }

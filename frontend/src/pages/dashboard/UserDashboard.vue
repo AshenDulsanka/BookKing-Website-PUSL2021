@@ -3,10 +3,12 @@
     <newheader />
       <main :class="$style.rumethMansaraPiliyandalaRd">
       <userDashboardContent 
-        name="Rumeth Mansara"
-        address="Piliyandala Rd"
-        phoneNo="071 123 4567"
-        email="rumeth@gmail.com"
+        v-if="user && bookings"
+        :name="user.name"
+        :address="user.address"
+        :phoneNo="user.phoneNumber"
+        :email="user.email"
+        :bookings="bookings"
       />
       
     </main>
@@ -16,18 +18,57 @@
   <newfooter />
 
 </template>
+
 <script>
-  import { defineComponent } from "vue";
+  import { defineComponent, onMounted } from "vue";
   
   import userDashboardContent from "../../components/dashboard/userDashboardContent.vue";
   import newfooter from "../../components/public/newfooter.vue";
   import newheader from "../../components/public/newheader.vue";
+  import axios from "axios";
 
   export default defineComponent({
     name: "UserDashboard",
     components: { newheader, userDashboardContent, newfooter },
+    data() {
+      return {
+        user: null,
+        bookings: null,
+      };
+    },
+    mounted() {
+      this.fetchUserData();
+      this.fetchBookings();
+    },
+    methods: {
+      async fetchUserData() {
+        try {
+          const response = await axios.get("http://localhost:8081/api/getUser", {
+            headers: {
+              Authorization: `Bearer ${localStorage.getItem("token")}`,
+            },
+          });
+          this.user = response.data.data;
+        } catch (error) {
+          console.error(error);
+        }
+      },
+      async fetchBookings() {
+        try {
+          const response = await axios.get("http://localhost:8081/api/getBookings", {
+            headers: {
+              Authorization: `Bearer ${localStorage.getItem("token")}`,
+            },
+          });
+          this.bookings = response.data.data || [];
+        } catch (error) {
+          console.error(error);
+        }
+      },
+    },
   });
 </script>
+
 <style module>
   .rumethMansaraPiliyandalaRd {
     align-self: stretch;

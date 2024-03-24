@@ -204,4 +204,17 @@ const getSingleService = (req, res) => {
   }
 }
 
-export { addService, updateService, deleteService, getHotels, getTours, getVehicles, getServices, getSingleService }
+const getAllServices = (req, res) => {
+  try {
+    db.query('SELECT * FROM service', (error, result) => {
+      if (error) {
+        return res.status(400).json({ msg: error.message })
+      }
+      return res.status(200).json({ success: true, data: result, message: 'Services fetched successfully' })
+    })
+  } catch (error) {
+    return res.status(400).json({ msg: error.message })
+  }
+}
+
+export { addService, updateService, deleteService, getHotels, getTours, getVehicles, getServices, getSingleService, getAllServices }
