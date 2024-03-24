@@ -35,7 +35,7 @@
 
               <div :class="$style.price">location</div>
               <input :class="$style.footerLinksFrame" type="text" />
-            
+              <br>
               <div :class="$style.cateringMenuFrame">
                   <div :class="$style.ellipseParent">
                     <input :class="$style.frameChild" type="radio" v-model="selectedOption" value="vehicle"/>
@@ -76,8 +76,6 @@
 </script>
 <style module>
   .addPage {
-    margin: 0;
-    height: 83px;
     width: 293px;
     position: relative;
     font-size: inherit;
@@ -86,6 +84,8 @@
     display: inline-block;
     flex-shrink: 0;
     margin: 0 auto;
+    margin-top: 10%;
+    margin-left: 50%;
   }
   .searchInterfaceSymbol2Icon {
     height: 300px;
@@ -101,8 +101,7 @@
     flex-direction: row;
     align-items: flex-start;
     justify-content: center;
-    padding: var(--padding-124xl) var(--padding-xl) var(--padding-131xl)
-      var(--padding-2xl);
+    margin-bottom: 10%;
     box-sizing: border-box;
     max-width: 100%;
   }
@@ -237,12 +236,12 @@
     max-width: 100%;
   }
   .priceFrame {
-    width: 1319px;
+    width: 20000px;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     justify-content: flex-start;
-    padding: 0px var(--padding-2xl);
+    padding: 0px 0px var(--padding-529xl);
     box-sizing: border-box;
     max-width: 100%;
     font-size: var(--font-size-sm);
@@ -263,8 +262,6 @@
     width: 1640px;
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
-    justify-content: flex-start;
     padding: 0px 0px var(--padding-306xl) var(--padding-xl);
     box-sizing: border-box;
     max-width: 100%;
@@ -272,14 +269,9 @@
     font-size: var(--font-size-45xl);
     color: var(--color-black);
     font-family: var(--font-tajawal);
+    justify-content:flex-end;
+    align-items:flex-end;
   }
-  .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; 
-  }
-
   @media screen and (max-width: 1350px) {
     .toursFrame {
       flex: 1;
