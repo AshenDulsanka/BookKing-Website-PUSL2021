@@ -27,9 +27,30 @@ export default defineComponent({
     }
   },
   methods: {
-    sendResetEmail() {
-      // Logic to send reset email
-      console.log(`Sending reset email to ${this.email}`)
+    async sendResetEmail() {
+      try {
+        const response = await fetch('http://localhost:8081/api/forgetPassword', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            email: this.email,
+          }),
+        });
+
+        const responseData = await response.json();
+        
+        if (response.ok) {
+          alert('Password reset email sent successfully');
+          this.$router.push('/');
+        } else {
+          this.error = alert('Invalid email address');
+        }
+      } catch (error) {
+        console.error('Error occurred:', error);
+        this.error = 'An error occurred. Please try again later.';
+      }
     },
   },
 })
