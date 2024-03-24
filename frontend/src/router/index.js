@@ -19,6 +19,7 @@ import ContactUs from '../pages/public/ContactUs.vue';
 import Vehicles from '../pages/public/Vehicles.vue';
 import Tours from '../pages/public/Tours.vue';
 import forgotPassword from '../pages/auth/forgotPassword.vue';
+import spforgetPassword from '../pages/auth/spForgotPassword.vue';
 
 const routes = [
   // Auth
@@ -27,6 +28,7 @@ const routes = [
   { path: '/spsignup', component: ServiceProviderSignUp },
   { path: '/splogin', component: ServiceProviderLogin },
   { path: '/forgotPassword', component: forgotPassword },
+  { path: '/spforgotPassword', component: spforgetPassword },
 
   // Dashboard
   { path: '/userdashboard', component: UserDashboard },

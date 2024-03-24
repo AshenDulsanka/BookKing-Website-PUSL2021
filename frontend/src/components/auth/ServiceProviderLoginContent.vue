@@ -17,7 +17,7 @@
       </div>
     </div>
     <div class="forgot-password-link">
-      <a href="#">Forgot Password</a>
+      <a href="/spforgotPassword">Forgot Password</a>
     </div>
     <button class="ok" @click="login">Login</button>
     <div v-if="error" class="error-message">{{ error }}</div>
