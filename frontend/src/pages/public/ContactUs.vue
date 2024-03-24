@@ -4,14 +4,13 @@
     <h1 class="contact-us-header">Contact Us</h1>
     <section class="content-wrapper">
       <div class="intro">
-        <h2 class="customer-service">Customer Service - Contact</h2>
         <h2 class="connect-with-us">
           Connect with Us: Your Direct Line to Exceptional Service – Reach Out,
           Share Your Thoughts, and Let Us Assist You!
-          <br>
-          <a href="mailto:bookkinglk@gmail.com">Send us an email</a><br>
-          <a href="tel:076 702 4733">Call us: 07X XXX XXXX</a>
         </h2>
+          <br>
+          <a href="mailto:bookkinglk@gmail.com" style="text-decoration: none;">Email: bookking@gmail.com</a><br>
+          <a href="tel:076 702 4733" style="text-decoration: none;">Call us: 076 702 4733</a>
       </div>
       <div class="form-and-image">
         <div class="feedback-form">
