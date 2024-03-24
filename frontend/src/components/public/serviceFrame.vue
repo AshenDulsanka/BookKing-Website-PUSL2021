@@ -15,11 +15,11 @@
             <br>
             <div :class="$style.belowIsAn">{{belowIsAn}}</div> 
             <br>
-            <b :class="$style.hotelName">Price: {{price}}</b>
+            <b :class="$style.hotelName">Price: {{price}} per day</b>
           </div>
           <button :class="$style.rectangleGroup">
             <div :class="$style.rectangleDiv" />
-            <a href="/productPage"><b :class="$style.bookNow">Book Now</b></a>
+            <a :href="`/product/${serviceID}`"><b :class="$style.bookNow">Book Now</b></a>
           </button>
         </div>
       </div>

@@ -5,25 +5,18 @@
       <div :class="$style.bookNowButtonParent">
         <button :class="$style.bookNowButton">
           <div :class="$style.bookNowButtonChild" />
-          <b :class="$style.bookNow">Book NOW</b>
+          <b :class="$style.bookNow">Book Now</b>
         </button>
+        
         <div :class="$style.locationFrame">
           <div :class="$style.pricePerPersonFrame">
-            <b :class="$style.location">Location</b>
-            
-          </div>
-          <div :class="$style.seegiriyaLocation">
-            <div :class="$style.seegiriyaSrilanka">{{ Location }}</div>
+            <b :class="$style.location">Location: {{ Location }}</b>
             
           </div>
         </div>
         <div :class="$style.locationFrame1">
-          <div :class="$style.pricePerPersonParent">
-            <b :class="$style.pricePerPerson">Price </b>
-            
-          </div>
           <div :class="$style.rs150000Parent">
-            <div :class="$style.rs150000">{{ Price }}</div>
+            <div :class="$style.rs150000">Price: {{ Price }} per day</div>
             
           </div>
         </div>
