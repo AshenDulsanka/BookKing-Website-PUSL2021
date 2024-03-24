@@ -399,4 +399,39 @@ const sendFeedback = (req, res) => {
   }
 }
 
-export { register, verifyMail, login, getUser, forgetPassword, resetPasswordLoad, resetPassword, updateProfile, deleteUser, sendFeedback }
+const makeBooking = (req, res) => {
+  try {
+    const errors = validationResult(req)
+
+    if (!errors.isEmpty()) {
+      return res.status(400).json({ errors: errors.array() })
+    }
+
+    const token = req.headers.authorization.split(' ')[1]
+    const decode = jwt.verify(token, JWTSECRET)
+
+    const sql = 'INSERT INTO booking (UID, SID) VALUES (?, ?)'
+    // eslint-disable-next-line prefer-const
+    const data = [decode.UID, req.body.SID]
+
+    db.query(sql, data, function (error, result, fields) {
+      if (error) {
+        res.status(400).send({
+          msg: error
+        })
+      }
+
+      res.status(200).send({
+        msg: 'Booking set successfully!'
+      })
+    })
+
+    db.query(
+      `UPDATE service SET isAvailable = 0 WHERE SID = '${req.body.SID}}'`
+    )
+  } catch (error) {
+    return res.status(400).json({ msg: error.message })
+  }
+}
+
+export { register, verifyMail, login, getUser, forgetPassword, resetPasswordLoad, resetPassword, updateProfile, deleteUser, sendFeedback, makeBooking }

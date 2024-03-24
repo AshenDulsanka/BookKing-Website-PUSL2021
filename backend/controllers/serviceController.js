@@ -41,6 +41,10 @@ const addService = (req, res) => {
       const SID = result.SID
       return res.status(200).json({ msg: 'Service added successfully', SID })
     })
+
+    db.query(
+      'UPDATE service SET isAvailable = 1'
+    )
   } catch (error) {
     return res.status(400).json({ msg: error.message })
   }

@@ -1,6 +1,6 @@
 import express from 'express'
 import { userSignUpValidation, logInValidation, forgetValidation, updateProfileValidation } from '../helpers/validation.js'
-import { register, login, getUser, forgetPassword, updateProfile, deleteUser, sendFeedback } from '../controllers/userController.js'
+import { register, login, getUser, forgetPassword, updateProfile, deleteUser, sendFeedback, makeBooking } from '../controllers/userController.js'
 import { isAuthorized } from '../middleware/auth.js'
 
 const userRouter = express.Router()
@@ -17,5 +17,7 @@ userRouter.post('/updateProfile', updateProfileValidation, isAuthorized, updateP
 userRouter.delete('/deleteUser', isAuthorized, deleteUser)
 
 userRouter.post('/sendFeedback', isAuthorized, sendFeedback)
+
+userRouter.post('/makeBooking', isAuthorized, makeBooking)
 
 export { userRouter }

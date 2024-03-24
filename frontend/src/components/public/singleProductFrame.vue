@@ -19,7 +19,7 @@
         </div>
         <div :class="$style.locationFrame1">
           <div :class="$style.pricePerPersonParent">
-            <b :class="$style.pricePerPerson">Price per person</b>
+            <b :class="$style.pricePerPerson">Price </b>
             
           </div>
           <div :class="$style.rs150000Parent">
@@ -44,29 +44,6 @@
           </div>
           
         </div>
-        <div :class="$style.singleProductPage">
-          <div :class="$style.vipAccessToContainer">
-            <ul :class="$style.vipAccessToSigiriyaFortres">
-              <li :class="$style.vipAccessTo">
-                VIP Access to Sigiriya Fortress
-              </li>
-              <li :class="$style.scenicHelicopterRide">
-                Scenic Helicopter Ride Upgrade
-              </li>
-              <li :class="$style.culturalInsightsWith">
-                Cultural Insights with Knowledgeable Guides
-              </li>
-              <li :class="$style.gourmetPicnicAt">
-                Gourmet Picnic at Royal Gardens
-              </li>
-              <li :class="$style.exclusiveSunsetTours">
-                Exclusive Sunset Tours
-              </li>
-              <li>Luxury Accommodation Packages</li>
-            </ul>
-          </div>
-          
-        </div>
       </div>
       <div :class="$style.singleProductPageFrame">
         <div :class="$style.productPageFrame">
@@ -82,6 +59,7 @@
     </div>
   </section>
 </template>
+
 <script>
   import { defineComponent } from "vue";
 
@@ -89,6 +67,7 @@
     name: "singleProductFrame",
   });
 </script>
+
 <style module>
   .sigiriyaTourFrame {
     position: absolute;
