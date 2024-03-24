@@ -11,15 +11,9 @@
     </section>
 
     <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <newfooter />
 
   </div>
+  <newfooter />
 </template>
 <script>
 import { defineComponent } from 'vue'

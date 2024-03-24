@@ -77,10 +77,11 @@
     font-family: "Poppins", sans-serif;
     font-size: 14px;
     font-weight: 500;
+    
   }
   nav li {
     height: 50px;
-    align-content: center;
+    text-align: center;
   }
   .menu-button {
     background-color: white;

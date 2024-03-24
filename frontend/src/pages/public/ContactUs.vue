@@ -86,8 +86,9 @@
         </div>
       </div>
     </section>
-    <NewFooter />
+
   </div>
+  <NewFooter />
 </template>
 
 <script>

@@ -20,8 +20,9 @@
         </div>
       </div>
     </section>
-    <newfooter />
+    
   </div>
+  <newfooter />
 </template>
 <script>
 import { defineComponent } from 'vue'

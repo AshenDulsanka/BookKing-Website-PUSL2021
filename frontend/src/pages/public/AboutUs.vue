@@ -1,7 +1,9 @@
 <template>
   <div :class="$style.aboutUs">
     <newheader />
-    <main :class="$style.welcomeTextWrapper"><aboutusFrame /></main>
+    <main :class="$style.welcomeTextWrapper">
+      <aboutusFrame />
+    </main>
     <br>
     <br>
     

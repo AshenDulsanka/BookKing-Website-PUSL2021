@@ -12,7 +12,7 @@
             src="../../../public/assets/images/scenery1.png"
           />
           <div :class="$style.welcomeToYourContainer">
-            <p :class="$style.welcomeToYour">
+            <p :class="$style.embarkOnA">
               Welcome to BookKing, where we redefine the way you
               experience travel. Established with a commitment to elevate your
               journey, we take pride in being your go-to platform for
@@ -21,7 +21,7 @@
               exceptional stays that transcend mere lodging, transforming your
               travel moments into unforgettable memories.
             </p>
-            <p :class="$style.ourUserCentricPlatform">
+            <p :class="$style.embarkOnA">
               Our user-centric platform is designed to streamline the booking
               process, offering you a hassle-free and intuitive experience.
               Navigating through our extensive selection of accommodations,
@@ -37,7 +37,7 @@
           <div :class="$style.footerFramesParent">
             <div :class="$style.footerFrames">
               <div :class="$style.collaboratingWithAContainer">
-                <p :class="$style.collaboratingWithA">
+                <p :class="$style.embarkOnA">
                   Collaborating with a network of trusted partners, we
                   prioritize quality, reliability, and authenticity. Whether
                   you're seeking a peaceful retreat nestled in nature, a vibrant
@@ -45,7 +45,7 @@
                   handpicked collection of accommodations reflects our
                   commitment to providing you with the best possible stay.
                 </p>
-                <p :class="$style.atYourBooking">
+                <p :class="$style.embarkOnA">
                   At BookKing, we understand that every journey is
                   a unique story waiting to unfold. Our dedication to customer
                   satisfaction extends beyond the booking process, as we
@@ -264,6 +264,9 @@
     .footerFrames {
       flex-wrap: wrap;
     }
+    .atYourBooking{
+      text-align: justify;
+    }
   }
   @media screen and (max-width: 925px) {
     .aboutUs {
@@ -272,6 +275,8 @@
 
     .welcomeToYourContainer {
       min-width: 100%;
+      text-align: center;
+      padding-top: 50px;
     }
 
     .image1Parent {
