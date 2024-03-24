@@ -166,7 +166,8 @@ const login = (req, res) => {
 
           if (bResult) {
             // console.log('JWT Key is, ' + JWTSECRET)
-            const token = jwt.sign({ SPID: result[0].SPID }, JWTSECRET, { expiresIn: '1h' })
+            const userRole = result[0].role || 'serviceProvider'
+            const token = jwt.sign({ SPID: result[0].SPID, role: userRole }, JWTSECRET, { expiresIn: '1h' })
             db.query(
               `UPDATE serviceprovider SET lastLogin = now() WHERE SPID = '${result[0].SPID}'`
             )

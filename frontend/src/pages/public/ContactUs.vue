@@ -4,11 +4,13 @@
     <h1 class="contact-us-header">Contact Us</h1>
     <section class="content-wrapper">
       <div class="intro">
-        <h2 class="customer-service">Customer Service - Contact</h2>
         <h2 class="connect-with-us">
           Connect with Us: Your Direct Line to Exceptional Service – Reach Out,
           Share Your Thoughts, and Let Us Assist You!
         </h2>
+          <br>
+          <a href="mailto:bookkinglk@gmail.com" style="text-decoration: none;">Email: bookking@gmail.com</a><br>
+          <a href="tel:076 702 4733" style="text-decoration: none;">Call us: 076 702 4733</a>
       </div>
       <div class="form-and-image">
         <div class="feedback-form">
@@ -68,9 +70,10 @@
                 placeholder="Enter your message here"
                 minlength="10"
                 maxlength="100"
+                v-model="text"
               ></textarea>
             </div>
-            <button class="submitBtn">
+            <button class="submitBtn" @click="submit">
               Submit
               <svg
                 fill="white"
@@ -176,6 +179,45 @@ import NewFooter from "../../components/public/newfooter.vue";
 export default defineComponent({
   name: "ContactUs",
   components: { NewHeader, NewFooter },
+  data() {
+    return {
+      text: "",
+    };
+  },
+  methods: {
+    async submit() {
+      try {
+        const token = localStorage.getItem('token');
+        console.log(token);
+        if (!token) {
+          alert('Please login to submit feedback');
+          return;
+        }
+
+        const response = await fetch('http://localhost:8081/api/sendFeedback', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${token}`,
+          },
+          body: JSON.stringify({
+            text: this.text,
+          }),
+        });
+
+        const responseData = await response.json();
+        
+        if (response.ok) {
+          alert("Feedback submitted successfully");
+        } else {
+          this.error = alert('Something went wrong. Please try again later');
+        }
+      } catch (error) {
+        console.error('Error occurred:', error);
+        this.error = 'An error occurred. Please try again later.';
+      }
+    },
+  },
 });
 </script>
 
