@@ -124,7 +124,6 @@ export default defineComponent({
     font-family: var(--font-poppins);
     font-size: var(--font-size-sm);
     background-color: transparent;
-    height: 20px;
     position: relative;
     color: var(--color-black);
     text-align: left;

@@ -74,6 +74,9 @@ nav a:hover {
   .nav {
   background-color:transparent;
   }
+  .hideOnMobile{
+    display: none;
+  }
 }
 
 @media (max-width: 480px) {
