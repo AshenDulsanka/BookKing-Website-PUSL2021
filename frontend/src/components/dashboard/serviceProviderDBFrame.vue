@@ -38,10 +38,9 @@
                 <img loading="lazy" alt="profile picture" src="../../../public/assets/images/plus-sign.png" />
               </button>
             </a>
-            <div class="service">
-              <h3>Car Service</h3>
+            <div class="service" v-for="service in services" :key="service.SID">
+              <h3>{{ service.Name }}</h3>
               <button class="delete-btn" title="Remove This Service">
-                <img loading="lazy" alt="profile picture" src="../../../public/assets/images/close.png" />
               </button>
             </div>
           </div>
@@ -53,11 +52,14 @@
 
 <script>
 import { defineComponent, ref, reactive, onMounted } from "vue";
-import { fetchServiceProvider, updateServiceProvider } from "../../services/serviceProviderApi.js";
+import { fetchServiceProvider, updateServiceProvider, fetchServices } from "../../services/serviceProviderApi.js";
+import { useRouter } from "vue-router";
 
 export default defineComponent({
   name: "serviceProviderDBFrame",
   setup() {
+    const router = useRouter();
+
     const serviceProvider = reactive({
       name: "",
       email: "",
@@ -65,9 +67,14 @@ export default defineComponent({
       address: "",
       serviceDesc: ""
     });
-    onMounted(() => {
+
+    const services = ref([]);
+
+    onMounted(async () => {
       fetchServiceProvider(serviceProvider);
+      await fetchServices(services.value); 
     });
+
     const updateProfile = async (event) => {
       event.preventDefault();
       try {
@@ -75,7 +82,10 @@ export default defineComponent({
       } catch (error) {
         console.error("Error updating profile:", error);
       }
-      
+    };
+
+    const redirectToServiceDetails = (SID) => {
+      router.push(`/service-details/${SID}`); // Replace '/service-details/:id' with your actual route
     };
     // basic services fetch function
     // userServices = fetch('api/[userid]/services/')
@@ -127,6 +137,8 @@ export default defineComponent({
       cancelForm,
       submitForm,
       formVisible,
+      services,
+      redirectToServiceDetails,
     };
   },
 });

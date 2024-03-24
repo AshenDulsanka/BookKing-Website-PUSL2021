@@ -44,4 +44,18 @@ export const updateServiceProvider = async (serviceProvider) => {
     } catch (error) {
       console.error("Error updating profile:", error);
     }
+};
+
+export const fetchServices = async (services) => {
+    try {
+      const token = localStorage.getItem("token");
+      const response = await axios.get("http://localhost:8081/api/services", {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      });
+      services.splice(0, services.length, ...response.data.data); 
+    } catch (error) {
+      console.error("Error fetching services:", error);
+    }
   };
