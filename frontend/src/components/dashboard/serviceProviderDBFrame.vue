@@ -33,9 +33,11 @@
         <div class="service-settings">
           <h2>Your Services</h2>
           <div class="services">
-            <button class="service add-new" title="Add a Service">
-              <img loading="lazy" alt="profile picture" src="../../../public/assets/images/plus-sign.png" />
-            </button>
+            <a href="/addPage">
+              <button class="service add-new" title="Add a Service">
+                <img loading="lazy" alt="profile picture" src="../../../public/assets/images/plus-sign.png" />
+              </button>
+            </a>
             <div class="service">
               <h3>Car Service</h3>
               <button class="delete-btn" title="Remove This Service">
@@ -291,7 +293,7 @@ button:hover{
   border: 2px solid black;
   position: relative;
   min-width: 300px;
-  min-height: 100px;
+  min-height: 140px;
 }
 .service > h3{
   font-weight: 700;
