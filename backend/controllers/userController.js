@@ -166,7 +166,8 @@ const login = (req, res) => {
 
           if (bResult) {
             // console.log('JWT Key is, ' + JWTSECRET)
-            const token = jwt.sign({ UID: result[0].UID }, JWTSECRET, { expiresIn: '1h' })
+            const userRole = result[0].role || 'user'
+            const token = jwt.sign({ UID: result[0].UID, role: userRole }, JWTSECRET, { expiresIn: '1h' })
             db.query(
               `UPDATE users SET lastLogin = now() WHERE UID = '${result[0].UID}'`
             )
