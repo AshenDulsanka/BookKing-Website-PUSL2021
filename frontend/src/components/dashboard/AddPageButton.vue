@@ -3,9 +3,6 @@
     <div :class="$style.headerTextContainer">
       <div :class="$style.searchSymbolFrame">
         <h1 :class="$style.addPage">Add Page</h1>
-        <div :class="$style.longDescription">
-          <div :class="$style.shortDescription" />
-        </div>
       </div>
       <div :class="$style.priceFrame">
         <div :class="$style.locationFrame">
@@ -22,63 +19,55 @@
           </div>
           <div :class="$style.toursFrame">
             <div :class="$style.entertainmentFrame">
-              <div :class="$style.eventsFrame">
-                <div :class="$style.cateringFrame">
-                  <input
-                    :class="$style.serviceName"
-                    placeholder="Service Name"
-                    type="text"
-                  />
-                  <input :class="$style.homeServicesFrame" type="text" />
-                </div>
-                <div :class="$style.longDescription1">Long Description</div>
-                <input :class="$style.vehicleHotelsFrame" type="text" />
-              </div>
-              <div :class="$style.loginTextInput">
-                <div :class="$style.shortDescription1">Short Description</div>
-                <div :class="$style.reviewRating">
-                  <input :class="$style.contactFormFrame" type="text" />
-                </div>
-              </div>
-              <div :class="$style.aboutUsInfoFrame">
-                <div :class="$style.price">Price</div>
-                <input :class="$style.footerLinksFrame" type="text" />
-              </div>
-            </div>
-            <div :class="$style.homeServicesFrame1">
-              <div :class="$style.subHeaderFrame">
-                <b :class="$style.location">Location</b>
-              </div>
-              <input :class="$style.freelancerDetailsFrame" type="text" />
-            </div>
-            <div :class="$style.toursVenuesFrame">
-              <div :class="$style.eventsActivitiesFrame">
+                  
+              <div :class="$style.price">Service name</div>
+              <input :class="$style.homeServicesFrame" type="text" />
+      
+              <div :class="$style.price">Long Description</div>
+              <input :class="$style.vehicleHotelsFrame" type="text" />
+
+              <div :class="$style.price">Short Description</div>
+              <input :class="$style.vehicleHotelsFrame" type="text" />
+
+              <div :class="$style.price">Price</div>
+              <input :class="$style.footerLinksFrame" type="text" />
+
+              <div :class="$style.price">location</div>
+              <input :class="$style.footerLinksFrame" type="text" />
+            
+              
+            
+              
+            
+            
+              
                 <div :class="$style.cateringMenuFrame">
                   <div :class="$style.ellipseParent">
-                    <input :class="$style.frameChild" type="radio" />
+                    <input :class="$style.frameChild" type="checkbox" />
                     <div :class="$style.vehicleWrapper">
                       <div :class="$style.vehicle">Vehicle</div>
                     </div>
                   </div>
                   <div :class="$style.ellipseGroup">
-                    <input :class="$style.frameItem" type="radio" />
+                    <input :class="$style.frameItem" type="checkbox" />
                     <div :class="$style.hotelsWrapper">
                       <div :class="$style.hotels">Hotels</div>
                     </div>
                   </div>
                   <div :class="$style.reviewSummaryFrame">
-                    <input :class="$style.contactUsFormFrame" type="radio" />
-                    <div :class="$style.aboutUsHistoryFrame">
-                      <div :class="$style.freelancer">Tours</div>
-                    </div>
-                  </div>
-                </div>
-                    </div>
+                    <input :class="$style.contactUsFormFrame" type="checkbox" />
+                    <div :class="$style.freelancer">Tours</div>
+                    
                   </div>
                 </div>
               </div>
             </div>
-          </div>
+                
+              
+      </div>
+      </div>
+    </div>
+          
 
   </section>
 </template>
@@ -121,7 +110,7 @@
     max-width: 100%;
   }
   .searchSymbolFrame {
-    align-self: stretch;
+    align-self: auto;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -192,14 +181,7 @@
     position: relative;
     min-width: 250px;
   }
-  .cateringFrame {
-    align-self: stretch;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap: 8px 0px;
-  }
+  
   .longDescription1 {
     position: relative;
     font-weight: 600;
@@ -213,39 +195,10 @@
     position: relative;
     min-width: 250px;
   }
-  .eventsFrame {
-    align-self: stretch;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap: 2.5px 0px;
-  }
-  .shortDescription1 {
-    position: relative;
-    font-weight: 600;
-    z-index: 1;
-  }
-  .contactFormFrame {
-    border: none;
-    outline: none;
-    background-color: var(--color-yellow-100);
-    height: 79px;
-    flex: 1;
-    position: relative;
-    min-width: 250px;
-    max-width: 100%;
-  }
-  .reviewRating {
-    align-self: stretch;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: flex-start;
-    padding: 0px 0px 0px var(--padding-12xs);
-    box-sizing: border-box;
-    max-width: 100%;
-  }
+
+  
+  
+  
   .loginTextInput {
     align-self: stretch;
     display: flex;
@@ -259,7 +212,7 @@
   .price {
     position: relative;
     font-weight: 600;
-    z-index: 1;
+    z-index: 1
   }
   .footerLinksFrame {
     border: none;
