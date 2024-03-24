@@ -21,14 +21,12 @@
 </script>
 <style module>
   .addPage {
-    width: 100%;
-    height: 1715px;
-    position: relative;
+    width: 100%; 
     background-color: var(--color-white);
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: flex-start;
     justify-content: flex-start;
     gap: 167px 0px;
     letter-spacing: normal;
