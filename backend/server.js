@@ -9,6 +9,7 @@ import { userRouter } from './routes/userRoute.js'
 import { serviceProviderRouter } from './routes/serviceProviderRoute.js'
 import { serviceRouter } from './routes/serviceRoute.js'
 import { webRoute } from './routes/webRoute.js'
+import { adminRouter } from './routes/adminRoute.js'
 
 const server = express()
 
@@ -21,7 +22,7 @@ dotenv.config()
 
 console.log(conn.connect)
 
-server.use('/api', userRouter, serviceProviderRouter, serviceRouter)
+server.use('/api', userRouter, serviceProviderRouter, serviceRouter, adminRouter)
 server.use('/', webRoute)
 
 // error handling

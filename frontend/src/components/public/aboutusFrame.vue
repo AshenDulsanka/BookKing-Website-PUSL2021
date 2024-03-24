@@ -257,10 +257,6 @@
       flex-wrap: wrap;
     }
 
-    .collaboratingWithAContainer {
-      flex: 1;
-    }
-
     .footerFrames {
       flex-wrap: wrap;
     }
@@ -283,25 +279,10 @@
       gap: 0px 32px;
     }
 
-    .collaboratingWithAContainer {
-      min-width: 100%;
-    }
-
     .image2Icon {
       min-width: 100%;
     }
 
-    .footerFrames {
-      gap: 0px 30px;
-    }
-
-    .footerFramesParent {
-      gap: 33px 0px;
-    }
-
-    .journeyText {
-      gap: 47px 0px;
-    }
   }
   @media screen and (max-width: 450px) {
     .aboutUs {
@@ -311,13 +292,32 @@
     .image1Parent {
       gap: 0px 16px;
     }
-
-    .footerFramesParent {
-      gap: 17px 0px;
-    }
-
-    .journeyText {
-      gap: 23px 0px;
-    }
   }
+  @media screen and (max-width: 1350px) {
+}
+
+@media screen and (max-width: 925px) {
+  .welcomeToYourContainer,
+  .collaboratingWithAContainer {
+    min-width: auto;  
+  }
+  .image1Parent,
+  .footerFrames {
+    gap: 0px 20px;  
+  }
+  .journeyText {
+    gap: 30px 0px;  
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .image1Parent,
+  .footerFrames {
+    gap: 0px 10px;  
+  }
+  .journeyText {
+    gap: 15px 0px;  
+  }
+}
+
 </style>

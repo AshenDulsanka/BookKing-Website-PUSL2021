@@ -10,10 +10,11 @@
       <div :class="$style.frameContainer" :style="frameDiv1Style">
         <div :class="$style.frameParent">
           <div :class="$style.hotelNameParent" :style="frameDiv2Style">
-            <b :class="$style.hotelName">{{hotelName}}</b>
+            <b :class="$style.hotelName">{{serviceName}}</b>
+            <br>
             <div :class="$style.belowIsAn">{{belowIsAn}}</div> 
             <br>
-            <b :class="$style.hotelName">{{price}}</b>
+            <b :class="$style.hotelName">Price: {{price}}</b>
           </div>
           <button :class="$style.rectangleGroup">
             <div :class="$style.rectangleDiv" />
@@ -24,13 +25,14 @@
     </div>
   </div>
 </template>
+
 <script>
   import { defineComponent } from "vue";
 
   export default defineComponent({
     name: "serviceFrame",
     props: {
-      hotelName: { type: String },
+      serviceName: { type: String },
       price: { type: String },
       propPadding: { type: [Object, Array, String, Number, Boolean] },
       propPadding1: { type: [Object, Array, String, Number, Boolean] },
@@ -57,6 +59,7 @@
     },
   });
 </script>
+
 <style module>
   .frameChild {
     height: 347px;

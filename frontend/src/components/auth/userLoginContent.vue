@@ -6,23 +6,20 @@
     <div class="password-rectangle1">
       <div class="email-parent">
         <div class="email1">Email</div>
-        <input class="rectangle-rectangle" type="text" />
+        <input class="rectangle-rectangle" type="email" v-model="email" />
       </div>
     </div>
     <div class="password-rectangle2">
       <div class="password-parent">
         <div class="email1">Password</div>
-        <input class="frame-item" type="text" />
+        <input class="frame-item" type="password" v-model="password" />
       </div>
     </div>
     <div class="forgot-password-link">
-      <a href="#">Forgot Password</a>
+      <a href="/forgotPassword">Forgot Password</a>
     </div>
-    <a href="#">
-        <button class="ok">
-            <div class="ok">Login</div>
-        </button>
-    </a>
+    <button class="ok" @click="login">Login</button>
+    <div v-if="error" class="error-message">{{ error }}</div>
   </div>
   
 </template>
@@ -31,7 +28,41 @@
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-  name: 'userLoginContent'
+  name: 'userLoginContent',
+  data() {
+    return {
+      email: '',
+      password: '',
+    };
+  },
+  methods: {
+    async login() {
+      try {
+        const response = await fetch('http://localhost:8081/api/login', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            email: this.email,
+            password: this.password,
+          }),
+        });
+
+        const responseData = await response.json();
+        
+        if (response.ok) {
+          localStorage.setItem('token', responseData.token);
+          this.$router.push('/');
+        } else {
+          this.error = alert('Invalid username or password');
+        }
+      } catch (error) {
+        console.error('Error occurred:', error);
+        this.error = 'An error occurred. Please try again later.';
+      }
+    },
+  },
 })
 </script>
 
@@ -42,12 +73,13 @@ export default defineComponent({
     color: black;
     padding: 6px 20px;
     border: none;
-    border-radius: 2px;
+    border-radius: 8px;
     cursor: pointer;
     text-decoration: none;
     display: inline-block;
     font-size: 14px;
     font-weight: bold;
+    width: 15%;
   }
 
   a{
@@ -171,6 +203,11 @@ export default defineComponent({
     font-size: var(--font-size-21xl);
     color: var(--color-black);
     font-family: var(--font-tajawal);
+  }
+
+  .error-message {
+    color: red;
+    margin-top: 5px;
   }
 
   @media screen and (max-width: 925px) {

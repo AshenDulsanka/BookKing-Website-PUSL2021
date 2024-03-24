@@ -166,7 +166,8 @@ const login = (req, res) => {
 
           if (bResult) {
             // console.log('JWT Key is, ' + JWTSECRET)
-            const token = jwt.sign({ UID: result[0].UID }, JWTSECRET, { expiresIn: '1h' })
+            const userRole = result[0].role || 'user'
+            const token = jwt.sign({ UID: result[0].UID, role: userRole }, JWTSECRET, { expiresIn: '1h' })
             db.query(
               `UPDATE users SET lastLogin = now() WHERE UID = '${result[0].UID}'`
             )
@@ -322,12 +323,9 @@ const updateProfile = (req, res) => {
     const token = req.headers.authorization.split(' ')[1]
     const decode = jwt.verify(token, JWTSECRET)
 
-    let sql = '' // Declare the sql variable using let
-    let data // Declare the data variable using let
-
-    sql = 'UPDATE users SET name = ?, email = ?, phoneNumber = ?, address = ? WHERE UID = ?'
+    const sql = 'UPDATE users SET name = ?, email = ?, phoneNumber = ?, address = ? WHERE UID = ?'
     // eslint-disable-next-line prefer-const
-    data = [req.body.name, req.body.email, req.body.phoneNo, req.body.address, decode.UID]
+    const data = [req.body.name, req.body.email, req.body.phoneNo, req.body.address, decode.UID]
 
     db.query(
       `UPDATE users SET updatedAt = now() WHERE UID = '${decode.UID}}'`
@@ -370,4 +368,35 @@ const deleteUser = (req, res) => {
   }
 }
 
-export { register, verifyMail, login, getUser, forgetPassword, resetPasswordLoad, resetPassword, updateProfile, deleteUser }
+const sendFeedback = (req, res) => {
+  try {
+    const errors = validationResult(req)
+
+    if (!errors.isEmpty()) {
+      return res.status(400).json({ errors: errors.array() })
+    }
+
+    const token = req.headers.authorization.split(' ')[1]
+    const decode = jwt.verify(token, JWTSECRET)
+
+    const sql = 'INSERT INTO feedback (UID, text) VALUES (?, ?)'
+    // eslint-disable-next-line prefer-const
+    const data = [decode.UID, req.body.text]
+
+    db.query(sql, data, function (error, result, fields) {
+      if (error) {
+        res.status(400).send({
+          msg: error
+        })
+      }
+
+      res.status(200).send({
+        msg: 'Feedback sent successfully!'
+      })
+    })
+  } catch (error) {
+    return res.status(400).json({ msg: error.message })
+  }
+}
+
+export { register, verifyMail, login, getUser, forgetPassword, resetPasswordLoad, resetPassword, updateProfile, deleteUser, sendFeedback }

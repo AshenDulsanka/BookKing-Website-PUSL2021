@@ -3,9 +3,9 @@
     <nav>
       <ul>
         <li class="hideOnMobile"><a href="/">Home</a></li>
-        <li class="hideOnMobile"><a href="#">Vehicles</a></li>
+        <li class="hideOnMobile"><a href="/vehicles">Vehicles</a></li>
         <li class="hideOnMobile"><a href="/hotels">Hotels</a></li>
-        <li class="hideOnMobile"><a href="#">Tours</a></li>
+        <li class="hideOnMobile"><a href="/tours">Tours</a></li>
         <li class="hideOnMobile"><a href="/reviews">Reviews</a></li>
         <li class="hideOnMobile"><a href="/contactus">Contact us</a></li>
         <li class="hideOnMobile"><a href="/aboutus">About us</a></li>
@@ -73,6 +73,9 @@ nav a:hover {
   }
   .nav {
   background-color:transparent;
+  }
+  .hideOnMobile{
+    display: none;
   }
 }
 

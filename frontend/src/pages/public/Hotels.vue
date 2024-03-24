@@ -12,66 +12,45 @@
         
         <!-- new hotel frame starts here -->
         <serviceFrame
-          hotelName="Kingsbury"
-          price="LKR 20,000"
-          propPadding="0px 0px 0px var(--padding-5xs)"
-          propPadding1="var(--padding-35xl) 0px 0px"
-          propGap="8px 0px"
-          belowIsAn="The Kingsbury Hotel is a luxurious 5-star haven in the heart of Colombo, Sri Lanka.  Its prime oceanfront location provides breathtaking views of the Colombo Harbor and Galle Face Green. The hotel offers beautifully designed rooms with modern amenities, a selection of award-winning restaurants serving diverse cuisines, and outstanding facilities. These include a delightful pool, a rejuvenating spa, and a well-equipped fitness center. Whether for business or leisure, the Kingsbury Hotel blends modern luxury with traditional Sri Lankan hospitality, making it an ideal choice for a memorable stay in  Colombo."
-          image="../../../public/assets/images/hotels/Kingsbury.png"
-          />
+          v-for="hotel in hotels"
+          :key="hotel.SID"
+          :serviceName="hotel.Name"
+          :price="hotel.Price"
+          :propPadding="'0px 0px 0px var(--padding-5xs)'"
+          :propPadding1="'var(--padding-35xl) 0px 0px'"
+          :propGap="'8px 0px'"
+          :belowIsAn="hotel.ShortDescription"
+          :image="hotel.Image"
+        />
         <div :class="$style.lineWrapper1">
           <div :class="$style.frameChild1" />
         </div>
         <!-- new hotel frame ends here -->
-        
-        <serviceFrame
-          hotelName="Shangrila"
-          propPadding="0px 0px 0px var(--padding-5xs)"
-          propPadding1="var(--padding-35xl) 0px 0px"
-          propGap="8px 0px"
-          image="../../src/Shangrila.png"
-        />
-        <div :class="$style.lineWrapper2">
-          <div :class="$style.frameChild2" />
-        </div>
-        
-        <serviceFrame
-          hotelName="The Ritz"
-          propPadding="0px 0px 0px var(--padding-5xs)"
-          propPadding1="var(--padding-35xl) 0px 0px"
-          propGap="8px 0px"
-          image="../../src/Ritz.png"
-        />
-        <div :class="$style.lineWrapper3">
-          <div :class="$style.frameChild3" />
-        </div>
-
-        <serviceFrame
-          hotelName="Cinnamon Grand"
-          propPadding="0px 0px 0px var(--padding-5xs)"
-          propPadding1="var(--padding-35xl) 0px 0px"
-          propGap="8px 0px"
-          image="../../src/Cinnamon.png"
-        />
-        <div :class="$style.lineWrapper2">
-          <div :class="$style.frameChild2" />
-        </div>
       </section>
     </main>    
   </div>
   <newfooter />
 </template>
+
 <script>
-  import { defineComponent } from "vue";
+  import { defineComponent, onMounted } from "vue";
 
   import newHeader from "../../components/public/newheader.vue";
   import serviceFrame from "../../components/public/serviceFrame.vue";
   import newfooter from "../../components/public/newfooter.vue";
+  import getHotels from "../../services/Api.js"
 
   export default defineComponent({
     name: "Hotels",
     components: { newHeader, serviceFrame, newfooter },
+
+    setup() {
+      const { hotels, error, getAllHotels } = getHotels()
+
+      onMounted(getAllHotels)
+
+      return { hotels, error }
+    }
   });
 </script>
 
