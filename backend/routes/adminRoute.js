@@ -6,6 +6,6 @@ const adminRouter = express.Router()
 adminRouter.post('/admin', login)
 adminRouter.get('/users', getUsers)
 adminRouter.get('/serviceProviders', getServiceProviders)
-adminRouter.get('/services', getServices)
+adminRouter.get('/adservices', getServices)
 
 export { adminRouter }

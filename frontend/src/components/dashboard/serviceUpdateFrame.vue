@@ -20,11 +20,11 @@
               </div>
               <div class="input-box">
                 <label for="phone">Location</label>
-                <input type="tel" id="phone" v-model="service.Location" placeholder="#" required />
+                <input type="text" id="phone" v-model="service.Location" placeholder="#" required />
               </div>
               <div class="input-box">
                 <label for="email">Price</label>
-                <input type="email" id="email" v-model="service.Price" placeholder="#" required />
+                <input type="text" id="email" v-model="service.Price" placeholder="#" required />
               </div>
               <div class="input-box">
                 <label for="profile">Short Description</label>
@@ -45,14 +45,13 @@
   <script>
   import { defineComponent, ref, reactive, onMounted } from "vue";
   import { fetchService, updateServiceData } from "../../services/serviceProviderApi.js";
-  import { useRoute, useRouter } from "vue-router";
+  import { useRoute } from "vue-router";
 
   
   export default defineComponent({
     name: "serviceUpdateFrame",
     setup() {
       const route = useRoute();
-      const router = useRouter();
 
       const service = reactive({
         SID: '',
@@ -65,11 +64,11 @@
       });
 
       onMounted(async () => {
-        const SID = route.params.SID;
+        const serviceId = route.params.serviceId;
 
-        if (SID) {
+        if (serviceId) {
           try {
-            await fetchService(SID, service);
+            await fetchService(serviceId, service);
           } catch (error) {
             console.error("Error fetching service:", error);
           }

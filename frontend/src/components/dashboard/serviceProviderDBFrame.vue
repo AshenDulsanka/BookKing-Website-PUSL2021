@@ -44,7 +44,7 @@
               :serviceName="service.Name"
               :serviceId="service.SID"
               @delete-service="handleDeleteService(service.SID)"
-              @click.prevent="redirectToServiceDetails(service.SID)"
+              :redirectToServiceDetails="redirectToServiceDetails"
             />
           </div>
         </div>
@@ -66,7 +66,6 @@ export default defineComponent({
   },
   methods: {
     handleDeleteService(serviceId) {
-      // Implement the logic for deleting the service here
       console.log(`Deleting service with ID: ${serviceId}`);
     },
   },
@@ -98,8 +97,8 @@ export default defineComponent({
       }
     };
 
-    const redirectToServiceDetails = (SID) => {
-      router.push(`/updateService`);
+    const redirectToServiceDetails = (serviceId) => {
+      router.push(`/updateService/${serviceId}`);
     };
 
     let sampleServices = ["car rental", "car wash", "detailing"];

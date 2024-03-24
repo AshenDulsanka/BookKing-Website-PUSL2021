@@ -1,5 +1,5 @@
 <template>
-    <div class="service">
+    <div class="service" @click="redirectToServiceDetails(serviceId)">
       <h3>{{ serviceName }}</h3>
       <button class="delete-btn" title="Remove This Service" @click="deleteService">
       </button>
@@ -20,9 +20,14 @@
         type: String,
         required: true,
       },
+      redirectToServiceDetails: {
+        type: Function,
+        required: true,
+      },
     },
     methods: {
-      deleteService() {
+      deleteService(event) {
+        event.stopPropagation();
         console.log(`Deleting service: ${this.serviceName}`);
       },
     },
