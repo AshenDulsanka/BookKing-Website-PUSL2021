@@ -3,8 +3,9 @@
     <div :class="$style.rectangleParent">
       <div :class="$style.frameChild" />
       <div :class="$style.rectangleWrapper">
-        <a href="/productPage"><img 
-          :class="$style.frameItem" alt="" :src="image" /></a>
+        <a :href="`/product/${serviceID}`">
+          <img :class="$style.frameItem" alt="" :src="image" />
+        </a>
       </div>
       <div :class="$style.frameInner" />
       <div :class="$style.frameContainer" :style="frameDiv1Style">
@@ -14,11 +15,11 @@
             <br>
             <div :class="$style.belowIsAn">{{belowIsAn}}</div> 
             <br>
-            <b :class="$style.hotelName">Price: {{price}}</b>
+            <b :class="$style.hotelName">Price: {{price}} per day</b>
           </div>
           <button :class="$style.rectangleGroup">
             <div :class="$style.rectangleDiv" />
-            <a href="/productPage"><b :class="$style.bookNow">Book Now</b></a>
+            <a :href="`/product/${serviceID}`"><b :class="$style.bookNow">Book Now</b></a>
           </button>
         </div>
       </div>
@@ -39,6 +40,7 @@
       propGap: { type: String },
       belowIsAn: { type: String },
       image: { type: String },
+      serviceID: { type: String },
     },
     computed: {
       frameDivStyle() {

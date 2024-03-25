@@ -2,21 +2,19 @@
 <NewHeader />
   <div :class="$style.addPage">
     <AddPageButton />
-    <PricingFrame />
-    
+    <newfooter />
   </div>
-  <newfooter />
+  
 </template>
 <script>
   import { defineComponent } from "vue";
   import NewHeader from "../../components/public/newheader.vue";
   import AddPageButton from "../../components/dashboard/AddPageButton.vue";
-  import PricingFrame from "../../components/dashboard/PricingFrame.vue";
   import newfooter from "../../components/public/newfooter.vue";
 
   export default defineComponent({
     name: "AddPage",
-    components: { NewHeader, AddPageButton, PricingFrame, newfooter  },
+    components: { NewHeader, AddPageButton,  newfooter  },
   });
 </script>
 <style module>

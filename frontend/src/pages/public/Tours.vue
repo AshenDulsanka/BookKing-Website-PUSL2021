@@ -20,7 +20,8 @@
             :propPadding1="'var(--padding-35xl) 0px 0px'"
             :propGap="'8px 0px'"
             :belowIsAn="tour.ShortDescription"
-            :image="tour.Image"
+            :image="`../../../public/uploads/${tour.Image}`"
+            :serviceID="tour.SID"
           />
           <div :class="$style.lineWrapper1">
             <div :class="$style.frameChild1" />

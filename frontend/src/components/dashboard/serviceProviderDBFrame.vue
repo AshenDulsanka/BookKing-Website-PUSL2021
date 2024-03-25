@@ -1,92 +1,106 @@
 <template>
   <section class="service-dashboard">
     <div class="wrapper">
-      <div class="profile-picture-setup">
-        <div class="profile-picture">
-          <img loading="lazy" alt="profile picture" src="../../../public/assets/images/user-sample.jpg" />
-        </div>
-        <button title="Add a New Picture">Change Picture</button>
-        <button title="Remove Your Picture">Remove Picture</button>
-      </div>
       <div class="settings">
         <hr class="line">
         <div class="personal-settings">
           <h2>Personal Info</h2>
-          <form class="personal-info" action="#" method="post">
+          <form class="personal-info" @submit.prevent="updateProfile">
             <div class="input-box">
               <label for="name">Name</label>
-              <input type="text" id="name" name="name" placeholder="#" required />
+              <input type="text" id="name" v-model="serviceProvider.name" placeholder="#" required />
             </div>
             <div class="input-box">
               <label for="address">Address</label>
-              <input type="text" id="address" name="address" placeholder="#" required />
+              <input type="text" id="address" v-model="serviceProvider.address" placeholder="#" required />
             </div>
             <div class="input-box">
               <label for="phone">Phone Number</label>
-              <input type="tel" id="phone" name="phone" placeholder="#" required />
+              <input type="tel" id="phone" v-model="serviceProvider.phoneNo" placeholder="#" required />
             </div>
             <div class="input-box">
               <label for="email">Email Address</label>
-              <input type="email" id="email" name="email" placeholder="#" required />
+              <input type="email" id="email" v-model="serviceProvider.email" placeholder="#" required />
             </div>
             <div class="input-box">
               <label for="profile">Profile</label>
-              <textarea id="profile" name="profile" placeholder="#" maxlength="200" required></textarea> 
+              <textarea id="profile" v-model="serviceProvider.serviceDesc" placeholder="#" maxlength="200" required></textarea>
             </div>
-            <button class="info-update-btn" title="Update Personal Info">Update</button>
+            <button class="info-update-btn" title="Update Personal Info" type="submit">Update</button>
           </form>
         </div>
         <hr class="line">
         <div class="service-settings">
           <h2>Your Services</h2>
           <div class="services">
-            <button class="service add-new" title="Add a Service">
-              <img loading="lazy" alt="profile picture" src="../../../public/assets/images/plus-sign.png" />
-            </button>
-            <div class="service">
-              <h3>Car Service</h3>
-              <button class="delete-btn" title="Remove This Service">
-                <img loading="lazy" alt="profile picture" src="../../../public/assets/images/close.png" />
+            <a href="/addPage">
+              <button class="service add-new" title="Add a Service">
+                <img loading="lazy" alt="profile picture" src="../../../public/assets/images/plus-sign.png" />
               </button>
-            </div>
-            <div class="service">
-              <h3>Car Detailing</h3>
-              <button class="delete-btn" title="Remove This Service">
-                <img loading="lazy" alt="profile picture" src="../../../public/assets/images/close.png" />
-              </button>
-            </div>
-            <div class="service">
-              <h3>Body Tinkering</h3>
-              <button class="delete-btn" title="Remove This Service">
-                <img loading="lazy" alt="profile picture" src="../../../public/assets/images/close.png" />
-              </button>
-            </div>
-            <div class="service">
-              <h3>Car Body Wash</h3>
-              <button class="delete-btn" title="Remove This Service">
-                <img loading="lazy" alt="profile picture" src="../../../public/assets/images/close.png" />
-              </button>
-            </div>
-            <div class="service">
-              <h3>Car Parts Dealing</h3>
-              <button class="delete-btn" title="Remove This Service">
-                <img loading="lazy" alt="profile picture" src="../../../public/assets/images/close.png" />
-              </button>
-            </div>
+            </a>
+            <ServiceCard
+              v-for="service in services"
+              :key="service.SID"
+              :serviceName="service.Name"
+              :serviceId="service.SID"
+              @delete-service="handleDeleteService(service.SID)"
+              :redirectToServiceDetails="redirectToServiceDetails"
+            />
           </div>
         </div>
       </div>
     </div>
   </section>
 </template>
+
 <script>
-import { defineComponent, ref } from "vue";
+import { defineComponent, ref, reactive, onMounted } from "vue";
+import { fetchServiceProvider, updateServiceProvider, fetchServices } from "../../services/serviceProviderApi.js";
+import ServiceCard from './ServiceCard.vue';
+import { useRouter } from "vue-router";
 
 export default defineComponent({
   name: "serviceProviderDBFrame",
+  components: {
+    ServiceCard,
+  },
+  methods: {
+    handleDeleteService(serviceId) {
+      console.log(`Deleting service with ID: ${serviceId}`);
+    },
+  },
   setup() {
-    // basic services fetch function
-    // userServices = fetch('api/[userid]/services/')
+    const router = useRouter();
+
+    const serviceProvider = reactive({
+      name: "",
+      email: "",
+      phoneNo: "",
+      address: "",
+      serviceDesc: ""
+    });
+
+    const services = ref([]);
+
+    onMounted(async () => {
+      fetchServiceProvider(serviceProvider);
+      const fetchedServices = await fetchServices(services.value);
+      console.log('Fetched services:', fetchedServices); 
+    });
+
+    const updateProfile = async (event) => {
+      event.preventDefault();
+      try {
+        await updateServiceProvider(serviceProvider);
+      } catch (error) {
+        console.error("Error updating profile:", error);
+      }
+    };
+
+    const redirectToServiceDetails = (serviceId) => {
+      router.push(`/updateService/${serviceId}`);
+    };
+
     let sampleServices = ["car rental", "car wash", "detailing"];
 
     function deleteService() {
@@ -113,26 +127,19 @@ export default defineComponent({
     }
 
     function submitForm() {
-      //post/api/[userid]/service/
-      //   let options = "";
-      //   for (let i = 0; i < sampleServices.length; i++) {
-      //     options += `${i + 1}. ${sampleServices[i]}\n`;
-      //   }
-
-      //   let person = prompt(`Choose What to Delete\n${options}`);
-
-      //   if (person !== null && person >= 1 && person <= sampleServices.length) {
-      //     window.alert(`Hello ${sampleServices[person - 1]} was deleted!`);
-      //   }
       formVisible.value = false;
     }
     return {
+      serviceProvider,
+      updateProfile,
       sampleServices,
       deleteService,
       addService,
       cancelForm,
       submitForm,
       formVisible,
+      services,
+      redirectToServiceDetails,
     };
   },
 });
@@ -154,6 +161,15 @@ button:hover{
   font-size: var(--font-size-base);
   color: var(--color-black);
   font-family: var(--font-tajawal);
+}
+
+.updateservice{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: black;
 }
 
 .wrapper {
@@ -268,7 +284,7 @@ button:hover{
   height: 30px;
   font-size: 17px;
   width: 100%;
-  font-weight: bold;
+  font-weight: normal;
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -290,7 +306,7 @@ button:hover{
   text-decoration: none;
   display: inline-block;
   font-size: 14px;
-  font-weight: bold;
+  font-weight: normal;
 }
 
 .service-settings{
@@ -322,7 +338,7 @@ button:hover{
   border: 2px solid black;
   position: relative;
   min-width: 300px;
-  min-height: 100px;
+  min-height: 140px;
 }
 .service > h3{
   font-weight: 700;

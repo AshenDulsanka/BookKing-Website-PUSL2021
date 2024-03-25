@@ -10,6 +10,7 @@
   </div>
   <newfooter />
 </template>
+
 <script>
 import { defineComponent } from "vue";
 import newheader from "../../components/public/newheader.vue";
@@ -21,6 +22,7 @@ export default defineComponent({
   components: { newheader, serviceProviderDBFrame, newfooter },
 });
 </script>
+
 <style scoped>
 main{
   height: 100%;

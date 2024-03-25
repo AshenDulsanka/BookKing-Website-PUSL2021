@@ -20,6 +20,7 @@ import Vehicles from '../pages/public/Vehicles.vue';
 import Tours from '../pages/public/Tours.vue';
 import forgotPassword from '../pages/auth/forgotPassword.vue';
 import spforgetPassword from '../pages/auth/spForgotPassword.vue';
+import updateService from '../pages/dashboard/serviceUpdate.vue';
 
 const routes = [
   // Auth
@@ -34,6 +35,7 @@ const routes = [
   { path: '/userdashboard', component: UserDashboard },
   { path: '/spdashboard', component: ServiceProviderDashboard },
   { path: '/addpage', component: AddPage },
+  { path: '/updateService/:serviceId', component: updateService, name: 'updateService' },
 
   // Admin
   { path: '/secret', component: AdminLogin },
@@ -41,7 +43,7 @@ const routes = [
 
   // Public
   { path: '/', component: HomeView },
-  { path: '/productPage', component: SingleProductPage },
+  { path: '/product/:id', component: SingleProductPage, props: true },
   { path: '/reviews', component: Reviews },
   { path: '/hotels', component: Hotels },
   { path: '/vehicles', component: Vehicles },

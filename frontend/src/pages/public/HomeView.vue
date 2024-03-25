@@ -16,31 +16,31 @@
             <div class="cars">
               <!--Here I have added a tags to the imgs, enter page locations to the href accordingly-->
               <div class="vehicle-list">
-                <a href="#" class="vehicle-item">
+                <a href="/vehicles" class="vehicle-item">
                   <img class="cars-img" alt="hotel-image"
                     src="https://cdn.animaapp.com/projects/65d23269fb82e0b1687904f9/releases/65d233c5449bbb741dc6aecb/img/rectangle-10.png" />
                   <h3 class="text-wrapper-9">Car</h3>
                 </a>
 
-                <a href="#" class="vehicle-item">
+                <a href="/vehicles" class="vehicle-item">
                   <img class="cars-img" alt="hotel-image"
                     src="https://cdn.animaapp.com/projects/65d23269fb82e0b1687904f9/releases/65d233c5449bbb741dc6aecb/img/rectangle-6.png" />
                   <h3 class="text-wrapper-9">Mini Car</h3>
                 </a>
 
-                <a href="#" class="vehicle-item">
+                <a href="/vehicles" class="vehicle-item">
                   <img class="cars-img" alt="hotel-image"
                     src="https://cdn.animaapp.com/projects/65d23269fb82e0b1687904f9/releases/65d233c5449bbb741dc6aecb/img/rectangle-7.png" />
                   <h3 class="text-wrapper-9">Van</h3>
                 </a>
 
-                <a href="#" class="vehicle-item">
+                <a href="/vehicles" class="vehicle-item">
                   <img class="cars-img" alt="hotel-image"
                     src="https://cdn.animaapp.com/projects/65d23269fb82e0b1687904f9/releases/65d233c5449bbb741dc6aecb/img/rectangle-8.png" />
                   <h3 class="text-wrapper-9">Bus</h3>
                 </a>
 
-                <a href="#" class="vehicle-item">
+                <a href="/vehicles" class="vehicle-item">
                   <img class="cars-img" alt="hotel-image"
                     src="https://cdn.animaapp.com/projects/65d23269fb82e0b1687904f9/releases/65d233c5449bbb741dc6aecb/img/rectangle-9.png" />
                   <h3 class="text-wrapper-9">Bike</h3>

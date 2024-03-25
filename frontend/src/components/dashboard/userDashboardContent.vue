@@ -16,21 +16,21 @@
                 <b :class="$style.rumethMansara">
                   <span>
                     <ul :class="$style.rumethMansara1">
-                      <li>{{name}}</li>
+                      <li>{{ name }}</li>
                     </ul>
                   </span>
                 </b>
                 <b :class="$style.piliyandalaRdKottawaContainer">
                   <span>
                     <ul :class="$style.piliyandalaRdKottawa">
-                      <li>{{address}}</li>
+                      <li>{{ address }}</li>
                     </ul>
                   </span>
                 </b>
                 <b :class="$style.loginTextLabelContainer">
                   <span :class="$style.loginTextLabelContainer1">
                     <ul :class="$style.ul">
-                      <li>{{phoneNo}}</li>
+                      <li>{{ phoneNo }}</li>
                     </ul>
                   </span>
                 </b>
@@ -38,16 +38,10 @@
                   <b :class="$style.emailparent">
                     <span :class="$style.emailparentTxt">
                       <ul :class="$style.Emailchild">
-                        <li>{{email}}</li>
+                        <li>{{ email }}</li>
                       </ul>
                     </span>
                   </b>
-                  <div :class="$style.homeFrame">
-                    <button :class="$style.servicesFrame">
-                      <div :class="$style.servicesFrameChild" />
-                      <b :class="$style.edit">Edit</b>
-                    </button>
-                  </div>
                 </div>
               </div>
             </div>
@@ -65,9 +59,14 @@
                 </span>
               </b>
               <div :class="$style.noBookingsText">
-                <div :class="$style.noBookingsAvailable">
+                <div v-if="!bookings || bookings.length === 0" :class="$style.noBookingsAvailable">
                   No bookings available
                 </div>
+                <ul v-else>
+                  <li v-for="booking in bookings" :key="booking.BID">
+                    {{ getServiceName(booking.SID) }} - {{ getDateTime(booking.dateTime) }}
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
@@ -76,8 +75,10 @@
     </div>
   </section>
 </template>
+
 <script>
   import { defineComponent } from "vue";
+  import axios from "axios";
 
   export default defineComponent({
     name: "userDashboardContent",
@@ -86,9 +87,41 @@
       address: { type: String },
       phoneNo: { type: String },
       email: { type: String },
+      bookings: { type: Array, default: () => [] },
+    },
+    data() {
+      return {
+        services: [],
+      };
+    },
+    mounted() {
+      this.fetchServices();
+    },
+    methods: {
+      async fetchServices() {
+        try {
+          const response = await axios.get("http://localhost:8081/api/allServices",{
+            headers: {
+              Authorization: `Bearer ${localStorage.getItem("token")}`,
+            },
+          })
+          this.services = response.data.data;
+        } catch (error) {
+          console.error(error);
+        }
+      },
+      getServiceName(SID) {
+        const service = this.services.find((s) => s.SID === SID);
+        return service ? service.Name : "";
+      },
+      getDateTime(dateTime){
+        const booking = this.bookings.find((b) => b.dateTime === dateTime);
+        return booking ? booking.dateTime : "";
+      }
     },
   });
 </script>
+
 <style module>
   .userDashboard {
     margin: 0;
