@@ -10,6 +10,7 @@
         :Price="service.Price"
         :Image="`../../../public/uploads/${service.Image}`"
         :SID="service.SID"
+        :isAvailable="service.isAvailable"
       />
       
     </main>
@@ -41,11 +42,18 @@
         try {
           const response = await axios.post(
             "http://localhost:8081/api/singleService",
-            {
-              SID: this.id,
-            }
+            { SID: this.id.toString() }
           );
-          this.service = response.data.data[0];
+          const data = response.data.data[0];
+          this.service = {
+            Name: data.Name,
+            LongDescription: data.LongDescription,
+            Location: data.Location,
+            Price: data.Price.toString(), 
+            Image: `../../../public/uploads/${data.Image}`,
+            SID: data.SID.toString(), 
+            isAvailable: data.isAvailable === 1, 
+          };
         } catch (error) {
           console.error(error);
         }

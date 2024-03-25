@@ -3,7 +3,11 @@
     <div :class="$style.line">
       <div :class="$style.sigiriyaTourFrame" />
       <div :class="$style.bookNowButtonParent">
-        <button :class="$style.bookNowButton" @click="confirmBooking">
+        <button 
+          :class="$style.bookNowButton"
+          @click="confirmBooking"
+          :disabled="!isAvailable"
+        >
           <div :class="$style.bookNowButtonChild" />
           <b :class="$style.bookNow">Book Now</b>
         </button>
@@ -18,6 +22,12 @@
           <div :class="$style.rs150000Parent">
             <div :class="$style.rs150000">Price: {{ Price }} per day</div>
             
+          </div>
+        </div>
+
+        <div :class="$style.availabilityFrame">
+          <div :class="$style.availabilityText" :style="{ color: isAvailable ? 'green' : 'red' }">
+            {{ isAvailable ? 'Available' : 'Not Available' }}
           </div>
         </div>
        
@@ -58,11 +68,16 @@
       Price: { type: String },
       Image: { type: String },
       SID: { type: String, required: true },
+      isAvailable: { type: Boolean, required: true },
     },
     methods: {
       confirmBooking() {
-        if (confirm('Are you sure you want to book this service?')) {
-          this.makeBooking();
+        if (this.isAvailable) {
+          if (confirm('Are you sure you want to book this service?')) {
+            this.makeBooking();
+          }
+        } else {
+          alert('Sorry, this service is not available for booking.');
         }
       },
       async makeBooking() {
