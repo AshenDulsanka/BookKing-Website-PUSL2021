@@ -98,6 +98,9 @@ nav a:hover {
   color: black;
   font-weight: 700;
 }
+.hideOnMobile {
+  display: flex;
+}
 .hideOnMobile:hover {
   background-color: yellow;
 }
@@ -110,18 +113,12 @@ nav a:hover {
     justify-content: center;
     display:block;
     padding:0px;
-    margin-top: 100px;
   }
-  nav li {
-    width: 100%;
-    text-align: center;
-    
-  }
-  .nav {
-  background-color:transparent;
+  nav ul:hover {
+    color: black;
   }
   .hideOnMobile{
-    display: none;
+    background-color: black;
   }
 }
 

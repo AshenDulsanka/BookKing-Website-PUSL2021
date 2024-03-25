@@ -55,7 +55,7 @@
             <div class="tour-list">
               <!--Here I have added a tags to the imgs, enter page locations to the href accordingly-->
               <div class="tour-box">
-                <a href="#" class="tour-item">
+                <a href="/tours" class="tour-item">
                   <img class="tour-img" alt="hotel-image"
                     src="https://cdn.animaapp.com/projects/65d23269fb82e0b1687904f9/releases/65d233c5449bbb741dc6aecb/img/rectangle-11.png" />
                   <h3 class="text-wrapper-20">Historical Tour</h3>
@@ -68,7 +68,7 @@
               </div>
 
               <div class="tour-box">
-                <a href="#" class="tour-item">
+                <a href="/tours" class="tour-item">
                   <img class="tour-img" alt="hotel-image"
                     src="https://cdn.animaapp.com/projects/65d23269fb82e0b1687904f9/releases/65d233c5449bbb741dc6aecb/img/rectangle-12.png" />
                   <h3 class="text-wrapper-20">Tea Country tour</h3>
@@ -82,7 +82,7 @@
               </div>
 
               <div class="tour-box">
-                <a href="#" class="tour-item">
+                <a href="/tours" class="tour-item">
                   <img class="tour-img" alt="hotel-image"
                     src="https://cdn.animaapp.com/projects/65d23269fb82e0b1687904f9/releases/65d233c5449bbb741dc6aecb/img/rectangle-13.png" />
                   <h3 class="text-wrapper-20">Sigiriya tour</h3>
@@ -155,42 +155,42 @@
           <h2 class="text-wrapper-31">Hotels</h2>
           <!--Here I have added a tags to the imgs, enter page locations to the href accordingly-->
           <div class="hotel-list">
-            <a href="#" class="hotel-img">
+            <a href="/hotels" class="hotel-img">
               <img class="rectangle-14" alt="hotel-image"
                 src="https://cdn.animaapp.com/projects/65d23269fb82e0b1687904f9/releases/65d233c5449bbb741dc6aecb/img/rectangle-24.png" />
               <div class="hotel-img-overlay">
                 <h3 class="text-wrapper-25">Hotel 1</h3>
               </div>
             </a>
-            <a href="#" class="hotel-img">
+            <a href="/hotels" class="hotel-img">
               <img class="rectangle-14" alt="hotel-image"
                 src="https://cdn.animaapp.com/projects/65d23269fb82e0b1687904f9/releases/65d233c5449bbb741dc6aecb/img/rectangle-25.png" />
               <div class="hotel-img-overlay">
                 <h3 class="text-wrapper-25">Hotel 2</h3>
               </div>
             </a>
-            <a href="#" class="hotel-img">
+            <a href="/hotels" class="hotel-img">
               <img class="rectangle-14" alt="hotel-image"
                 src="https://cdn.animaapp.com/projects/65d23269fb82e0b1687904f9/releases/65d233c5449bbb741dc6aecb/img/rectangle-26.png" />
               <div class="hotel-img-overlay">
                 <h3 class="text-wrapper-25">Hotel 3</h3>
               </div>
             </a>
-            <a href="#" class="hotel-img">
+            <a href="/hotels" class="hotel-img">
               <img class="rectangle-14" alt="hotel-image"
                 src="https://cdn.animaapp.com/projects/65d23269fb82e0b1687904f9/releases/65d233c5449bbb741dc6aecb/img/rectangle-27.png" />
               <div class="hotel-img-overlay">
                 <h3 class="text-wrapper-25">Hotel 4</h3>
               </div>
             </a>
-            <a href="#" class="hotel-img">
+            <a href="/hotels" class="hotel-img">
               <img class="rectangle-14" alt="hotel-image"
                 src="https://cdn.animaapp.com/projects/65d23269fb82e0b1687904f9/releases/65d233c5449bbb741dc6aecb/img/rectangle-28.png" />
               <div class="hotel-img-overlay">
                 <h3 class="text-wrapper-25">Hotel 5</h3>
               </div>
             </a>
-            <a href="#" class="hotel-img">
+            <a href="/hotels" class="hotel-img">
               <img class="rectangle-14" alt="hotel-image"
                 src="https://cdn.animaapp.com/projects/65d23269fb82e0b1687904f9/releases/65d233c5449bbb741dc6aecb/img/rectangle-29.png" />
               <div class="hotel-img-overlay">
