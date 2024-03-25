@@ -27,6 +27,10 @@
                 <input type="text" id="email" v-model="service.Price" placeholder="#" required />
               </div>
               <div class="input-box">
+                <label for="email">Availability</label>
+                <input type="text" id="email" v-model="service.isAvailable" placeholder="#" required />
+              </div>
+              <div class="input-box">
                 <label for="profile">Short Description</label>
                 <textarea id="profile" v-model="service.ShortDescription" placeholder="#" maxlength="400" required ></textarea>
               </div>
@@ -60,6 +64,7 @@
         Name: '',
         Location: '',
         Price: '',
+        isAvailable: '', 
         ShortDescription: '',
         LongDescription: '',
       });
