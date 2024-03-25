@@ -3,7 +3,7 @@
     <div :class="$style.line">
       <div :class="$style.sigiriyaTourFrame" />
       <div :class="$style.bookNowButtonParent">
-        <button :class="$style.bookNowButton">
+        <button :class="$style.bookNowButton" @click="confirmBooking">
           <div :class="$style.bookNowButtonChild" />
           <b :class="$style.bookNow">Book Now</b>
         </button>
@@ -47,6 +47,7 @@
 
 <script>
   import { defineComponent } from "vue";
+  import axios from 'axios';
 
   export default defineComponent({
     name: "singleProductFrame",
@@ -56,6 +57,27 @@
       Location: { type: String },
       Price: { type: String },
       Image: { type: String },
+      SID: { type: String, required: true },
+    },
+    methods: {
+      confirmBooking() {
+        if (confirm('Are you sure you want to book this service?')) {
+          this.makeBooking();
+        }
+      },
+      async makeBooking() {
+        try {
+          const token = localStorage.getItem('token'); 
+          const response = await axios.post('http://localhost:8081/api/makeBooking', { SID: this.SID }, {
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
+          });
+          console.log(response.data.msg); 
+        } catch (error) {
+          console.error(error);
+        }
+      },
     },
   });
 </script>

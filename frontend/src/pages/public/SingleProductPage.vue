@@ -9,6 +9,7 @@
         :Location="service.Location"
         :Price="service.Price"
         :Image="`../../../public/uploads/${service.Image}`"
+        :SID="service.SID"
       />
       
     </main>

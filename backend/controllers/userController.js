@@ -402,33 +402,101 @@ const sendFeedback = (req, res) => {
 const makeBooking = (req, res) => {
   try {
     const errors = validationResult(req)
-
     if (!errors.isEmpty()) {
       return res.status(400).json({ errors: errors.array() })
     }
 
     const token = req.headers.authorization.split(' ')[1]
     const decode = jwt.verify(token, JWTSECRET)
+    const UID = decode.UID
+    const SID = req.body.SID
 
     const sql = 'INSERT INTO booking (UID, SID) VALUES (?, ?)'
-    // eslint-disable-next-line prefer-const
-    const data = [decode.UID, req.body.SID]
+    const data = [UID, SID]
 
     db.query(sql, data, function (error, result, fields) {
       if (error) {
-        res.status(400).send({
-          msg: error
+        res.status(400).send({ msg: error })
+      } else {
+        db.query('SELECT name, email FROM users WHERE UID = ?', [UID], (err, userData) => {
+          if (err) throw err
+
+          const userName = userData[0].name
+          const userEmail = userData[0].email
+
+          // Fetch service data
+          db.query('SELECT Name, Location, Price FROM service WHERE SID = ?', [SID], (err, serviceData) => {
+            if (err) throw err
+
+            const serviceName = serviceData[0].Name
+            const serviceLocation = serviceData[0].Location
+            const servicePrice = serviceData[0].Price
+            const bookingDate = new Date().toDateString()
+
+            const mailSubject = 'Booking Confirmation - BookKing'
+            const content = `
+              <html>
+              <head>
+              <style>
+              body {
+                font-family: Arial, sans-serif;
+                background-color: #f4f4f4;
+                color: #333;
+              }
+              .container {
+                max-width: 600px;
+                margin: 0 auto;
+                padding: 20px;
+                background-color: #fff;
+                border-radius: 10px;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+              }
+              h1 {
+                color: #333;
+                text-align: center;
+              }
+              p {
+                margin-bottom: 20px;
+              }
+              a.button {
+                display: inline-block;
+                margin: 0 auto;
+                background-color: grey;
+                color: white;
+                padding: 10px 20px;
+                border-radius: 5px;
+                text-decoration: none;
+                text-align: center;
+              }
+              </style>
+              </head>
+              <body>
+              <div class="container">
+              <h1>Thank you for booking with BookKing!</h1>
+              <p>Dear ${userName},</p>
+              <p>We are delighted to confirm your booking with us. Here are the details of your booking:</p>
+              <p><strong>Service:</strong> ${serviceName}</p>
+              <p><strong>Location:</strong> ${serviceLocation}</p>
+              <p><strong>Date:</strong> ${bookingDate}</p>
+              <p><strong>Price:</strong> ${servicePrice}</p>
+              <p>We look forward to welcoming you and providing you with an exceptional experience.</p>
+              <p>If you have any questions or need further assistance, please don't hesitate to contact us.</p>
+              <p>Thank you for choosing BookKing,<br>The BookKing Team</p>
+              </div>
+              </body>
+              </html>
+            `
+
+            sendMail(userEmail, mailSubject, content)
+          })
+
+          res.status(200).send({ msg: 'Booking set successfully!' })
+          alert('Booking set successfully!')
         })
       }
-
-      res.status(200).send({
-        msg: 'Booking set successfully!'
-      })
     })
 
-    db.query(
-      `UPDATE service SET isAvailable = 0 WHERE SID = '${req.body.SID}}'`
-    )
+    db.query(`UPDATE service SET isAvailable = 0 WHERE SID = '${req.body.SID}'`)
   } catch (error) {
     return res.status(400).json({ msg: error.message })
   }
