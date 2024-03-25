@@ -491,7 +491,6 @@ const makeBooking = (req, res) => {
           })
 
           res.status(200).send({ msg: 'Booking set successfully!' })
-          alert('Booking set successfully!')
         })
       }
     })

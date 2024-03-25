@@ -74,6 +74,7 @@
             },
           });
           console.log(response.data.msg); 
+          alert('Booking set successfully!')
         } catch (error) {
           console.error(error);
         }
