@@ -6,8 +6,8 @@
     </main>
     <br>
     <br>
-    <newfooter />
   </div>
+  <newfooter />
 </template>
 
 <script>
