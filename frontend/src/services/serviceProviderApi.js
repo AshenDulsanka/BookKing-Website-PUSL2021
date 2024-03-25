@@ -92,6 +92,7 @@ export const updateServiceData = async (service) => {
       Name: service.Name,
       Location: service.Location,
       Price: service.Price,
+      isAvailable: service.isAvailable,
       ShortDescription: service.ShortDescription,
       LongDescription: service.LongDescription,
     }, 

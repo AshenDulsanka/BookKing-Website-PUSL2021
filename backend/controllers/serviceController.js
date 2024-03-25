@@ -65,17 +65,19 @@ const updateService = (req, res) => {
       Name,
       Location,
       Price,
+      isAvailable,
       ShortDescription,
       LongDescription
     } = req.body
 
     const sql =
-      'UPDATE service SET Name = ?, LongDescription = ?, ShortDescription = ?, Price = ?, Location = ? WHERE SID = ? AND SPID = ?'
+      'UPDATE service SET Name = ?, LongDescription = ?, ShortDescription = ?, Price = ?, isAvailable = ?, Location = ? WHERE SID = ? AND SPID = ?'
     const data = [
       Name,
       LongDescription,
       ShortDescription,
       Price,
+      isAvailable,
       Location,
       SID,
       decode.SPID
