@@ -21,6 +21,7 @@
           :propGap="'8px 0px'"
           :belowIsAn="vehicle.ShortDescription"
           :image="`../../../public/uploads/${vehicle.Image}`"
+          :serviceID="vehicle.SID"
         />
         <div :class="$style.lineWrapper1">
           <div :class="$style.frameChild1" />

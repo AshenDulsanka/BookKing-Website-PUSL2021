@@ -38,13 +38,14 @@
                 <img loading="lazy" alt="profile picture" src="../../../public/assets/images/plus-sign.png" />
               </button>
             </a>
-            <a href="#" @click.prevent="redirectToServiceDetails(service.SID)">
-              <div class="service" v-for="service in services" :key="service.SID">
-                  <h3>{{ service.Name }}</h3>
-                  <button class="delete-btn" title="Remove This Service">
-                  </button>
-              </div>
-            </a>
+            <ServiceCard
+              v-for="service in services"
+              :key="service.SID"
+              :serviceName="service.Name"
+              :serviceId="service.SID"
+              @delete-service="handleDeleteService(service.SID)"
+              :redirectToServiceDetails="redirectToServiceDetails"
+            />
           </div>
         </div>
       </div>
@@ -55,10 +56,19 @@
 <script>
 import { defineComponent, ref, reactive, onMounted } from "vue";
 import { fetchServiceProvider, updateServiceProvider, fetchServices } from "../../services/serviceProviderApi.js";
+import ServiceCard from './ServiceCard.vue';
 import { useRouter } from "vue-router";
 
 export default defineComponent({
   name: "serviceProviderDBFrame",
+  components: {
+    ServiceCard,
+  },
+  methods: {
+    handleDeleteService(serviceId) {
+      console.log(`Deleting service with ID: ${serviceId}`);
+    },
+  },
   setup() {
     const router = useRouter();
 
@@ -87,8 +97,8 @@ export default defineComponent({
       }
     };
 
-    const redirectToServiceDetails = (SID) => {
-      router.push(`/updateService`);
+    const redirectToServiceDetails = (serviceId) => {
+      router.push(`/updateService/${serviceId}`);
     };
 
     let sampleServices = ["car rental", "car wash", "detailing"];

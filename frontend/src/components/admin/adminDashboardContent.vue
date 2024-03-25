@@ -4,16 +4,12 @@
       <h1 class="service-provider-login3">Admin Dashboard</h1>
     </div>
     <div class="dashboardicons">
-      <a href="#">
+      <a href="/">
         <img src="../../../public/assets/images/add.png" alt="Image description" class="img">
       </a>
       <a href="#">
         <img src="../../../public/assets/images/Delete.png" alt="Image description" class="img">
       </a>
-      <a href="#">
-        <img src="../../../public/assets/images/Logout.png" alt="Image description" class="img">
-      </a>
-
     </div>
 
   </div>

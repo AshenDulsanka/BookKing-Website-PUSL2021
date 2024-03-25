@@ -35,7 +35,7 @@ const routes = [
   { path: '/userdashboard', component: UserDashboard },
   { path: '/spdashboard', component: ServiceProviderDashboard },
   { path: '/addpage', component: AddPage },
-  { path: '/updateService', component: updateService },
+  { path: '/updateService/:serviceId', component: updateService, name: 'updateService' },
 
   // Admin
   { path: '/secret', component: AdminLogin },
@@ -43,7 +43,7 @@ const routes = [
 
   // Public
   { path: '/', component: HomeView },
-  { path: '/productPage', component: SingleProductPage },
+  { path: '/product/:id', component: SingleProductPage, props: true },
   { path: '/reviews', component: Reviews },
   { path: '/hotels', component: Hotels },
   { path: '/vehicles', component: Vehicles },

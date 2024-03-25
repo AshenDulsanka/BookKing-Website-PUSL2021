@@ -4,7 +4,7 @@ import multer from 'multer'
 import { fileURLToPath } from 'url'
 import { isAuthorized } from '../middleware/auth.js'
 import { addServiceValidation } from '../helpers/validation.js'
-import { addService, updateService, deleteService, getHotels, getTours, getVehicles, getServices, getSingleService } from '../controllers/serviceController.js'
+import { addService, updateService, deleteService, getHotels, getTours, getVehicles, getServices, getSingleService, getAllServices, getSpService } from '../controllers/serviceController.js'
 
 const serviceRouter = express.Router()
 
@@ -48,5 +48,7 @@ serviceRouter.get('/Tours', getTours)
 serviceRouter.get('/Vehicles', getVehicles)
 serviceRouter.get('/services', isAuthorized, getServices)
 serviceRouter.post('/singleService', getSingleService)
+serviceRouter.get('/allServices', getAllServices)
+serviceRouter.get('/service/:SID', isAuthorized, getSpService)
 
 export { serviceRouter }

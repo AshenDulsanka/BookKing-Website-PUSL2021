@@ -63,20 +63,20 @@ export const fetchServices = async (services) => {
 export const fetchService = async (SID, service) => {
     try {
       const token = localStorage.getItem("token");
-      const response = await axios.get(`http://localhost:8081/api/services/${SID}`, {
+      const response = await axios.get(`http://localhost:8081/api/service/${SID}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
       });
       const data = response.data.data;
 
-      service.SID = data.SID;
-      service.Category = data.Category;
-      service.Name = data.Name;
-      service.Location = data.Location;
-      service.price = data.price;
-      service.ShortDescription = data.ShortDescription;
-      service.LongDescription = data.LongDescription;
+      service.SID = data.SID || "";
+      service.Category = data.category || ""; 
+      service.Name = data.Name || "";
+      service.Location = data.Location || "";
+      service.Price = data.Price || "";
+      service.ShortDescription = data.ShortDescription || "";
+      service.LongDescription = data.LongDescription || "";
     } catch (error) {
       console.error("Error fetching service:", error);
     }
@@ -85,23 +85,43 @@ export const fetchService = async (SID, service) => {
 export const updateServiceData = async (service) => {
   try {
     const token = localStorage.getItem("token");
-    const formData = new FormData();
-    formData.append("name", service.Name);
-    formData.append("longDescription", service.LongDescription);
-    formData.append("shortDescription", service.ShortDescription);
-    formData.append("price", service.price);
-    formData.append("location", service.Location);
-    formData.append("category", service.Category);
-    formData.append("SID", service.SID);
 
-    const response = await axios.put("http://localhost:8081/api/updateService", formData, {
+    const response = await axios.post("http://localhost:8081/api/updateService", {
+      SID: service.SID,
+      Category: service.category,
+      Name: service.Name,
+      Location: service.Location,
+      Price: service.Price,
+      ShortDescription: service.ShortDescription,
+      LongDescription: service.LongDescription,
+    }, 
+    {
       headers: {
         Authorization: `Bearer ${token}`,
-        "Content-Type": "multipart/form-data",
+        "Content-Type": "application/json",
       },
     });
     console.log("Service updated successfully:", response.data.msg);
+    alert("Service updated successfully");
   } catch (error) {
     console.error("Error updating service:", error);
+  }
+};
+
+export const deleteServiceData = async (serviceId) => {
+  try {
+    const token = localStorage.getItem('token');
+    const response = await axios.delete('http://localhost:8081/api/deleteService', {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+      data: {
+        SID: serviceId,
+      },
+    });
+    console.log('Service deleted successfully:', response.data.msg);
+    alert('Service deleted successfully');
+  } catch (error) {
+    console.error('Error deleting service:', error);
   }
 };

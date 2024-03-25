@@ -9,9 +9,11 @@
         <li class="hideOnMobile"><a href="/reviews">Reviews</a></li>
         <li class="hideOnMobile"><a href="/contactus">Contact us</a></li>
         <li class="hideOnMobile"><a href="/aboutus">About us</a></li>
-        <li v-if="!isLoggedIn" class="hideOnMobile"><a class="login" href="/login">Login</a></li>
-        <li v-else class="hideOnMobile" @click="redirectToDashboard"><a href="#">Profile</a></li>
-        <li v-if="isLoggedIn" class="hideOnMobile"><a href="#" @click="logout">Logout</a></li>
+        <li class="hideOnMobile">
+          <a v-if="!isLoggedIn" class="login" href="/login">Login</a>
+          <a v-else href="#" @click.prevent="redirectToDashboard">Profile</a>
+        </li>
+        <li v-if="isLoggedIn" class="hideOnMobile"><a href="#" @click.prevent="logout">Logout</a></li>
       </ul>
     </nav>
   </footer>
