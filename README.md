@@ -1,4 +1,9 @@
 # BookKing-Website PUSL2021
+
+> Note: This is a second-year group project.
+> It’s archived now, and the code quality reflects the fact that we were still figuring out which way was up.
+> Keeping it public for nostalgia and transparency!
+
 This is the project we are creating for our second-year computing group project module.
 
 Online booking platforms have become increasingly popular in recent years, as consumers seek the 
